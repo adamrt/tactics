@@ -1,0 +1,10 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: effect-e453
+address_model: { runtime_base: "0x801c2500", file_header_bytes: 0 }
+provenance:
+  - original/ffhacktics/wiki/pages/00006760.wiki
+  - original/ffhacktics/wiki/pages/00009846.wiki
+  - build/extracted/files/EFFECT/E453.BIN
+symbols:
+  - { name: effect_e453_end_of_the_world_dispatch_commands_state, address: "0x801c69c4", end: "0x801c6b04", kind: function, ownership: game, confidence: high, external_name: "E453 001c69c4 - 001c6b00" }

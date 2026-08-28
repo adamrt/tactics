@@ -1,0 +1,237 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+
+# Tracked clean-room drafts which do not yet make an exact-byte claim. A file
+# belongs here or in modules.yaml, never both.
+wip:
+  - { module: effect-e015, symbol: effect_e015_holy_update_animated_quad_grid_4x4, address: "0x801c4fc8", status: wip, source: wip/effect/effect_e015_holy_update_animated_quad_grid_4x4.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: restore_game_loop_stack_pointer, address: "0x80011bc0", status: wip, source: wip/main/restore_game_loop_stack_pointer.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: opening, symbol: open_parse_start_overlay_fade_out, address: "0x8006fd9c", status: wip, source: wip/open/open_parse_start_overlay_fade_out.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: opening, symbol: open_parse_start_overlay_fade_in, address: "0x8006fde0", status: wip, source: wip/open/open_parse_start_overlay_fade_in.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: initialize_save_data_tables, address: "0x800452ec", status: wip, source: wip/main/initialize_save_data_tables.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: level_party_unit_to_target, address: "0x8005d8fc", status: wip, source: wip/main/level_party_unit_to_target.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: update_unit_action_statuses, address: "0x8005e7a8", status: wip, source: wip/main/update_unit_action_statuses.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: battle_load_seq_data, address: "0x800871f4", status: wip, source: wip/battle/battle_load_seq_data.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: process_map_zoom, address: "0x8006f678", status: wip, source: wip/battle/process_map_zoom.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-etc, symbol: etc_build_game_over_graphic_polygons, address: "0x801bfc58", status: wip, source: wip/event/etc_build_game_over_graphic_polygons.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-helpmenu, symbol: helpmenu_run_battle_help_menu, address: "0x801df050", status: wip, source: wip/helpmenu/helpmenu_run_battle_help_menu.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-helpmenu, symbol: helpmenu_require_handler, address: "0x801dfe10", status: wip, source: wip/helpmenu/helpmenu_require_handler.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-option, symbol: option_configure_at_list, address: "0x801c14ec", status: wip, source: wip/option/option_configure_at_list.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-option, symbol: option_build_at_list, address: "0x801bf45c", status: wip, source: wip/option/option_build_at_list.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-option, symbol: option_run_dead_unit_panel_a, address: "0x801c0304", status: wip, source: wip/option/option_run_dead_unit_panel_a.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-option, symbol: option_run_dead_unit_panel_b, address: "0x801c0894", status: wip, source: wip/option/option_run_dead_unit_panel_b.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-option, symbol: option_start_dead_unit_menu_threads, address: "0x801c0e80", status: wip, source: wip/option/option_start_dead_unit_menu_threads.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-option, symbol: option_run_option_choice_menu, address: "0x801c2ddc", status: wip, source: wip/option/option_run_option_choice_menu.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-card, symbol: card_render_encoded_text_ids_to_image, address: "0x801c6c50", status: wip, source: wip/card/card_render_encoded_text_ids_to_image.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-card, symbol: card_parse_draw_tiled_rectangle, address: "0x801c61e0", status: wip, source: wip/card/card_parse_draw_tiled_rectangle.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-card, symbol: card_update_controller_input, address: "0x801c75d0", status: wip, source: wip/card/card_update_controller_input.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-card, symbol: card_update_event_input_state, address: "0x801c3a4c", status: wip, source: wip/card/card_update_event_input_state.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-require, symbol: require_apply_post_battle_unit_changes, address: "0x801c6988", status: wip, source: wip/require/require_apply_post_battle_unit_changes.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-require, symbol: require_prepare_party_portrait_textures, address: "0x801c5458", status: wip, source: wip/require/require_prepare_party_portrait_textures.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-debugchr, symbol: debugchr_run_character_status_thread, address: "0x801c0b84", status: wip, source: wip/debugchr/debugchr_run_character_status_thread.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-debugchr, symbol: debugchr_run_character_debug_session, address: "0x801c438c", status: wip, source: wip/debugchr/debugchr_run_character_debug_session.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: battle_handle_menu_cancel_input, address: "0x80137f84", status: wip, source: wip/battle/battle_handle_menu_cancel_input.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: battle_update_menu_cursor_primitives, address: "0x80138570", status: wip, source: wip/battle/battle_update_menu_cursor_primitives.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: world, symbol: get_generic_job_index, address: "0x801223b8", status: wip, source: wip/world/get_generic_job_index.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: effect_code_script_0x05, address: "0x801a2374", status: wip, source: wip/battle/effect_code_script_0x05.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: is_unit_absent_dead_crystal_treasure_petrified_or_ridden, address: "0x801835a8", status: wip, source: wip/battle/is_unit_absent_dead_crystal_treasure_petrified_or_ridden.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: conditional_status_proc_roll, address: "0x801884c0", status: wip, source: wip/battle/conditional_status_proc_roll.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: store_reaction_proc_id_and_target, address: "0x801876e4", status: wip, source: wip/battle/store_reaction_proc_id_and_target.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: battle_load_ability_effect, address: "0x801a1814", status: wip, source: wip/battle/battle_load_ability_effect.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: cursor_tile_vector_shift, address: "0x8006fdf8", status: wip, source: wip/battle/cursor_tile_vector_shift.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: able_to_move_act_checks, address: "0x80183d10", status: wip, source: wip/battle/able_to_move_act_checks.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: battle_load_job_level, address: "0x8017ea28", status: wip, source: wip/battle/battle_load_job_level.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: check_spreading_tile_coordinates, address: "0x80175618", status: wip, source: wip/battle/check_spreading_tile_coordinates.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: initialise_animation_for_trap, address: "0x801b0c88", status: wip, source: wip/battle/initialise_animation_for_trap.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: initialize_party_members_job_data_sp_cap_status_initializati, address: "0x8017f31c", status: wip, source: wip/battle/initialize_party_members_job_data_sp_cap_status_initializati.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: set_real_coords_from_map_coords, address: "0x800895c4", status: wip, source: wip/battle/set_real_coords_from_map_coords.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: world, symbol: world_ps_sort_sprite_bg, address: "0x800e03ec", status: wip, source: wip/world/world_ps_sort_sprite_bg.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: set_facing_from_arctan, address: "0x80072674", status: wip, source: wip/battle/set_facing_from_arctan.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: check_if_unit_can_be_targeted, address: "0x8017bdd0", status: wip, source: wip/battle/check_if_unit_can_be_targeted.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: apply_target_status_xa_modifier_magical, address: "0x80186460", status: wip, source: wip/battle/apply_target_status_xa_modifier_magical.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: range_1_ability_used, address: "0x80072b50", status: wip, source: wip/battle/range_1_ability_used.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: world, symbol: world_bin_toggle_preview_stats_window, address: "0x801156b4", status: wip, source: wip/world/world_bin_toggle_preview_stats_window.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: world_map_script_0x1d, address: "0x80091b18", status: wip, source: wip/wldcore/world_map_script_0x1d.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001c76cc_001c7720, address: "0x801c76cc", status: wip, source: wip/equip/equip_out_001c76cc_001c7720.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001c7784_001c77d8, address: "0x801c7784", status: wip, source: wip/equip/equip_out_001c7784_001c77d8.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c7104_001c7144, address: "0x801c7104", status: wip, source: wip/bunit/bunit_out_001c7104_001c7144.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001c7980_001c79d0, address: "0x801c7980", status: wip, source: wip/equip/equip_out_001c7980_001c79d0.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001c7724_001c7780, address: "0x801c7724", status: wip, source: wip/event/equip_out_001c7724_001c7780.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c7148_001c71a4, address: "0x801c7148", status: wip, source: wip/event/bunit_out_001c7148_001c71a4.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: effect_code_script_02, address: "0x801a2280", status: wip, source: wip/battle/effect_code_script_02.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: end_secondary_effect_on_current_unit, address: "0x801ae2c8", status: wip, source: wip/battle/end_secondary_effect_on_current_unit.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: prep_for_initialize_deployed_units_data_debug_red_team, address: "0x8017f5f8", status: wip, source: wip/battle/prep_for_initialize_deployed_units_data_debug_red_team.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c4164_001c41dc, address: "0x801c4164", status: wip, source: wip/event/bunit_out_001c4164_001c41dc.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c6330_001c63a4, address: "0x801c6330", status: wip, source: wip/event/bunit_out_001c6330_001c63a4.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: world_map_script_0x19, address: "0x800919d8", status: wip, source: wip/wldcore/world_map_script_0x19.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: event-equip, symbol: equip_out_001c79d4_001c7a38, address: "0x801c79d4", status: wip, source: wip/equip/equip_out_001c79d4_001c7a38.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001c77dc_001c78d8, address: "0x801c77dc", status: wip, source: wip/equip/equip_out_001c77dc_001c78d8.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-jobstts, symbol: jobstts_out_create_background_tiles, address: "0x801e2cf8", status: wip, source: wip/jobstts/jobstts_out_create_background_tiles.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-jobstts, symbol: jobstts_out_001e1074_001e1118, address: "0x801e1074", status: wip, source: wip/jobstts/jobstts_out_001e1074_001e1118.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c70c4_001c7100, address: "0x801c70c4", status: wip, source: wip/bunit/bunit_out_001c70c4_001c7100.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001c83d0_001c85c8, address: "0x801c83d0", status: wip, source: wip/equip/equip_out_001c83d0_001c85c8.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c57c0_001c5860, address: "0x801c57c0", status: wip, source: wip/bunit/bunit_out_001c57c0_001c5860.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c41e0_001c4298, address: "0x801c41e0", status: wip, source: wip/bunit/bunit_out_001c41e0_001c4298.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c6274_001c632c, address: "0x801c6274", status: wip, source: wip/bunit/bunit_out_001c6274_001c632c.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-jobstts, symbol: jobstts_out_001e46cc_001e47c4, address: "0x801e46cc", status: wip, source: wip/jobstts/jobstts_out_001e46cc_001e47c4.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001c7b04_001c7d28, address: "0x801c7b04", status: wip, source: wip/equip/equip_out_001c7b04_001c7d28.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-jobstts, symbol: jobstts_out_001e48f4_001e49ec, address: "0x801e48f4", status: wip, source: wip/jobstts/jobstts_out_001e48f4_001e49ec.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-jobstts, symbol: jobstts_out_001e2be8_001e2cf4, address: "0x801e2be8", status: wip, source: wip/jobstts/jobstts_out_001e2be8_001e2cf4.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-jobstts, symbol: jobstts_out_001e458c_001e46c8, address: "0x801e458c", status: wip, source: wip/jobstts/jobstts_out_001e458c_001e46c8.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-jobstts, symbol: jobstts_out_create_menu_job_list, address: "0x801e01b4", status: wip, source: wip/jobstts/jobstts_out_create_menu_job_list.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001cd6a8_001cd7c0, address: "0x801cd6a8", status: wip, source: wip/equip/equip_out_001cd6a8_001cd7c0.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001cd7c4_001cd8f4, address: "0x801cd7c4", status: wip, source: wip/equip/equip_out_001cd7c4_001cd8f4.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001cd568_001cd6a4, address: "0x801cd568", status: wip, source: wip/equip/equip_out_001cd568_001cd6a4.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001c5920_001c5a64, address: "0x801c5920", status: wip, source: wip/equip/equip_out_001c5920_001c5a64.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001c6db4_001c7008, address: "0x801c6db4", status: wip, source: wip/equip/equip_out_001c6db4_001c7008.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: opening, symbol: open_bin_libpress_timeout, address: "0x80073a6c", status: wip, source: wip/open/open_bin_libpress_timeout.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-attack, symbol: attack_out_001c2adc_001c2db8, address: "0x801c2adc", status: wip, source: wip/event/attack_out_001c2adc_001c2db8.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-attack, symbol: attack_out_001c651c_001c66d8, address: "0x801c651c", status: wip, source: wip/attack/attack_out_001c651c_001c66d8.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-attack, symbol: attack_out_001c7a08_001c7be8, address: "0x801c7a08", status: wip, source: wip/attack/attack_out_001c7a08_001c7be8.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-attack, symbol: attack_out_build_deployment_screen_arrow, address: "0x801c62e0", status: wip, source: wip/attack/attack_out_build_deployment_screen_arrow.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c6f48_001c70c0, address: "0x801c6f48", status: wip, source: wip/bunit/bunit_out_001c6f48_001c70c0.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c9b4c_001c9cf0, address: "0x801c9b4c", status: wip, source: wip/bunit/bunit_out_001c9b4c_001c9cf0.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001cb410_001cb528, address: "0x801cb410", status: wip, source: wip/bunit/bunit_out_001cb410_001cb528.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001cb6bc_001cb940, address: "0x801cb6bc", status: wip, source: wip/bunit/bunit_out_001cb6bc_001cb940.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001cc50c_001cc694, address: "0x801cc50c", status: wip, source: wip/bunit/bunit_out_001cc50c_001cc694.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_create_ability_list, address: "0x801c7444", status: wip, source: wip/bunit/bunit_out_create_ability_list.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001c4dcc_001c4f34, address: "0x801c4dcc", status: wip, source: wip/equip/equip_out_001c4dcc_001c4f34.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-equip, symbol: equip_out_001cc17c_001cc324, address: "0x801cc17c", status: wip, source: wip/equip/equip_out_001cc17c_001cc324.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-jobstts, symbol: jobstts_out_create_ability_list, address: "0x801e03bc", status: wip, source: wip/jobstts/jobstts_out_create_ability_list.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-jobstts, symbol: jobstts_out_move_unit_battle_job_data_to_jobstts, address: "0x801dffc0", status: wip, source: wip/jobstts/jobstts_out_move_unit_battle_job_data_to_jobstts.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: opening, symbol: open_bin_0006bc9c_0006bddc, address: "0x8006bc9c", status: wip, source: wip/open/open_bin_0006bc9c_0006bddc.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-attack, symbol: attack_out_prepare_valid_deployment_tiles, address: "0x801c7288", status: wip, source: wip/event/attack_out_prepare_valid_deployment_tiles.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001cb2d0_001cb40c, address: "0x801cb2d0", status: wip, source: wip/bunit/bunit_out_001cb2d0_001cb40c.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-attack, symbol: attack_out_001c2940_001c2ad8, address: "0x801c2940", status: wip, source: wip/event/attack_out_001c2940_001c2ad8.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c5864_001c5a74, address: "0x801c5864", status: wip, source: wip/bunit/bunit_out_001c5864_001c5a74.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: opening, symbol: open_bin_display_birthday_menu_text, address: "0x8006b990", status: wip, source: wip/open/open_bin_display_birthday_menu_text.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001c9268_001c94fc, address: "0x801c9268", status: wip, source: wip/bunit/bunit_out_001c9268_001c94fc.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: event-bunit, symbol: bunit_out_001cda9c_001cdd20, address: "0x801cda9c", status: wip, source: wip/bunit/bunit_out_001cda9c_001cdd20.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: wldcore, symbol: world_map_script_0x1f, address: "0x80091bf8", status: wip, source: wip/wldcore/world_map_script_0x1f.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: world_map_script_0x20, address: "0x80091c68", status: wip, source: wip/wldcore/world_map_script_0x20.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: world_map_script_0x21, address: "0x80091cd8", status: wip, source: wip/wldcore/world_map_script_0x21.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: world_map_script_0x1a, address: "0x80091a48", status: wip, source: wip/wldcore/world_map_script_0x1a.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: main_r_s_m_flag_setting, address: "0x8005b82c", status: wip, source: wip/main/main_r_s_m_flag_setting.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: world_map_script_0x1e, address: "0x80091b64", status: wip, source: wip/wldcore/world_map_script_0x1e.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: world_map_script_0x24, address: "0x80091dc8", status: wip, source: wip/wldcore/world_map_script_0x24.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: scus_mrta_switch_track, address: "0x80043a90", status: wip, source: wip/main/scus_mrta_switch_track.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: color_and_draw_all_the_world_map_dots, address: "0x8008cb8c", status: wip, source: wip/wldcore/color_and_draw_all_the_world_map_dots.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: world, symbol: world_gs_setdrawbuffclip, address: "0x800e1648", status: wip, source: wip/world/world_gs_setdrawbuffclip.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: calculate_unit_jobs_and_skillsets_from_entd, address: "0x8005b2b4", status: wip, source: wip/main/calculate_unit_jobs_and_skillsets_from_entd.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: scus_mrta_smd_malloc, address: "0x800442bc", status: wip, source: wip/main/scus_mrta_smd_malloc.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: main_scus_mrta_malloc, address: "0x80044414", status: wip, source: wip/main/main_scus_mrta_malloc.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: scus_set_program_running, address: "0x80010b40", status: wip, source: wip/main/scus_set_program_running.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: move_jump_x_calculation, address: "0x8005c8ec", status: wip, source: wip/main/move_jump_x_calculation.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: process_world_conditional_set, address: "0x80091238", status: wip, source: wip/wldcore/process_world_conditional_set.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: main_scus_get_entd, address: "0x80042880", status: wip, source: wip/main/main_scus_get_entd.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: load_available_units_to_send_on_proposition, address: "0x800757b8", status: wip, source: wip/wldcore/load_available_units_to_send_on_proposition.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: main_proposition_jp_gain, address: "0x8005dd48", status: wip, source: wip/main/main_proposition_jp_gain.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: generate_unit_s_base_raw_stats, address: "0x8005a448", status: wip, source: wip/main/generate_unit_s_base_raw_stats.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: main_save_unit_to_party, address: "0x80059bb0", status: wip, source: wip/main/main_save_unit_to_party.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: get_total_equipment_quantity, address: "0x8005e288", status: wip, source: wip/main/get_total_equipment_quantity.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: calculate_actual_stats, address: "0x8005b880", status: wip, source: wip/main/calculate_actual_stats.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: scus_open_file_to_ram_centre, address: "0x80011e38", status: wip, source: wip/main/scus_open_file_to_ram_centre.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: initialize_unit_s_battle_data, address: "0x8005b0d0", status: wip, source: wip/main/initialize_unit_s_battle_data.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: main_learn_job_abilities, address: "0x8005ce74", status: wip, source: wip/main/main_learn_job_abilities.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: calculate_random_equipment, address: "0x8005cc98", status: wip, source: wip/main/calculate_random_equipment.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: main, symbol: get_random_unlocked_job, address: "0x8005b500", status: wip, source: wip/main/get_random_unlocked_job.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: wldcore, symbol: idel_during_job_report_confirmation, address: "0x800777c4", status: wip, source: wip/wldcore/idel_during_job_report_confirmation.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: opening, symbol: open_bin_0006aef8_0006b0a0, address: "0x8006aef8", status: wip, source: wip/open/open_bin_0006aef8_0006b0a0.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: opening, symbol: open_bin_0006fb40_0006fd60, address: "0x8006fb40", status: wip, source: wip/open/open_bin_0006fb40_0006fd60.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: opening, symbol: open_bin_handle_confirm_menu_input, address: "0x8006c464", status: wip, source: wip/open/open_bin_handle_confirm_menu_input.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: wldcore, symbol: if_preferred_job_for_random_success_is_present_calculation, address: "0x8007a2a8", status: wip, source: wip/wldcore/if_preferred_job_for_random_success_is_present_calculation.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: battle, symbol: formula_3c_heal_caster_max_hp_two_fifths_damage_caster_one_fifth, address: "0x80186dbc", status: wip, source: wip/battle/formula_3c_heal_caster_max_hp_two_fifths_damage_caster_one_fifth.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: battle_dance_song_hit, address: "0x80184360", status: wip, source: wip/battle/battle_dance_song_hit.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: battle, symbol: undead_absorb_attack, address: "0x801873d8", status: wip, source: wip/battle/undead_absorb_attack.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: get_number_of_clockticks_till_able_to_revive_dead_unit, address: "0x80199c88", status: wip, source: wip/battle/get_number_of_clockticks_till_able_to_revive_dead_unit.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: disable_tile_flag_0x10_for_dead_and_jumping_units, address: "0x80174df8", status: wip, source: wip/battle/disable_tile_flag_0x10_for_dead_and_jumping_units.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: invert_target_priority, address: "0x8019630c", status: wip, source: wip/battle/invert_target_priority.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: try_get_unit_misc_data_by_unit_id, address: "0x80147928", status: wip, source: wip/battle/try_get_unit_misc_data_by_unit_id.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: walk_to_event_instruction, address: "0x8013e5c0", status: wip, source: wip/battle/walk_to_event_instruction.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: height_coordinate_validation, address: "0x8017b3f4", status: wip, source: wip/battle/height_coordinate_validation.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: use_specific_action_hit_percentage, address: "0x80187510", status: wip, source: wip/battle/use_specific_action_hit_percentage.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: battle_effect_related_801a1d28, address: "0x801a1d28", status: wip, source: wip/battle/battle_effect_related_801a1d28.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: opening, symbol: open_bin_handle_birthday_menu_input, address: "0x8006bde0", status: wip, source: wip/open/open_bin_handle_birthday_menu_input.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+
+  - { module: battle, symbol: battle_katana_break_chance, address: "0x80187910", status: wip, source: wip/battle/battle_katana_break_chance.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: dismiss_unit_event_instruction, address: "0x801340ac", status: wip, source: wip/battle/dismiss_unit_event_instruction.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: float_float_fly_movements, address: "0x8017f020", status: wip, source: wip/battle/float_float_fly_movements.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: poach_inventory_routine, address: "0x8018c680", status: wip, source: wip/battle/poach_inventory_routine.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: some_type_of_checking_algorithm, address: "0x801957c0", status: wip, source: wip/battle/some_type_of_checking_algorithm.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: store_some_acting_unit_data, address: "0x8017dbc8", status: wip, source: wip/battle/store_some_acting_unit_data.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: battle, symbol: battle_store_used_weapon, address: "0x8018b274", status: wip, source: wip/battle/battle_store_used_weapon.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: battle, symbol: set_highest_target_priority, address: "0x80196e20", status: wip, source: wip/battle/set_highest_target_priority.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: battle_set_exp_stolen, address: "0x80186814", status: wip, source: wip/battle/battle_set_exp_stolen.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: find_chocobo_or_caster_at_xyz_coords, address: "0x8007a4f4", status: wip, source: wip/battle/find_chocobo_or_caster_at_xyz_coords.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: get_item_graphic_data, address: "0x80136b10", status: wip, source: wip/battle/get_item_graphic_data.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+
+  - { module: battle, symbol: unitanimrotate_event_instruction, address: "0x80147fac", status: wip, source: wip/battle/unitanimrotate_event_instruction.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: battle, symbol: calculate_tile_ceiling, address: "0x80176164", status: wip, source: wip/battle/calculate_tile_ceiling.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: opening, symbol: open_bin_0006ffe4_0007001c, address: "0x8006ffe4", status: wip, source: wip/open/open_bin_0006ffe4_0007001c.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: opening, symbol: open_bin_00070020_00070058, address: "0x80070020", status: wip, source: wip/open/open_bin_00070020_00070058.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+
+  - { module: battle, symbol: process_scenario_conditionals, address: "0x801425b0", status: wip, source: wip/battle/process_scenario_conditionals.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: world, symbol: world_gs_sortline, address: "0x800e0d5c", status: wip, source: wip/world/world_gs_sortline.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: world, symbol: world_learn_ability, address: "0x801255e4", status: wip, source: wip/world/world_learn_ability.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: battle, symbol: attacker_s_earned_experience, address: "0x8018d620", status: wip, source: wip/battle/attacker_s_earned_experience.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: auto_battle_handling, address: "0x80197f14", status: wip, source: wip/battle/auto_battle_handling.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: set_target_state_for_all_units_panels, address: "0x8017a6dc", status: wip, source: wip/battle/set_target_state_for_all_units_panels.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+
+  - { module: battle, symbol: set_marlboro_spritesheet_change, address: "0x80081c60", status: wip, source: wip/battle/set_marlboro_spritesheet_change.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: event-option, symbol: option_render_menu_entries, address: "0x801bf000", status: wip, source: wip/option/option_render_menu_entries.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: world, symbol: world_get_known_skillsets, address: "0x80122790", status: wip, source: wip/world/world_get_known_skillsets.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: battle, symbol: compare_set_highest_unit_target_priority, address: "0x80196fc4", status: wip, source: wip/battle/compare_set_highest_unit_target_priority.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: set_thrown_item_graphic_palette, address: "0x80083758", status: wip, source: wip/battle/set_thrown_item_graphic_palette.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: battle_depth_calculation, address: "0x801797b4", status: wip, source: wip/battle/battle_depth_calculation.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+
+
+  - { module: battle, symbol: non_specific_ai_autobattle, address: "0x8019619c", status: wip, source: wip/battle/non_specific_ai_autobattle.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: battle, symbol: unit_graphic_information_loading, address: "0x80083e10", status: wip, source: wip/battle/unit_graphic_information_loading.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: battle, symbol: player_control_routine, address: "0x801811f8", status: wip, source: wip/battle/player_control_routine.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: vertical_fixed_routine, address: "0x8017a7bc", status: wip, source: wip/battle/vertical_fixed_routine.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: battle, symbol: magic_gun_ability_decision, address: "0x80187730", status: wip, source: wip/battle/magic_gun_ability_decision.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: acting_unit_s_data_setup, address: "0x801941f8", status: wip, source: wip/battle/acting_unit_s_data_setup.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: portraitcol_event_instruction, address: "0x8013c8a8", status: wip, source: wip/battle/portraitcol_event_instruction.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: battle, symbol: rider_dismount_preparation, address: "0x8008c7cc", status: wip, source: wip/battle/rider_dismount_preparation.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+
+
+
+  - { module: wldcore, symbol: wldcore_test_bit, address: "0x80092148", status: wip, source: wip/wldcore/wldcore_test_bit.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: wldcore, symbol: wldcore_store_800d07d8_entry, address: "0x8008fc88", status: wip, source: wip/wldcore/wldcore_store_800d07d8_entry.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+
+  - { module: world, symbol: world_func_80128c7c, address: "0x80128c7c", status: wip, source: wip/world/world_func_80128c7c.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: wldcore, symbol: wldcore_opcode_branch_if_equal, address: "0x8008c240", status: wip, source: wip/wldcore/wldcore_opcode_branch_if_equal.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: wldcore, symbol: wldcore_opcode_branch_if_not_equal, address: "0x8008c2cc", status: wip, source: wip/wldcore/wldcore_opcode_branch_if_not_equal.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: wldcore, symbol: wldcore_opcode_branch_if_less, address: "0x8008c358", status: wip, source: wip/wldcore/wldcore_opcode_branch_if_less.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+  - { module: wldcore, symbol: wldcore_opcode_branch_if_greater, address: "0x8008c3e8", status: wip, source: wip/wldcore/wldcore_opcode_branch_if_greater.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.21 }
+
+  - { module: world, symbol: world_func_80114088, address: "0x80114088", status: wip, source: wip/world/world_func_80114088.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: world, symbol: world_func_80126374, address: "0x80126374", status: wip, source: wip/world/world_func_80126374.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: world, symbol: world_func_801264a8, address: "0x801264a8", status: wip, source: wip/world/world_func_801264a8.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: world, symbol: world_func_80128cac, address: "0x80128cac", status: wip, source: wip/world/world_func_80128cac.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+
+  - { module: wldcore, symbol: wldcore_opcode_or10_800bbc70_flags_0c, address: "0x8008b86c", status: wip, source: wip/wldcore/wldcore_opcode_or10_800bbc70_flags_0c.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+  - { module: wldcore, symbol: wldcore_opcode_wait_thread14_flags_04_08, address: "0x8008b448", status: wip, source: wip/wldcore/wldcore_opcode_wait_thread14_flags_04_08.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+

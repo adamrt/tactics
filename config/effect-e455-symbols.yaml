@@ -1,0 +1,14 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: effect-e455
+address_model: { runtime_base: "0x801c2500", file_header_bytes: 0 }
+provenance:
+  - original/ffhacktics/wiki/pages/00006760.wiki
+  - original/ffhacktics/wiki/pages/00009855.wiki
+  - original/ffhacktics/wiki/pages/00009854.wiki
+  - build/extracted/files/EFFECT/E455.BIN
+symbols:
+  - { name: effect_e455_fire_dispatch_command_0x80_group_1_state, address: "0x801c2500", end: "0x801c2604", kind: function, ownership: game, confidence: high, external_name: "E455 001c2500 - 001c2600" }
+  - { name: effect_e455_fire_dispatch_command_0x80_group_2_state, address: "0x801c2604", end: "0x801c2708", kind: function, ownership: game, confidence: high, external_name: "E455 001c2604 - 001c2704" }
+  - { name: effect_e455_fire_step_map_unfreeze_state, address: "0x801c2708", end: "0x801c279c", kind: function, ownership: game, confidence: high, external_name: "E455 001c2708 - 001c2798" }
+  - { name: effect_e455_fire_step_map_freeze_state, address: "0x801c279c", end: "0x801c2830", kind: function, ownership: game, confidence: high, external_name: "E455 001c279c - 001c282c" }

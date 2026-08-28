@@ -1,0 +1,81 @@
+CLEANUP PASS — src/ only. You are improving code that ALREADY matches byte-for-byte.
+The one absolute rule: every file you touch must still match when you are done.
+
+DO NOT create new files under src/ or wip/. DO NOT touch wip/. DO NOT commit.
+DO NOT hand-edit config/*.yaml except through scripts/rename_symbol.py and
+scripts/rename_global.py, which update every reference atomically.
+
+Read docs/matching-cookbook.md first. It has ~60 confirmed techniques for making
+GCC 2.6.3 emit a given shape from plain C; most inline asm in src/ exists because
+the author did not know the technique.
+
+== The verification gate (run after EVERY edit, before moving on) ==
+Look up the function's record in config/modules.yaml to get file_range start and
+bytes, then:
+  make wip ACTION=match TARGET=build/extracted/files/<DISC_PATH> \
+       SOURCE=src/<mod>/<name>.c LINKER=build/<mod>/<name>/generated.ld \
+       OFFSET=<file_range start> BYTES=<bytes> [PROFILE=<canonical_profile>] </dev/null
+It must print `matching WIP:`. If it does not, revert your edit (git checkout the
+file) before doing anything else. A mismatch left in src/ breaks the whole disc.
+DISC_PATH per module: battle=BATTLE.BIN world=WORLD/WORLD.BIN wldcore=WORLD/WLDCORE.BIN
+open=OPEN/OPEN.BIN main=SCUS_942.21 event/*=EVENT/<SUBDIR>.OUT (uppercase).
+Use PROFILE= only when the record has canonical_profile (2.21 for wldcore/open
+that have it, O0 for CARD and the WORLD tutorial family).
+If build/<mod>/<name>/generated.ld is missing, run `make build MODULE=<mod>` once.
+IMPORTANT: generated.ld is derived from the identifiers in the source at the
+last build. After ANY rename (yours or a concurrent fold), it is STALE and the
+gate fails with `mipsel-linux-gnu-ld: exit status 1` (undefined reference to
+the new name). That is not a mismatch. Re-run `make build MODULE=<mod>` to
+regenerate, then gate again. Never 'fix' an ld failure by editing the source.
+
+== Converting asm to C, in priority order ==
+1. Whole-function or large asm blocks: rewrite as C. These exist and are the
+   worst offenders. Use the cookbook. Budget real effort here.
+2. `register x __asm__("$N")` pins: usually replaceable by declaring locals in
+   the right order / one local per block / the cookbook's allocation tricks.
+   Try removing the pin and re-matching; often it just works.
+3. `__asm__ volatile("" ::: "memory")` and `__asm__("")` fences: try removing;
+   many are unnecessary. Some legitimately hold a load-delay nop — keep those
+   with a one-line comment saying exactly what they preserve.
+4. `srl $N,$M,31 / addu` = signed `/ 2`. `bgez / addiu 0x1FFF / sra 13` =
+   signed `/ 0x2000`. Write the division.
+5. `.word 0x0c......` hardcoded calls: decode the jal target (target = (word &
+   0x03ffffff) << 2, OR'd with the region's top nibble) and call it by name.
+6. `.set noat` / `$1` pins: the target uses $at as scratch. Try the cookbook
+   allocation tricks first; if the pin is genuinely required, keep it AND keep
+   the `.set noat` (a directive, no bytes) so the build stays warning-free.
+   NEVER add `.set noat` at file scope in a file whose asm uses assembler
+   macros that need $at — that turns a warning into a hard error.
+   Never restore `.set reorder` after a noreorder block unless you re-verify;
+   it changes delay-slot filling.
+7. `open/` and `wldcore/`: if the asm reproduces `lui $at / addiu $at / addu $at
+   / load 0($at)`, that is the aspsx-2.21 assembler's indexed-global form. Delete
+   the asm, write the plain global access, and re-match with
+   PROFILE=gcc-2.6.3_O2_aspsx-2.21. If it matches, the record needs
+   canonical_profile updated: do that by editing the ONE flow-style line in
+   config/modules.yaml for that symbol to append
+   `, canonical_profile: gcc-2.6.3_O2_aspsx-2.21` before the closing ` }`.
+   This is the single permitted direct config edit; re-run the gate after.
+What is NOT acceptable: leaving a whole function as asm because it is hard. If a
+block will not convert after real effort, leave the asm, add a comment stating
+precisely what shape it forces and what you tried, and move on.
+
+== Naming (do this in the same pass over each file) ==
+Rename with scripts/rename_symbol.py (functions) and scripts/rename_global.py
+(globals) — never by hand. ONLY rename with solid evidence: the wiki
+(original/ffhacktics/wiki, 12,496 pages — grep for the address), the readers and
+writers of a global, callers/callees in src/, and the existing naming in the
+module. A wrong semantic name is worse than func_/D_. Encode a struct offset or
+numeric id when that is all that is knowable. Beware same-base overlay
+collisions: a name at an address under a DIFFERENT module id is not evidence.
+Also improve local variable names, replace magic numbers with the module's
+existing enums/constants from include/, and use struct fields instead of
+`ptr[0xNN]` where include/fft/*.h already has the struct. Every such change goes
+through the gate too — a type change can alter codegen (u16 vs s16 = lhu vs lh).
+
+== Report ==
+Per file: converted / partially converted (what remains and why) / unchanged.
+List every rename with its one-line evidence. List any cookbook-worthy technique
+you confirmed and append it to docs/matching-cookbook.md yourself.
+Work through your file list in order. Use `</dev/null` on every make command.
+Retry transient `parse error at end of input` after ~3s.

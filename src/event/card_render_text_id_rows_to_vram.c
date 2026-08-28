@@ -1,0 +1,58 @@
+#include "psx/types.h"
+
+typedef struct CardRect {
+    u16 x;
+    u16 y;
+    u16 w;
+    u16 h;
+} CardRect;
+
+extern void* memset(void* destination, s32 value, u32 size);
+extern void card_render_encoded_text_ids_to_image(
+    void* image, CardRect* bounds, s32 glyph_spacing, s32 line_width,
+    void* glyph_data, const u16* text_ids, s32 max_glyphs, s32 terminator,
+    s32 flags);
+extern void card_load_image_and_wait(CardRect* rect, void* image);
+
+void card_render_text_id_rows_to_vram(glyph_data, text_ids, destination, flags) void* glyph_data;
+const u16* text_ids;
+const CardRect* destination;
+s32 flags;
+{
+    u8 image[0x800];
+    CardRect bounds;
+    CardRect upload_rect;
+    u16 row_text_ids[2];
+    u16 text_id;
+    s32 terminator;
+    void* saved_glyph_data;
+
+    bounds.x = 0;
+    bounds.y = 0;
+    bounds.w = destination->w;
+    bounds.h = 0x10;
+
+    upload_rect.x = destination->x;
+    upload_rect.y = destination->y;
+    upload_rect.w = destination->w;
+    upload_rect.h = 0x10;
+
+    text_id = *text_ids;
+    if ((s16)*text_ids == -1) {
+        return;
+    }
+    saved_glyph_data = glyph_data;
+    terminator = -1;
+    do {
+        row_text_ids[0] = text_id;
+        row_text_ids[1] = terminator;
+        memset(image, 0, sizeof(image));
+        card_render_encoded_text_ids_to_image(
+            image, &bounds, 0x0a, 0x64, saved_glyph_data, row_text_ids, 0x64,
+            0xeb, flags);
+        card_load_image_and_wait(&upload_rect, image);
+        text_ids++;
+        upload_rect.y += 0x10;
+        text_id = *text_ids;
+    } while ((s16)*text_ids != terminator);
+}

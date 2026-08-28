@@ -1,0 +1,67 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-debugchr
+
+address_model:
+  runtime_base: "0x801bf000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00004354.wiki
+  - original/ffhacktics/wiki/pages/00004355.wiki
+  - original/ffhacktics/wiki/pages/00010925.wiki
+  - original/ffhacktics/wiki/pages/00008951.wiki
+  - original/ffhacktics/wiki/pages/00011216.wiki
+  - original/ffhacktics/wiki/pages/00011217.wiki
+  - original/ffhacktics/wiki/pages/00011218.wiki
+  - original/ffhacktics/wiki/pages/00011219.wiki
+  - original/ffhacktics/wiki/pages/00011220.wiki
+  - original/ffhacktics/wiki/pages/00011712.wiki
+  - original/ffhacktics/wiki/pages/00011224.wiki
+  - original/ffhacktics/wiki/pages/00011225.wiki
+  - original/ffhacktics/wiki/pages/00011228.wiki
+  - original/ffhacktics/wiki/pages/00011234.wiki
+  - original/ffhacktics/wiki/pages/00011237.wiki
+  - original/ffhacktics/wiki/pages/00011713.wiki
+  - original/ffhacktics/wiki/pages/00011238.wiki
+  - original/ffhacktics/wiki/pages/00011240.wiki
+  - original/ffhacktics/wiki/pages/00011243.wiki
+  - original/ffhacktics/wiki/pages/00008946.wiki
+  - original/ffhacktics/wiki/pages/00011247.wiki
+  - build/extracted/files/EVENT/DEBUGCHR.OUT
+
+symbols:
+  - { name: debugchr_configure_scaled_draw_area_packets, address: "0x801bf000", end: "0x801bf1d0", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001bf000 - 001bf1cc" }
+  - { name: debugchr_initialize_portrait_primitive_tail, address: "0x801bf1d0", end: "0x801bf204", kind: function, ownership: game, confidence: medium, external_name: "DEBUGCHR.OUT 001bf1d0 - 001bf200" }
+  - { name: debugchr_set_clut_rect_from_id, address: "0x801bf204", end: "0x801bf230", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001bf204 - 001bf22c" }
+  - { name: debugchr_build_portrait_poly_ft4, address: "0x801bf230", end: "0x801bf260", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001bf230 - 001bf25c" }
+  - { name: debugchr_clip_portrait_poly_from_right, address: "0x801bf260", end: "0x801bf2c4", kind: function, ownership: game, confidence: medium, external_name: "DEBUGCHR.OUT 001bf260 - 001bf2c0" }
+  - { name: debugchr_clip_portrait_poly_from_left, address: "0x801bf2c4", end: "0x801bf328", kind: function, ownership: game, confidence: medium, external_name: "DEBUGCHR.OUT 001bf2c4 - 001bf324" }
+  - { name: debugchr_build_portrait_transition_primitives, address: "0x801bf328", end: "0x801bf750", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001bf328 - 001bf74c" }
+  - { name: debugchr_noop_801c090c, address: "0x801c090c", end: "0x801c0914", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT Null Routine 1" }
+  - { name: debugchr_initialize_character_editor_primitives, address: "0x801c0914", end: "0x801c0b34", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c0914 - 001c0b30" }
+  - { name: debugchr_advance_and_stop_current_thread, address: "0x801c0b34", end: "0x801c0b5c", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c0b34 - 001c0b58" }
+  - { name: debugchr_advance_and_stop_current_thread_2, address: "0x801c0b5c", end: "0x801c0b84", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c0b5c - 001c0b80" }
+  - { name: debugchr_configure_status_panel_primitive_colors, address: "0x801c1310", end: "0x801c148c", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c1310 - 001c1488" }
+  - { name: debugchr_initialize_menu_primitive_colors, address: "0x801c148c", end: "0x801c14e0", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c148c - 001c14dc" }
+  - { name: debugchr_render_signed_decimal_entries, address: "0x801c14e0", end: "0x801c15ec", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c14e0 - 001c15e8" }
+  - { name: debugchr_render_decimal_entry_list, address: "0x801c15ec", end: "0x801c16e0", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c15ec - 001c16dc" }
+  - { name: debugchr_render_decimal_value, address: "0x801c16e0", end: "0x801c19e4", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c16e0 - 001c19e0" }
+  - { name: debugchr_run_numeric_editor_thread, address: "0x801c19e4", end: "0x801c1f48", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c19e4 - 001c1f44" }
+  - { name: debugchr_run_character_editor_menu_thread, address: "0x801c1f48", end: "0x801c2138", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c1f48 - 001c2134" }
+  - { name: debugchr_open_submenu_thread_from_current, address: "0x801c2138", end: "0x801c2230", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c2138 - 001c222c" }
+  - { name: debugchr_run_static_menu_text_thread, address: "0x801c2230", end: "0x801c23a4", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c2230 - 001c23a0" }
+  - { name: debugchr_build_item_graphic_descriptor, address: "0x801c23a4", end: "0x801c240c", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c23a4 - 001c2408" }
+  - { name: debugchr_noop_801c240c, address: "0x801c240c", end: "0x801c2414", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT Null Routine 2" }
+  - { name: debugchr_is_event_thread_running, address: "0x801c2414", end: "0x801c2430", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c2414 - 001c242c" }
+  - { name: debugchr_render_thread_status_indicators, address: "0x801c2430", end: "0x801c2904", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c2430 - 001c2900" }
+  - { name: debugchr_fill_16_bytes_with_fe, address: "0x801c2904", end: "0x801c2924", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c2904 - 001c2920" }
+  - { name: debugchr_copy_unit_data_to_status_billboard, address: "0x801c2924", end: "0x801c2af0", kind: function, ownership: game, confidence: high, external_name: "Copy Unit Data to Status Billboard" }
+  - { name: debugchr_load_selected_unit_into_editor, address: "0x801c2af0", end: "0x801c3034", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c2af0 - 001c3030" }
+  - { name: debugchr_set_scaled_poly_ft4_geometry, address: "0x801c3034", end: "0x801c3278", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c3034 - 001c3274" }
+  - { name: debugchr_render_status_text_primitives, address: "0x801c3278", end: "0x801c3534", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c3278 - 001c3530" }
+  - { name: debugchr_build_gradient_grid_primitives, address: "0x801c3534", end: "0x801c36c4", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c3534 - 001c36c0" }
+  - { name: debugchr_set_scaled_poly_ft4_geometry_and_uv, address: "0x801c36c4", end: "0x801c3994", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c36c4 - 001c3990" }
+  - { name: debugchr_build_scaled_sprite_primitive_chain, address: "0x801c3994", end: "0x801c3c48", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c3994 - 001c3c44" }
+  - { name: debugchr_apply_editor_values_to_battle_unit, address: "0x801c3c48", end: "0x801c3d84", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c3c48 - 001c3d80" }
+  - { name: debugchr_run_unit_debug_editor_thread, address: "0x801c3d84", end: "0x801c438c", kind: function, ownership: game, confidence: high, external_name: "DEBUGCHR.OUT 001c3d84 - 001c4388" }

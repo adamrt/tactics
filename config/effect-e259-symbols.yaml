@@ -1,0 +1,14 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: effect-e259
+
+address_model:
+  runtime_base: "0x801c2500"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00009670.wiki
+  - build/extracted/files/EFFECT/E259.BIN
+
+symbols:
+  - { name: effect_add_scratchpad_xyz_components, address: "0x801c2500", end: "0x801c2578", kind: function, ownership: game, confidence: high, external_name: "E259 001c2500 - 001c2570" }

@@ -1,0 +1,128 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: wldcore
+
+address_model:
+  runtime_base: "0x80067000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00005682.wiki
+  - original/ffhacktics/wiki/pages/00005677.wiki
+  - original/ffhacktics/wiki/pages/00007101.wiki
+  - original/ffhacktics/wiki/pages/00005786.wiki
+  - original/ffhacktics/wiki/pages/00005793.wiki
+  - original/ffhacktics/wiki/pages/00005843.wiki
+  - original/ffhacktics/wiki/pages/00005704.wiki
+  - original/ffhacktics/wiki/pages/00005710.wiki
+  - original/ffhacktics/wiki/pages/00005831.wiki
+  - original/ffhacktics/wiki/pages/00005946.wiki
+  - original/ffhacktics/wiki/pages/00005947.wiki
+  - original/ffhacktics/wiki/pages/00005948.wiki
+  - build/extracted/files/WORLD/WLDCORE.BIN
+
+symbols:
+  - { name: world_bin_entrypoint, address: "0x800672f8", end: "0x80067484", kind: function, ownership: game, confidence: high }
+  - { name: world_process_frame_gate, address: "0x80067484", end: "0x800674e0", kind: function, ownership: game, confidence: high }
+  - { name: world_initialize_core, address: "0x800674e0", end: "0x800677a4", kind: function, ownership: game, confidence: medium }
+  - { name: world_initialize_subsystems, address: "0x80067c2c", end: "0x80067cb4", kind: function, ownership: game, confidence: medium }
+  - { name: world_finalize_loop, address: "0x800682a0", end: "0x80068308", kind: function, ownership: game, confidence: medium }
+  - { name: world_initialize_runtime_state, address: "0x80068308", end: "0x800683fc", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_func_80068d40, address: "0x80068d40", end: "0x80068d74", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_set_display_rect, address: "0x80068d74", end: "0x80068da4", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_reset_game_if_special_keycode_is_pressed, address: "0x80068da4", end: "0x80068e70", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_get_proposition_data_pointer, address: "0x80069918", end: "0x80069934", kind: function, ownership: game, confidence: medium, external_name: "Get Proposition? Data Pointer" }
+  - { name: wldcore_set_propositions_based_on_location, address: "0x800699e4", end: "0x80069adc", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_get_party_data_pointer, address: "0x80069e38", end: "0x80069e58", kind: function, ownership: game, confidence: high, external_name: "Get Party Data Pointer wrapper" }
+  - { name: wldcore_func_8006abc8, address: "0x8006abc8", end: "0x8006ac08", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_bar_menu_idle_routine, address: "0x8006c3dc", end: "0x8006c44c", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_set_800bbc84_entry_to_0_from_arg_0x10, address: "0x800702e4", end: "0x8007031c", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_set_800bbc84_entry_to_2_from_arg_0x10, address: "0x8007031c", end: "0x80070358", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_queue_thread14_call_800723b8, address: "0x800723b8", end: "0x800723f0", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_clear_menu_result_800723f0, address: "0x800723f0", end: "0x80072404", kind: function, ownership: game, confidence: medium, external_name: "WLDCORE.BIN 000723f0 - 00072400" }
+  - { name: wldcore_queue_thread14_call_80072ea8, address: "0x80072ea8", end: "0x80072ee0", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_clear_menu_result_80072ee0, address: "0x80072ee0", end: "0x80072ef4", kind: function, ownership: game, confidence: medium, external_name: "WLDCORE.BIN 00072ee0 - 00072ef0" }
+  - { name: wldcore_set_800bbc84_entry_to_0_from_arg_0x04, address: "0x80073594", end: "0x800735c8", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_set_800bbc84_entry_to_2_from_arg_0x04, address: "0x800735c8", end: "0x80073600", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_queue_thread14_call_8007756c, address: "0x8007756c", end: "0x800775a4", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_set_menu_result_pending_800775a4, address: "0x800775a4", end: "0x800775b8", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_return_from_job_determinations, address: "0x80079184", end: "0x8007920c", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_map_job_id_to_category_index, address: "0x80079820", end: "0x80079844", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_queue_thread14_call_8007ada4, address: "0x8007ada4", end: "0x8007addc", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_clear_menu_result_8007addc, address: "0x8007addc", end: "0x8007adf0", kind: function, ownership: game, confidence: medium, external_name: "WLDCORE.BIN 0007addc - 0007adec" }
+  - { name: wldcore_queue_thread14_call_8007e140, address: "0x8007e140", end: "0x8007e178", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_set_menu_result_pending_8007e178, address: "0x8007e178", end: "0x8007e18c", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_queue_thread14_call_8007ed70, address: "0x8007ed70", end: "0x8007eda8", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_set_menu_result_pending_8007eda8, address: "0x8007eda8", end: "0x8007edbc", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_queue_thread14_call_80082b80, address: "0x80082b80", end: "0x80082bb8", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_set_menu_result_pending_80082bb8, address: "0x80082bb8", end: "0x80082bcc", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_queue_thread14_call_80083640, address: "0x80083640", end: "0x80083678", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_set_menu_result_pending_80083678, address: "0x80083678", end: "0x8008368c", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_set_menu_result_0x160_8008436c, address: "0x8008436c", end: "0x80084380", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_set_menu_result_pending_80084380, address: "0x80084380", end: "0x80084394", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_noop_80087d90, address: "0x80087d90", end: "0x80087d98", kind: function, ownership: game, confidence: high, external_name: "WLDCORE.BIN 87d90 no-op" }
+  - { name: wldcore_noop_80087d98, address: "0x80087d98", end: "0x80087da0", kind: function, ownership: game, confidence: high, external_name: "WLDCORE.BIN 87d98 no-op" }
+  - { name: wldcore_set_menu_result_0x160_80089fec, address: "0x80089fec", end: "0x8008a000", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_set_menu_result_pending_8008a000, address: "0x8008a000", end: "0x8008a014", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_set_menu_result_0x160_8008a440, address: "0x8008a440", end: "0x8008a454", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_set_menu_result_pending_8008a454, address: "0x8008a454", end: "0x8008a468", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_func_8008aba8, address: "0x8008aba8", end: "0x8008abe4", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_stop_music_and_play_sound, address: "0x8008b19c", end: "0x8008b1d0", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_or_flags_8008b354_mask_20, address: "0x8008b354", end: "0x8008b370", kind: function, ownership: game, confidence: low }
+  - { name: wldcore_or_flags_8008b370_mask_0a, address: "0x8008b370", end: "0x8008b38c", kind: function, ownership: game, confidence: low }
+  - { name: wldcore_or_flags_8008b38c_mask_04, address: "0x8008b38c", end: "0x8008b3a8", kind: function, ownership: game, confidence: low }
+  - { name: wldcore_opcode_set_800d485a_flags_04, address: "0x8008b498", end: "0x8008b508", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_set_800d484e_flags_02, address: "0x8008b508", end: "0x8008b534", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_conditional_8008b554_expect_true, address: "0x8008b534", end: "0x8008b554", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_conditional_8008b554_expect_false, address: "0x8008b5f4", end: "0x8008b614", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_start_script_thread_flags_04, address: "0x8008ba84", end: "0x8008baec", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_set_800d484e_random_operand_flags_02, address: "0x8008baec", end: "0x8008bb68", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_conditional_8008bb88_expect_true, address: "0x8008bb68", end: "0x8008bb88", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_conditional_8008bb88_expect_false, address: "0x8008bc18", end: "0x8008bc38", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_conditional_8008bc58_expect_true, address: "0x8008bc38", end: "0x8008bc58", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_conditional_8008bc58_expect_false, address: "0x8008bce0", end: "0x8008bd00", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_call_8008bd20_with_1, address: "0x8008bd00", end: "0x8008bd20", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_call_8008bd20_with_0, address: "0x8008bda8", end: "0x8008bdc8", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_set_bit_80059810_flags_04, address: "0x8008bdc8", end: "0x8008be10", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_clear_bit_80059810_flags_04, address: "0x8008be10", end: "0x8008be58", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_set_bit_800d4564_flags_04, address: "0x8008be58", end: "0x8008bea0", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_clear_bit_800d4564_flags_04, address: "0x8008bea0", end: "0x8008bee8", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_set_800d4874_flags_04, address: "0x8008bee8", end: "0x8008bf1c", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_add_800d4852_flags_04, address: "0x8008bf1c", end: "0x8008bf5c", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_sub_800d4852_flags_04, address: "0x8008bf5c", end: "0x8008bf9c", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_system_flag_800_flags_04, address: "0x8008c02c", end: "0x8008c05c", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_play_sound_flags_04, address: "0x8008c0d0", end: "0x8008c110", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_play_music_flags_04, address: "0x8008c110", end: "0x8008c150", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_set_800d486c_flags_04, address: "0x8008c214", end: "0x8008c240", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_fade_out_music_flags_04, address: "0x8008c478", end: "0x8008c4e8", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_opcode_stop_music_flags_04, address: "0x8008c808", end: "0x8008c844", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_clear_800d07d8_entry, address: "0x8008fd88", end: "0x8008fdb4", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_play_sound, address: "0x80090d30", end: "0x80090d50", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x14_and_0x15, address: "0x80091388", end: "0x800913a4", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x05_through_0x0b_and_0x1b, address: "0x800913a4", end: "0x800913c0", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x17, address: "0x800913c0", end: "0x800913dc", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x18, address: "0x800913dc", end: "0x800913f8", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x01, address: "0x800913f8", end: "0x80091450", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_store_script_data_into_r4_and_r5, address: "0x80091450", end: "0x800914bc", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x02, address: "0x800914bc", end: "0x80091518", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x03, address: "0x80091518", end: "0x80091574", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x04, address: "0x80091574", end: "0x80091630", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x0c, address: "0x80091630", end: "0x8009164c", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x0d, address: "0x8009164c", end: "0x80091668", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x0e, address: "0x80091668", end: "0x800916dc", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x0f, address: "0x800916dc", end: "0x80091750", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x10, address: "0x80091750", end: "0x800917cc", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_store_script_and_date, address: "0x800917cc", end: "0x80091874", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x11, address: "0x80091874", end: "0x800918f0", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x12, address: "0x800918f0", end: "0x80091964", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x13, address: "0x80091964", end: "0x800919d8", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x1c, address: "0x80091ae4", end: "0x80091b18", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x22, address: "0x80091d48", end: "0x80091d88", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x23, address: "0x80091d88", end: "0x80091dc8", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x25, address: "0x80091e84", end: "0x80091f00", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_get_ramza_s_roster_index, address: "0x80091f00", end: "0x80091f74", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x26, address: "0x80091f74", end: "0x80091ff0", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x27, address: "0x80091ff0", end: "0x8009206c", kind: function, ownership: game, confidence: high }
+  - { name: world_map_script_0x28, address: "0x8009206c", end: "0x800920e8", kind: function, ownership: game, confidence: high }
+  - { name: wldcore_set_menu_result_0x160_8009240c, address: "0x8009240c", end: "0x80092420", kind: function, ownership: game, confidence: medium }
+  - { name: wldcore_set_menu_result_pending_80092420, address: "0x80092420", end: "0x80092434", kind: function, ownership: game, confidence: medium }

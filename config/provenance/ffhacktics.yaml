@@ -1,0 +1,33 @@
+schema_version: 1
+source_id: ffhacktics-fft-asm-notes
+
+routine_index:
+  url: https://ffhacktics.com/wiki/SCUS_942.21_Routines
+  local_path: original/ffhacktics/scus_94221_routines.wiki.txt
+  retrieved: "2026-08-30"
+  sha256: "516ecc99be9b3bfdd4b9240b59c866d83af36354e1a1471fac12bf68c0eef887"
+  address_convention: Low 28 bits of the runtime address; range end is the address of the final instruction.
+
+data_tables:
+  url: https://ffhacktics.com/wiki/SCUS_942.21_Data_Tables
+  local_path: original/ffhacktics/scus_94221_datatables.txt
+  retrieved: "2026-08-30"
+  sha256: "e3f49ff0c3fc72cd4f07385cf357b022fdaf88d52e2196133228b90cf5140cd5"
+
+notes_archive:
+  url: https://ffhacktics.com/smf/index.php?action=dlattach;topic=6538.0;attach=11553
+  local_path: original/ffhacktics/asm-files.zip
+  retrieved: "2026-08-30"
+  sha256: "f70ccdeb22f4a0900e6c26055dcfe1e421b99d17e7f77d3cab6493768bf9f09e"
+
+wiki_snapshot:
+  url: https://ffhacktics.com/w/api.php
+  local_path: original/ffhacktics/wiki
+  retrieved: "2026-08-30"
+  namespaces: [0, 6, 10, 14]
+  pages: 12496
+  index_sha256: "78519504a996248e5ef0401cd95114e006b30487ebb57cc9cbdd34e40d1fdf60"
+  scope: Current MediaWiki source only; no attachments or revision histories.
+  distribution: Private ignored research snapshot; site rights metadata was blank.
+
+policy: External names, boundaries, and table annotations are evidence to cross-check against the target executable, not authoritative project facts.

@@ -1,0 +1,102 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-attack
+
+address_model:
+  runtime_base: "0x801bf000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00000154.wiki
+  - original/ffhacktics/wiki/pages/00007145.wiki
+  - original/ffhacktics/wiki/pages/00007157.wiki
+  - original/ffhacktics/wiki/pages/00007165.wiki
+  - original/ffhacktics/wiki/pages/00007188.wiki
+  - original/ffhacktics/wiki/pages/00007138.wiki
+  - original/ffhacktics/wiki/pages/00007139.wiki
+  - original/ffhacktics/wiki/pages/00007140.wiki
+  - original/ffhacktics/wiki/pages/00007141.wiki
+  - original/ffhacktics/wiki/pages/00007142.wiki
+  - original/ffhacktics/wiki/pages/00009425.wiki
+  - original/ffhacktics/wiki/pages/00007115.wiki
+  - original/ffhacktics/wiki/pages/00007158.wiki
+  - original/ffhacktics/wiki/pages/00007107.wiki
+  - original/ffhacktics/wiki/pages/00007168.wiki
+  - original/ffhacktics/wiki/pages/00007169.wiki
+  - original/ffhacktics/wiki/pages/00007172.wiki
+  - original/ffhacktics/wiki/pages/00012646.wiki
+  - original/ffhacktics/wiki/pages/00007173.wiki
+  - original/ffhacktics/wiki/pages/00007174.wiki
+  - original/ffhacktics/wiki/pages/00012742.wiki
+  - original/ffhacktics/wiki/pages/00007175.wiki
+  - original/ffhacktics/wiki/pages/00007176.wiki
+  - original/ffhacktics/wiki/pages/00007177.wiki
+  - original/ffhacktics/wiki/pages/00007178.wiki
+  - original/ffhacktics/wiki/pages/00007147.wiki
+  - original/ffhacktics/wiki/pages/00007148.wiki
+  - original/ffhacktics/wiki/pages/00007181.wiki
+  - original/ffhacktics/wiki/pages/00007182.wiki
+  - original/ffhacktics/wiki/pages/00007183.wiki
+  - original/ffhacktics/wiki/pages/00007192.wiki
+  - original/ffhacktics/wiki/pages/00007193.wiki
+  - original/ffhacktics/wiki/pages/00007194.wiki
+  - original/ffhacktics/wiki/pages/00007195.wiki
+  - original/ffhacktics/wiki/pages/00007198.wiki
+  - original/ffhacktics/wiki/pages/00007211.wiki
+  - original/ffhacktics/wiki/pages/00010347.wiki
+  - original/ffhacktics/wiki/pages/00007156.wiki
+  - original/ffhacktics/wiki/pages/00007187.wiki
+  - original/ffhacktics/wiki/pages/00007189.wiki
+  - original/ffhacktics/wiki/pages/00007186.wiki
+  - build/extracted/files/EVENT/ATTACK.OUT
+
+symbols:
+  - { name: attack_initialize_portrait_primitive_tail, address: "0x801bf1d4", end: "0x801bf208", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001bf1d4 - 001bf204" }
+  - { name: attack_set_clut_rect_from_id, address: "0x801bf208", end: "0x801bf234", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001bf208 - 001bf230" }
+  - { name: attack_build_portrait_poly_ft4, address: "0x801bf234", end: "0x801bf28c", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001bf234 - 001bf288" }
+  - { name: attack_clip_portrait_poly_from_right, address: "0x801bf28c", end: "0x801bf2f0", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001bf28c - 001bf2ec" }
+  - { name: attack_clip_portrait_poly_from_left, address: "0x801bf2f0", end: "0x801bf354", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001bf2f0 - 001bf350" }
+  - { name: attack_noop_801c087c, address: "0x801c087c", end: "0x801c0884", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Null Routine 1" }
+  - { name: attack_initialize_menu_tile_and_line_primitives, address: "0x801c0884", end: "0x801c0aa4", kind: function, ownership: game, confidence: high }
+  - { name: attack_advance_and_stop_current_thread, address: "0x801c0aa4", end: "0x801c0acc", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Do Next Thread then Stop Current Thread" }
+  - { name: attack_advance_and_stop_current_thread_2, address: "0x801c0acc", end: "0x801c0af4", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Do Next Thread then Stop Current Thread 2" }
+  - { name: attack_configure_status_panel_primitive_colors, address: "0x801c1280", end: "0x801c13fc", kind: function, ownership: game, confidence: high }
+  - { name: attack_apply_menu_palette_for_mode, address: "0x801c13fc", end: "0x801c1450", kind: function, ownership: game, confidence: high }
+  - { name: attack_render_signed_decimal_entries, address: "0x801c1450", end: "0x801c155c", kind: function, ownership: game, confidence: high }
+  - { name: attack_render_decimal_entry_list, address: "0x801c155c", end: "0x801c1650", kind: function, ownership: game, confidence: high }
+  - { name: attack_build_item_graphic_descriptor, address: "0x801c1eb8", end: "0x801c1f20", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c1eb8 - 001c1f1c" }
+  - { name: attack_noop_801c1f20, address: "0x801c1f20", end: "0x801c1f28", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Null Routine 2" }
+  - { name: attack_is_event_thread_running, address: "0x801c1f28", end: "0x801c1f44", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c1f28 - 001c1f40" }
+  - { name: attack_configure_scaled_poly_ft4, address: "0x801c2418", end: "0x801c265c", kind: function, ownership: game, confidence: high }
+  - { name: attack_noop_801c3070, address: "0x801c3070", end: "0x801c3078", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Null Routine 3" }
+  - { name: attack_determine_fieldable_units, address: "0x801c3078", end: "0x801c33a8", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Determine Fieldable Units" }
+  - { name: attack_load_unaligned_s16, address: "0x801c33a8", end: "0x801c33c4", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Load Halfword" }
+  - { name: attack_wait_for_music_open, address: "0x801c33c4", end: "0x801c340c", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c33c4 - 001c3408" }
+  - { name: attack_play_scenario_music, address: "0x801c340c", end: "0x801c34b4", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Play Scenario Music" }
+  - { name: attack_mark_other_squad_units_undeployable, address: "0x801c3ca8", end: "0x801c3d3c", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Deployment Screen Set units deployed to other squads as undeployable" }
+  - { name: attack_is_roster_unit_deployed, address: "0x801c3d3c", end: "0x801c3d8c", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c3d3c - 001c3d88" }
+  - { name: attack_yield_current_thread_forever, address: "0x801c3d8c", end: "0x801c3db4", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Hold Current Thread Hostage" }
+  - { name: attack_deployment_tiles_contain_roster_id, address: "0x801c3db4", end: "0x801c3e04", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c3db4 - 001c3e00" }
+  - { name: attack_remove_roster_unit_from_deployment_tiles, address: "0x801c3e04", end: "0x801c3e5c", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c3e04 - 001c3e58" }
+  - { name: attack_swap_roster_unit_deployment_tile, address: "0x801c3e5c", end: "0x801c3ecc", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c3e5c - 001c3ec8" }
+  - { name: attack_reset_deployment_tables, address: "0x801c3ecc", end: "0x801c3f44", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c3ecc - 001c3f40" }
+  - { name: attack_select_deployment_coordinate_slots, address: "0x801c5a50", end: "0x801c5a8c", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Prepare Deployed Unit Map Coordinate Data Pointer" }
+  - { name: attack_return_zero, address: "0x801c5a8c", end: "0x801c5a94", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Clear r2" }
+  - { name: attack_handle_roster_navigation_input, address: "0x801c5a94", end: "0x801c5b50", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c5a94 - 001c5b4c" }
+  - { name: attack_out_choose_unit_for_deployment_screen_stats_display, address: "0x801c5b50", end: "0x801c5be0", kind: function, ownership: game, confidence: high }
+  - { name: attack_select_next_deployable_roster_unit, address: "0x801c60e0", end: "0x801c61dc", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c60e0 - 001c61d8" }
+  - { name: attack_noop_801c61dc, address: "0x801c61dc", end: "0x801c61e4", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Null Routine 4" }
+  - { name: attack_select_previous_deployable_roster_unit, address: "0x801c61e4", end: "0x801c62e0", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c61e4 - 001c62dc" }
+  - { name: attack_set_valid_deployment_tile, address: "0x801c66dc", end: "0x801c66fc", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c66dc - 001c66f8" }
+  - { name: attack_get_valid_deployment_tile, address: "0x801c66fc", end: "0x801c6720", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c66fc - 001c671c" }
+  - { name: attack_set_deployment_cursor_tile, address: "0x801c6720", end: "0x801c6738", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c6720 - 001c6734" }
+  - { name: attack_set_deployment_arrow_position_mode, address: "0x801c6738", end: "0x801c6748", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c6738 - 001c6744" }
+  - { name: attack_prepare_valid_deployment_tiles, address: "0x801c6748", end: "0x801c67cc", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Prepare Valid Deployment Tiles" }
+  - { name: attack_out_initialise_frame_ft4_array, address: "0x801c7944", end: "0x801c7a08", kind: function, ownership: game, confidence: high }
+  - { name: attack_out_call_prepare_formation_sprites, address: "0x801c7fe4", end: "0x801c8004", kind: function, ownership: game, confidence: high }
+  - { name: attack_out_call_portrait_loading_routine, address: "0x801c8004", end: "0x801c8024", kind: function, ownership: game, confidence: high }
+  - { name: attack_out_enqueue_open_file, address: "0x801c8024", end: "0x801c80d0", kind: function, ownership: game, confidence: high }
+  - { name: attack_set_formation_icon_uv, address: "0x801c8c08", end: "0x801c8cf0", kind: function, ownership: game, confidence: high }
+  - { name: attack_initialize_battle_text_pointers, address: "0x801c9444", end: "0x801c9488", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT 001c9444 - 001c9484" }
+  - { name: attack_out_show_map_title, address: "0x801c9d68", end: "0x801c9ec0", kind: function, ownership: game, confidence: high }
+  - { name: attack_load_map_title_graphic, address: "0x801c9ec0", end: "0x801c9f8c", kind: function, ownership: game, confidence: high, external_name: "ATTACK.OUT Load Map Title Graphic" }

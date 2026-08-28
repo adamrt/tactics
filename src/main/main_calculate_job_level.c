@@ -1,0 +1,14 @@
+#include "fft/job.h"
+#include "psx/types.h"
+
+u32 main_calculate_job_level(u16 job_jp) {
+    s32 job_level = 0;
+    s32 level;
+
+    for (level = 0; level < 8; level++) {
+        if (job_jp >= g_job_level_jp_requirements[level]) {
+            job_level++;
+        }
+    }
+    return job_level;
+}

@@ -1,0 +1,30 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-option
+
+address_model:
+  runtime_base: "0x801bf000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00010803.wiki
+  - original/ffhacktics/wiki/pages/00010809.wiki
+  - original/ffhacktics/wiki/pages/00010811.wiki
+  - original/ffhacktics/wiki/pages/00010812.wiki
+  - original/ffhacktics/wiki/pages/00004346.wiki
+  - original/ffhacktics/wiki/pages/00004258.wiki
+  - original/ffhacktics/wiki/pages/00006882.wiki
+  - original/ffhacktics/wiki/pages/00010819.wiki
+  - build/extracted/files/EVENT/OPTION.OUT
+
+symbols:
+  - { name: option_update_menu_scroll_render, address: "0x801bf1e0", end: "0x801bf45c", kind: function, ownership: game, confidence: high, external_name: "OPTION.OUT 001bf1e0 - 001bf458" }
+  - { name: option_store_four_halfwords, address: "0x801c00c0", end: "0x801c00e8", kind: function, ownership: game, confidence: high, external_name: "OPTION.OUT 001c00c0 - 001c00e4" }
+  - { name: option_store_two_halfwords, address: "0x801c00e8", end: "0x801c0100", kind: function, ownership: game, confidence: high, external_name: "OPTION.OUT 001c00e8 - 001c00fc" }
+  - { name: option_configure_scaled_draw_area_packets, address: "0x801c0100", end: "0x801c02d0", kind: function, ownership: game, confidence: high, external_name: "OPTION.OUT 001c0100 - 001c02cc" }
+  - { name: option_initialize_menu_record, address: "0x801c02d0", end: "0x801c0304", kind: function, ownership: game, confidence: medium, external_name: "OPTION.OUT 001c02d0 - 001c0300" }
+  - { name: option_thread_idle, address: "0x801c0e30", end: "0x801c0e58", kind: function, ownership: game, confidence: high, external_name: "OPTION.OUT Thread Idle" }
+  - { name: option_yield_then_stop_thread, address: "0x801c0e58", end: "0x801c0e80", kind: function, ownership: game, confidence: medium, external_name: "OPTION.OUT 001c0e58 - 001c0e7c" }
+  - { name: option_close_at_list_threads, address: "0x801c1814", end: "0x801c195c", kind: function, ownership: game, confidence: medium, external_name: "OPTION.OUT 001c1814 - 001c1958" }
+  - { name: option_start_at_list_menu_thread, address: "0x801c195c", end: "0x801c1a3c", kind: function, ownership: game, confidence: high, external_name: "OPTION.OUT Start AT List Menu Thread" }
+  - { name: option_entrypoint, address: "0x801c1a3c", end: "0x801c1cbc", kind: function, ownership: game, confidence: high, external_name: "OPTION.OUT Entrypoint" }

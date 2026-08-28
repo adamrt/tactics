@@ -1,0 +1,17 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: effect-e464
+
+address_model:
+  runtime_base: "0x801c2500"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00006760.wiki
+  - original/ffhacktics/wiki/pages/00009730.wiki
+  - original/ffhacktics/wiki/pages/00009874.wiki
+  - build/extracted/files/EFFECT/E464.BIN
+
+symbols:
+  - { name: effect_add_scratchpad_xyz_components, address: "0x801c2500", end: "0x801c2578", kind: function, ownership: game, confidence: high, external_name: "E464 001c2500 - 001c2574" }
+  - { name: effect_e464_altimas_transformation_update_particle_state, address: "0x801c4b54", end: "0x801c4dc4", kind: function, ownership: game, confidence: high, external_name: "E464 001c4b54 - 001c4dc0" }

@@ -1,0 +1,134 @@
+FAST MODE batch agent for FFT decomp at /Users/adam/src/tactics.
+
+## Your batch
+`/tmp/batch_N.tsv` — format: `module_id\tsymbol\taddress\tend\tbytes\twiki_name`
+
+## Per-function loop (goal: raw throughput)
+
+For each row:
+
+1. Draft: `make wip ACTION=draft MODULE=<mid> SYMBOL=<sym> ADDRESS=<addr> END=<end>` → writes `build/analysis/decomp/<mid>/<sym>/{draft.c,assembly/*.text.s}`.
+2. Read the assembly (small functions are often obvious).
+3. Create `wip/<subdir>/<sym>.c` — clean C, no more than a tiny trailing __asm__. Include `psx/types.h` + `fft/battle.h` as needed. Do NOT re-declare PSX helpers (AddPrim, GetTPage, SetPolyFT4) already in `psx/gpu.h`.
+4. Create `wip/<subdir>/<sym>.ld`:
+   ```
+   OUTPUT_ARCH(mips)
+   <extern> = 0x<addr>;
+   SECTIONS { .text <addr> : SUBALIGN(4) { *(.text) } /DISCARD/ : { *(.reginfo) *(.pdr) *(.comment) *(.gnu.attributes) } }
+   ```
+   Look up externs in `config/<mid>-symbols.yaml` and `config/linker-symbols.yaml` (`- id: <mid>` block).
+5. Append 1 line to `config/wip.yaml`:
+   ```
+     - { module: <mid>, symbol: <sym>, address: "<addr>", status: wip, source: wip/<subdir>/<sym>.c, canonical_profile: gcc-2.6.3_O2_aspsx-2.34 }
+   ```
+6. Iterate:
+   ```
+   make wip ACTION=diff TARGET=<target_bin> SOURCE=wip/<subdir>/<sym>.c LINKER=wip/<subdir>/<sym>.ld OFFSET=<file_off> BYTES=<size_hex>
+   ```
+7. On match (`matching WIP:`):
+   ```
+   python3 scripts/promote_wip.py --module <mid> --symbol <sym> --address <addr> --end <end> --wip-c wip/<subdir>/<sym>.c --wip-ld wip/<subdir>/<sym>.ld
+   ```
+
+## Address helpers
+- `battle`: file offset = addr - 0x80067000, target = `build/extracted/files/BATTLE.BIN`
+- `world`: addr - 0x800e0000, `WORLD/WORLD.BIN`
+- `wldcore`: addr - 0x80067000, `WORLD/WLDCORE.BIN`
+- `opening`: addr - 0x80067000, `OPEN/OPEN.BIN`
+- `main`: addr - 0x80010000 + 0x800, `SCUS_942.21`
+- `event-*`: check `config/modules.yaml` for load_address, target `EVENT/<OVERLAY>.OUT`
+
+Directory: `wip/battle`, `wip/world`, `wip/wldcore`, `wip/open`, `wip/main`. Event: `wip/event/` for etc/bunit/attack, `wip/card`, `wip/option`, `wip/require`, `wip/debugchr`, `wip/helpmenu`, `wip/jobstts`, `wip/equip`.
+
+## STRICT
+- GCC 2.6.3 -O2 default.
+- **NEVER wrap the whole body in `__asm__`** — tiny epilogue asm is OK; full-body asm is FORBIDDEN. Leave draft in wip/ + report as asm-only-skipped.
+- Skip after **~3 iterations** of no progress (fast mode — permuter later).
+- Don't touch modules.yaml/*symbols.yaml directly (promote script handles it). No `make build`. No commits.
+- Transient yaml parse errors are common (concurrent workers) — sleep 2s and retry.
+
+
+## HIGH-LEVERAGE TRICKS (from prior workers — use these first)
+
+1. **Look for a TWIN.** The event overlays (bunit/equip/card/require/debugchr/attack/option/jobstts) contain many byte-identical or near-identical siblings. Before drafting from scratch, grep `src/event/` for a function with the same shape:
+   ```
+   grep -l "SetPolyFT4\|addPrim\|GetTPage" src/event/*.c | head -20
+   ```
+   If you find a twin, copy it, rename the symbol + externs to this overlay's addresses, and diff. This matched first-try 3+ times for prior workers.
+
+2. **libgpu `addPrim` needs a P_TAG bitfield**, not hand-written masks:
+   ```c
+   typedef struct { u32 addr:24; u32 len:8; } P_TAG;
+   ((P_TAG *)prim)->addr = ot[i];
+   ((P_TAG *)&ot[i])->addr = (u32)prim;
+   ```
+
+3. **Unexplained larger target stack frame** = unreferenced locals in the original source. Add a dummy `s32 unused[N];` (address-taken if needed) to reach the right frame size. Outgoing-arg area is often 0x18, not 0x10.
+
+4. **`while (n-- != 0)`** must be written `n -= 1; while (n != -1) { ...; n -= 1; }` to get the compare-against-hoisted--1 form.
+
+5. **Relocatable externs get `addiu`; literal `(T*)0x8...` constants get `ori`.** If the target has `addiu`, declare a real extern symbol and put it in the `.ld`.
+
+6. **`u8 *p = &GLOBAL; *p += N;`** (via a local pointer) reuses one lui/addiu base — `GLOBAL += N;` does not.
+
+7. **`s32` locals, not `s16`/`u8`** — avoids spurious `sll`/`sra` sign-extension pairs.
+
+8. Always redirect stdin: `make wip ... </dev/null` (shell loops fail spuriously otherwise).
+
+9. Transient `parse error at end of input` / truncated `.i` is a concurrent-worker race — retry the identical command after ~2-3s.
+
+
+10. **WLDCORE / OPEN need the ASPSX 2.21 profile.** If the target keeps an
+    indexed global address in `$at` across four instructions:
+    ```
+    lui $at,%hi(sym) ; addiu $at,$at,%lo(sym) ; addu $at,$at,$idx ; load rd,0($at)
+    ```
+    and your build folds it to three (`lui / addu / load %lo(...)`), that is an
+    ASSEMBLER VERSION difference, not a source problem. `WORLD/WLDCORE.BIN` and
+    `OPEN/OPEN.BIN` were built with ASPSX < 2.30. Do NOT try to fix it in C — the
+    target uses `$at`, which no compiler will allocate.
+
+    Add `PROFILE=gcc-2.6.3_O2_aspsx-2.21` to your make wip commands:
+    ```
+    make wip ACTION=diff TARGET=... OFFSET=... BYTES=... PROFILE=gcc-2.6.3_O2_aspsx-2.21 </dev/null
+    ```
+    and pass `--profile gcc-2.6.3_O2_aspsx-2.21` to `scripts/promote_wip.py`.
+
+    It is a PER-FUNCTION exception: some WLDCORE/OPEN functions have no indexed
+    global access and match under the canonical 2.34 profile. Try 2.34 first; if
+    the diff shows the folded 3-instruction form where the target has 4, retry
+    with 2.21. Do not use 2.21 for battle/world/event modules — they were built
+    with 2.34.
+
+## Report (under 300 words)
+- PROMOTED count + symbols
+- SKIPPED (permuter/asm/other) counts
+- No verbose explanations — quantity over depth.
+
+Your batch number is: {BATCH_NUM}
+
+11. **Read `docs/matching-cookbook.md`** before drafting. It carries the full
+    accumulated trick list (register allocation, constant materialization, and
+    the classes of wiki entry that are not functions at all). It is kept up to
+    date as workers report new findings; this prompt only summarizes it.
+
+12. **Jump tables.** If your function has a dense `switch`, GCC emits a jump
+    table in `.rodata`. Your wip `.ld` needs a `.rodata <addr>` placement, AND
+    the promotion needs `--rodata-bytes N` (N = entries * 4). Without the flag
+    `promote_wip.py` will refuse the promotion -- that refusal is correct, do not
+    work around it. `make wip ACTION=match` passing is NOT sufficient here; it
+    uses your `.ld`, while the real build uses `modules.yaml`.
+
+13. **Be conservative about skipping.** `config/skip-addresses.txt` permanently
+    removes a candidate from every future batch, so a wrong entry hides real work
+    that nobody will look at again. Skip only with positive evidence:
+      * inside a range in `config/libraries.yaml` (Psy-Q library ownership), or
+      * already bound as an extern in `config/linker-symbols.yaml`, or
+      * demonstrably not a function (no prologue, reads registers it never
+        writes, ends in a bare `j`, is padding, or is data).
+    "It looks like middleware" and "no `jal` caller anywhere" are NOT sufficient.
+    Plenty of real game code is reached only through function-pointer tables or
+    callbacks. In particular the Suzuki sound driver (below `0x800186c4`) IS
+    reconstructed by this project -- see `src/main/suzuki/` and `docs/audio.md`.
+    When unsure, leave the candidate in the pool and say so in your report.
+

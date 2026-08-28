@@ -1,0 +1,19 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-helpmenu
+
+address_model:
+  runtime_base: "0x801df000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00010918.wiki
+  - original/ffhacktics/wiki/pages/00010919.wiki
+  - original/ffhacktics/wiki/pages/00010921.wiki
+  - original/ffhacktics/wiki/pages/00012689.wiki
+  - original/ffhacktics/wiki/pages/00012758.wiki
+  - build/extracted/files/EVENT/HELPMENU.OUT
+
+symbols:
+  - { name: helpmenu_close, address: "0x801df000", end: "0x801df050", kind: function, ownership: game, confidence: high, external_name: "HELPMENU.OUT Close Help Menu" }
+  - { name: helpmenu_find_running_thread_at_or_after_4, address: "0x801dfdd4", end: "0x801dfe10", kind: function, ownership: game, confidence: high, external_name: "HELPMENU.OUT Get First Running Thread ID At or After 4" }

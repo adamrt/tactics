@@ -1,0 +1,272 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: main
+
+address_model:
+  runtime_base: "0x80010000"
+  file_header_bytes: 2048
+  ffhacktics_file_bias: "0x0000f800"
+
+provenance:
+  - config/provenance/ffhacktics.yaml
+  - original/ffhacktics/wiki/pages/00000530.wiki
+  - original/ffhacktics/wiki/pages/00000550.wiki
+  - original/ffhacktics/wiki/pages/00000587.wiki
+  - original/ffhacktics/wiki/pages/00000603.wiki
+  - original/ffhacktics/wiki/pages/00002546.wiki
+  - original/ffhacktics/wiki/pages/00002548.wiki
+  - original/ffhacktics/wiki/pages/00002549.wiki
+  - original/ffhacktics/wiki/pages/00002584.wiki
+  - original/ffhacktics/wiki/pages/00002664.wiki
+  - original/ffhacktics/wiki/pages/00002679.wiki
+  - original/ffhacktics/wiki/pages/00002685.wiki
+  - original/ffhacktics/wiki/pages/00003050.wiki
+  - original/ffhacktics/wiki/pages/00003051.wiki
+  - original/ffhacktics/wiki/pages/00003052.wiki
+  - original/ffhacktics/wiki/pages/00003094.wiki
+  - original/ffhacktics/wiki/pages/00002510.wiki
+  - original/ffhacktics/wiki/pages/00002513.wiki
+  - original/ffhacktics/wiki/pages/00003009.wiki
+  - original/ffhacktics/wiki/pages/00005249.wiki
+  - original/ffhacktics/wiki/pages/00009368.wiki
+  - original/ffhacktics/wiki/pages/00000547.wiki
+  - original/ffhacktics/wiki/pages/00000548.wiki
+  - original/ffhacktics/wiki/pages/00000549.wiki
+  - original/ffhacktics/wiki/pages/00000551.wiki
+  - original/ffhacktics/wiki/pages/00000552.wiki
+  - original/ffhacktics/wiki/pages/00000572.wiki
+  - build/extracted/files/SCUS_942.21
+
+symbols:
+  - { name: store_stack_pointer, address: "0x80011bb0", end: "0x80011bc0", kind: function, ownership: game, confidence: high, external_name: "SCUS Put Stack pointer" }
+  - { name: main_build_file_header_nnl, address: "0x80011bd0", end: "0x80011bf4", kind: function, ownership: game, confidence: high, external_name: "SCUS Build File Header NNL" }
+  - { name: main_build_file_header, address: "0x80011bf4", end: "0x80011dd8", kind: function, ownership: game, confidence: high }
+  - { name: main_reset_pause_cdrom, address: "0x80011dd8", end: "0x80011e18", kind: function, ownership: game, confidence: high, external_name: "SCUS Reset Pause CDROM" }
+  - { name: main_reset_cd_subsystems, address: "0x80011e18", end: "0x80011e38", kind: function, ownership: game, confidence: high }
+  - { name: main_draw_now_loading_message, address: "0x80012020", end: "0x800120f4", kind: function, ownership: game, confidence: high, external_name: "SCUS Draw Now Loading Message" }
+  - { name: func_800121cc, address: "0x800121cc", end: "0x800121d4", kind: function, ownership: middleware, confidence: high }
+  - { name: func_800121d4, address: "0x800121d4", end: "0x800121dc", kind: function, ownership: middleware, confidence: high }
+  - { name: func_800124ac, address: "0x800124ac", end: "0x800124b4", kind: function, ownership: middleware, confidence: high }
+  - { name: func_800124b4, address: "0x800124b4", end: "0x800124bc", kind: function, ownership: middleware, confidence: high }
+  - { name: func_800124bc, address: "0x800124bc", end: "0x800124c4", kind: function, ownership: middleware, confidence: high }
+  - { name: func_800124c4, address: "0x800124c4", end: "0x800124cc", kind: function, ownership: middleware, confidence: high }
+  - { name: SuzukiGetMusicPlaying, address: "0x80012e7c", end: "0x80012e88", kind: function, ownership: middleware, confidence: high, external_name: "SUZUKI GetMusicPlaying" }
+  - { name: SuzukiGetActiveChannels, address: "0x800135fc", end: "0x80013634", kind: function, ownership: middleware, confidence: high, external_name: "SUZUKI getActiveChannels" }
+  - { name: func_80013634, address: "0x80013634", end: "0x8001363c", kind: function, ownership: middleware, confidence: high }
+  - { name: func_80014204, address: "0x80014204", end: "0x8001420c", kind: function, ownership: middleware, confidence: high }
+  - { name: func_80014544, address: "0x80014544", end: "0x8001454c", kind: function, ownership: middleware, confidence: high }
+  - { name: InitGeom, address: "0x8001beb8", end: "0x8001bf38", kind: function, ownership: psyq-library, library: libgte, confidence: high, external_name: "SCUS GTE InitGeom" }
+  - { name: SetGeomOffset, address: "0x8001d1a8", end: "0x8001d1c0", kind: function, ownership: psyq-library, library: libgte, confidence: high, external_name: "Store Screen offsets to GTE" }
+  - { name: SetGeomScreen, address: "0x8001d1c8", end: "0x8001d1d4", kind: function, ownership: psyq-library, library: libgte, confidence: high, external_name: "Store Projection plane distance in GTE" }
+  - { name: main_read_controller_input, address: "0x8001db58", end: "0x8001db88", kind: function, ownership: game, confidence: high, external_name: "Get Inverted Button Input" }
+  - { name: VSync, address: "0x8001dba8", end: "0x8001dcf0", kind: function, ownership: psyq-library, library: libetc, confidence: high, external_name: "SCUS ETC VSYNC" }
+  - { name: CdInit, address: "0x8001e8c4", end: "0x8001e954", kind: function, ownership: psyq-library, library: libcd, confidence: high, external_name: "SCUS CD CdInit" }
+  - { name: CdSetDebug, address: "0x8001ea98", end: "0x8001eab0", kind: function, ownership: psyq-library, library: libcd, confidence: high, external_name: "SCUS CD CdSetDebug" }
+  - { name: CdSync, address: "0x8001eb18", end: "0x8001eb38", kind: function, ownership: psyq-library, library: libcd, confidence: high, external_name: "SCUS CD CdSync" }
+  - { name: SetMem, address: "0x80021f54", end: "0x80021f64", kind: function, ownership: psyq-library, library: libcd, confidence: high, external_name: "SCUS CD SetMem" }
+  - { name: LoadTPage, address: "0x80022c24", end: "0x80022d10", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "E00 LoadTpage" }
+  - { name: LoadClut2, address: "0x80022d78", end: "0x80022de0", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "E02 LoadClut2" }
+  - { name: SetDefDrawEnv, address: "0x80022de0", end: "0x80022eb0", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "E03 SetDefDrawEnv" }
+  - { name: SetDefDispEnv, address: "0x80022eb0", end: "0x80022eec", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "E04 SetDefDispEnv" }
+  - { name: SetDumpFnt, address: "0x80022eec", end: "0x80022f2c", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "FONT SetDumpFnt" }
+  - { name: FntLoad, address: "0x80022f2c", end: "0x80022fd0", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "FONT FntLoad" }
+  - { name: FntOpen, address: "0x80022fd0", end: "0x80023288", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "FONT FntOpen" }
+  - { name: FntFlush, address: "0x80023288", end: "0x800235ac", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "FONT FntFlush" }
+  - { name: AddPrim, address: "0x80023bb4", end: "0x80023bf0", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P06 AddPrim" }
+  - { name: SetSemiTrans, address: "0x80023c68", end: "0x80023c90", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P10 SetSemiTrans" }
+  - { name: SetShadeTex, address: "0x80023c90", end: "0x80023cb8", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P11 SetShadeTex" }
+  - { name: SetPolyF3, address: "0x80023cb8", end: "0x80023ccc", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P12 SetPolyF3" }
+  - { name: SetPolyFT3, address: "0x80023ccc", end: "0x80023ce0", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P13 SetPolyFT3" }
+  - { name: SetPolyG3, address: "0x80023ce0", end: "0x80023cf4", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P14 SetPolyG3" }
+  - { name: SetPolyGT3, address: "0x80023cf4", end: "0x80023d08", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P15 SetPolyGT3" }
+  - { name: SetPolyF4, address: "0x80023d08", end: "0x80023d1c", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P16 SetPolyF4" }
+  - { name: SetPolyFT4, address: "0x80023d1c", end: "0x80023d30", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P17 SetPolyFT4" }
+  - { name: SetPolyG4, address: "0x80023d30", end: "0x80023d44", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P18 SetPolyG4" }
+  - { name: SetPolyGT4, address: "0x80023d44", end: "0x80023d58", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P19 SetPolyGT4" }
+  - { name: SetSprt8, address: "0x80023d58", end: "0x80023d6c", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P20 SetSprt8" }
+  - { name: SetSprt16, address: "0x80023d6c", end: "0x80023d80", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P21 SetSprt16" }
+  - { name: SetSprt, address: "0x80023d80", end: "0x80023d94", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P22 SetSprt" }
+  - { name: SetTile1, address: "0x80023d94", end: "0x80023da8", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P23 SetTile1" }
+  - { name: SetTile8, address: "0x80023da8", end: "0x80023dbc", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P24 SetTile8" }
+  - { name: SetTile16, address: "0x80023dbc", end: "0x80023dd0", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P25 SetTile16" }
+  - { name: SetTile, address: "0x80023dd0", end: "0x80023de4", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P26 SetTile" }
+  - { name: SetLineF2, address: "0x80023de4", end: "0x80023df8", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P27 SetLineF2" }
+  - { name: SetLineG2, address: "0x80023df8", end: "0x80023e0c", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P28 SetLineG2" }
+  - { name: SetLineF3, address: "0x80023e0c", end: "0x80023e2c", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P29 SetLineF3" }
+  - { name: SetLineG3, address: "0x80023e2c", end: "0x80023e4c", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P30 SetLineG3" }
+  - { name: SetLineF4, address: "0x80023e4c", end: "0x80023e6c", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P31 SetLineF4" }
+  - { name: SetLineG4, address: "0x80023e6c", end: "0x80023e8c", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P32 SetLineG4" }
+  - { name: SetBlockFill, address: "0x80023e8c", end: "0x80023ea0", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SetBlockFill" }
+  - { name: SetDrawMove, address: "0x80023ea0", end: "0x80023ebc", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SetDrawMove" }
+  - { name: ResetGraph, address: "0x80024238", end: "0x80024390", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS ResetGraph" }
+  - { name: SetDispMask, address: "0x80024638", end: "0x800246d4", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS SetDispMask" }
+  - { name: DrawSync, address: "0x800246d4", end: "0x80024740", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS DrawSync" }
+  - { name: ClearImage, address: "0x80024868", end: "0x800248fc", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS ClearImage" }
+  - { name: LoadImage, address: "0x800248fc", end: "0x80024960", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS LoadImage" }
+  - { name: StoreImage, address: "0x80024960", end: "0x800249c4", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS StoreImage" }
+  - { name: MoveImage, address: "0x800249c4", end: "0x80024a88", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS MoveImage" }
+  - { name: ClearOTag, address: "0x80024a88", end: "0x80024b40", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS ClearOtag" }
+  - { name: DrawOTag, address: "0x80024c38", end: "0x80024cac", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS DrawOtag" }
+  - { name: PutDrawEnv, address: "0x80024cac", end: "0x80024d70", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS PutDrawEnv" }
+  - { name: PutDispEnv, address: "0x80024e84", end: "0x80025334", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "SYS PutDispEnv" }
+  - { name: SetDrawMode, address: "0x800254cc", end: "0x80025524", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "P41 SetDrawMode" }
+  - { name: OpenTIM, address: "0x80026fa4", end: "0x80026fb4", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "OpenTIM" }
+  - { name: ReadTIM, address: "0x80026fb4", end: "0x8002701c", kind: function, ownership: psyq-library, library: libgpu, confidence: high, external_name: "ReadTIM" }
+  - { name: main_shutdown_display_and_audio_for_game_reset, address: "0x80040934", end: "0x80040974", kind: function, ownership: game, confidence: high, external_name: "SCUS GameReset QuitSound" }
+  - { name: main_game_reset, address: "0x80040974", end: "0x800409a4", kind: function, ownership: game, confidence: high, external_name: "SCUS Game Reset" }
+  - { name: main_call_battle_bin_entrypoint, address: "0x800409a4", end: "0x800409c4", kind: function, ownership: game, confidence: high, external_name: "SCUS Call BATTLE.BIN Entrypoint (deprecated)" }
+  - { name: main_open_exec_battle_bin, address: "0x800409c4", end: "0x80040a00", kind: function, ownership: game, confidence: high, external_name: "SCUS OpenExec BATTLE.BIN" }
+  - { name: main_game_loop, address: "0x80040a00", end: "0x80040b88", kind: function, ownership: game, confidence: high, external_name: "SCUS GameLoop" }
+  - { name: main, address: "0x80040b88", end: "0x80040bd8", kind: function, ownership: game, confidence: high, external_name: "SCUS Main" }
+  - { name: build_now_loading, address: "0x80040bd8", end: "0x80041384", kind: function, ownership: game, confidence: high, external_name: "SCUS Build Now Loading" }
+  - { name: main_build_now_loading_center, address: "0x80041384", end: "0x800413a8", kind: function, ownership: game, confidence: high, external_name: "SCUS Build Now Loading Centre" }
+  - { name: main_add_now_loading_to_otag, address: "0x800413a8", end: "0x8004146c", kind: function, ownership: game, confidence: high, external_name: "SCUS NowLoading Into OTAG" }
+  - { name: main_get_efc_fnt, address: "0x8004146c", end: "0x80041598", kind: function, ownership: game, confidence: high, external_name: "SCUS Get EFC FNT" }
+  - { name: main_set_display_draw, address: "0x80041598", end: "0x80041774", kind: function, ownership: game, confidence: high, external_name: "SCUS Set DisplayDraw" }
+  - { name: main_draw_squaresoft_logo, address: "0x80041774", end: "0x80041890", kind: function, ownership: game, confidence: high, external_name: "SCUS Draw Squaresoft Logo" }
+  - { name: main_build_draw_squaresoft_logo, address: "0x80041890", end: "0x80041b1c", kind: function, ownership: game, confidence: high, external_name: "SCUS BuildDraw Squaresoft Logo" }
+  - { name: main_squaresoft_fade_out, address: "0x80041b1c", end: "0x80041d80", kind: function, ownership: game, confidence: high, external_name: "SCUS Squaresoft FadeOut" }
+  - { name: main_draw_sceap, address: "0x80041d80", end: "0x80041e98", kind: function, ownership: game, confidence: high, external_name: "SCUS Draw SCEAP" }
+  - { name: main_build_draw_sceap, address: "0x80041e98", end: "0x80042284", kind: function, ownership: game, confidence: high, external_name: "SCUS BuildDraw SCEAP" }
+  - { name: main_reset_display, address: "0x80042284", end: "0x800424c0", kind: function, ownership: game, confidence: high, external_name: "SCUS Reset Display" }
+  - { name: main_reset_cdrom_cpu_ram, address: "0x800424c0", end: "0x80042508", kind: function, ownership: game, confidence: high, external_name: "SCUS Reset CDROM CPURAM" }
+  - { name: main_get_zodiac_frame, address: "0x80042508", end: "0x80042584", kind: function, ownership: game, confidence: high, external_name: "SCUS Get ZODIAC FRAME to FrameBuffer" }
+  - { name: main_startup, address: "0x80042584", end: "0x80042690", kind: function, ownership: game, confidence: high, external_name: "SCUS Startup" }
+  - { name: main_startup2, address: "0x80042690", end: "0x800427a4", kind: function, ownership: game, confidence: high, external_name: "SCUS Startup2" }
+  - { name: main_open_entd, address: "0x800427a4", end: "0x80042880", kind: function, ownership: game, confidence: high, external_name: "SCUS Open ENTD" }
+  - { name: main_event_start_initialize_unit_data, address: "0x80042930", end: "0x80042a10", kind: function, ownership: game, confidence: high, external_name: "SCUS EventStart Initialize Unit Data" }
+  - { name: main_new_game_set_inventory, address: "0x80042a10", end: "0x80042ab0", kind: function, ownership: game, confidence: high, external_name: "SCUS NewGame Set Inventory" }
+  - { name: main_new_game_set_party, address: "0x80042ab0", end: "0x80042b1c", kind: function, ownership: game, confidence: high, external_name: "SCUS NewGame Set Party" }
+  - { name: main_set_svector, address: "0x80042b1c", end: "0x80042b2c", kind: function, ownership: game, confidence: high, external_name: "SCUS Save 3 u short" }
+  - { name: main_set_vector, address: "0x80042b2c", end: "0x80042b3c", kind: function, ownership: game, confidence: high, external_name: "SCUS Save 3 u long" }
+  - { name: main_set_display_draw_new_game, address: "0x80042b3c", end: "0x80042d18", kind: function, ownership: game, confidence: high }
+  - { name: main_swap_display_area, address: "0x80042d18", end: "0x80042dd4", kind: function, ownership: game, confidence: high, external_name: "SCUS Swap DisplayArea" }
+  - { name: main_orbonne_monastery_fade_in, address: "0x80042dd4", end: "0x8004315c", kind: function, ownership: game, confidence: medium }
+  - { name: main_orbonne_monastery_fade_out, address: "0x8004315c", end: "0x800434dc", kind: function, ownership: game, confidence: medium }
+  - { name: main_vsync_callback_func, address: "0x800434dc", end: "0x800435ac", kind: function, ownership: game, confidence: high, external_name: "VsyncCallbackFunc" }
+  - { name: main_draw_sync_callback_func, address: "0x800435ac", end: "0x800435b4", kind: function, ownership: game, confidence: high, external_name: "DrawSyncCallbackFunc" }
+  - { name: main_cd_ready_callback_func, address: "0x800435b4", end: "0x800435bc", kind: function, ownership: game, confidence: high, external_name: "CdReadyCallbackFunc" }
+  - { name: main_cd_read_callback_func, address: "0x800435bc", end: "0x800435c4", kind: function, ownership: game, confidence: high, external_name: "CdReadCallbackFunc" }
+  - { name: main_mrta_openandplaymusic, address: "0x800435c4", end: "0x80043660", kind: function, ownership: game, confidence: high }
+  - { name: main_mrta_openmusintofreeslot, address: "0x80043660", end: "0x80043708", kind: function, ownership: game, confidence: high }
+  - { name: main_unused_music_stub, address: "0x80043708", end: "0x80043710", kind: function, ownership: game, confidence: high }
+  - { name: main_open_scenario_smd_files, address: "0x800437d8", end: "0x800438d0", kind: function, ownership: game, confidence: high, external_name: "SMD file opener" }
+  - { name: main_poll_scenario_smd_file_load, address: "0x800438d0", end: "0x80043958", kind: function, ownership: game, confidence: high, external_name: "MRTA Check SMD file Still Opening" }
+  - { name: main_mrta_unload_scenario_mus, address: "0x800439c0", end: "0x80043a38", kind: function, ownership: game, confidence: high }
+  - { name: main_mrta_set_no_forced_mus_playing, address: "0x80043a38", end: "0x80043a90", kind: function, ownership: game, confidence: high }
+  - { name: main_get_current_scenario_music, address: "0x80043b44", end: "0x80043b54", kind: function, ownership: game, confidence: high }
+  - { name: main_change_current_music_volume, address: "0x80043b54", end: "0x80043ba0", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Change Volume Current Song" }
+  - { name: main_change_current_music_volume_timed, address: "0x80043ba0", end: "0x80043be8", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Volume with Target Time Current Song" }
+  - { name: main_set_current_music_target, address: "0x80043be8", end: "0x80043c3c", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Set Target Vol Shift Time Current Song" }
+  - { name: main_set_current_music_tempo_scale_timed, address: "0x80043c3c", end: "0x80043c88", kind: function, ownership: game, confidence: high }
+  - { name: main_set_current_music_pitch_shift_timed, address: "0x80043c88", end: "0x80043cd4", kind: function, ownership: game, confidence: high }
+  - { name: main_set_current_music_balance_shift_timed, address: "0x80043cd4", end: "0x80043d20", kind: function, ownership: game, confidence: high }
+  - { name: main_play_tune, address: "0x80043d20", end: "0x80043d80", kind: function, ownership: game, confidence: high, external_name: "Play Tune" }
+  - { name: main_set_play_tune_volume, address: "0x80043d80", end: "0x80043de0", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Set PlayTune Volume" }
+  - { name: main_unload_scenario_music_and_tunes, address: "0x80043f00", end: "0x80043f38", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Unload Scenario Music and PlayTunes" }
+  - { name: main_get_music_handle, address: "0x80043f38", end: "0x80043f50", kind: function, ownership: game, confidence: high }
+  - { name: main_unload_current_scenario_music, address: "0x80043f50", end: "0x80043f88", kind: function, ownership: game, confidence: high }
+  - { name: main_set_current_music_track, address: "0x80043f88", end: "0x80043ff8", kind: function, ownership: game, confidence: high }
+  - { name: main_play_sound, address: "0x80043ff8", end: "0x80044018", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Call Play Sound" }
+  - { name: main_play_sound_find_channel, address: "0x80044018", end: "0x80044038", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Call Play Sound Find Channel" }
+  - { name: main_play_sound_2, address: "0x80044038", end: "0x80044060", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Call Play Sound 2" }
+  - { name: main_replay_weather_sfx, address: "0x80044060", end: "0x8004408c", kind: function, ownership: game, confidence: high }
+  - { name: main_set_sfx_echo, address: "0x8004408c", end: "0x800440cc", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Call Set SFX Echo" }
+  - { name: main_stop_weather_sfx_music, address: "0x800440cc", end: "0x800440f4", kind: function, ownership: game, confidence: high }
+  - { name: main_stop_playing_sfx, address: "0x800440f4", end: "0x80044128", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Stop Playing SFX" }
+  - { name: main_stop_current_weather_sfx, address: "0x80044128", end: "0x80044154", kind: function, ownership: game, confidence: high }
+  - { name: main_scus_opengnrcsfx, address: "0x80044154", end: "0x800442bc", kind: function, ownership: game, confidence: high }
+  - { name: main_mrta_smd_realloc, address: "0x80044384", end: "0x800443f0", kind: function, ownership: game, confidence: high }
+  - { name: main_clear_smd_allocator_table, address: "0x800443f0", end: "0x80044414", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA SMD Free" }
+  - { name: main_scus_mrta_realloc, address: "0x800444dc", end: "0x80044600", kind: function, ownership: game, confidence: high }
+  - { name: main_game_free, address: "0x80044600", end: "0x80044670", kind: function, ownership: game, confidence: high, external_name: "SCUS MRTA Free" }
+  - { name: main_clear_game_allocator_table, address: "0x80044670", end: "0x80044694", kind: function, ownership: game, confidence: high, external_name: "00044670 - 00044690" }
+  - { name: main_call_build_file_header, address: "0x80044694", end: "0x800446c8", kind: function, ownership: game, confidence: high, external_name: "SCUS Call Build File Header" }
+  - { name: main_check_file_still_loading, address: "0x800446c8", end: "0x800446d8", kind: function, ownership: game, confidence: high, external_name: "Check File Still Loading" }
+  - { name: main_get_smd, address: "0x800446d8", end: "0x800447bc", kind: function, ownership: game, confidence: high }
+  - { name: main_get_tim, address: "0x800447bc", end: "0x800448a0", kind: function, ownership: game, confidence: high }
+  - { name: main_get_wd, address: "0x800448a0", end: "0x80044954", kind: function, ownership: game, confidence: high, external_name: "Get WD" }
+  - { name: main_get_dat_as_wd, address: "0x80044954", end: "0x80044990", kind: function, ownership: game, confidence: high, external_name: "Get DAT as WD" }
+  - { name: main_get_bin_as_tim, address: "0x80044990", end: "0x800449cc", kind: function, ownership: game, confidence: high, external_name: "Get BIN as TIM" }
+  - { name: main_call_game_free, address: "0x800449cc", end: "0x800449ec", kind: function, ownership: game, confidence: high, external_name: "SCUS Call Free" }
+  - { name: main_do_nothing, address: "0x800449f8", end: "0x80044a00", kind: function, ownership: game, confidence: high }
+  - { name: main_malloc_exception_handler, address: "0x80044a00", end: "0x80044a08", kind: function, ownership: game, confidence: high, external_name: "Malloc Exception Handler" }
+  - { name: main_animation_exception_handler, address: "0x80044a08", end: "0x80044a34", kind: function, ownership: game, confidence: high, external_name: "Animation Exception Handler" }
+  - { name: main_pointer_exception_handler, address: "0x80044a34", end: "0x80044a60", kind: function, ownership: game, confidence: high, external_name: "Pointer Exception Handler" }
+  - { name: main_get_otag, address: "0x80044a60", end: "0x80044a7c", kind: function, ownership: game, confidence: high, external_name: "SCUS Get OTAG" }
+  - { name: main_put_otag, address: "0x80044a7c", end: "0x80044acc", kind: function, ownership: game, confidence: high, external_name: "SCUS Put Otag" }
+  - { name: main_initialize_save_state_and_options, address: "0x80044acc", end: "0x80044b68", kind: function, ownership: game, confidence: high }
+  - { name: main_call_battle_return_zero, address: "0x80044b68", end: "0x80044ba0", kind: function, ownership: game, confidence: high, external_name: "SCUS Call BATTLE.Return 0" }
+  - { name: main_call_build_zodiac_bin, address: "0x80045134", end: "0x80045154", kind: function, ownership: game, confidence: high }
+  - { name: main_open_frame_bin_to_vram, address: "0x80045154", end: "0x800451cc", kind: function, ownership: game, confidence: high, external_name: "SCUS Open Frame.BIN to VRAM" }
+  - { name: main_open_world_and_wldcore, address: "0x800451cc", end: "0x80045234", kind: function, ownership: game, confidence: high, external_name: "SCUS Open WORLD.BIN And WLDCORE.BIN" }
+  - { name: main_scus_open_world_bin, address: "0x80045234", end: "0x80045268", kind: function, ownership: game, confidence: high }
+  - { name: main_load_data_from_disc, address: "0x80045268", end: "0x800452ec", kind: function, ownership: game, confidence: high, external_name: "SCUS Open WORLD File" }
+  - { name: main_initialize_item_order_tables, address: "0x80045514", end: "0x80045720", kind: function, ownership: game, confidence: high }
+  - { name: main_initmemcard_evt, address: "0x80045720", end: "0x800458b8", kind: function, ownership: game, confidence: high }
+  - { name: main_open_exec_open_bin_1, address: "0x800458b8", end: "0x80045900", kind: function, ownership: game, confidence: high, external_name: "SCUS OpenExec OPEN.BIN 1" }
+  - { name: main_open_exec_open_bin_2, address: "0x80045900", end: "0x8004593c", kind: function, ownership: game, confidence: high, external_name: "SCUS OpenExec OPEN.BIN 2" }
+  - { name: main_initialize_status_check_data, address: "0x80059854", end: "0x80059ac0", kind: function, ownership: game, confidence: high }
+  - { name: main_clear_party, address: "0x80059ac8", end: "0x80059af0", kind: function, ownership: game, confidence: high, external_name: "Clear Party" }
+  - { name: main_get_party_data_pointer, address: "0x80059af0", end: "0x80059b18", kind: function, ownership: game, confidence: high, external_name: "Get Party Data Pointer" }
+  - { name: main_initialize_unit, address: "0x80059b18", end: "0x80059bb0", kind: function, ownership: game, confidence: high, external_name: "Unit Initialization" }
+  - { name: main_find_free_party_slot, address: "0x80059d5c", end: "0x80059e18", kind: function, ownership: game, confidence: high, external_name: "Find Free Party Slot" }
+  - { name: main_create_monster_egg, address: "0x80059e18", end: "0x80059ed4", kind: function, ownership: game, confidence: high, external_name: "Create Monster Egg" }
+  - { name: main_generate_party_unit, address: "0x80059ed4", end: "0x80059f94", kind: function, ownership: game, confidence: high, external_name: "Generate Party Unit In Empty Slot" }
+  - { name: main_find_party_slot_by_sprite_set, address: "0x80059f94", end: "0x80059fe0", kind: function, ownership: game, confidence: high, external_name: "Find Unit's Party Data Location" }
+  - { name: main_remove_unit_from_party, address: "0x80059fe0", end: "0x80059ffc", kind: function, ownership: game, confidence: high, external_name: "Remove Unit from Party" }
+  - { name: main_prepare_generate_unit_base_raw_stats, address: "0x8005a3e0", end: "0x8005a400", kind: function, ownership: game, confidence: high, external_name: "Generate Unit's Base Raw Stats Prep" }
+  - { name: main_generate_unit_raw_stats, address: "0x8005a400", end: "0x8005a448", kind: function, ownership: game, confidence: high, external_name: "Generate Unit Raw Stats" }
+  - { name: main_copy_job_growths_and_multipliers_to_unit, address: "0x8005a520", end: "0x8005a568", kind: function, ownership: game, confidence: high, external_name: "Transfer Job's Growths/Mults to Unit" }
+  - { name: main_get_ability_id_from_skillset, address: "0x8005a568", end: "0x8005a638", kind: function, ownership: game, confidence: high, external_name: "Get Ability ID From Skillset" }
+  - { name: main_store_skillset_s_abilities, address: "0x8005a638", end: "0x8005a72c", kind: function, ownership: game, confidence: high }
+  - { name: main_calculate_ability_pointers_and_type, address: "0x8005a72c", end: "0x8005a884", kind: function, ownership: game, confidence: high }
+  - { name: main_get_item_data_pointer, address: "0x8005a884", end: "0x8005a8a4", kind: function, ownership: game, confidence: high, external_name: "Get Item Data Pointer" }
+  - { name: main_get_job_data_pointer, address: "0x8005a8a4", end: "0x8005a8d4", kind: function, ownership: game, confidence: high, external_name: "Get Job Data Pointer" }
+  - { name: main_initialize_unit_s_job_data, address: "0x8005a8d4", end: "0x8005a9b4", kind: function, ownership: game, confidence: high }
+  - { name: main_unit_battle_initialization, address: "0x8005a9b4", end: "0x8005ab00", kind: function, ownership: game, confidence: high }
+  - { name: main_equipment_move_jump_x_name_storing_generation, address: "0x8005ab00", end: "0x8005ab48", kind: function, ownership: game, confidence: high }
+  - { name: main_store_ramza_s_name_birthday_zodiac, address: "0x8005ab48", end: "0x8005ac1c", kind: function, ownership: game, confidence: high }
+  - { name: main_prep_for_initializing_unit_s_job_data, address: "0x8005b038", end: "0x8005b0d0", kind: function, ownership: game, confidence: high }
+  - { name: main_transfer_job_s_data_to_unit_s_data, address: "0x8005b5dc", end: "0x8005b7a0", kind: function, ownership: game, confidence: high }
+  - { name: main_enable_unit_s_r_s_m_flags, address: "0x8005b7a0", end: "0x8005b82c", kind: function, ownership: game, confidence: high }
+  - { name: main_monster_equipment_storing, address: "0x8005bdb0", end: "0x8005bdf0", kind: function, ownership: game, confidence: high }
+  - { name: main_equippable_item_setting, address: "0x8005c27c", end: "0x8005c398", kind: function, ownership: game, confidence: high }
+  - { name: main_calculate_highest_party_level, address: "0x8005cbd0", end: "0x8005cc64", kind: function, ownership: game, confidence: high }
+  - { name: main_store_x_into_y, address: "0x8005cc64", end: "0x8005cc98", kind: function, ownership: game, confidence: high }
+  - { name: main_find_skillset_job_id, address: "0x8005d3c4", end: "0x8005d414", kind: function, ownership: game, confidence: high, external_name: "Find Skillset's Job ID (Possibly unused)" }
+  - { name: main_initialize_unit_status, address: "0x8005d414", end: "0x8005d470", kind: function, ownership: game, confidence: high, external_name: "Status Initialization" }
+  - { name: main_initialize_status_ct, address: "0x8005d470", end: "0x8005d4d0", kind: function, ownership: game, confidence: high, external_name: "Nullify CT/Initialize Death Counter" }
+  - { name: main_update_unit_status_flags_and_ct, address: "0x8005d4d0", end: "0x8005d5bc", kind: function, ownership: game, confidence: high, external_name: "Float/Current Statuses/Status Immunities/Status CT" }
+  - { name: main_prepare_formation_unit_stats, address: "0x8005d5bc", end: "0x8005d5e0", kind: function, ownership: game, confidence: medium }
+  - { name: main_refresh_unit_stats_and_statuses, address: "0x8005d5e0", end: "0x8005d604", kind: function, ownership: game, confidence: high, external_name: "Status Setting/Checking + Equip/R/S/M Stats Prep 2" }
+  - { name: main_initialize_unit_stats_and_statuses, address: "0x8005d604", end: "0x8005d628", kind: function, ownership: game, confidence: medium, external_name: "Status Setting/Checking + Equip/R/S/M Stats Prep 3" }
+  - { name: update_unit_stats_statuses_and_equipment, address: "0x8005d628", end: "0x8005d880", kind: function, ownership: game, confidence: high, external_name: "Status Setting/Checking + Equip/R/S/M Stats" }
+  - { name: main_check_unit_level_up, address: "0x8005d880", end: "0x8005d8fc", kind: function, ownership: game, confidence: high, external_name: "Check if Unit Leveled UP" }
+  - { name: main_apply_unit_level_growth, address: "0x8005da10", end: "0x8005db70", kind: function, ownership: game, confidence: high, external_name: "Level Up Section" }
+  - { name: main_set_status_ct, address: "0x8005db70", end: "0x8005dc14", kind: function, ownership: game, confidence: high, external_name: "Status CT Setting" }
+  - { name: main_calculate_unlocked_jobs, address: "0x8005dc14", end: "0x8005dd48", kind: function, ownership: game, confidence: high, external_name: "Calculate Unlocked Jobs" }
+  - { name: main_store_job_unlock_bitset, address: "0x8005ded8", end: "0x8005def4", kind: function, ownership: game, confidence: high, external_name: "Store Unlocked Jobs" }
+  - { name: main_calculate_job_level, address: "0x8005def4", end: "0x8005df38", kind: function, ownership: game, confidence: high, external_name: "Calculate Job Level" }
+  - { name: main_initialize_unit_s_job_levels, address: "0x8005df38", end: "0x8005dfac", kind: function, ownership: game, confidence: high }
+  - { name: main_reset_unit_battle_state, address: "0x8005dfac", end: "0x8005dfd4", kind: function, ownership: game, confidence: high }
+  - { name: main_initialize_unit_status_and_rewards, address: "0x8005dfd4", end: "0x8005e018", kind: function, ownership: game, confidence: high, external_name: "Minimum SP Capping/War Trophy Nulling/Status Initialization" }
+  - { name: main_get_ability_range, address: "0x8005e018", end: "0x8005e050", kind: function, ownership: game, confidence: high, external_name: "Get Ability's Range" }
+  - { name: main_get_ability_aoe, address: "0x8005e050", end: "0x8005e088", kind: function, ownership: game, confidence: high, external_name: "Get Ability's AoE" }
+  - { name: main_calculate_unit_palette_spritesheet, address: "0x8005e088", end: "0x8005e0cc", kind: function, ownership: game, confidence: high, external_name: "Calculate Unit's Palette/Spritesheet" }
+  - { name: main_pass_fail_roll, address: "0x8005e0cc", end: "0x8005e120", kind: function, ownership: game, confidence: high, external_name: "Pass/Fail Roll" }
+  - { name: main_get_unit_spritesheet_palette, address: "0x8005e120", end: "0x8005e1b0", kind: function, ownership: game, confidence: high, external_name: "Get Unit's Spritesheet/Palette" }
+  - { name: main_unit_has_status_in_set, address: "0x8005e1b0", end: "0x8005e200", kind: function, ownership: game, confidence: high, external_name: "Does Unit Have Status In Set" }
+  - { name: main_get_known_abilities, address: "0x8005e200", end: "0x8005e22c", kind: function, ownership: game, confidence: high, external_name: "Get Known Abilities" }
+  - { name: main_copy_action_data, address: "0x8005e22c", end: "0x8005e254", kind: function, ownership: game, confidence: high, external_name: "Copy Byte Data (20 Bytes)" }
+  - { name: main_copy_byte_data, address: "0x8005e254", end: "0x8005e288", kind: function, ownership: game, confidence: high, external_name: "Store X Byte into Y" }
+  - { name: get_total_equipment_quantity, address: "0x8005e288", end: "0x8005e478", kind: function, ownership: game, confidence: high, external_name: "Get Total Equipment Quantity" }
+  - { name: main_initialize_unit_position_rewards, address: "0x8005e478", end: "0x8005e4e8", kind: function, ownership: game, confidence: high, external_name: "Initialize Unit's X/Y+Facing/Battle Rewards" }
+  - { name: main_find_action_highest_order_status_effect, address: "0x8005e4e8", end: "0x8005e5d8", kind: function, ownership: game, confidence: high, external_name: "Find Action's Highest Order Status Effect" }
+  - { name: main_calculate_zodiac_symbol, address: "0x8005e5d8", end: "0x8005e644", kind: function, ownership: game, confidence: high, external_name: "Calculate Zodiac Symbol" }
+  - { name: main_clear_byte_data, address: "0x8005e644", end: "0x8005e670", kind: function, ownership: game, confidence: high, external_name: "Data Nullifying" }
+  - { name: main_increase_casualties_injured_counters, address: "0x8005e670", end: "0x8005e6cc", kind: function, ownership: game, confidence: high, external_name: "Increase Casualties/Injured Counters" }
+  - { name: main_change_unit_status, address: "0x8005e6cc", end: "0x8005e744", kind: function, ownership: game, confidence: high, external_name: "Inflicted Status Changes" }
+  - { name: main_store_current_status, address: "0x8005e744", end: "0x8005e778", kind: function, ownership: game, confidence: high, external_name: "Store Current Statuses" }
+  - { name: main_transfer_last_ability_ct, address: "0x8005e778", end: "0x8005e7a8", kind: function, ownership: game, confidence: high, external_name: "Transfer Last Ability Used CT" }
+  - { name: main_battle_load_exception_handler, address: "0x8005e8e8", end: "0x8005e90c", kind: function, ownership: game, confidence: high, external_name: "BATTLE Load Exception Handler" }

@@ -1,0 +1,177 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-equip
+
+address_model:
+  runtime_base: "0x801bf000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00002339.wiki
+  - original/ffhacktics/wiki/pages/00011644.wiki
+  - original/ffhacktics/wiki/pages/00011645.wiki
+  - original/ffhacktics/wiki/pages/00006177.wiki
+  - original/ffhacktics/wiki/pages/00006178.wiki
+  - original/ffhacktics/wiki/pages/00006179.wiki
+  - original/ffhacktics/wiki/pages/00006180.wiki
+  - original/ffhacktics/wiki/pages/00006216.wiki
+  - original/ffhacktics/wiki/pages/00006217.wiki
+  - original/ffhacktics/wiki/pages/00006219.wiki
+  - original/ffhacktics/wiki/pages/00006220.wiki
+  - original/ffhacktics/wiki/pages/00006221.wiki
+  - original/ffhacktics/wiki/pages/00006227.wiki
+  - original/ffhacktics/wiki/pages/00006229.wiki
+  - original/ffhacktics/wiki/pages/00006233.wiki
+  - original/ffhacktics/wiki/pages/00006235.wiki
+  - original/ffhacktics/wiki/pages/00006236.wiki
+  - original/ffhacktics/wiki/pages/00006237.wiki
+  - original/ffhacktics/wiki/pages/00011651.wiki
+  - original/ffhacktics/wiki/pages/00011661.wiki
+  - original/ffhacktics/wiki/pages/00011662.wiki
+  - original/ffhacktics/wiki/pages/00011663.wiki
+  - original/ffhacktics/wiki/pages/00011665.wiki
+  - original/ffhacktics/wiki/pages/00011666.wiki
+  - original/ffhacktics/wiki/pages/00011681.wiki
+  - original/ffhacktics/wiki/pages/00011684.wiki
+  - original/ffhacktics/wiki/pages/00011692.wiki
+  - original/ffhacktics/wiki/pages/00011693.wiki
+  - original/ffhacktics/wiki/pages/00011698.wiki
+  - original/ffhacktics/wiki/pages/00011699.wiki
+  - original/ffhacktics/wiki/pages/00011700.wiki
+  - original/ffhacktics/wiki/pages/00011701.wiki
+  - original/ffhacktics/wiki/pages/00011707.wiki
+  - original/ffhacktics/wiki/pages/00011708.wiki
+  - original/ffhacktics/wiki/pages/00011709.wiki
+  - build/extracted/files/EVENT/EQUIP.OUT
+
+symbols:
+  - { name: equip_load_menu_images_and_reset_lists, address: "0x801bf004", end: "0x801bf1d8", kind: function, ownership: game, confidence: high }
+  - { name: equip_initialize_screen, address: "0x801bf1d8", end: "0x801bf3c8", kind: function, ownership: game, confidence: high }
+  - { name: equip_toggle_event_thread_13, address: "0x801bf3c8", end: "0x801bf42c", kind: function, ownership: game, confidence: high }
+  - { name: equip_toggle_event_threads_10_and_12, address: "0x801bf42c", end: "0x801bf4ac", kind: function, ownership: game, confidence: high }
+  - { name: equip_toggle_event_thread_12, address: "0x801bf4ac", end: "0x801bf510", kind: function, ownership: game, confidence: high }
+  - { name: equip_toggle_event_thread_11, address: "0x801bf510", end: "0x801bf590", kind: function, ownership: game, confidence: high }
+  - { name: equip_reset_menu_state_flags, address: "0x801bf590", end: "0x801bf5bc", kind: function, ownership: game, confidence: high }
+  - { name: equip_shutdown_menu_threads, address: "0x801bf5bc", end: "0x801bf604", kind: function, ownership: game, confidence: high }
+  - { name: equip_load_selected_unit_data, address: "0x801bf604", end: "0x801bf754", kind: function, ownership: game, confidence: high }
+  - { name: equip_reset_selection_indices, address: "0x801bf754", end: "0x801bf77c", kind: function, ownership: game, confidence: high }
+  - { name: equip_show_message_with_sound, address: "0x801bf77c", end: "0x801bf7e0", kind: function, ownership: game, confidence: high }
+  - { name: equip_out_entrypoint, address: "0x801bf7e0", end: "0x801bfa18", kind: function, ownership: game, confidence: high }
+  - { name: equip_clear_all_indexed_action_records, address: "0x801bfa18", end: "0x801bfa44", kind: function, ownership: game, confidence: high }
+  - { name: equip_clear_indexed_action_record, address: "0x801bfa44", end: "0x801bfa80", kind: function, ownership: game, confidence: high }
+  - { name: equip_set_indexed_action_record, address: "0x801bfa80", end: "0x801bfacc", kind: function, ownership: game, confidence: high }
+  - { name: equip_restore_list_selection_from_action_record, address: "0x801bfacc", end: "0x801bfbc8", kind: function, ownership: game, confidence: high }
+  - { name: equip_configure_scaled_draw_area_packets, address: "0x801bfbc8", end: "0x801bfd98", kind: function, ownership: game, confidence: high }
+  - { name: equip_reset_portrait_primitive_tail, address: "0x801bfd98", end: "0x801bfdcc", kind: function, ownership: game, confidence: high }
+  - { name: equip_set_sprite_uv_and_type, address: "0x801bfdcc", end: "0x801bfdf8", kind: function, ownership: game, confidence: high }
+  - { name: equip_build_portrait_poly_if_valid, address: "0x801bfdf8", end: "0x801bfe28", kind: function, ownership: game, confidence: high }
+  - { name: equip_clip_portrait_poly_from_right, address: "0x801bfe28", end: "0x801bfe8c", kind: function, ownership: game, confidence: high }
+  - { name: equip_clip_portrait_poly_from_left, address: "0x801bfe8c", end: "0x801bfef0", kind: function, ownership: game, confidence: high }
+  - { name: equip_noop_801c151c, address: "0x801c151c", end: "0x801c1524", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001c151c - 001c1520" }
+  - { name: equip_initialize_menu_tile_and_line_primitives, address: "0x801c1524", end: "0x801c1744", kind: function, ownership: game, confidence: high }
+  - { name: equip_apply_menu_palette_for_mode, address: "0x801c2c6c", end: "0x801c2cc0", kind: function, ownership: game, confidence: high }
+  - { name: equip_render_signed_decimal_entries, address: "0x801c2cc0", end: "0x801c2dcc", kind: function, ownership: game, confidence: high }
+  - { name: equip_run_menu_thread, address: "0x801c373c", end: "0x801c392c", kind: function, ownership: game, confidence: high }
+  - { name: equip_open_submenu_thread_from_current, address: "0x801c392c", end: "0x801c3a24", kind: function, ownership: game, confidence: high }
+  - { name: equip_render_simple_selection_menu_thread, address: "0x801c3a24", end: "0x801c3b98", kind: function, ownership: game, confidence: high }
+  - { name: equip_build_item_graphic_descriptor, address: "0x801c3b98", end: "0x801c3c00", kind: function, ownership: game, confidence: high }
+  - { name: equip_noop_801c3c00, address: "0x801c3c00", end: "0x801c3c08", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001c3c00 - 001c3c04" }
+  - { name: equip_get_thread_field_0x12, address: "0x801c3c08", end: "0x801c3c24", kind: function, ownership: game, confidence: high }
+  - { name: equip_thread_menu_idle_loop, address: "0x801c40fc", end: "0x801c4124", kind: function, ownership: game, confidence: high }
+  - { name: equip_get_item_avail_with_equip_flag, address: "0x801c4180", end: "0x801c41dc", kind: function, ownership: game, confidence: high }
+  - { name: equip_build_item_row_icon_rect, address: "0x801c41dc", end: "0x801c424c", kind: function, ownership: game, confidence: high }
+  - { name: equip_update_screen_state, address: "0x801c4290", end: "0x801c4490", kind: function, ownership: game, confidence: high }
+  - { name: equip_get_menu_value_1, address: "0x801c4f38", end: "0x801c4f48", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001c4f38 - 001c4f44" }
+  - { name: equip_get_menu_value_2, address: "0x801c4f48", end: "0x801c4f58", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001c4f48 - 001c4f54" }
+  - { name: equip_get_menu_display_value_1, address: "0x801c4f58", end: "0x801c4f78", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001c4f58 - 001c4f74" }
+  - { name: equip_get_menu_display_value_2, address: "0x801c4f78", end: "0x801c4f98", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001c4f78 - 001c4f94" }
+  - { name: equip_enqueue_textured_quad_current_ot, address: "0x801c6598", end: "0x801c6788", kind: function, ownership: game, confidence: high }
+  - { name: equip_build_item_inventory_totals, address: "0x801c6788", end: "0x801c684c", kind: function, ownership: game, confidence: high }
+  - { name: equip_adjust_item_inventory_count, address: "0x801c684c", end: "0x801c688c", kind: function, ownership: game, confidence: high }
+  - { name: equip_check_if_two_handing_weapon, address: "0x801c688c", end: "0x801c6920", kind: function, ownership: game, confidence: high }
+  - { name: equip_load_unit_data_from_battle_stats, address: "0x801c6ca0", end: "0x801c6db4", kind: function, ownership: game, confidence: high }
+  - { name: equip_get_item_ranking_value, address: "0x801c700c", end: "0x801c70f8", kind: function, ownership: game, confidence: high }
+  - { name: equip_rebuild_item_category_list, address: "0x801c78dc", end: "0x801c7980", kind: function, ownership: game, confidence: high }
+  - { name: equip_remove_item_from_category_list, address: "0x801c7a3c", end: "0x801c7abc", kind: function, ownership: game, confidence: high }
+  - { name: equip_clear_item_stat_sums, address: "0x801c7abc", end: "0x801c7b04", kind: function, ownership: game, confidence: high }
+  - { name: equip_compute_item_swap_stat_delta, address: "0x801c7d2c", end: "0x801c7de8", kind: function, ownership: game, confidence: high }
+  - { name: equip_subtract_scaled_item_stats, address: "0x801c7de8", end: "0x801c7f90", kind: function, ownership: game, confidence: high }
+  - { name: equip_compute_equipment_swap_stat_deltas, address: "0x801c7f90", end: "0x801c8068", kind: function, ownership: game, confidence: high }
+  - { name: equip_sum_equipment_stat_bonuses, address: "0x801c8068", end: "0x801c8188", kind: function, ownership: game, confidence: high }
+  - { name: equip_get_item_available_count, address: "0x801c8188", end: "0x801c81cc", kind: function, ownership: game, confidence: high }
+  - { name: equip_get_item_total_count, address: "0x801c81cc", end: "0x801c81e4", kind: function, ownership: game, confidence: high }
+  - { name: equip_set_equipment_slot_item, address: "0x801c81e4", end: "0x801c8338", kind: function, ownership: game, confidence: high }
+  - { name: equip_out_can_unit_equip_item_id, address: "0x801c8338", end: "0x801c83d0", kind: function, ownership: game, confidence: high }
+  - { name: equip_get_item_type, address: "0x801c8860", end: "0x801c8884", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001c8860 - 001c8880" }
+  - { name: equip_get_item_type_icon_rect, address: "0x801c8884", end: "0x801c88bc", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001c8884 - 001c88b8" }
+  - { name: equip_out_get_item_type_from_item_number, address: "0x801c88bc", end: "0x801c891c", kind: function, ownership: game, confidence: high }
+  - { name: equip_copy_unit_data_to_compare_slot, address: "0x801c891c", end: "0x801c894c", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001c891c - 001c8948" }
+  - { name: equip_check_two_swords, address: "0x801c894c", end: "0x801c8970", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001c894c - 001c896c" }
+  - { name: equip_check_two_hands, address: "0x801c8970", end: "0x801c8994", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001c8970 - 001c8990" }
+  - { name: equip_render_glyph_to_4bpp_image, address: "0x801c8994", end: "0x801c8ac8", kind: function, ownership: game, confidence: high }
+  - { name: equip_advance_encoded_string_segments, address: "0x801c8ac8", end: "0x801c8b24", kind: function, ownership: game, confidence: high }
+  - { name: equip_initialize_event_thread_if_idle, address: "0x801c8dac", end: "0x801c8e24", kind: function, ownership: game, confidence: high }
+  - { name: equip_concatenate_text_list, address: "0x801c8e24", end: "0x801c8ef4", kind: function, ownership: game, confidence: high }
+  - { name: equip_set_thread_completion_parameters, address: "0x801c8ef4", end: "0x801c8f1c", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001c8ef4 - 001c8f18" }
+  - { name: equip_render_text_id_rows_to_vram, address: "0x801c8f1c", end: "0x801c9024", kind: function, ownership: game, confidence: high }
+  - { name: equip_clear_thread_state, address: "0x801c9024", end: "0x801c904c", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001c9024 - 001c9048" }
+  - { name: equip_start_managed_thread, address: "0x801c904c", end: "0x801c90e8", kind: function, ownership: game, confidence: high }
+  - { name: equip_start_help_text_thread, address: "0x801c90e8", end: "0x801c9164", kind: function, ownership: game, confidence: high }
+  - { name: equip_set_s16_801d86ac, address: "0x801c94a4", end: "0x801c94b4", kind: function, ownership: game, confidence: low, external_name: "EQUIP.OUT 001c94a4 - 001c94b0" }
+  - { name: equip_update_input_and_message_state, address: "0x801c94b4", end: "0x801c9604", kind: function, ownership: game, confidence: high }
+  - { name: equip_clear_menu_indices, address: "0x801c9604", end: "0x801c9628", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001c9604 - 001c9624" }
+  - { name: equip_set_menu_index_1, address: "0x801c9628", end: "0x801c9648", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001c9628 - 001c9644" }
+  - { name: equip_set_menu_index_2, address: "0x801c9648", end: "0x801c9668", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001c9648 - 001c9664" }
+  - { name: equip_update_wrapped_vertical_selection, address: "0x801c9668", end: "0x801c970c", kind: function, ownership: game, confidence: high }
+  - { name: equip_update_vertical_selection_and_mark_change, address: "0x801c970c", end: "0x801c9774", kind: function, ownership: game, confidence: high }
+  - { name: equip_update_wrapped_horizontal_selection, address: "0x801c9774", end: "0x801c9818", kind: function, ownership: game, confidence: high }
+  - { name: equip_update_horizontal_selection_and_mark_change, address: "0x801c9818", end: "0x801c9880", kind: function, ownership: game, confidence: high }
+  - { name: equip_reset_input_state, address: "0x801c9880", end: "0x801c98a0", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001c9880 - 001c989c" }
+  - { name: equip_enqueue_translucent_tile, address: "0x801c98a0", end: "0x801c99a0", kind: function, ownership: game, confidence: high }
+  - { name: equip_enqueue_line_f2, address: "0x801c99a0", end: "0x801c9aa4", kind: function, ownership: game, confidence: high }
+  - { name: equip_enqueue_textured_quad_list, address: "0x801c9aa4", end: "0x801c9d1c", kind: function, ownership: game, confidence: high }
+  - { name: equip_enqueue_textured_quad, address: "0x801c9d1c", end: "0x801c9f30", kind: function, ownership: game, confidence: high }
+  - { name: equip_enqueue_textured_quad_from_descriptor, address: "0x801ca344", end: "0x801ca540", kind: function, ownership: game, confidence: high }
+  - { name: equip_enqueue_draw_move, address: "0x801ca540", end: "0x801ca648", kind: function, ownership: game, confidence: high }
+  - { name: equip_enqueue_draw_area, address: "0x801ca648", end: "0x801ca72c", kind: function, ownership: game, confidence: high }
+  - { name: equip_enqueue_draw_mode, address: "0x801ca72c", end: "0x801ca804", kind: function, ownership: game, confidence: high }
+  - { name: equip_load_image_and_wait, address: "0x801ca804", end: "0x801ca834", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001ca804 - 001ca830" }
+  - { name: equip_store_image_and_wait, address: "0x801ca834", end: "0x801ca864", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001ca834 - 001ca860" }
+  - { name: equip_move_image_and_wait, address: "0x801ca864", end: "0x801ca8a0", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001ca864 - 001ca89c" }
+  - { name: equip_out_001ca8a0_001ca968, address: "0x801ca8a0", end: "0x801ca96c", kind: function, ownership: game, confidence: high }
+  - { name: equip_init_scrollable_list_menu, address: "0x801ca96c", end: "0x801ca9a0", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001ca96c - 001ca99c" }
+  - { name: equip_init_and_draw_scrollable_list_menu, address: "0x801ca9a0", end: "0x801ca9d4", kind: function, ownership: game, confidence: medium, external_name: "EQUIP.OUT 001ca9a0 - 001ca9d0" }
+  - { name: equip_run_sprite_command_stream, address: "0x801ca9d4", end: "0x801caa68", kind: function, ownership: game, confidence: high }
+  - { name: equip_dispatch_menu_with_override, address: "0x801caa68", end: "0x801caab8", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_conditional_block, address: "0x801caab8", end: "0x801cabd0", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_if_else_block, address: "0x801cabd0", end: "0x801cad5c", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_draw_translucent_tile, address: "0x801cad5c", end: "0x801cae14", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_draw_textured_quad, address: "0x801cae14", end: "0x801caf14", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_draw_line_f2, address: "0x801caf14", end: "0x801caf84", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_draw_row_sprite, address: "0x801caf84", end: "0x801cb08c", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_zoomed_draw_area, address: "0x801cb6d4", end: "0x801cb800", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_clut_from_stream, address: "0x801cbb30", end: "0x801cbb84", kind: function, ownership: game, confidence: high }
+  - { name: equip_calculate_next_graphic_clut_id, address: "0x801cbb84", end: "0x801cbbf8", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_tpage_from_stream, address: "0x801cbbf8", end: "0x801cbc4c", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_set_sprite_semitrans, address: "0x801cbc4c", end: "0x801cbc64", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cbc4c - 001cbc60" }
+  - { name: equip_submit_sprite_prim_from_stream, address: "0x801cbc64", end: "0x801cbcc8", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_set_sprite_color, address: "0x801cbcc8", end: "0x801cbd30", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_set_sprite_ot_index, address: "0x801cbd30", end: "0x801cbd48", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cbd30 - 001cbd44" }
+  - { name: equip_advance_render_command_group, address: "0x801cc5bc", end: "0x801cc628", kind: function, ownership: game, confidence: high }
+  - { name: equip_setup_and_draw_scrollable_list_menu, address: "0x801cc8c8", end: "0x801cc8f8", kind: function, ownership: game, confidence: high }
+  - { name: equip_set_sprite_color, address: "0x801cd2b4", end: "0x801cd2e0", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cd2b4 - 001cd2dc" }
+  - { name: equip_set_sprite_ot_index, address: "0x801cd2e0", end: "0x801cd2f0", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cd2e0 - 001cd2ec" }
+  - { name: equip_select_text_palette_and_metrics, address: "0x801cd2f0", end: "0x801cd3cc", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_close_zoom_otag_chain, address: "0x801cd3cc", end: "0x801cd430", kind: function, ownership: game, confidence: high }
+  - { name: equip_parse_set_draw_area, address: "0x801cd430", end: "0x801cd4a4", kind: function, ownership: game, confidence: high }
+  - { name: equip_close_sprite_otag_chain, address: "0x801cd4a4", end: "0x801cd500", kind: function, ownership: game, confidence: high }
+  - { name: equip_set_transition_frame, address: "0x801cd500", end: "0x801cd510", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cd500 - 001cd50c" }
+  - { name: equip_get_transition_frame, address: "0x801cd510", end: "0x801cd520", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cd510 - 001cd51c" }
+  - { name: equip_parse_advance_transition_frame, address: "0x801cd520", end: "0x801cd558", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cd520 - 001cd554" }
+  - { name: equip_get_sprite_color, address: "0x801cd558", end: "0x801cd568", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cd558 - 001cd564" }
+  - { name: equip_initialize_primitive_buffers, address: "0x801cd8f8", end: "0x801cda80", kind: function, ownership: game, confidence: high }
+  - { name: equip_get_speed_multiplier, address: "0x801cdf30", end: "0x801cdf50", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cdf30 - 001cdf4c" }
+  - { name: equip_init_bit_reader_1, address: "0x801cdf50", end: "0x801cdf6c", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cdf50 - 001cdf68" }
+  - { name: equip_init_bit_reader_2, address: "0x801cdf6c", end: "0x801cdf88", kind: function, ownership: game, confidence: high, external_name: "EQUIP.OUT 001cdf6c - 001cdf84" }
+  - { name: equip_read_primary_bits, address: "0x801cdf88", end: "0x801ce034", kind: function, ownership: game, confidence: high }
+  - { name: equip_read_secondary_bits, address: "0x801ce034", end: "0x801ce0e0", kind: function, ownership: game, confidence: high }

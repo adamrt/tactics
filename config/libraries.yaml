@@ -1,0 +1,67 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: main
+
+# These are linked-code ownership ranges, not claims that every object came
+# from one SDK release. Ends are exclusive.
+ranges:
+  - id: libspu
+    address: "0x800186c4"
+    end: "0x8001bb5c"
+    ownership: psyq-library
+    confidence: high
+    evidence: FFHacktics LIBSPU section boundary
+  - id: libgte
+    address: "0x8001bb5c"
+    end: "0x8001dad0"
+    ownership: psyq-library
+    confidence: high
+    evidence: FFHacktics LIBGTE section boundary
+  - id: libetc
+    address: "0x8001dad0"
+    end: "0x8001e8c4"
+    ownership: psyq-library
+    confidence: high
+    evidence: FFHacktics LIBETC section boundary
+  - id: libcd
+    address: "0x8001e8c4"
+    end: "0x8002228c"
+    ownership: psyq-library
+    confidence: high
+    evidence: FFHacktics LIBCD section boundary
+  - id: libc
+    address: "0x8002228c"
+    end: "0x80022c24"
+    ownership: c-runtime
+    confidence: high
+    evidence: FFHacktics LIBC section boundary
+  - id: libgpu
+    address: "0x80022c24"
+    end: "0x800275c0"
+    ownership: psyq-library
+    confidence: high
+    evidence: FFHacktics LIBGPU section boundary
+  - id: libcard
+    address: "0x800275c0"
+    end: "0x80028acc"
+    ownership: psyq-library
+    confidence: high
+    evidence: FFHacktics LIBCARD section boundary
+
+version_evidence:
+  sdk: Psy-Q
+  version: "3.5"
+  scope: identified objects only
+  objects:
+    - library: LIBCD.LIB
+      object: BIOS.OBJ
+      file_offset: "0x0f940"
+      signature_bytes: 5888
+    - library: LIBGPU.LIB
+      object: PRIM.OBJ
+      file_offset: "0x1418c"
+      signature_bytes: 2220
+    - library: LIBGPU.LIB
+      object: SYS.OBJ
+      file_offset: "0x14a38"
+      signature_bytes: 11596

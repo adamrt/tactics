@@ -1,0 +1,17 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-small
+
+address_model:
+  runtime_base: "0x801d7000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00010301.wiki
+  - original/ffhacktics/wiki/pages/00010302.wiki
+  - original/ffhacktics/wiki/pages/00010303.wiki
+  - build/extracted/files/EVENT/SMALL.OUT
+
+symbols:
+  - { name: battle_small_initialize_battle_text_pointers, address: "0x801d7000", end: "0x801d7064", kind: function, ownership: game, confidence: high, external_name: "SMALL.OUT Set String Arrays 2, 6, 8" }
+  - { name: small_return_zero, address: "0x801d7064", end: "0x801d706c", kind: function, ownership: game, confidence: high, external_name: "SMALL.OUT Clear r2" }

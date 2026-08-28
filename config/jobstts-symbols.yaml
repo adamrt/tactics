@@ -1,0 +1,149 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-jobstts
+
+address_model:
+  runtime_base: "0x801df000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00010007.wiki
+  - original/ffhacktics/wiki/pages/00010015.wiki
+  - original/ffhacktics/wiki/pages/00010016.wiki
+  - original/ffhacktics/wiki/pages/00010017.wiki
+  - original/ffhacktics/wiki/pages/00010019.wiki
+  - original/ffhacktics/wiki/pages/00010020.wiki
+  - original/ffhacktics/wiki/pages/00010022.wiki
+  - original/ffhacktics/wiki/pages/00010024.wiki
+  - original/ffhacktics/wiki/pages/00010026.wiki
+  - original/ffhacktics/wiki/pages/00010027.wiki
+  - original/ffhacktics/wiki/pages/00010028.wiki
+  - original/ffhacktics/wiki/pages/00010029.wiki
+  - original/ffhacktics/wiki/pages/00010030.wiki
+  - original/ffhacktics/wiki/pages/00010031.wiki
+  - original/ffhacktics/wiki/pages/00010032.wiki
+  - original/ffhacktics/wiki/pages/00010033.wiki
+  - original/ffhacktics/wiki/pages/00010034.wiki
+  - original/ffhacktics/wiki/pages/00010035.wiki
+  - original/ffhacktics/wiki/pages/00010036.wiki
+  - original/ffhacktics/wiki/pages/00010037.wiki
+  - original/ffhacktics/wiki/pages/00010038.wiki
+  - original/ffhacktics/wiki/pages/00010039.wiki
+  - original/ffhacktics/wiki/pages/00010040.wiki
+  - original/ffhacktics/wiki/pages/00010041.wiki
+  - original/ffhacktics/wiki/pages/00010042.wiki
+  - original/ffhacktics/wiki/pages/00010043.wiki
+  - original/ffhacktics/wiki/pages/00010046.wiki
+  - original/ffhacktics/wiki/pages/00010048.wiki
+  - original/ffhacktics/wiki/pages/00010049.wiki
+  - original/ffhacktics/wiki/pages/00010053.wiki
+  - original/ffhacktics/wiki/pages/00010058.wiki
+  - original/ffhacktics/wiki/pages/00010059.wiki
+  - original/ffhacktics/wiki/pages/00010068.wiki
+  - original/ffhacktics/wiki/pages/00010069.wiki
+  - original/ffhacktics/wiki/pages/00010070.wiki
+  - original/ffhacktics/wiki/pages/00010071.wiki
+  - original/ffhacktics/wiki/pages/00010072.wiki
+  - original/ffhacktics/wiki/pages/00010073.wiki
+  - original/ffhacktics/wiki/pages/00010074.wiki
+  - original/ffhacktics/wiki/pages/00010076.wiki
+  - original/ffhacktics/wiki/pages/00010077.wiki
+  - original/ffhacktics/wiki/pages/00010080.wiki
+  - original/ffhacktics/wiki/pages/00010082.wiki
+  - original/ffhacktics/wiki/pages/00010084.wiki
+  - original/ffhacktics/wiki/pages/00010085.wiki
+  - original/ffhacktics/wiki/pages/00010087.wiki
+  - original/ffhacktics/wiki/pages/00010088.wiki
+  - original/ffhacktics/wiki/pages/00010090.wiki
+  - original/ffhacktics/wiki/pages/00010091.wiki
+  - original/ffhacktics/wiki/pages/00010095.wiki
+  - original/ffhacktics/wiki/pages/00010096.wiki
+  - original/ffhacktics/wiki/pages/00010097.wiki
+  - original/ffhacktics/wiki/pages/00010103.wiki
+  - original/ffhacktics/wiki/pages/00010104.wiki
+  - original/ffhacktics/wiki/pages/00010105.wiki
+  - original/ffhacktics/wiki/pages/00010109.wiki
+  - original/ffhacktics/wiki/pages/00010110.wiki
+  - original/ffhacktics/wiki/pages/00010116.wiki
+  - original/ffhacktics/wiki/pages/00010118.wiki
+  - original/ffhacktics/wiki/pages/00012287.wiki
+  - original/ffhacktics/wiki/pages/00012290.wiki
+  - original/ffhacktics/wiki/pages/00000809.wiki
+  - original/ffhacktics/wiki/pages/00000810.wiki
+  - build/extracted/files/EVENT/JOBSTTS.OUT
+
+symbols:
+  - { name: jobstts_out_001df004_001df194, address: "0x801df004", end: "0x801df198", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_clear_ability_selection_states, address: "0x801df478", end: "0x801df4a4", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df478 - 001df4a0" }
+  - { name: jobstts_clear_ability_selection_state, address: "0x801df4a4", end: "0x801df4e0", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df4a4 - 001df4dc" }
+  - { name: jobstts_store_ability_selection_state, address: "0x801df4e0", end: "0x801df52c", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df4e0 - 001df528" }
+  - { name: jobstts_load_ability_selection_state, address: "0x801df52c", end: "0x801df5dc", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_refresh_current_job_level, address: "0x801df5dc", end: "0x801df648", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df5dc - 001df644" }
+  - { name: jobstts_refresh_current_job_jp, address: "0x801df648", end: "0x801df694", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df648 - 001df690" }
+  - { name: jobstts_refresh_current_job_total_jp, address: "0x801df694", end: "0x801df6e0", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df694 - 001df6dc" }
+  - { name: jobstts_refresh_next_job_level_jp_requirement, address: "0x801df6e0", end: "0x801df760", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_refresh_current_job_mastered, address: "0x801df760", end: "0x801df7ac", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df760 - 001df7a8" }
+  - { name: jobstts_update_job_list_menu, address: "0x801df7ac", end: "0x801df964", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_get_current_job_jp, address: "0x801df964", end: "0x801df974", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df964 - 001df970" }
+  - { name: jobstts_get_current_job_level, address: "0x801df974", end: "0x801df984", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df974 - 001df980" }
+  - { name: jobstts_get_next_job_level_jp_requirement, address: "0x801df984", end: "0x801df994", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df984 - 001df990" }
+  - { name: jobstts_get_current_job_total_jp, address: "0x801df994", end: "0x801df9a4", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df994 - 001df9a0" }
+  - { name: jobstts_is_current_job_mastered, address: "0x801df9a4", end: "0x801df9b4", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001df9a4 - 001df9b0" }
+  - { name: jobstts_is_non_action_ability_learned, address: "0x801df9b4", end: "0x801dfa24", kind: function, ownership: game, confidence: medium, external_name: "JOBSTTS.OUT 001df9b4 - 001dfa20" }
+  - { name: jobstts_is_non_action_ability_unlearned, address: "0x801dfa24", end: "0x801dfa5c", kind: function, ownership: game, confidence: medium, external_name: "JOBSTTS.OUT 001dfa24 - 001dfa58" }
+  - { name: jobstts_is_action_ability, address: "0x801dfa5c", end: "0x801dfa6c", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001dfa5c - 001dfa68" }
+  - { name: jobstts_get_ability_mp_cost_display_value, address: "0x801dfa6c", end: "0x801dfab8", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001dfa6c - 001dfab4" }
+  - { name: jobstts_get_ability_ct_display_value, address: "0x801dfab8", end: "0x801dfb1c", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001dfab8 - 001dfb18" }
+  - { name: jobstts_get_ability_jp_cost_display_value, address: "0x801dfb1c", end: "0x801dfb6c", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001dfb1c - 001dfb68" }
+  - { name: jobstts_is_ability_learned, address: "0x801dfb6c", end: "0x801dfb90", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001dfb6c - 001dfb8c" }
+  - { name: jobstts_is_action_tab, address: "0x801dfb90", end: "0x801dfba0", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001dfb90 - 001dfb9c" }
+  - { name: jobstts_is_reaction_tab, address: "0x801dfba0", end: "0x801dfbb8", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001dfba0 - 001dfbb4" }
+  - { name: jobstts_is_support_tab, address: "0x801dfbb8", end: "0x801dfbd0", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001dfbb8 - 001dfbcc" }
+  - { name: jobstts_is_movement_tab, address: "0x801dfbd0", end: "0x801dfbe8", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001dfbd0 - 001dfbe4" }
+  - { name: jobstts_is_special_monster_job, address: "0x801dffa0", end: "0x801dffc0", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001dffa0 - 001dffbc" }
+  - { name: jobstts_initialize_unit_job_data, address: "0x801e0128", end: "0x801e0168", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e0128 - 001e0164" }
+  - { name: jobstts_get_base_job, address: "0x801e0168", end: "0x801e01b4", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e0168 - 001e01b0" }
+  - { name: jobstts_find_first_job_for_skillset, address: "0x801e0314", end: "0x801e036c", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e0314 - 001e0368" }
+  - { name: jobstts_get_job_skillset, address: "0x801e036c", end: "0x801e0390", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e036c - 001e038c" }
+  - { name: jobstts_get_generic_job_index, address: "0x801e0390", end: "0x801e03bc", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT Get generic job index" }
+  - { name: jobstts_render_glyph_to_4bpp_image, address: "0x801e060c", end: "0x801e0740", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_advance_encoded_string_segments, address: "0x801e0740", end: "0x801e079c", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e0740 - 001e0798" }
+  - { name: jobstts_render_text_id_rows_to_vram, address: "0x801e0a24", end: "0x801e0b2c", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_start_selected_job_text_thread, address: "0x801e0b2c", end: "0x801e0ba8", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_out_001e0ee8_001e104c, address: "0x801e0ee8", end: "0x801e1050", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_clear_input_repeat_counters, address: "0x801e1050", end: "0x801e1074", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e1050 - 001e1070" }
+  - { name: jobstts_enqueue_textured_quad_rect, address: "0x801e111c", end: "0x801e135c", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_enqueue_textured_quad_list, address: "0x801e135c", end: "0x801e15d4", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_out_build_board_polygons, address: "0x801e15d4", end: "0x801e17e8", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_enqueue_textured_quad_corners, address: "0x801e1c08", end: "0x801e1e04", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_enqueue_draw_move, address: "0x801e1e04", end: "0x801e1f0c", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_enqueue_draw_area, address: "0x801e1f0c", end: "0x801e1ff0", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_load_image_and_wait, address: "0x801e1ff0", end: "0x801e2020", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e1ff0 - 001e201c" }
+  - { name: jobstts_store_image_and_wait, address: "0x801e2020", end: "0x801e2050", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e2020 - 001e204c" }
+  - { name: jobstts_init_scrollable_list_menu_core, address: "0x801e2050", end: "0x801e2114", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_init_scrollable_list_menu, address: "0x801e2114", end: "0x801e2148", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e2114 - 001e2144" }
+  - { name: jobstts_init_and_draw_scrollable_list_menu, address: "0x801e2148", end: "0x801e217c", kind: function, ownership: game, confidence: medium, external_name: "JOBSTTS.OUT 001e2148 - 001e2178" }
+  - { name: jobstts_run_render_command_stream, address: "0x801e217c", end: "0x801e2238", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_set_mode_and_render_command_stream, address: "0x801e2238", end: "0x801e227c", kind: function, ownership: game, confidence: medium, external_name: "JOBSTTS.OUT 001e2238 - 001e2278" }
+  - { name: jobstts_parse_conditional_group, address: "0x801e227c", end: "0x801e2394", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_parse_conditional_group_else, address: "0x801e2394", end: "0x801e2520", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_parse_set_semitransparency, address: "0x801e2520", end: "0x801e2538", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e2520 - 001e2534" }
+  - { name: jobstts_out_create_column_headings_separators_mastered_graph, address: "0x801e2538", end: "0x801e2638", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_parse_set_clut_id, address: "0x801e2f90", end: "0x801e2fe4", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e2f90 - 001e2fe0" }
+  - { name: jobstts_out_calculate_next_graphic_clut_id, address: "0x801e2fe4", end: "0x801e3058", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_parse_set_texture_page, address: "0x801e3058", end: "0x801e30ac", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e3058 - 001e30a8" }
+  - { name: jobstts_parse_set_otag_index_if_unlocked, address: "0x801e30ac", end: "0x801e30d8", kind: function, ownership: game, confidence: medium, external_name: "JOBSTTS.OUT 001e30ac - 001e30d4" }
+  - { name: jobstts_advance_render_command_group, address: "0x801e362c", end: "0x801e3698", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e362c - 001e3694" }
+  - { name: jobstts_init_and_draw_scrollable_list_menu_simple, address: "0x801e3938", end: "0x801e3968", kind: function, ownership: game, confidence: medium, external_name: "JOBSTTS.OUT 001e3938 - 001e3964" }
+  - { name: jobstts_select_text_palette_and_metrics, address: "0x801e4338", end: "0x801e4414", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_parse_release_otag_lock_and_add_draw_area, address: "0x801e4414", end: "0x801e449c", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_parse_set_draw_area_if_unlocked, address: "0x801e449c", end: "0x801e4510", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_parse_add_next_otag_draw_area, address: "0x801e4510", end: "0x801e456c", kind: function, ownership: game, confidence: medium, external_name: "JOBSTTS.OUT 001e4510 - 001e4568" }
+  - { name: jobstts_set_transition_frame, address: "0x801e456c", end: "0x801e457c", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e456c - 001e4578" }
+  - { name: jobstts_get_transition_frame, address: "0x801e457c", end: "0x801e458c", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e457c - 001e4588" }
+  - { name: jobstts_swap_graphics_context_and_clear_otag, address: "0x801e47c8", end: "0x801e48f4", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_get_speed_multiplier, address: "0x801e4e78", end: "0x801e4e98", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e4e78 - 001e4e94" }
+  - { name: jobstts_set_primary_bitstream_source, address: "0x801e4e98", end: "0x801e4eb4", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e4e98 - 001e4eb0" }
+  - { name: jobstts_set_secondary_bitstream_source, address: "0x801e4eb4", end: "0x801e4ed0", kind: function, ownership: game, confidence: high, external_name: "JOBSTTS.OUT 001e4eb4 - 001e4ecc" }
+  - { name: jobstts_read_primary_bits, address: "0x801e4ed0", end: "0x801e4f7c", kind: function, ownership: game, confidence: high }
+  - { name: jobstts_read_secondary_bits, address: "0x801e4f7c", end: "0x801e5028", kind: function, ownership: game, confidence: high }

@@ -1,0 +1,11 @@
+typedef unsigned char u8;
+
+void main_monster_equipment_storing(u8* dst, u8* src) {
+    dst[0x1D] = src[0x15];
+    dst[0x1E] = 0xFF;
+    dst[0x1F] = src[0x16];
+    dst[0x20] = 0xFF;
+    dst[0x1A] = src[0x12];
+    dst[0x1B] = src[0x13];
+    dst[0x1C] = src[0x14];
+}

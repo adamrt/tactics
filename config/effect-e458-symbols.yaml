@@ -1,0 +1,10 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: effect-e458
+address_model: { runtime_base: "0x801c2500", file_header_bytes: 0 }
+provenance:
+  - original/ffhacktics/wiki/pages/00006760.wiki
+  - original/ffhacktics/wiki/pages/00009862.wiki
+  - build/extracted/files/EFFECT/E458.BIN
+symbols:
+  - { name: effect_e458_strong_fire_explosion_submit_remaining_timeline_duration_state, address: "0x801c2c74", end: "0x801c2d1c", kind: function, ownership: game, confidence: high, external_name: "E458 001c2c74 - 001c2d18" }

@@ -1,0 +1,14 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: effect-e373
+
+address_model:
+  runtime_base: "0x801c2500"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00009821.wiki
+  - build/extracted/files/EFFECT/E373.BIN
+
+symbols:
+  - { name: effect_add_scratchpad_xyz_components, address: "0x801c3ad0", end: "0x801c3b48", kind: function, ownership: game, confidence: high, external_name: "E373 001c3ad0 - 001c3b44" }

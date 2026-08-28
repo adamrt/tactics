@@ -1,0 +1,130 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-require
+
+address_model:
+  runtime_base: "0x801bf000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00004354.wiki
+  - original/ffhacktics/wiki/pages/00004355.wiki
+  - original/ffhacktics/wiki/pages/00000872.wiki
+  - original/ffhacktics/wiki/pages/00006074.wiki
+  - original/ffhacktics/wiki/pages/00006075.wiki
+  - original/ffhacktics/wiki/pages/00006076.wiki
+  - original/ffhacktics/wiki/pages/00006077.wiki
+  - original/ffhacktics/wiki/pages/00006078.wiki
+  - original/ffhacktics/wiki/pages/00006084.wiki
+  - original/ffhacktics/wiki/pages/00006086.wiki
+  - original/ffhacktics/wiki/pages/00006090.wiki
+  - original/ffhacktics/wiki/pages/00011411.wiki
+  - original/ffhacktics/wiki/pages/00006082.wiki
+  - original/ffhacktics/wiki/pages/00006083.wiki
+  - original/ffhacktics/wiki/pages/00011412.wiki
+  - original/ffhacktics/wiki/pages/00006094.wiki
+  - original/ffhacktics/wiki/pages/00006095.wiki
+  - original/ffhacktics/wiki/pages/00006096.wiki
+  - original/ffhacktics/wiki/pages/00006097.wiki
+  - original/ffhacktics/wiki/pages/00006098.wiki
+  - original/ffhacktics/wiki/pages/00006092.wiki
+  - original/ffhacktics/wiki/pages/00006105.wiki
+  - original/ffhacktics/wiki/pages/00006109.wiki
+  - original/ffhacktics/wiki/pages/00006110.wiki
+  - original/ffhacktics/wiki/pages/00006112.wiki
+  - original/ffhacktics/wiki/pages/00006111.wiki
+  - original/ffhacktics/wiki/pages/00006113.wiki
+  - original/ffhacktics/wiki/pages/00011413.wiki
+  - original/ffhacktics/wiki/pages/00006117.wiki
+  - original/ffhacktics/wiki/pages/00006119.wiki
+  - original/ffhacktics/wiki/pages/00006121.wiki
+  - original/ffhacktics/wiki/pages/00006124.wiki
+  - original/ffhacktics/wiki/pages/00006127.wiki
+  - original/ffhacktics/wiki/pages/00006905.wiki
+  - original/ffhacktics/wiki/pages/00009027.wiki
+  - original/ffhacktics/wiki/pages/00009028.wiki
+  - original/ffhacktics/wiki/pages/00009036.wiki
+  - original/ffhacktics/wiki/pages/00009039.wiki
+  - original/ffhacktics/wiki/pages/00012759.wiki
+  - original/ffhacktics/wiki/pages/00012755.wiki
+  - original/ffhacktics/wiki/pages/00011414.wiki
+  - original/ffhacktics/wiki/pages/00007062.wiki
+  - build/extracted/files/EVENT/REQUIRE.OUT
+
+symbols:
+  - { name: require_configure_scaled_draw_area_packets, address: "0x801bf01c", end: "0x801bf1f4", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001bf01c - 001bf1f0" }
+  - { name: require_initialize_portrait_primitive_tail, address: "0x801bf1f4", end: "0x801bf228", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001bf1f4 - 001bf224" }
+  - { name: require_set_clut_rect_from_id, address: "0x801bf228", end: "0x801bf254", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001bf228 - 001bf250" }
+  - { name: require_build_portrait_poly_ft4, address: "0x801bf254", end: "0x801bf2ac", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001bf254 - 001bf2a8" }
+  - { name: require_clip_portrait_poly_from_right, address: "0x801bf2ac", end: "0x801bf310", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001bf2ac - 001bf30c" }
+  - { name: require_clip_portrait_poly_from_left, address: "0x801bf310", end: "0x801bf374", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001bf310 - 001bf370" }
+  - { name: require_build_portrait_transition_primitives, address: "0x801bf374", end: "0x801bf79c", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001bf374 - 001bf798" }
+  - { name: require_noop_801c07ac, address: "0x801c07ac", end: "0x801c07b4", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Null Routine 1" }
+  - { name: require_initialize_postbattle_unit_menu_primitives, address: "0x801c07b4", end: "0x801c09d4", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c07b4 - 001c09d0" }
+  - { name: require_advance_and_stop_current_thread, address: "0x801c09d4", end: "0x801c09fc", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c09d4 - 001c09f8" }
+  - { name: require_advance_and_stop_current_thread_2, address: "0x801c09fc", end: "0x801c0a24", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c09fc - 001c0a20" }
+  - { name: require_configure_postbattle_status_panel_primitive_colors, address: "0x801c11b0", end: "0x801c132c", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c11b0 - 001c1328" }
+  - { name: require_initialize_menu_primitive_colors, address: "0x801c132c", end: "0x801c1380", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c132c - 001c137c" }
+  - { name: require_render_signed_decimal_entries, address: "0x801c1380", end: "0x801c148c", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c1380 - 001c1488" }
+  - { name: require_render_decimal_entry_list, address: "0x801c148c", end: "0x801c1580", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c148c - 001c157c" }
+  - { name: require_render_decimal_value, address: "0x801c1580", end: "0x801c1884", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c1580 - 001c1880" }
+  - { name: require_run_numeric_editor_thread, address: "0x801c1884", end: "0x801c1de8", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c1884 - 001c1de4" }
+  - { name: require_run_character_editor_menu_thread, address: "0x801c1de8", end: "0x801c1fd8", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c1de8 - 001c1fd4" }
+  - { name: require_open_submenu_thread_from_current, address: "0x801c1fd8", end: "0x801c20d0", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c1fd8 - 001c20cc" }
+  - { name: require_render_simple_selection_menu_thread, address: "0x801c20d0", end: "0x801c2244", kind: function, ownership: game, confidence: high, external_name: "Display Simple Selection Menu" }
+  - { name: require_build_item_graphic_descriptor, address: "0x801c2244", end: "0x801c22ac", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c2244 - 001c22a8" }
+  - { name: require_noop_801c22ac, address: "0x801c22ac", end: "0x801c22b4", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Null Routine 2" }
+  - { name: require_is_event_thread_running, address: "0x801c22b4", end: "0x801c22d0", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c22b4 - 001c22cc" }
+  - { name: require_render_thread_status_indicators, address: "0x801c22d0", end: "0x801c27a4", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c22d0 - 001c27a0" }
+  - { name: require_fill_string_buffer_fe, address: "0x801c27a4", end: "0x801c27c4", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c27a4 - 001c27c0" }
+  - { name: require_copy_battle_stats_to_status_gauges, address: "0x801c27c4", end: "0x801c2888", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c27c4 - 001c2884" }
+  - { name: require_load_selected_unit_into_editor, address: "0x801c2888", end: "0x801c2dcc", kind: function, ownership: game, confidence: high, external_name: "Copy Unit Data to Status Billboard" }
+  - { name: require_configure_scaled_poly_ft4, address: "0x801c2dcc", end: "0x801c3010", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c2dcc - 001c300c" }
+  - { name: require_render_transition_poly_ft4_passes, address: "0x801c3010", end: "0x801c32cc", kind: function, ownership: game, confidence: high }
+  - { name: require_render_transition_poly_gt4_grid, address: "0x801c32cc", end: "0x801c345c", kind: function, ownership: game, confidence: high }
+  - { name: require_set_scaled_poly_ft4_geometry_and_uv, address: "0x801c345c", end: "0x801c372c", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c345c - 001c3728" }
+  - { name: require_build_scaled_sprite_primitive_chain, address: "0x801c372c", end: "0x801c39e0", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Build Scaled Sprite Primitive Chain" }
+  - { name: require_wait_16_frames_and_stop_thread, address: "0x801c39e0", end: "0x801c3a08", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c39e0 - 001c3a04" }
+  - { name: require_update_bio_variable_for_unit_class, address: "0x801c3a08", end: "0x801c3ab0", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Update Bio Variable for Unit Class" }
+  - { name: require_load_bonus_image, address: "0x801c3ab0", end: "0x801c3ba4", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Open BONUS BIN Image" }
+  - { name: require_wait_frames_or_skip_input, address: "0x801c3ba4", end: "0x801c3c10", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Timer & Input Skip" }
+  - { name: require_fade_rgb_31_frames, address: "0x801c3c10", end: "0x801c3d08", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c3c10 - 001c3d04" }
+  - { name: require_wait_for_music_call_idle, address: "0x801c3d08", end: "0x801c3d50", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c3d08 - 001c3d4c" }
+  - { name: require_open_scenario_tracks_and_play_first, address: "0x801c3d50", end: "0x801c3df8", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c3d50 - 001c3df4" }
+  - { name: require_show_battle_congratulations_messages, address: "0x801c3df8", end: "0x801c3fa4", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Display Conditions Battle Congrats Messages" }
+  - { name: require_apply_permanent_brave_faith_changes_and_collect_warnings, address: "0x801c3fa4", end: "0x801c43b0", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Apply Permanent Brave/Faith Changes" }
+  - { name: require_broadcast_transition_value, address: "0x801c43b0", end: "0x801c43e0", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c43b0 - 001c43dc" }
+  - { name: require_noop_801c43e0, address: "0x801c43e0", end: "0x801c43e8", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Null Routine 3" }
+  - { name: require_collect_low_brave_high_faith_departures, address: "0x801c43e8", end: "0x801c4740", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Search for Units with under 6 Brave or over 95 Faith" }
+  - { name: require_collect_post_battle_join_candidates, address: "0x801c4740", end: "0x801c4ab4", kind: function, ownership: game, confidence: high }
+  - { name: require_apply_permanent_brave_faith_changes, address: "0x801c4ab4", end: "0x801c4c78", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c4ab4 - 001c4c74" }
+  - { name: require_remove_units_with_low_brave_or_high_faith, address: "0x801c4c78", end: "0x801c4ec4", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c4c78 - 001c4ec0" }
+  - { name: require_display_ready_condition_bugged, address: "0x801c4ec4", end: "0x801c4f40", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c4ec4 - 001c4f3c" }
+  - { name: require_wait_for_selection_menu_threads, address: "0x801c4f40", end: "0x801c500c", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c4f40 - 001c5008" }
+  - { name: require_wait_for_skip_input, address: "0x801c500c", end: "0x801c5050", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c500c - 001c504c" }
+  - { name: require_open_jobstts_overlay, address: "0x801c5050", end: "0x801c5158", kind: function, ownership: game, confidence: high, external_name: "Open JOBSTTS.OUT Companion Executable" }
+  - { name: require_open_jobstts_thread, address: "0x801c5158", end: "0x801c5190", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c5158 - 001c518c" }
+  - { name: require_run_suspended_thread_transition, address: "0x801c5190", end: "0x801c52c4", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c5190 - 001c52c0" }
+  - { name: require_set_formation_icon_uv, address: "0x801c52c4", end: "0x801c53ac", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c52c4 - 001c53a8" }
+  - { name: require_load_file_sync, address: "0x801c53ac", end: "0x801c5458", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c53ac - 001c5454" }
+  - { name: require_restore_party_item_counts, address: "0x801c5dd0", end: "0x801c5e48", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c5dd0 - 001c5e44" }
+  - { name: require_sell_equipment_over_inventory_limit, address: "0x801c5e48", end: "0x801c5f10", kind: function, ownership: game, confidence: high, external_name: "Post battle equipment storing" }
+  - { name: require_store_equipment_or_sell_overflow, address: "0x801c5f10", end: "0x801c6000", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c5f10 - 001c5ffc" }
+  - { name: require_get_free_party_slot_status, address: "0x801c6000", end: "0x801c60a0", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c6000 - 001c609c" }
+  - { name: require_select_party_unit_to_remove, address: "0x801c60a0", end: "0x801c6988", kind: function, ownership: game, confidence: high, external_name: "Post-battle Party Full Unit Join Selection" }
+  - { name: require_apply_post_battle_unit_changes, address: "0x801c6988", end: "0x801c7170", kind: function, ownership: game, confidence: high, external_name: "Post-battle Unit Changes" }
+  - { name: require_collect_war_trophies_and_bonus_money, address: "0x801c7170", end: "0x801c735c", kind: function, ownership: game, confidence: high, external_name: "Collect War Trophies and Bonus Money" }
+  - { name: require_get_war_trophy_column_x, address: "0x801c735c", end: "0x801c7384", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c735c - 001c7380" }
+  - { name: require_get_war_trophy_entry_offset, address: "0x801c7384", end: "0x801c73b8", kind: function, ownership: game, confidence: medium, external_name: "REQUIRE.OUT 001c7384 - 001c73b4" }
+  - { name: require_render_war_trophies, address: "0x801c73b8", end: "0x801c7b78", kind: function, ownership: game, confidence: high, external_name: "Display Conditions War Trophies" }
+  - { name: require_render_gil_reward_ticker, address: "0x801c7b78", end: "0x801c8b94", kind: function, ownership: game, confidence: high, external_name: "Display Conditions Gil Reward Ticker" }
+  - { name: require_scale_poly_gt4_vertex_colors, address: "0x801c8b94", end: "0x801c8d38", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c8b94 - 001c8d34" }
+  - { name: require_initialize_poly_gt4_array_32, address: "0x801c8d38", end: "0x801c8e5c", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c8d38 - 001c8e58" }
+  - { name: require_initialize_poly_gt4_array_8, address: "0x801c8e5c", end: "0x801c8f80", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001c8e5c - 001c8f7c" }
+  - { name: require_render_display_condition_general_cases, address: "0x801c8f80", end: "0x801c9fa4", kind: function, ownership: game, confidence: high, external_name: "Display Conditions General Cases" }
+  - { name: require_noop_801c9fa4, address: "0x801c9fa4", end: "0x801c9fac", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Null Routine 4" }
+  - { name: require_render_display_condition_special_cases_thread, address: "0x801c9fac", end: "0x801ca644", kind: function, ownership: game, confidence: high, external_name: "Display Conditions Special Cases" }
+  - { name: require_stop_current_event_thread_wrapper, address: "0x801ca644", end: "0x801ca664", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT 001ca644 - 001ca660" }
+  - { name: require_dispatch_display_condition, address: "0x801cafd4", end: "0x801cb15c", kind: function, ownership: game, confidence: high, external_name: "Display Conditions" }
+  - { name: require_run_helpmenu_overlay, address: "0x801cb15c", end: "0x801cb21c", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Open and Run HELPMENU.OUT" }
+  - { name: require_build_battle_nickname_strings, address: "0x801cb21c", end: "0x801cb2cc", kind: function, ownership: game, confidence: high, external_name: "REQUIRE.OUT Create Strings 8 From Battle Nicknames" }

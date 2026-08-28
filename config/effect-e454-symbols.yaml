@@ -1,0 +1,12 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: effect-e454
+address_model: { runtime_base: "0x801c2500", file_header_bytes: 0 }
+provenance:
+  - original/ffhacktics/wiki/pages/00006760.wiki
+  - original/ffhacktics/wiki/pages/00009717.wiki
+  - original/ffhacktics/wiki/pages/00009850.wiki
+  - build/extracted/files/EFFECT/E454.BIN
+symbols:
+  - { name: effect_e454_banish_update_particle_state, address: "0x801c2500", end: "0x801c28e8", kind: function, ownership: game, confidence: high, external_name: "E454 001c2500 - 001c28e4" }
+  - { name: effect_e454_banish_dispatch_command_0x80_group_2_state, address: "0x801c28e8", end: "0x801c29ec", kind: function, ownership: game, confidence: high, external_name: "E454 001c28e8 - 001c29e8" }

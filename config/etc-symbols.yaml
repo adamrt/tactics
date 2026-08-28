@@ -1,0 +1,24 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-etc
+
+address_model:
+  runtime_base: "0x801bf000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00009424.wiki
+  - original/ffhacktics/wiki/pages/00011531.wiki
+  - original/ffhacktics/wiki/pages/00006935.wiki
+  - original/ffhacktics/wiki/pages/00006933.wiki
+  - original/ffhacktics/wiki/pages/00006934.wiki
+  - original/ffhacktics/wiki/pages/00006932.wiki
+  - build/extracted/files/EVENT/ETC.OUT
+
+symbols:
+  - { name: etc_open_graphic, address: "0x801bf01c", end: "0x801bf3d8", kind: function, ownership: game, confidence: high, external_name: "ETC.OUT Open Graphic to Frame Buffer" }
+  - { name: etc_null_routine, address: "0x801bf3d8", end: "0x801bf3e0", kind: function, ownership: game, confidence: high, external_name: "ETC.OUT Null Routine" }
+  - { name: etc_build_chapter_graphic_polygons, address: "0x801bf3e0", end: "0x801bfc58", kind: function, ownership: game, confidence: high, external_name: "ETC.OUT Build Chapter Graphic Polygons" }
+  - { name: etc_show_chapter_title, address: "0x801c017c", end: "0x801c03ac", kind: function, ownership: game, confidence: high, external_name: "ETC.OUT Show Chapter Title" }
+  - { name: etc_show_game_over, address: "0x801c03ac", end: "0x801c05d4", kind: function, ownership: game, confidence: high, external_name: "ETC.OUT Show Gameover Image" }
+  - { name: etc_show_graphic_async, address: "0x801c05d4", end: "0x801c0648", kind: function, ownership: game, confidence: high, external_name: "ETC.OUT Show Graphic (Async)" }

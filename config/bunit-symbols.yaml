@@ -1,0 +1,190 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-bunit
+
+address_model:
+  runtime_base: "0x801bf000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00009927.wiki
+  - original/ffhacktics/wiki/pages/00010622.wiki
+  - original/ffhacktics/wiki/pages/00010637.wiki
+  - original/ffhacktics/wiki/pages/00010641.wiki
+  - original/ffhacktics/wiki/pages/00010644.wiki
+  - original/ffhacktics/wiki/pages/00010653.wiki
+  - original/ffhacktics/wiki/pages/00010654.wiki
+  - original/ffhacktics/wiki/pages/00010655.wiki
+  - original/ffhacktics/wiki/pages/00010656.wiki
+  - original/ffhacktics/wiki/pages/00010662.wiki
+  - original/ffhacktics/wiki/pages/00010670.wiki
+  - original/ffhacktics/wiki/pages/00010682.wiki
+  - original/ffhacktics/wiki/pages/00010690.wiki
+  - original/ffhacktics/wiki/pages/00010699.wiki
+  - original/ffhacktics/wiki/pages/00010704.wiki
+  - original/ffhacktics/wiki/pages/00010706.wiki
+  - original/ffhacktics/wiki/pages/00010707.wiki
+  - original/ffhacktics/wiki/pages/00010717.wiki
+  - original/ffhacktics/wiki/pages/00010719.wiki
+  - original/ffhacktics/wiki/pages/00010723.wiki
+  - original/ffhacktics/wiki/pages/00010724.wiki
+  - original/ffhacktics/wiki/pages/00010725.wiki
+  - original/ffhacktics/wiki/pages/00010748.wiki
+  - original/ffhacktics/wiki/pages/00010749.wiki
+  - original/ffhacktics/wiki/pages/00010750.wiki
+  - original/ffhacktics/wiki/pages/00010751.wiki
+  - original/ffhacktics/wiki/pages/00010752.wiki
+  - original/ffhacktics/wiki/pages/00010759.wiki
+  - original/ffhacktics/wiki/pages/00010761.wiki
+  - original/ffhacktics/wiki/pages/00010765.wiki
+  - original/ffhacktics/wiki/pages/00010766.wiki
+  - original/ffhacktics/wiki/pages/00010767.wiki
+  - original/ffhacktics/wiki/pages/00010768.wiki
+  - original/ffhacktics/wiki/pages/00010771.wiki
+  - original/ffhacktics/wiki/pages/00010782.wiki
+  - original/ffhacktics/wiki/pages/00010783.wiki
+  - original/ffhacktics/wiki/pages/00010784.wiki
+  - original/ffhacktics/wiki/pages/00010785.wiki
+  - original/ffhacktics/wiki/pages/00010786.wiki
+  - build/extracted/files/EVENT/BUNIT.OUT
+
+symbols:
+  - { name: bunit_initialize_portrait_primitive_tail, address: "0x801bf3d4", end: "0x801bf408", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Initialize Portrait Primitive Tail" }
+  - { name: bunit_set_clut_rect_from_id, address: "0x801bf408", end: "0x801bf434", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Set CLUT Rectangle from ID" }
+  - { name: bunit_build_portrait_poly_ft4, address: "0x801bf434", end: "0x801bf464", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Build Portrait POLY_FT4" }
+  - { name: bunit_clip_portrait_poly_from_right, address: "0x801bf464", end: "0x801bf4c8", kind: function, ownership: game, confidence: high }
+  - { name: bunit_clip_portrait_poly_from_left, address: "0x801bf4c8", end: "0x801bf52c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_noop_801c0adc, address: "0x801c0adc", end: "0x801c0ae4", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c0adc - 001c0ae0" }
+  - { name: bunit_initialize_menu_tile_and_line_primitives, address: "0x801c0ae4", end: "0x801c0d04", kind: function, ownership: game, confidence: high }
+  - { name: bunit_yield_then_stop_thread, address: "0x801c0d04", end: "0x801c0d2c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c0d04 - 001c0d28" }
+  - { name: bunit_yield_then_stop_thread_2, address: "0x801c0d2c", end: "0x801c0d54", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c0d2c - 001c0d50" }
+  - { name: bunit_configure_status_panel_primitive_colors, address: "0x801c14d4", end: "0x801c1650", kind: function, ownership: game, confidence: high }
+  - { name: bunit_apply_menu_palette_for_mode, address: "0x801c1650", end: "0x801c16a4", kind: function, ownership: game, confidence: high }
+  - { name: bunit_render_signed_decimal_entries, address: "0x801c16a4", end: "0x801c17b0", kind: function, ownership: game, confidence: high }
+  - { name: bunit_render_decimal_entry_list, address: "0x801c17b0", end: "0x801c18a4", kind: function, ownership: game, confidence: high }
+  - { name: bunit_render_decimal_value, address: "0x801c18a4", end: "0x801c1ba8", kind: function, ownership: game, confidence: high }
+  - { name: bunit_run_menu_thread, address: "0x801c2100", end: "0x801c22f0", kind: function, ownership: game, confidence: high }
+  - { name: bunit_open_submenu_thread_from_current, address: "0x801c22f0", end: "0x801c23e8", kind: function, ownership: game, confidence: high }
+  - { name: bunit_render_simple_selection_menu_thread, address: "0x801c23e8", end: "0x801c255c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_build_item_graphic_descriptor, address: "0x801c255c", end: "0x801c25c4", kind: function, ownership: game, confidence: high }
+  - { name: bunit_is_event_thread_running, address: "0x801c2948", end: "0x801c2964", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c2948 - 001c2960" }
+  - { name: bunit_init_vram_and_start_fade, address: "0x801c2e38", end: "0x801c30a8", kind: function, ownership: game, confidence: high }
+  - { name: bunit_update_input_lock_timer, address: "0x801c30a8", end: "0x801c3140", kind: function, ownership: game, confidence: high }
+  - { name: bunit_get_input_lock_timer, address: "0x801c3140", end: "0x801c3150", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c3140 - 001c314c" }
+  - { name: bunit_read_pad1_unless_input_locked, address: "0x801c3150", end: "0x801c3190", kind: function, ownership: game, confidence: high }
+  - { name: bunit_reset_menu_results, address: "0x801c35f0", end: "0x801c360c", kind: function, ownership: game, confidence: medium, external_name: "BUNIT.OUT 001c35f0 - 001c3608" }
+  - { name: bunit_is_menu_or_transition_active, address: "0x801c360c", end: "0x801c366c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_copy_selected_unit_data, address: "0x801c3e18", end: "0x801c3ee0", kind: function, ownership: game, confidence: high }
+  - { name: bunit_toggle_event_thread_8, address: "0x801c3ee0", end: "0x801c3f44", kind: function, ownership: game, confidence: high }
+  - { name: bunit_toggle_event_thread_7, address: "0x801c3f44", end: "0x801c3fa8", kind: function, ownership: game, confidence: high }
+  - { name: bunit_toggle_event_threads_9_and_12, address: "0x801c3fa8", end: "0x801c4054", kind: function, ownership: game, confidence: high }
+  - { name: bunit_get_unit_s16_0c_12_or_18, address: "0x801c4054", end: "0x801c40e4", kind: function, ownership: game, confidence: high }
+  - { name: bunit_get_unit_s16_00, address: "0x801c40e4", end: "0x801c4104", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c40e4 - 001c4100" }
+  - { name: bunit_get_unit_s16_08, address: "0x801c4104", end: "0x801c4124", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c4104 - 001c4120" }
+  - { name: bunit_get_unit_s16_26, address: "0x801c4124", end: "0x801c4144", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c4124 - 001c4140" }
+  - { name: bunit_get_unit_s16_28, address: "0x801c4144", end: "0x801c4164", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c4144 - 001c4160" }
+  - { name: bunit_update_unit_list_scroll, address: "0x801c429c", end: "0x801c43b4", kind: function, ownership: game, confidence: high }
+  - { name: bunit_init_unit_list_menu, address: "0x801c4670", end: "0x801c4750", kind: function, ownership: game, confidence: high }
+  - { name: bunit_init_rhombus_cursor_tpages, address: "0x801c5a78", end: "0x801c5ae4", kind: function, ownership: game, confidence: high }
+  - { name: bunit_run_reorder_list_menu, address: "0x801c63a8", end: "0x801c657c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_clear_indexed_action_record, address: "0x801c65a8", end: "0x801c65e4", kind: function, ownership: game, confidence: high }
+  - { name: bunit_set_indexed_action_record, address: "0x801c65e4", end: "0x801c6630", kind: function, ownership: game, confidence: high }
+  - { name: bunit_lookup_indexed_action_record, address: "0x801c6630", end: "0x801c66e0", kind: function, ownership: game, confidence: high }
+  - { name: bunit_unit_list_needs_scroll, address: "0x801c66e0", end: "0x801c67a0", kind: function, ownership: game, confidence: high }
+  - { name: bunit_check_if_two_handing_weapon, address: "0x801c67a0", end: "0x801c6834", kind: function, ownership: game, confidence: high }
+  - { name: bunit_is_special_monster_job, address: "0x801c6834", end: "0x801c6854", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Special Monster check" }
+  - { name: bunit_out_unit_list_display, address: "0x801c6e08", end: "0x801c6f48", kind: function, ownership: game, confidence: high }
+  - { name: bunit_get_generic_job_index, address: "0x801c71a8", end: "0x801c71d4", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Get Generic Job Index" }
+  - { name: bunit_find_first_job_for_skillset, address: "0x801c71d4", end: "0x801c722c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Get first job that matches Skillset ID" }
+  - { name: bunit_get_base_job, address: "0x801c722c", end: "0x801c7278", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Calculate Base Job" }
+  - { name: bunit_store_job_unlocks, address: "0x801c7278", end: "0x801c72c0", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Calculate and Store Job Unlocks" }
+  - { name: bunit_calculate_unit_jobs, address: "0x801c72c0", end: "0x801c7420", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Calculate Job Wheel Jobs" }
+  - { name: bunit_get_job_skillset, address: "0x801c7420", end: "0x801c7444", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT get skillset of job ID" }
+  - { name: bunit_create_ability_list, address: "0x801c7444", end: "0x801c76cc", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Create Ability List" }
+  - { name: bunit_set_event_speed, address: "0x801c8408", end: "0x801c843c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Set Event Speed" }
+  - { name: bunit_get_event_speed, address: "0x801c843c", end: "0x801c845c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Get Event Speed" }
+  - { name: bunit_init_scrollable_list_menu_core, address: "0x801c845c", end: "0x801c8530", kind: function, ownership: game, confidence: high }
+  - { name: bunit_init_scrollable_list_menu, address: "0x801c8530", end: "0x801c8564", kind: function, ownership: game, confidence: high }
+  - { name: bunit_run_render_command_stream, address: "0x801c8564", end: "0x801c85f8", kind: function, ownership: game, confidence: high }
+  - { name: bunit_dispatch_menu_with_override, address: "0x801c85f8", end: "0x801c8648", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_if_row_callback, address: "0x801c8648", end: "0x801c8760", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_if_else_row_callback, address: "0x801c8760", end: "0x801c88ec", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_draw_textured_quad, address: "0x801c88ec", end: "0x801c89ec", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_draw_row_callback_quad, address: "0x801c89ec", end: "0x801c8af4", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_zoomed_draw_area, address: "0x801c913c", end: "0x801c9268", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_clut_from_stream, address: "0x801c9500", end: "0x801c9554", kind: function, ownership: game, confidence: high }
+  - { name: bunit_calculate_next_graphic_clut_id, address: "0x801c9554", end: "0x801c95c8", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_tpage_from_stream, address: "0x801c95c8", end: "0x801c961c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_set_semitransparency, address: "0x801c961c", end: "0x801c9634", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c961c - 001c9630" }
+  - { name: bunit_submit_sprite_prim_from_stream, address: "0x801c9634", end: "0x801c9698", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_set_sprite_color, address: "0x801c9698", end: "0x801c9700", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_set_otag_index, address: "0x801c9700", end: "0x801c9718", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001c9700 - 001c9714" }
+  - { name: bunit_update_and_draw_animated_cursor, address: "0x801c9cf4", end: "0x801c9f80", kind: function, ownership: game, confidence: high }
+  - { name: bunit_advance_render_command_group, address: "0x801ca2e0", end: "0x801ca34c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_draw_scrollable_list_menu, address: "0x801ca34c", end: "0x801ca5ec", kind: function, ownership: game, confidence: high }
+  - { name: bunit_menu_apply_then_scroll_a34c, address: "0x801ca5ec", end: "0x801ca61c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_menu_setup_then_scroll_a34c, address: "0x801ca61c", end: "0x801ca650", kind: function, ownership: game, confidence: high }
+  - { name: bunit_set_sprite_color, address: "0x801cb014", end: "0x801cb048", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Set Sprite Color" }
+  - { name: bunit_set_otag_index, address: "0x801cb048", end: "0x801cb058", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cb048 - 001cb054" }
+  - { name: bunit_select_text_palette_and_metrics, address: "0x801cb058", end: "0x801cb134", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_release_otag_lock_and_add_draw_area, address: "0x801cb134", end: "0x801cb198", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_set_draw_area_if_unlocked, address: "0x801cb198", end: "0x801cb20c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_parse_add_next_otag_draw_area, address: "0x801cb20c", end: "0x801cb268", kind: function, ownership: game, confidence: high }
+  - { name: bunit_set_transition_frame, address: "0x801cb268", end: "0x801cb278", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cb268 - 001cb274" }
+  - { name: bunit_get_transition_frame, address: "0x801cb278", end: "0x801cb288", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cb278 - 001cb284" }
+  - { name: bunit_advance_transition_frame_and_value, address: "0x801cb288", end: "0x801cb2c0", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cb288 - 001cb2bc" }
+  - { name: bunit_get_sprite_color, address: "0x801cb2c0", end: "0x801cb2d0", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cb2c0 - 001cb2cc" }
+  - { name: bunit_render_glyph_to_4bpp_image, address: "0x801cb52c", end: "0x801cb660", kind: function, ownership: game, confidence: high }
+  - { name: bunit_advance_encoded_string_segments, address: "0x801cb660", end: "0x801cb6bc", kind: function, ownership: game, confidence: high }
+  - { name: bunit_concatenate_text_ids, address: "0x801cb944", end: "0x801cba14", kind: function, ownership: game, confidence: high }
+  - { name: bunit_out_message_thread_to_stop, address: "0x801cba14", end: "0x801cba3c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_render_text_id_rows_to_vram, address: "0x801cba3c", end: "0x801cbb44", kind: function, ownership: game, confidence: high }
+  - { name: bunit_run_menu_descriptor_thread, address: "0x801cbb44", end: "0x801cbbe0", kind: function, ownership: game, confidence: high }
+  - { name: bunit_start_selection_text_thread, address: "0x801cbbe0", end: "0x801cbc80", kind: function, ownership: game, confidence: high }
+  - { name: bunit_init_bit_reader, address: "0x801cbfc4", end: "0x801cbfe0", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cbfc4 - 001cbfdc" }
+  - { name: bunit_read_bits, address: "0x801cbfe0", end: "0x801cc090", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cbfe0 - 001cc08c" }
+  - { name: bunit_out_001cc418_001cc508, address: "0x801cc418", end: "0x801cc50c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_clear_indexed_s16, address: "0x801cc698", end: "0x801cc6bc", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cc698 - 001cc6b8" }
+  - { name: bunit_set_indexed_s16, address: "0x801cc6bc", end: "0x801cc6dc", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cc6bc - 001cc6d8" }
+  - { name: bunit_update_wrapped_horizontal_selection, address: "0x801cc6dc", end: "0x801cc780", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cc6dc - 001cc77c" }
+  - { name: bunit_update_horizontal_selection_and_mark_change, address: "0x801cc780", end: "0x801cc7e8", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cc780 - 001cc7e4" }
+  - { name: bunit_reset_menu_input_masks, address: "0x801cc7e8", end: "0x801cc808", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cc7e8 - 001cc804" }
+  - { name: bunit_refresh_current_job_level, address: "0x801cc808", end: "0x801cc888", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cc808 - 001cc884" }
+  - { name: bunit_refresh_current_job_jp, address: "0x801cc888", end: "0x801cc8e8", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cc888 - 001cc8e4" }
+  - { name: bunit_refresh_current_job_total_jp, address: "0x801cc8e8", end: "0x801cc948", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cc8e8 - 001cc944" }
+  - { name: bunit_refresh_next_job_level_jp_requirement, address: "0x801cc948", end: "0x801cc9c8", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cc948 - 001cc9c4" }
+  - { name: bunit_refresh_current_job_mastered, address: "0x801cc9c8", end: "0x801cca18", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cc9c8 - 001cca14" }
+  - { name: bunit_run_job_list_menu, address: "0x801cca18", end: "0x801ccc2c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_get_current_job_jp, address: "0x801ccc2c", end: "0x801ccc3c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ccc2c - 001ccc38" }
+  - { name: bunit_get_current_job_level, address: "0x801ccc3c", end: "0x801ccc4c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ccc3c - 001ccc48" }
+  - { name: bunit_get_next_job_level_jp_requirement, address: "0x801ccc4c", end: "0x801ccc5c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ccc4c - 001ccc58" }
+  - { name: bunit_get_current_job_total_jp, address: "0x801ccc5c", end: "0x801ccc6c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ccc5c - 001ccc68" }
+  - { name: bunit_is_current_job_mastered, address: "0x801ccc6c", end: "0x801ccc7c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ccc6c - 001ccc78" }
+  - { name: bunit_is_non_action_ability_learned, address: "0x801ccc7c", end: "0x801cccec", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ccc7c - 001ccce8" }
+  - { name: bunit_is_non_action_ability_unlearned, address: "0x801cccec", end: "0x801ccd24", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cccec - 001ccd20" }
+  - { name: bunit_is_action_ability, address: "0x801ccd24", end: "0x801ccd34", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ccd24 - 001ccd30" }
+  - { name: bunit_get_ability_mp_cost_display_value, address: "0x801ccd34", end: "0x801ccd80", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ccd34 - 001ccd7c" }
+  - { name: bunit_get_ability_ct_display_value, address: "0x801ccd80", end: "0x801ccde4", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ccd80 - 001ccde0" }
+  - { name: bunit_get_ability_jp_cost_display_value, address: "0x801ccde4", end: "0x801cce34", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ccde4 - 001cce30" }
+  - { name: bunit_is_action_tab, address: "0x801cce34", end: "0x801cce44", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cce34 - 001cce40" }
+  - { name: bunit_is_reaction_tab, address: "0x801cce44", end: "0x801cce5c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cce44 - 001cce58" }
+  - { name: bunit_is_support_tab, address: "0x801cce5c", end: "0x801cce74", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cce5c - 001cce70" }
+  - { name: bunit_is_movement_tab, address: "0x801cce74", end: "0x801cce8c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cce74 - 001cce88" }
+  - { name: bunit_is_ability_learned, address: "0x801cce8c", end: "0x801cceb0", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001cce8c - 001cceac" }
+  - { name: bunit_update_job_menu, address: "0x801cceb0", end: "0x801ccf74", kind: function, ownership: game, confidence: high }
+  - { name: bunit_enqueue_translucent_tile, address: "0x801cd344", end: "0x801cd444", kind: function, ownership: game, confidence: high }
+  - { name: bunit_enqueue_gouraud_quad, address: "0x801cd444", end: "0x801cd610", kind: function, ownership: game, confidence: high }
+  - { name: bunit_enqueue_textured_quad_list, address: "0x801cd610", end: "0x801cd888", kind: function, ownership: game, confidence: high }
+  - { name: bunit_enqueue_textured_quad, address: "0x801cd888", end: "0x801cda9c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_enqueue_textured_quad_corners, address: "0x801ce138", end: "0x801ce334", kind: function, ownership: game, confidence: high }
+  - { name: bunit_enqueue_draw_mode, address: "0x801ce334", end: "0x801ce40c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_enqueue_draw_area, address: "0x801ce40c", end: "0x801ce4f0", kind: function, ownership: game, confidence: high }
+  - { name: bunit_enqueue_draw_move, address: "0x801ce4f0", end: "0x801ce5f8", kind: function, ownership: game, confidence: high }
+  - { name: bunit_get_fade_state, address: "0x801ce5f8", end: "0x801ce614", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ce5f8 - 001ce610" }
+  - { name: bunit_start_fade_from_0xf0, address: "0x801ce614", end: "0x801ce634", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ce614 - 001ce630" }
+  - { name: bunit_start_fade_from_zero, address: "0x801ce634", end: "0x801ce650", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT 001ce634 - 001ce64c" }
+  - { name: bunit_update_decreasing_fade, address: "0x801ce650", end: "0x801ce734", kind: function, ownership: game, confidence: high }
+  - { name: bunit_update_increasing_fade, address: "0x801ce734", end: "0x801ce82c", kind: function, ownership: game, confidence: high }
+  - { name: bunit_load_image_and_wait, address: "0x801ce82c", end: "0x801ce85c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Load Image & Wait" }
+  - { name: bunit_store_image_and_wait, address: "0x801ce85c", end: "0x801ce88c", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Store Image & Wait" }
+  - { name: bunit_move_image_and_wait, address: "0x801ce88c", end: "0x801ce8c8", kind: function, ownership: game, confidence: high, external_name: "BUNIT.OUT Move Image & Wait" }

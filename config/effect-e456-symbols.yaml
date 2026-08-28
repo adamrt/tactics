@@ -1,0 +1,13 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: effect-e456
+address_model: { runtime_base: "0x801c2500", file_header_bytes: 0 }
+provenance:
+  - original/ffhacktics/wiki/pages/00006760.wiki
+  - original/ffhacktics/wiki/pages/00009860.wiki
+  - original/ffhacktics/wiki/pages/00009859.wiki
+  - build/extracted/files/EFFECT/E456.BIN
+symbols:
+  - { name: effect_e456_flood_update_specialized_map_destruction_state, address: "0x801c2500", end: "0x801c25ac", kind: function, ownership: game, confidence: high, external_name: "E456 001c2500 - 001c25a8" }
+  - { name: effect_e456_flood_step_map_unfreeze_state, address: "0x801c3118", end: "0x801c31ac", kind: function, ownership: game, confidence: high, external_name: "E456 001c3118 - 001c31a8" }
+  - { name: effect_e456_flood_step_map_freeze_state, address: "0x801c31ac", end: "0x801c3240", kind: function, ownership: game, confidence: high, external_name: "E456 001c31ac - 001c323c" }

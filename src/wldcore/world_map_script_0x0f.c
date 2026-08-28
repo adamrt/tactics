@@ -1,0 +1,16 @@
+#include "psx/types.h"
+
+extern s32 g_world_script_data_ptr;
+extern u16 g_world_script_ip;
+extern s32 g_world_script_flags;
+extern s32 world_get_script_variable(s32);
+
+void world_map_script_0x0f(void) {
+    u16* ip = &g_world_script_ip;
+    u16 idx = *ip;
+    s32 value = ((u16*)g_world_script_data_ptr)[idx];
+    *ip = idx + 1;
+    if (value < world_get_script_variable(0x2C)) {
+        g_world_script_flags |= 2;
+    }
+}

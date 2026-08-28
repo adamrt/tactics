@@ -1,0 +1,38 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+
+title: Final Fantasy Tactics
+platform: Sony PlayStation
+region: USA
+video_standard: NTSC-U/C
+language: English
+serial: SCUS-94221
+boot_executable: SCUS_942.21
+volume_label: FINALFANTASYTACTICS
+
+input:
+  path: fft-us-scus-94221.bin
+  format: raw-bin
+  bytes: 541315152
+
+track_01:
+  type: MODE2/2352
+  pregap: "00:00:00"
+  length: "51:08:51"
+  sectors: 230151
+
+checksums:
+  crc32: "377f6510"
+  md5: "b156ba386436d20fd5ed8d37bab6b624"
+  sha1: "2b5d4db3229cdc7bbd0358b95fcba33dddae8bba"
+  sha256: "29e63bb6d2e7b842fe87f7c0ee03b7076681c34bcc47095cca27ec53236bf4f9"
+
+reference:
+  database: Redump
+  disc_id: 55
+  status: Verified
+  url: https://redump.info/disc/55
+  editions:
+    - Original
+    - Greatest Hits
+  exe_date: "1997-10-17"

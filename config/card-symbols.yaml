@@ -1,0 +1,158 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: event-card
+
+address_model:
+  runtime_base: "0x801bf000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00010841.wiki
+  - original/ffhacktics/wiki/pages/00010845.wiki
+  - original/ffhacktics/wiki/pages/00010846.wiki
+  - original/ffhacktics/wiki/pages/00010847.wiki
+  - original/ffhacktics/wiki/pages/00010850.wiki
+  - original/ffhacktics/wiki/pages/00010853.wiki
+  - original/ffhacktics/wiki/pages/00010875.wiki
+  - original/ffhacktics/wiki/pages/00010908.wiki
+  - original/ffhacktics/wiki/pages/00010822.wiki
+  - original/ffhacktics/wiki/pages/00010824.wiki
+  - original/ffhacktics/wiki/pages/00010826.wiki
+  - original/ffhacktics/wiki/pages/00010827.wiki
+  - original/ffhacktics/wiki/pages/00010828.wiki
+  - original/ffhacktics/wiki/pages/00010832.wiki
+  - original/ffhacktics/wiki/pages/00010848.wiki
+  - original/ffhacktics/wiki/pages/00010849.wiki
+  - original/ffhacktics/wiki/pages/00010851.wiki
+  - original/ffhacktics/wiki/pages/00010852.wiki
+  - original/ffhacktics/wiki/pages/00010854.wiki
+  - original/ffhacktics/wiki/pages/00010855.wiki
+  - original/ffhacktics/wiki/pages/00010856.wiki
+  - original/ffhacktics/wiki/pages/00010858.wiki
+  - original/ffhacktics/wiki/pages/00010860.wiki
+  - original/ffhacktics/wiki/pages/00010861.wiki
+  - original/ffhacktics/wiki/pages/00010862.wiki
+  - original/ffhacktics/wiki/pages/00010864.wiki
+  - original/ffhacktics/wiki/pages/00010865.wiki
+  - original/ffhacktics/wiki/pages/00010866.wiki
+  - original/ffhacktics/wiki/pages/00010843.wiki
+  - original/ffhacktics/wiki/pages/00010844.wiki
+  - original/ffhacktics/wiki/pages/00010870.wiki
+  - original/ffhacktics/wiki/pages/00010871.wiki
+  - original/ffhacktics/wiki/pages/00010873.wiki
+  - original/ffhacktics/wiki/pages/00010874.wiki
+  - original/ffhacktics/wiki/pages/00010878.wiki
+  - original/ffhacktics/wiki/pages/00010879.wiki
+  - original/ffhacktics/wiki/pages/00010882.wiki
+  - original/ffhacktics/wiki/pages/00010883.wiki
+  - original/ffhacktics/wiki/pages/00010885.wiki
+  - original/ffhacktics/wiki/pages/00010887.wiki
+  - original/ffhacktics/wiki/pages/00010889.wiki
+  - original/ffhacktics/wiki/pages/00010891.wiki
+  - original/ffhacktics/wiki/pages/00010892.wiki
+  - original/ffhacktics/wiki/pages/00010894.wiki
+  - original/ffhacktics/wiki/pages/00010895.wiki
+  - original/ffhacktics/wiki/pages/00010897.wiki
+  - original/ffhacktics/wiki/pages/00010898.wiki
+  - original/ffhacktics/wiki/pages/00010899.wiki
+  - original/ffhacktics/wiki/pages/00010901.wiki
+  - original/ffhacktics/wiki/pages/00010904.wiki
+  - original/ffhacktics/wiki/pages/00010905.wiki
+  - original/ffhacktics/wiki/pages/00010907.wiki
+  - original/ffhacktics/wiki/pages/00010911.wiki
+  - original/ffhacktics/wiki/pages/00010912.wiki
+  - original/ffhacktics/wiki/pages/00010913.wiki
+  - original/ffhacktics/wiki/pages/00010916.wiki
+  - original/ffhacktics/wiki/pages/00010917.wiki
+  - build/extracted/files/EVENT/CARD.OUT
+
+symbols:
+  - { name: card_clear_save_selection_indices, address: "0x801bf170", end: "0x801bf1a8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Clear Save Selection Indices" }
+  - { name: card_initialize_save_menu_graphics, address: "0x801bf1a8", end: "0x801bf3b8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001bf1a8 - 001bf3b4" }
+  - { name: card_run_save_menu, address: "0x801bf3b8", end: "0x801bf970", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Run Save Menu" }
+  - { name: card_update_initial_save_prompt, address: "0x801bf970", end: "0x801bfa7c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001bf970 - 001bfa78" }
+  - { name: card_update_memory_card_slot_selection, address: "0x801bfa7c", end: "0x801bfbd8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001bfa7c - 001bfbd4" }
+  - { name: card_update_save_slot_scan_result, address: "0x801bfbd8", end: "0x801bfde0", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001bfbd8 - 001bfddc" }
+  - { name: card_update_save_slot_write_operation, address: "0x801bfde0", end: "0x801c01ac", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Update Save Slot Write Operation" }
+  - { name: card_populate_save_buffer, address: "0x801c01ac", end: "0x801c09b4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Get Ramza's Unit Details and Populate Save Data" }
+  - { name: card_initialize_save_menu_state, address: "0x801c09b4", end: "0x801c0a38", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Initialize Save Menu State" }
+  - { name: card_update_save_slot_playtime, address: "0x801c0a38", end: "0x801c0c58", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Update Save Slot Playtime" }
+  - { name: card_build_save_slot_description, address: "0x801c1820", end: "0x801c1d28", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Build Save Slot Description" }
+  - { name: card_render_save_slot_text, address: "0x801c1d28", end: "0x801c1e70", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Render Save Slot Text" }
+  - { name: card_initialize_occupied_save_slot_selection, address: "0x801c1e70", end: "0x801c1fc8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Initialize Occupied Save Slot Selection" }
+  - { name: card_update_save_slot_scroll, address: "0x801c2d08", end: "0x801c2ea8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Update Save Slot Scroll" }
+  - { name: card_set_scaled_poly_ft4_geometry_and_uv, address: "0x801c34c8", end: "0x801c3798", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Set Scaled POLY_FT4 Geometry And UV" }
+  - { name: card_build_scaled_sprite_primitive_chain, address: "0x801c3798", end: "0x801c3a4c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c3798 - 001c3a48" }
+  - { name: card_set_render_otag, address: "0x801c3dcc", end: "0x801c3ddc", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c3dcc - 001c3dd8" }
+  - { name: card_run_save_menu_graphic_thread, address: "0x801c3ddc", end: "0x801c3f04", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c3ddc - 001c3f00" }
+  - { name: card_set_selected_slot, address: "0x801c3f04", end: "0x801c3f34", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c3f04 - 001c3f30" }
+  - { name: card_get_selected_slot, address: "0x801c3f34", end: "0x801c3f6c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c3f34 - 001c3f68" }
+  - { name: card_consume_all_events, address: "0x801c3f6c", end: "0x801c3fa4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c3f6c - 001c3fa0" }
+  - { name: card_poll_bios_event_result, address: "0x801c3fa4", end: "0x801c409c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c3fa4 - 001c4098" }
+  - { name: card_wait_for_bios_event_result, address: "0x801c409c", end: "0x801c4144", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c409c - 001c4140" }
+  - { name: card_consume_bios_events, address: "0x801c4144", end: "0x801c41ac", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c4144 - 001c41a8" }
+  - { name: card_poll_hardware_event_result, address: "0x801c41ac", end: "0x801c42a4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c41ac - 001c42a0" }
+  - { name: card_wait_for_hardware_event_result, address: "0x801c42a4", end: "0x801c434c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c42a4 - 001c4348" }
+  - { name: card_consume_hardware_events, address: "0x801c434c", end: "0x801c43b4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c434c - 001c43b0" }
+  - { name: card_info_with_retries, address: "0x801c43b4", end: "0x801c447c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c43b4 - 001c4478" }
+  - { name: card_load_with_retries, address: "0x801c447c", end: "0x801c4550", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c447c - 001c454c" }
+  - { name: card_create_new_with_retries, address: "0x801c4550", end: "0x801c4654", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c4550 - 001c4650" }
+  - { name: card_poll_operation_result, address: "0x801c4654", end: "0x801c477c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c4654 - 001c4778" }
+  - { name: card_wait_for_operation_result, address: "0x801c477c", end: "0x801c4838", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c477c - 001c4834" }
+  - { name: card_enumerate_save_files, address: "0x801c4838", end: "0x801c4984", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c4838 - 001c4980" }
+  - { name: card_count_free_blocks, address: "0x801c4984", end: "0x801c4ab8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c4984 - 001c4ab4" }
+  - { name: card_open_or_create_selected_card, address: "0x801c4ab8", end: "0x801c4bb4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c4ab8 - 001c4bb0" }
+  - { name: card_format_selected_slot, address: "0x801c4bb4", end: "0x801c4c9c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c4bb4 - 001c4c98" }
+  - { name: card_open_selected_file_with_retries, address: "0x801c4c9c", end: "0x801c4e1c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c4c9c - 001c4e18" }
+  - { name: card_close_file_with_retries, address: "0x801c4e1c", end: "0x801c4eec", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c4e1c - 001c4ee8" }
+  - { name: card_seek_file_with_retries, address: "0x801c4eec", end: "0x801c4fb8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c4eec - 001c4fb4" }
+  - { name: card_write_buffer_to_file, address: "0x801c4fb8", end: "0x801c5264", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Write Buffer To File" }
+  - { name: card_delete_selected_file_with_retries, address: "0x801c5264", end: "0x801c5378", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c5264 - 001c5374" }
+  - { name: card_read_file_with_retries, address: "0x801c5378", end: "0x801c54c8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c5378 - 001c54c4" }
+  - { name: card_write_file_with_retries, address: "0x801c54c8", end: "0x801c5618", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c54c8 - 001c5614" }
+  - { name: card_submit_frame_and_swap_buffers, address: "0x801c5618", end: "0x801c5724", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c5618 - 001c5720" }
+  - { name: card_initialize_primitive_lists, address: "0x801c5724", end: "0x801c57e0", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c5724 - 001c57dc" }
+  - { name: card_initialize_graphics_contexts, address: "0x801c57e0", end: "0x801c59b0", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c57e0 - 001c59ac" }
+  - { name: card_set_event_speed, address: "0x801c59b0", end: "0x801c59e4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c59b0 - 001c59e0" }
+  - { name: card_get_event_speed, address: "0x801c59e4", end: "0x801c5a04", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c59e4 - 001c5a00" }
+  - { name: card_parse_draw_textured_quad, address: "0x801c5a04", end: "0x801c5ab8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c5a04 - 001c5ab4" }
+  - { name: card_parse_draw_tiled_rectangle, address: "0x801c61e0", end: "0x801c6510", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c61e0 - 001c650c" }
+  - { name: card_parse_set_texture_page, address: "0x801c6510", end: "0x801c6564", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c6510 - 001c6560" }
+  - { name: card_parse_set_text_otag_index, address: "0x801c6564", end: "0x801c657c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c6564 - 001c6578" }
+  - { name: card_parse_draw_decimal_number, address: "0x801c657c", end: "0x801c670c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c657c - 001c6708" }
+  - { name: card_update_and_draw_animated_cursor, address: "0x801c670c", end: "0x801c6998", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c670c - 001c6994" }
+  - { name: card_set_text_color, address: "0x801c6998", end: "0x801c69c4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c6998 - 001c69c0" }
+  - { name: card_set_text_otag_index, address: "0x801c69c4", end: "0x801c69d4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c69c4 - 001c69d0" }
+  - { name: card_select_text_palette_and_metrics, address: "0x801c69d4", end: "0x801c6ab0", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c69d4 - 001c6aac" }
+  - { name: card_get_text_color, address: "0x801c6ab0", end: "0x801c6ac0", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c6ab0 - 001c6abc" }
+  - { name: card_render_glyph_to_4bpp_image, address: "0x801c6ac0", end: "0x801c6bf4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c6ac0 - 001c6bf0" }
+  - { name: card_advance_encoded_string_segments, address: "0x801c6bf4", end: "0x801c6c50", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c6bf4 - 001c6c4c" }
+  - { name: card_render_encoded_text_ids_to_image, address: "0x801c6c50", end: "0x801c6ed8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Render Encoded Text IDs to Image" }
+  - { name: card_initialize_event_thread_if_idle, address: "0x801c6ed8", end: "0x801c6f50", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c6ed8 - 001c6f4c" }
+  - { name: card_start_text_thread_for_key, address: "0x801c6f50", end: "0x801c7030", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c6f50 - 001c702c" }
+  - { name: card_set_thread_completion_parameters, address: "0x801c7030", end: "0x801c7058", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c7030 - 001c7054" }
+  - { name: card_count_encoded_glyphs, address: "0x801c7058", end: "0x801c70ac", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c7058 - 001c70a8" }
+  - { name: card_render_text_id_rows_to_vram, address: "0x801c70ac", end: "0x801c71b4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Render Text ID Rows to VRAM" }
+  - { name: card_finish_thread_and_clear_state, address: "0x801c71b4", end: "0x801c71dc", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c71b4 - 001c71d8" }
+  - { name: card_wait_for_thread_and_clear_state, address: "0x801c71dc", end: "0x801c7238", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c71dc - 001c7234" }
+  - { name: card_start_managed_thread, address: "0x801c7238", end: "0x801c72d4", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c7238 - 001c72d0" }
+  - { name: card_start_managed_thread_with_delay, address: "0x801c72d4", end: "0x801c7384", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c72d4 - 001c7380" }
+  - { name: card_set_primary_bitstream, address: "0x801c7384", end: "0x801c73a0", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c7384 - 001c739c" }
+  - { name: card_init_bit_reader_2, address: "0x801c73a0", end: "0x801c73bc", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c73a0 - 001c73b8" }
+  - { name: card_read_primary_bits, address: "0x801c73bc", end: "0x801c7468", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c73bc - 001c7464" }
+  - { name: card_write_primary_bit, address: "0x801c7468", end: "0x801c7524", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c7468 - 001c7520" }
+  - { name: card_read_secondary_bits, address: "0x801c7524", end: "0x801c75d0", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c7524 - 001c75cc" }
+  - { name: card_update_input_and_suppress_during_fade, address: "0x801c7924", end: "0x801c796c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c7924 - 001c7968" }
+  - { name: card_clear_input_state, address: "0x801c796c", end: "0x801c798c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c796c - 001c7988" }
+  - { name: card_enqueue_translucent_tile, address: "0x801c798c", end: "0x801c7a8c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c798c - 001c7a88" }
+  - { name: card_enqueue_textured_quad_list, address: "0x801c7a8c", end: "0x801c7d04", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c7a8c - 001c7d00" }
+  - { name: card_enqueue_textured_quad, address: "0x801c7d04", end: "0x801c7f18", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c7d04 - 001c7f14" }
+  - { name: card_enqueue_oriented_textured_quad, address: "0x801c7f18", end: "0x801c832c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT Enqueue Oriented Textured Quad" }
+  - { name: card_set_draw_mode_and_link_ot, address: "0x801c832c", end: "0x801c83e8", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c832c - 001c83e4" }
+  - { name: card_get_fade_state, address: "0x801c83e8", end: "0x801c8404", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c83e8 - 001c8400" }
+  - { name: card_start_fade_from_0xf0, address: "0x801c8404", end: "0x801c8424", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c8404 - 001c8420" }
+  - { name: card_start_fade_from_zero, address: "0x801c8424", end: "0x801c8440", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c8424 - 001c843c" }
+  - { name: card_update_decreasing_fade, address: "0x801c8440", end: "0x801c8524", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c8440 - 001c8520" }
+  - { name: card_update_increasing_fade, address: "0x801c8524", end: "0x801c861c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c8524 - 001c8618" }
+  - { name: card_load_image_and_wait, address: "0x801c861c", end: "0x801c864c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c861c - 001c8648" }
+  - { name: card_store_image_and_wait, address: "0x801c864c", end: "0x801c867c", kind: function, ownership: game, confidence: high, external_name: "CARD.OUT 001c864c - 001c8678" }

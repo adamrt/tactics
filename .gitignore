@@ -1,0 +1,13 @@
+.DS_Store
+
+# User-supplied copyrighted game media and extracted files.
+/fft-us-scus-94221.bin
+/original/*
+# Generated build and analysis output.
+/build/
+/compile_commands.json
+config/.promote.lock
+/wip/
+/build/wip-trash/
+config/.batch-claims.tsv
+scripts/__pycache__/

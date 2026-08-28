@@ -1,0 +1,1354 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: battle
+
+address_model:
+  runtime_base: "0x80067000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00003650.wiki
+  - original/ffhacktics/wiki/pages/00003651.wiki
+  - original/ffhacktics/wiki/pages/00003705.wiki
+  - original/ffhacktics/wiki/pages/00003719.wiki
+  - original/ffhacktics/wiki/pages/00003720.wiki
+  - original/ffhacktics/wiki/pages/00003721.wiki
+  - original/ffhacktics/wiki/pages/00003723.wiki
+  - original/ffhacktics/wiki/pages/00003724.wiki
+  - original/ffhacktics/wiki/pages/00003725.wiki
+  - original/ffhacktics/wiki/pages/00003726.wiki
+  - original/ffhacktics/wiki/pages/00003727.wiki
+  - original/ffhacktics/wiki/pages/00003728.wiki
+  - original/ffhacktics/wiki/pages/00003730.wiki
+  - original/ffhacktics/wiki/pages/00003731.wiki
+  - original/ffhacktics/wiki/pages/00003370.wiki
+  - original/ffhacktics/wiki/pages/00003732.wiki
+  - original/ffhacktics/wiki/pages/00003733.wiki
+  - original/ffhacktics/wiki/pages/00003775.wiki
+  - original/ffhacktics/wiki/pages/00006839.wiki
+  - original/ffhacktics/wiki/pages/00003781.wiki
+  - original/ffhacktics/wiki/pages/00003783.wiki
+  - original/ffhacktics/wiki/pages/00003793.wiki
+  - original/ffhacktics/wiki/pages/00003794.wiki
+  - original/ffhacktics/wiki/pages/00003821.wiki
+  - original/ffhacktics/wiki/pages/00003830.wiki
+  - original/ffhacktics/wiki/pages/00003843.wiki
+  - original/ffhacktics/wiki/pages/00003844.wiki
+  - original/ffhacktics/wiki/pages/00003845.wiki
+  - original/ffhacktics/wiki/pages/00003846.wiki
+  - original/ffhacktics/wiki/pages/00003847.wiki
+  - original/ffhacktics/wiki/pages/00003848.wiki
+  - original/ffhacktics/wiki/pages/00003849.wiki
+  - original/ffhacktics/wiki/pages/00003850.wiki
+  - original/ffhacktics/wiki/pages/00003851.wiki
+  - original/ffhacktics/wiki/pages/00003852.wiki
+  - original/ffhacktics/wiki/pages/00003853.wiki
+  - original/ffhacktics/wiki/pages/00007236.wiki
+  - original/ffhacktics/wiki/pages/00003871.wiki
+  - original/ffhacktics/wiki/pages/00003872.wiki
+  - original/ffhacktics/wiki/pages/00003873.wiki
+  - original/ffhacktics/wiki/pages/00003874.wiki
+  - original/ffhacktics/wiki/pages/00003875.wiki
+  - original/ffhacktics/wiki/pages/00003876.wiki
+  - original/ffhacktics/wiki/pages/00003877.wiki
+  - original/ffhacktics/wiki/pages/00003880.wiki
+  - original/ffhacktics/wiki/pages/00003881.wiki
+  - original/ffhacktics/wiki/pages/00003882.wiki
+  - original/ffhacktics/wiki/pages/00003883.wiki
+  - original/ffhacktics/wiki/pages/00003887.wiki
+  - original/ffhacktics/wiki/pages/00003889.wiki
+  - original/ffhacktics/wiki/pages/00003893.wiki
+  - original/ffhacktics/wiki/pages/00003894.wiki
+  - original/ffhacktics/wiki/pages/00003406.wiki
+  - original/ffhacktics/wiki/pages/00003408.wiki
+  - original/ffhacktics/wiki/pages/00003910.wiki
+  - original/ffhacktics/wiki/pages/00003913.wiki
+  - original/ffhacktics/wiki/pages/00003917.wiki
+  - original/ffhacktics/wiki/pages/00003933.wiki
+  - original/ffhacktics/wiki/pages/00003936.wiki
+  - original/ffhacktics/wiki/pages/00003937.wiki
+  - original/ffhacktics/wiki/pages/00003939.wiki
+  - original/ffhacktics/wiki/pages/00003943.wiki
+  - original/ffhacktics/wiki/pages/00003954.wiki
+  - original/ffhacktics/wiki/pages/00003410.wiki
+  - original/ffhacktics/wiki/pages/00003967.wiki
+  - original/ffhacktics/wiki/pages/00003968.wiki
+  - original/ffhacktics/wiki/pages/00003977.wiki
+  - original/ffhacktics/wiki/pages/00003980.wiki
+  - original/ffhacktics/wiki/pages/00003983.wiki
+  - original/ffhacktics/wiki/pages/00003932.wiki
+  - original/ffhacktics/wiki/pages/00003935.wiki
+  - original/ffhacktics/wiki/pages/00003931.wiki
+  - original/ffhacktics/wiki/pages/00003595.wiki
+  - original/ffhacktics/wiki/pages/00003952.wiki
+  - original/ffhacktics/wiki/pages/00003953.wiki
+  - original/ffhacktics/wiki/pages/00008757.wiki
+  - original/ffhacktics/wiki/pages/00003960.wiki
+  - original/ffhacktics/wiki/pages/00003962.wiki
+  - original/ffhacktics/wiki/pages/00010004.wiki
+  - original/ffhacktics/wiki/pages/00003961.wiki
+  - original/ffhacktics/wiki/pages/00003494.wiki
+  - original/ffhacktics/wiki/pages/00003796.wiki
+  - original/ffhacktics/wiki/pages/00003973.wiki
+  - original/ffhacktics/wiki/pages/00003974.wiki
+  - original/ffhacktics/wiki/pages/00003975.wiki
+  - original/ffhacktics/wiki/pages/00003929.wiki
+  - original/ffhacktics/wiki/pages/00003596.wiki
+  - original/ffhacktics/wiki/pages/00003997.wiki
+  - original/ffhacktics/wiki/pages/00003998.wiki
+  - original/ffhacktics/wiki/pages/00004003.wiki
+  - original/ffhacktics/wiki/pages/00004004.wiki
+  - original/ffhacktics/wiki/pages/00004005.wiki
+  - original/ffhacktics/wiki/pages/00012334.wiki
+  - original/ffhacktics/wiki/pages/00010006.wiki
+  - original/ffhacktics/wiki/pages/00007276.wiki
+  - original/ffhacktics/wiki/pages/00003854.wiki
+  - original/ffhacktics/wiki/pages/00003855.wiki
+  - original/ffhacktics/wiki/pages/00003856.wiki
+  - original/ffhacktics/wiki/pages/00003857.wiki
+  - original/ffhacktics/wiki/pages/00003858.wiki
+  - original/ffhacktics/wiki/pages/00003859.wiki
+  - original/ffhacktics/wiki/pages/00003860.wiki
+  - original/ffhacktics/wiki/pages/00003861.wiki
+  - original/ffhacktics/wiki/pages/00003862.wiki
+  - original/ffhacktics/wiki/pages/00003863.wiki
+  - original/ffhacktics/wiki/pages/00006976.wiki
+  - original/ffhacktics/wiki/pages/00006869.wiki
+  - original/ffhacktics/wiki/pages/00006877.wiki
+  - original/ffhacktics/wiki/pages/00003405.wiki
+  - original/ffhacktics/wiki/pages/00004625.wiki
+  - original/ffhacktics/wiki/pages/00004641.wiki
+  - original/ffhacktics/wiki/pages/00004642.wiki
+  - original/ffhacktics/wiki/pages/00007226.wiki
+  - original/ffhacktics/wiki/pages/00012328.wiki
+  - original/ffhacktics/wiki/pages/00000454.wiki
+  - original/ffhacktics/wiki/pages/00000455.wiki
+  - original/ffhacktics/wiki/pages/00000456.wiki
+  - original/ffhacktics/wiki/pages/00000457.wiki
+  - original/ffhacktics/wiki/pages/00000458.wiki
+  - original/ffhacktics/wiki/pages/00000459.wiki
+  - original/ffhacktics/wiki/pages/00000460.wiki
+  - original/ffhacktics/wiki/pages/00000461.wiki
+  - original/ffhacktics/wiki/pages/00000462.wiki
+  - original/ffhacktics/wiki/pages/00000463.wiki
+  - original/ffhacktics/wiki/pages/00000464.wiki
+  - original/ffhacktics/wiki/pages/00000465.wiki
+  - original/ffhacktics/wiki/pages/00000466.wiki
+  - original/ffhacktics/wiki/pages/00000799.wiki
+  - original/ffhacktics/wiki/pages/00000467.wiki
+  - original/ffhacktics/wiki/pages/00000468.wiki
+  - original/ffhacktics/wiki/pages/00000469.wiki
+  - original/ffhacktics/wiki/pages/00000470.wiki
+  - original/ffhacktics/wiki/pages/00000471.wiki
+  - original/ffhacktics/wiki/pages/00004237.wiki
+  - original/ffhacktics/wiki/pages/00000161.wiki
+  - original/ffhacktics/wiki/pages/00003756.wiki
+  - original/ffhacktics/wiki/pages/00006840.wiki
+  - original/ffhacktics/wiki/pages/00006776.wiki
+  - original/ffhacktics/wiki/pages/00003385.wiki
+  - original/ffhacktics/wiki/pages/00003389.wiki
+  - original/ffhacktics/wiki/pages/00003390.wiki
+  - original/ffhacktics/wiki/pages/00003391.wiki
+  - original/ffhacktics/wiki/pages/00003392.wiki
+  - original/ffhacktics/wiki/pages/00003766.wiki
+  - original/ffhacktics/wiki/pages/00003400.wiki
+  - original/ffhacktics/wiki/pages/00003769.wiki
+  - original/ffhacktics/wiki/pages/00003770.wiki
+  - original/ffhacktics/wiki/pages/00003772.wiki
+  - original/ffhacktics/wiki/pages/00001843.wiki
+  - original/ffhacktics/wiki/pages/00003285.wiki
+  - original/ffhacktics/wiki/pages/00003286.wiki
+  - original/ffhacktics/wiki/pages/00003287.wiki
+  - original/ffhacktics/wiki/pages/00003288.wiki
+  - original/ffhacktics/wiki/pages/00003289.wiki
+  - original/ffhacktics/wiki/pages/00003290.wiki
+  - original/ffhacktics/wiki/pages/00003291.wiki
+  - original/ffhacktics/wiki/pages/00003292.wiki
+  - original/ffhacktics/wiki/pages/00003293.wiki
+  - original/ffhacktics/wiki/pages/00003295.wiki
+  - original/ffhacktics/wiki/pages/00003354.wiki
+  - original/ffhacktics/wiki/pages/00003355.wiki
+  - original/ffhacktics/wiki/pages/00003357.wiki
+  - original/ffhacktics/wiki/pages/00003588.wiki
+  - original/ffhacktics/wiki/pages/00003589.wiki
+  - original/ffhacktics/wiki/pages/00003590.wiki
+  - original/ffhacktics/wiki/pages/00003591.wiki
+  - original/ffhacktics/wiki/pages/00003603.wiki
+  - original/ffhacktics/wiki/pages/00003604.wiki
+  - original/ffhacktics/wiki/pages/00003668.wiki
+  - original/ffhacktics/wiki/pages/00003669.wiki
+  - original/ffhacktics/wiki/pages/00003670.wiki
+  - original/ffhacktics/wiki/pages/00003674.wiki
+  - original/ffhacktics/wiki/pages/00003677.wiki
+  - original/ffhacktics/wiki/pages/00003678.wiki
+  - original/ffhacktics/wiki/pages/00003679.wiki
+  - original/ffhacktics/wiki/pages/00003680.wiki
+  - original/ffhacktics/wiki/pages/00003681.wiki
+  - original/ffhacktics/wiki/pages/00003683.wiki
+  - original/ffhacktics/wiki/pages/00003684.wiki
+  - original/ffhacktics/wiki/pages/00000055.wiki
+  - original/ffhacktics/wiki/pages/00003985.wiki
+  - original/ffhacktics/wiki/pages/00003986.wiki
+  - original/ffhacktics/wiki/pages/00003987.wiki
+  - original/ffhacktics/wiki/pages/00003988.wiki
+  - original/ffhacktics/wiki/pages/00003989.wiki
+  - original/ffhacktics/wiki/pages/00011449.wiki
+  - original/ffhacktics/wiki/pages/00004002.wiki
+  - original/ffhacktics/wiki/pages/00004006.wiki
+  - original/ffhacktics/wiki/pages/00004007.wiki
+  - original/ffhacktics/wiki/pages/00004008.wiki
+  - original/ffhacktics/wiki/pages/00004030.wiki
+  - original/ffhacktics/wiki/pages/00004031.wiki
+  - original/ffhacktics/wiki/pages/00004033.wiki
+  - original/ffhacktics/wiki/pages/00004035.wiki
+  - original/ffhacktics/wiki/pages/00004036.wiki
+  - original/ffhacktics/wiki/pages/00004037.wiki
+  - original/ffhacktics/wiki/pages/00004038.wiki
+  - original/ffhacktics/wiki/pages/00004039.wiki
+  - original/ffhacktics/wiki/pages/00004041.wiki
+  - original/ffhacktics/wiki/pages/00006891.wiki
+  - original/ffhacktics/wiki/pages/00006892.wiki
+  - original/ffhacktics/wiki/pages/00006897.wiki
+  - original/ffhacktics/wiki/pages/00006919.wiki
+  - original/ffhacktics/wiki/pages/00006926.wiki
+  - original/ffhacktics/wiki/pages/00006965.wiki
+  - original/ffhacktics/wiki/pages/00006781.wiki
+  - original/ffhacktics/wiki/pages/00006782.wiki
+  - original/ffhacktics/wiki/pages/00007230.wiki
+  - original/ffhacktics/wiki/pages/00007248.wiki
+  - original/ffhacktics/wiki/pages/00003742.wiki
+  - original/ffhacktics/wiki/pages/00003744.wiki
+  - original/ffhacktics/wiki/pages/00003745.wiki
+  - original/ffhacktics/wiki/pages/00003746.wiki
+  - original/ffhacktics/wiki/pages/00003747.wiki
+  - original/ffhacktics/wiki/pages/00003748.wiki
+  - build/extracted/files/BATTLE.BIN
+
+symbols:
+  - { name: set_at_list_active, address: "0x800683c0", end: "0x800683d4", kind: function, ownership: game, confidence: high, external_name: "Store AT list ID = 1" }
+  - { name: battle_clear_at_list_active, address: "0x800683d4", end: "0x800683e4", kind: function, ownership: game, confidence: high, external_name: "Store AT list ID = 0" }
+  - { name: battle_move_cursor_to_unit, address: "0x800683e4", end: "0x80068418", kind: function, ownership: game, confidence: high, external_name: "Move Cursor to Unit by Misc Data" }
+  - { name: battle_x_y_data_gathering_for_attacks, address: "0x80068418", end: "0x80068494", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_unit_palettes, address: "0x80068494", end: "0x80068534", kind: function, ownership: game, confidence: high, external_name: "Store Palette data for each unit" }
+  - { name: battle_palette_modification_based_on_team, address: "0x80068534", end: "0x80068634", kind: function, ownership: game, confidence: high }
+  - { name: battle_highlight_units_based_on_team_2, address: "0x80068634", end: "0x8006867c", kind: function, ownership: game, confidence: high }
+  - { name: battle_increment_at_list_id, address: "0x8006867c", end: "0x800686b0", kind: function, ownership: game, confidence: high, external_name: "Increment AT List ID" }
+  - { name: battle_at_list_check_if_unit_is_charging_ability, address: "0x800686b0", end: "0x80068768", kind: function, ownership: game, confidence: high }
+  - { name: battle_clear_at_list_id_and_flag, address: "0x80068768", end: "0x80068794", kind: function, ownership: game, confidence: high, external_name: "Clear AT List ID and set 940fc" }
+  - { name: battle_clear_at_list_id, address: "0x80068794", end: "0x800687a4", kind: function, ownership: game, confidence: high, external_name: "Clear AT list ID" }
+  - { name: battle_clear_status_menu_state, address: "0x800687a4", end: "0x800687bc", kind: function, ownership: game, confidence: high, external_name: "Clear Status Menu and 960fc" }
+  - { name: battle_setup_secondary_effect_init, address: "0x800687bc", end: "0x800687e0", kind: function, ownership: game, confidence: high, external_name: "Setup Secondary effect initialise table" }
+  - { name: battle_set_evade_type_data_and_weapon_element_effect, address: "0x8006894c", end: "0x800689a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_evade_type_data_item_and_throw_stone_hardcoding, address: "0x800689a4", end: "0x80068a20", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_secondary_effect, address: "0x80068a20", end: "0x80068a74", kind: function, ownership: game, confidence: high, external_name: "Set Secondary Effect Struct" }
+  - { name: battle_set_secondary_effect_zodiac_poof, address: "0x80068a74", end: "0x80068a94", kind: function, ownership: game, confidence: high, external_name: "Zodiac Poof: Set Secondary Effect Struct" }
+  - { name: battle_set_secondary_effect_death_smoke, address: "0x80068a94", end: "0x80068ab4", kind: function, ownership: game, confidence: high, external_name: "Death Smoke: Set Secondary Effect Struct" }
+  - { name: battle_set_secondary_effect_level_up, address: "0x80068ab4", end: "0x80068ad4", kind: function, ownership: game, confidence: high, external_name: "Level Up: Set Secondary Effect Struct" }
+  - { name: battle_set_secondary_effect_venom_trap, address: "0x80068ad4", end: "0x80068af4", kind: function, ownership: game, confidence: high, external_name: "Venom Trap: Set Secondary Effect Struct" }
+  - { name: battle_set_secondary_effect_splash, address: "0x80068af4", end: "0x80068b14", kind: function, ownership: game, confidence: high, external_name: Splash }
+  - { name: battle_set_secondary_effect_fall_dust, address: "0x80068b14", end: "0x80068b34", kind: function, ownership: game, confidence: high, external_name: "Fall Dust Cloud: Set Secondary Effect Struct" }
+  - { name: battle_set_secondary_effect_teleport, address: "0x80068b34", end: "0x80068b54", kind: function, ownership: game, confidence: high, external_name: "Teleport: Set Secondary Effect Struct" }
+  - { name: battle_set_target_anim_by_misc_id, address: "0x80068b54", end: "0x80068b94", kind: function, ownership: game, confidence: high, external_name: "Set targets animation by Misc ID" }
+  - { name: battle_set_target_anim_by_battle_id, address: "0x80068b94", end: "0x80068bd4", kind: function, ownership: game, confidence: high, external_name: "Set targets animation by Battle ID" }
+  - { name: battle_jump_to_post_action_display, address: "0x80068bd4", end: "0x80068c18", kind: function, ownership: game, confidence: high, external_name: "Jump to Post-Action Display" }
+  - { name: battle_set_bow_hardcoding, address: "0x80068c18", end: "0x80068c80", kind: function, ownership: game, confidence: high, external_name: "Set Bow Hardcoding" }
+  - { name: battle_call_bow_hardcoding_by_battle_id, address: "0x80068c80", end: "0x80068cc4", kind: function, ownership: game, confidence: high, external_name: "Call Bow Hardcoding by Battle Unit ID" }
+  - { name: battle_call_bow_hardcoding_by_misc_id, address: "0x80068cc4", end: "0x80068d08", kind: function, ownership: game, confidence: high, external_name: "Call Bow Hardcoding by Misc Unit ID" }
+  - { name: battle_update_display_by_misc_id, address: "0x80068e30", end: "0x80068e58", kind: function, ownership: game, confidence: high, external_name: "Update Unit Display via Misc ID" }
+  - { name: battle_update_display_by_battle_id, address: "0x80068e58", end: "0x80068e80", kind: function, ownership: game, confidence: high, external_name: "Update Animation Display by Battle ID" }
+  - { name: battle_jump_to_set_item_graphic_palette, address: "0x800690f8", end: "0x80069130", kind: function, ownership: game, confidence: high }
+  - { name: battle_rider_dismounts, address: "0x80069254", end: "0x800692bc", kind: function, ownership: game, confidence: high }
+  - { name: battle_rider_dismount_and_update_display, address: "0x800692bc", end: "0x8006933c", kind: function, ownership: game, confidence: high, external_name: "Rider Dismounts and Update Display" }
+  - { name: battle_partial_move_interpolate, address: "0x80069dfc", end: "0x80069e68", kind: function, ownership: game, confidence: high }
+  - { name: battle_initialize_units_coordinates_animation_facing, address: "0x80069e68", end: "0x80069ee0", kind: function, ownership: game, confidence: high }
+  - { name: battle_call_secondary_effect_init, address: "0x80069ee0", end: "0x80069f14", kind: function, ownership: game, confidence: high, external_name: "Call Secondary Effect Init" }
+  - { name: battle_play_movement_sfx, address: "0x8006b960", end: "0x8006b994", kind: function, ownership: game, confidence: high, external_name: "Play Sound Effect based on Movement Flag" }
+  - { name: battle_play_landing_sfx_by_tile_type, address: "0x8006b994", end: "0x8006ba38", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_landing_secondary_effect_by_tile_type, address: "0x8006ba38", end: "0x8006bad8", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_coordinate_mount_animation_data, address: "0x8006bbfc", end: "0x8006bce4", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_movement_direction, address: "0x8006c2bc", end: "0x8006c320", kind: function, ownership: game, confidence: high, external_name: "Get Movement Direction" }
+  - { name: battle_func_8006d79c, address: "0x8006d79c", end: "0x8006d7c4", kind: function, ownership: game, confidence: high }
+  - { name: battle_initialize_units_coordinates, address: "0x8006d7c4", end: "0x8006d7e4", kind: function, ownership: game, confidence: high, external_name: "Call Initialize Units Coordinates, Animation, Facing" }
+  - { name: battle_set_unit_movement_flag, address: "0x8006d7e4", end: "0x8006d818", kind: function, ownership: game, confidence: medium, external_name: "Set Unit Movement Flag" }
+  - { name: battle_transfer_target_coordinates, address: "0x8006ddac", end: "0x8006ddec", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_name_and_data_of_unit_selected_by_cursor, address: "0x8006e55c", end: "0x8006e5c0", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_name_and_data_of_unit_selected_by_cursor_2, address: "0x8006e5c0", end: "0x8006e634", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_casting_units_name_and_data_selected_by_cursor, address: "0x8006e634", end: "0x8006e6b0", kind: function, ownership: game, confidence: high }
+  - { name: battle_free_cursor_selection_routine, address: "0x8006e6b0", end: "0x8006e7c8", kind: function, ownership: game, confidence: high }
+  - { name: battle_start_game_flow, address: "0x8006eedc", end: "0x8006eef0", kind: function, ownership: game, confidence: high, external_name: "Start Game Flow" }
+  - { name: battle_stop_game_flow, address: "0x8006eef0", end: "0x8006ef00", kind: function, ownership: game, confidence: high, external_name: "Stop Game Flow" }
+  - { name: battle_process_map_camera_pan, address: "0x8006ef00", end: "0x8006f13c", kind: function, ownership: game, confidence: high }
+  - { name: battle_map_rotate_left, address: "0x8006f13c", end: "0x8006f174", kind: function, ownership: game, confidence: high, external_name: "Map Rotate Left" }
+  - { name: battle_call_map_rotate_left, address: "0x8006f174", end: "0x8006f1a8", kind: function, ownership: game, confidence: high, external_name: "Call Map Rotate Left" }
+  - { name: battle_map_rotate_right, address: "0x8006f1a8", end: "0x8006f1e0", kind: function, ownership: game, confidence: high, external_name: "Map Rotate Right" }
+  - { name: battle_call_map_rotate_right, address: "0x8006f1e0", end: "0x8006f218", kind: function, ownership: game, confidence: high, external_name: "Call Map Rotate Right" }
+  - { name: battle_request_map_rotation, address: "0x8006f218", end: "0x8006f28c", kind: function, ownership: game, confidence: high, external_name: "Request Map Rotation" }
+  - { name: battle_process_map_rotation_input, address: "0x8006f28c", end: "0x8006f320", kind: function, ownership: game, confidence: high, external_name: "Process Map Rotation Input" }
+  - { name: battle_process_map_rotation, address: "0x8006f320", end: "0x8006f4b0", kind: function, ownership: game, confidence: high }
+  - { name: battle_map_zoom, address: "0x8006f4b0", end: "0x8006f5bc", kind: function, ownership: game, confidence: high }
+  - { name: battle_toggle_map_zoom, address: "0x8006f5bc", end: "0x8006f634", kind: function, ownership: game, confidence: high }
+  - { name: battle_call_map_zoom, address: "0x8006f634", end: "0x8006f678", kind: function, ownership: game, confidence: high, external_name: "Call Map Zoom" }
+  - { name: battle_process_map_tilt_request, address: "0x8006f7c4", end: "0x8006f8c8", kind: function, ownership: game, confidence: high }
+  - { name: battle_toggle_map_tilt, address: "0x8006f8c8", end: "0x8006f968", kind: function, ownership: game, confidence: high, external_name: "Toggle Map Tilt" }
+  - { name: battle_call_map_tilt, address: "0x8006f968", end: "0x8006f9ac", kind: function, ownership: game, confidence: high, external_name: "Call Map Tilt" }
+  - { name: battle_process_map_tilt, address: "0x8006f9ac", end: "0x8006fb50", kind: function, ownership: game, confidence: high }
+  - { name: battle_acting_unit_vector_normal, address: "0x8006fb50", end: "0x8006fc08", kind: function, ownership: game, confidence: high }
+  - { name: battle_acting_unit_vector_shift, address: "0x8006fc08", end: "0x8006fc68", kind: function, ownership: game, confidence: high }
+  - { name: battle_process_unit_movement, address: "0x800707c4", end: "0x80070820", kind: function, ownership: game, confidence: high }
+  - { name: battle_rotate_camera_when_unit_tile_not_visible, address: "0x80070820", end: "0x80070998", kind: function, ownership: game, confidence: high, external_name: "Rotate Camera when Unit Tile Not Visible" }
+  - { name: battle_set_casting_unit_id_ff, address: "0x80070998", end: "0x800709fc", kind: function, ownership: game, confidence: high, external_name: "Set casting unit ID = FF 2" }
+  - { name: battle_set_casting_unit_id_ff_and_prepare, address: "0x800709fc", end: "0x80070a38", kind: function, ownership: game, confidence: high, external_name: "Set casting unit ID = FF 1" }
+  - { name: battle_store_entd_flags_into_misc_data_w_o_control_flag, address: "0x80070b7c", end: "0x80070c04", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_next_script_action_menus, address: "0x80070c04", end: "0x80070c78", kind: function, ownership: game, confidence: high, external_name: "Set next script = action menus" }
+  - { name: battle_set_game_state_free_cursor, address: "0x80070c78", end: "0x80070cdc", kind: function, ownership: game, confidence: high, external_name: "Set Game State to FreeCursor" }
+  - { name: battle_open_free_cursor_help, address: "0x80070cdc", end: "0x80070d18", kind: function, ownership: game, confidence: high, external_name: "Free Cursor Help (Select Button)" }
+  - { name: battle_deep_dungeon_crystal_check_and_map_state_preparation, address: "0x80070d18", end: "0x80070ddc", kind: function, ownership: game, confidence: high }
+  - { name: battle_refresh_deep_dungeon, address: "0x80070e24", end: "0x80070e6c", kind: function, ownership: game, confidence: high }
+  - { name: battle_enter_highlight_units_by_team_state, address: "0x8007134c", end: "0x800713a0", kind: function, ownership: game, confidence: high, external_name: "Highlight units based on team" }
+  - { name: battle_open_active_unit_idle_action_menu, address: "0x800713a0", end: "0x80071434", kind: function, ownership: game, confidence: high, external_name: "Active Unit Idle Action Menu" }
+  - { name: battle_non_active_unit_idle_action_menu, address: "0x80071434", end: "0x800714f4", kind: function, ownership: game, confidence: high }
+  - { name: battle_call_idle_action_menu, address: "0x800714f4", end: "0x800715a8", kind: function, ownership: game, confidence: high }
+  - { name: battle_open_help_menu, address: "0x800715a8", end: "0x800715e8", kind: function, ownership: game, confidence: high, external_name: "Open Help Menu" }
+  - { name: battle_show_move_range_in_free_cursor, address: "0x800715e8", end: "0x80071668", kind: function, ownership: game, confidence: high }
+  - { name: battle_open_free_cursor_mini_menu, address: "0x80071668", end: "0x8007169c", kind: function, ownership: game, confidence: high, external_name: "Free Cursor Mini Menu" }
+  - { name: battle_open_mini_menu, address: "0x8007169c", end: "0x800716dc", kind: function, ownership: game, confidence: high, external_name: "Open Mini Menu" }
+  - { name: battle_open_mini_menu_help, address: "0x800716dc", end: "0x8007171c", kind: function, ownership: game, confidence: high, external_name: "Open Mini Help Menu" }
+  - { name: battle_get_next_acting_unit, address: "0x8007171c", end: "0x800717cc", kind: function, ownership: game, confidence: high }
+  - { name: battle_pressed_move_command, address: "0x800717cc", end: "0x80071824", kind: function, ownership: game, confidence: high, external_name: "Pressed Move Command" }
+  - { name: battle_show_autobattle_feedback, address: "0x80071824", end: "0x8007187c", kind: function, ownership: game, confidence: high, external_name: "Show free-cursor autobattle feedback setup" }
+  - { name: battle_close_move_help, address: "0x8007187c", end: "0x8007192c", kind: function, ownership: game, confidence: high }
+  - { name: battle_open_illegal_move_help, address: "0x8007192c", end: "0x80071984", kind: function, ownership: game, confidence: high }
+  - { name: battle_setup_unit_moving, address: "0x80071984", end: "0x80071a7c", kind: function, ownership: game, confidence: high }
+  - { name: battle_save_unit_previous_state, address: "0x80071a7c", end: "0x80071ab8", kind: function, ownership: game, confidence: high, external_name: "Store Previous XYZ Facing Mount values" }
+  - { name: battle_unit_moving, address: "0x80071ab8", end: "0x80071b4c", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_state_after_command, address: "0x80071c8c", end: "0x80071cec", kind: function, ownership: game, confidence: high, external_name: "Set Game State to AfterCommandMode" }
+  - { name: battle_decide_facing_direction, address: "0x80071cec", end: "0x80071de8", kind: function, ownership: game, confidence: high }
+  - { name: battle_level_up_animation_and_report, address: "0x80071de8", end: "0x80071e68", kind: function, ownership: game, confidence: high }
+  - { name: battle_job_level_up_animation_and_report, address: "0x80071e68", end: "0x80071ee8", kind: function, ownership: game, confidence: high }
+  - { name: battle_post_movement_display_prep, address: "0x800723d4", end: "0x80072460", kind: function, ownership: game, confidence: high }
+  - { name: battle_choose_facing_for_wait, address: "0x80072460", end: "0x80072544", kind: function, ownership: game, confidence: high }
+  - { name: battle_turn_sprite_towards_attack, address: "0x8007270c", end: "0x8007273c", kind: function, ownership: game, confidence: high }
+  - { name: battle_rider_mount_x_y_facing_setting, address: "0x80072928", end: "0x80072a10", kind: function, ownership: game, confidence: high }
+  - { name: battle_attacker_face_targets, address: "0x80072a10", end: "0x80072a88", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_all_unit_facing_needs_changed, address: "0x80072a88", end: "0x80072ad0", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_state_jp_xp_gain, address: "0x80072ad0", end: "0x80072b14", kind: function, ownership: game, confidence: high, external_name: "Game State to JP XP Gain" }
+  - { name: battle_post_command_update_animation_display, address: "0x80072b14", end: "0x80072b50", kind: function, ownership: game, confidence: high, external_name: "Post Command Update Animation Display" }
+  - { name: battle_set_item_throw_stone_ability_display_stuff, address: "0x80072bf0", end: "0x80072ce8", kind: function, ownership: game, confidence: high }
+  - { name: battle_resume_attack_phase_control, address: "0x80072ce8", end: "0x80072d8c", kind: function, ownership: game, confidence: high }
+  - { name: battle_prep_targets_post_action_message, address: "0x80073164", end: "0x800731d8", kind: function, ownership: game, confidence: high }
+  - { name: battle_caster_post_effect_messages, address: "0x800731d8", end: "0x80073250", kind: function, ownership: game, confidence: high }
+  - { name: battle_attack_result_animation_update, address: "0x80073250", end: "0x800732c8", kind: function, ownership: game, confidence: high }
+  - { name: battle_post_action_xp_jp_ability, address: "0x80073638", end: "0x800736d4", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_damage_display_type_based_on_ability, address: "0x80073eec", end: "0x80073fb8", kind: function, ownership: game, confidence: high }
+  - { name: battle_finish_hiding_unit_status, address: "0x80073fb8", end: "0x80073fe0", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_animation_and_facing_based_on_animation_flag_1, address: "0x80073fe0", end: "0x80074068", kind: function, ownership: game, confidence: high }
+  - { name: battle_action_cast_2, address: "0x80074068", end: "0x800740d4", kind: function, ownership: game, confidence: high }
+  - { name: battle_target_out_of_range, address: "0x80074470", end: "0x800744c8", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_target_boxes_red, address: "0x800744c8", end: "0x800745ac", kind: function, ownership: game, confidence: high }
+  - { name: battle_confirm_action, address: "0x800745ac", end: "0x800746ac", kind: function, ownership: game, confidence: high }
+  - { name: battle_highlight_all_units_blue_or_red, address: "0x800746ac", end: "0x800747b8", kind: function, ownership: game, confidence: high }
+  - { name: battle_target_select_start, address: "0x800747b8", end: "0x80074814", kind: function, ownership: game, confidence: high }
+  - { name: battle_target_select_mode, address: "0x80074814", end: "0x8007485c", kind: function, ownership: game, confidence: high }
+  - { name: battle_target_select_denied, address: "0x8007485c", end: "0x80074930", kind: function, ownership: game, confidence: high }
+  - { name: battle_target_select_confirm, address: "0x80074930", end: "0x800749c8", kind: function, ownership: game, confidence: high }
+  - { name: battle_target_display_start, address: "0x800749c8", end: "0x80074a3c", kind: function, ownership: game, confidence: high }
+  - { name: battle_target_display, address: "0x80074a3c", end: "0x80074ac0", kind: function, ownership: game, confidence: high }
+  - { name: battle_half_animation_speed_for_effects, address: "0x80074ac0", end: "0x80074af8", kind: function, ownership: game, confidence: high }
+  - { name: battle_half_animation_speed_for_jump_out, address: "0x80074af8", end: "0x80074b18", kind: function, ownership: game, confidence: high }
+  - { name: battle_half_animation_speed_for_jump_in, address: "0x80074b18", end: "0x80074b38", kind: function, ownership: game, confidence: high }
+  - { name: battle_half_animation_speed_and_queue_close, address: "0x80074b38", end: "0x80074b68", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_tile_coords_and_glow_from_at_list, address: "0x80074b68", end: "0x80074bac", kind: function, ownership: game, confidence: high, external_name: "Calculate Tile Coordinates and Glow from AT List" }
+  - { name: battle_handle_free_cursor_input, address: "0x80074bac", end: "0x80074bf8", kind: function, ownership: game, confidence: high, external_name: "Free Cursor Controller Input" }
+  - { name: battle_handle_free_cursor_help_state, address: "0x80074dd0", end: "0x80074e2c", kind: function, ownership: game, confidence: high, external_name: "Main FreeCursorHelp Game State Handler" }
+  - { name: battle_handle_highlight_units_state, address: "0x80074e2c", end: "0x80074e94", kind: function, ownership: game, confidence: high, external_name: "Main HighlightUnits Game State Handler" }
+  - { name: battle_handle_open_action_menus_state, address: "0x80074e94", end: "0x80074f5c", kind: function, ownership: game, confidence: high, external_name: "Main OpenActionMenus Game State Handler" }
+  - { name: battle_handle_action_help_menu_state, address: "0x800755fc", end: "0x80075690", kind: function, ownership: game, confidence: high, external_name: "Main ActionHelpMenu Game State Handler" }
+  - { name: battle_handle_display_move_area_state, address: "0x80075690", end: "0x8007571c", kind: function, ownership: game, confidence: high, external_name: "Main DisplayMoveAreaMode Game State Handler" }
+  - { name: battle_handle_mini_menu_state, address: "0x8007571c", end: "0x800757c4", kind: function, ownership: game, confidence: high, external_name: "Main MiniMenu Game State Handler" }
+  - { name: battle_handle_mini_menu_help_state, address: "0x800757c4", end: "0x80075820", kind: function, ownership: game, confidence: high, external_name: "Main MiniMenuHelp Game State Handler" }
+  - { name: battle_handle_active_turn_state, address: "0x80075820", end: "0x8007587c", kind: function, ownership: game, confidence: high, external_name: "Main ActiveTurnMode Game State Handler" }
+  - { name: battle_handle_unit_move_state, address: "0x8007587c", end: "0x80075910", kind: function, ownership: game, confidence: high, external_name: "Main UnitMove Game State Handler" }
+  - { name: battle_handle_move_range_exception_state, address: "0x80075c34", end: "0x80075ca0", kind: function, ownership: game, confidence: high, external_name: "Main MoveRangeExceptionMode Game State Handler" }
+  - { name: battle_handle_illegal_move_menu_state, address: "0x80075ca0", end: "0x80075d0c", kind: function, ownership: game, confidence: high, external_name: "Main IllegalMoveMenu Game State Handler" }
+  - { name: battle_handle_unit_moving_setup_state, address: "0x80075d0c", end: "0x80075db0", kind: function, ownership: game, confidence: high, external_name: "Main UnitMovingSetup Game State Handler" }
+  - { name: battle_handle_unit_moving_state, address: "0x80075db0", end: "0x80075e68", kind: function, ownership: game, confidence: high, external_name: "Main UnitMoving Game State Handler" }
+  - { name: battle_move_to_previous_map_square, address: "0x80075e68", end: "0x80075f10", kind: function, ownership: game, confidence: high }
+  - { name: battle_undo_mount, address: "0x80075f10", end: "0x8007601c", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_move_confirm_menu_state, address: "0x800761cc", end: "0x8007629c", kind: function, ownership: game, confidence: high, external_name: "Main MoveConfirmMenu Game State Handler" }
+  - { name: battle_handle_wait_menu_state, address: "0x8007629c", end: "0x80076358", kind: function, ownership: game, confidence: high, external_name: "Main WaitMenu Game State Handler" }
+  - { name: battle_update_mount_animation_display, address: "0x80076358", end: "0x80076430", kind: function, ownership: game, confidence: high, external_name: "Update Mount Animation Display" }
+  - { name: battle_handle_wait_direction_state, address: "0x80076430", end: "0x80076658", kind: function, ownership: game, confidence: high, external_name: "Main WaitDirection Game State Handler" }
+  - { name: battle_handle_action_execute_setup_state, address: "0x8007691c", end: "0x800769b0", kind: function, ownership: game, confidence: high, external_name: "Main ActionExecuteSetup Game State Handler" }
+  - { name: battle_handle_targeting_range_state, address: "0x800769b0", end: "0x80076b7c", kind: function, ownership: game, confidence: high, external_name: "Main TargetingRange Game State Handler" }
+  - { name: battle_handle_illegal_range_state, address: "0x80076b7c", end: "0x80076be8", kind: function, ownership: game, confidence: high, external_name: "Main IllegalRange Game State Handler" }
+  - { name: battle_handle_ability_preview_help_state, address: "0x80076be8", end: "0x80076c50", kind: function, ownership: game, confidence: high, external_name: "Main AbilityPrvwHelp Game State Handler" }
+  - { name: battle_handle_ability_preview_state, address: "0x80076c50", end: "0x80076d84", kind: function, ownership: game, confidence: high, external_name: "Main AbilityPrvwHandling Game State Handler" }
+  - { name: battle_handle_confirm_action_state, address: "0x80076d84", end: "0x80076f14", kind: function, ownership: game, confidence: high, external_name: "Main ConfirmAction Game State Handler" }
+  - { name: battle_handle_pre_attack_animation_state, address: "0x80076f14", end: "0x80076fd0", kind: function, ownership: game, confidence: high, external_name: "Main PreAttackAnim1 Game State Handler" }
+  - { name: battle_handle_action_cast_state, address: "0x80076fd0", end: "0x80077098", kind: function, ownership: game, confidence: high, external_name: "Main ActionCast2Mode Game State Handler" }
+  - { name: battle_handle_commence_attack_phase_state, address: "0x80077098", end: "0x80077134", kind: function, ownership: game, confidence: high, external_name: "Main CommenceAtkPhaseCtrl Game State Handler" }
+  - { name: battle_handle_effect_damage_display_state, address: "0x80077134", end: "0x800771a0", kind: function, ownership: game, confidence: high, external_name: "Main DoEffectDamageDisp Game State Handler" }
+  - { name: battle_handle_open_sp2_files_state, address: "0x800771a0", end: "0x80077314", kind: function, ownership: game, confidence: high, external_name: "Main OpenSP2Files Game State Handler" }
+  - { name: battle_handle_start_effect_file_open_state, address: "0x80077314", end: "0x80077378", kind: function, ownership: game, confidence: high, external_name: "Main StartEffectFileOpen Game State Handler" }
+  - { name: battle_handle_secondary_effect_state, address: "0x80077378", end: "0x800773b4", kind: function, ownership: game, confidence: high, external_name: "Main SecondaryEffect Game State Handler" }
+  - { name: battle_post_attack_animation_display, address: "0x800773b4", end: "0x800773f8", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_battle_message_display_state, address: "0x80077760", end: "0x800777ec", kind: function, ownership: game, confidence: high, external_name: "Main BattleMessageDisplay Game State Handler" }
+  - { name: battle_handle_resume_attack_phase_state, address: "0x800777ec", end: "0x800779a0", kind: function, ownership: game, confidence: high, external_name: "Main ResumeAttackPhaseControl Game State Handler" }
+  - { name: battle_handle_learn_ability_on_hit_state, address: "0x800779a0", end: "0x80077b58", kind: function, ownership: game, confidence: high, external_name: "Main LearnAbilityOnHit Game State Handler" }
+  - { name: battle_deep_dungeon_map_and_animation, address: "0x80077b58", end: "0x80077bd8", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_deep_dungeon_mesh_load_state, address: "0x80077bd8", end: "0x80077c08", kind: function, ownership: game, confidence: high, external_name: "Main DeepDungeonMeshLoad Game State Handler" }
+  - { name: battle_handle_deep_dungeon_mesh_finish_state, address: "0x80077c08", end: "0x80077c38", kind: function, ownership: game, confidence: high, external_name: "Main DeepDungeonMeshFinish Game State Handler" }
+  - { name: battle_handle_target_select_start_state, address: "0x80077c38", end: "0x80077ca4", kind: function, ownership: game, confidence: high, external_name: "Main BattleTargetSelectStartMode Game State Handler" }
+  - { name: battle_handle_target_select_denied_state, address: "0x80077e1c", end: "0x80077e88", kind: function, ownership: game, confidence: high, external_name: "Main BattleTargetSelectDeniedMode Game State Handler" }
+  - { name: battle_main_battletargetselectconfirmmode_game_state_handler, address: "0x80077e88", end: "0x80077f68", kind: function, ownership: game, confidence: high }
+  - { name: battle_main_battletargetdisplaystartmode_game_state_handler, address: "0x80077f68", end: "0x80078030", kind: function, ownership: game, confidence: high }
+  - { name: battle_main_battletargetdisplaymode_game_state_handler, address: "0x80078030", end: "0x800780a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_main_aftercommandmode_game_state_handler, address: "0x800780a0", end: "0x80078148", kind: function, ownership: game, confidence: high }
+  - { name: battle_main_changeturnmode_game_state_handler, address: "0x80078328", end: "0x8007843c", kind: function, ownership: game, confidence: high }
+  - { name: battle_main_statusexecutemode_game_state_handler, address: "0x8007843c", end: "0x80078504", kind: function, ownership: game, confidence: high }
+  - { name: battle_main_effectmode_game_state_handler, address: "0x80078504", end: "0x800785ac", kind: function, ownership: game, confidence: high }
+  - { name: battle_finish_battle_frame, address: "0x800787dc", end: "0x800787fc", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_map_jumping_out_state, address: "0x800787fc", end: "0x80078964", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_map_jumping_out_2_state, address: "0x80078964", end: "0x80078acc", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_close_battle_state, address: "0x80078acc", end: "0x80078bf4", kind: function, ownership: game, confidence: high, external_name: "Main CloseBattle Game State Handler" }
+  - { name: battle_handle_map_initialize_state, address: "0x80078bf4", end: "0x80078d20", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_map_initialize_2_state, address: "0x80078d20", end: "0x80078e58", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_map_jumping_in_state, address: "0x80078e58", end: "0x80078fb4", kind: function, ownership: game, confidence: high }
+  - { name: battle_extract_deployed_unit_palettes, address: "0x800791e8", end: "0x80079298", kind: function, ownership: game, confidence: high }
+  - { name: battle_game_loop, address: "0x80079a98", end: "0x8007a1d4", kind: function, ownership: game, confidence: high, external_name: "Main BATTLE.BIN Loop" }
+  - { name: battle_get_casting_unit_misc_data, address: "0x8007a1d4", end: "0x8007a218", kind: function, ownership: game, confidence: high, external_name: "Get Casting Unit Misc Data Pointer" }
+  - { name: battle_get_source_unit_misc_data, address: "0x8007a218", end: "0x8007a25c", kind: function, ownership: game, confidence: high, external_name: "Get Source Unit Misc Data Pointer" }
+  - { name: battle_get_misc_data_at_map_coords_1, address: "0x8007a25c", end: "0x8007a2b8", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_misc_data_at_map_coords_2, address: "0x8007a2b8", end: "0x8007a3f8", kind: function, ownership: game, confidence: high, external_name: "Get Misc Data at Map Coords 2" }
+  - { name: battle_get_misc_data_at_map_coords_3, address: "0x8007a3f8", end: "0x8007a4f4", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_overlapping_unit_misc_data_pointer, address: "0x8007a5d0", end: "0x8007a6e4", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_unit_misc_data_by_misc_id, address: "0x8007a6e4", end: "0x8007a724", kind: function, ownership: game, confidence: high, external_name: "Get Unit Misc Data by Misc ID" }
+  - { name: battle_get_unit_misc_data_by_battle_id, address: "0x8007a724", end: "0x8007a774", kind: function, ownership: game, confidence: high, external_name: "Get Unit Misc Data by Battle ID" }
+  - { name: battle_count_special_misc_units, address: "0x8007a774", end: "0x8007a7b8", kind: function, ownership: game, confidence: high, external_name: "Count Special Misc Units" }
+  - { name: battle_move_misc_unit_to_head, address: "0x8007a7b8", end: "0x8007a840", kind: function, ownership: game, confidence: high, external_name: "Move Misc Unit to Head" }
+  - { name: battle_invalidate_sp2_vram_slot, address: "0x8007a968", end: "0x8007a9b0", kind: function, ownership: game, confidence: high, external_name: "Invalidate SP2 VRAM Slot" }
+  - { name: battle_read_compressed_graphics_nibble, address: "0x8007a9b0", end: "0x8007aa34", kind: function, ownership: game, confidence: high, external_name: "Read Compressed Graphics Nibble" }
+  - { name: battle_initialize_battle_render_state, address: "0x8007abd0", end: "0x8007ac60", kind: function, ownership: game, confidence: high, external_name: "BATTLE 0007abd0" }
+  - { name: battle_initialize_unit_sprite_display, address: "0x8007ac60", end: "0x8007acac", kind: function, ownership: game, confidence: high, external_name: "Initialize Unit Sprite Display" }
+  - { name: battle_initialize_weapon_sprite_display, address: "0x8007acac", end: "0x8007ad08", kind: function, ownership: game, confidence: high, external_name: "Initialize Weapon Sprite Display" }
+  - { name: battle_initialize_numeric_sprite_display, address: "0x8007ad08", end: "0x8007adb4", kind: function, ownership: game, confidence: high, external_name: "Initialize Numeric Sprite Display" }
+  - { name: battle_initialize_status_bubble_sprite_display, address: "0x8007adb4", end: "0x8007ae48", kind: function, ownership: game, confidence: high, external_name: "Initialize Status Bubble Sprite Display" }
+  - { name: battle_initialize_item_sprite_display, address: "0x8007ae48", end: "0x8007aecc", kind: function, ownership: game, confidence: high, external_name: "Initialize Item Sprite Display" }
+  - { name: battle_noop_8007aecc, address: "0x8007aecc", end: "0x8007aed4", kind: function, ownership: game, confidence: high }
+  - { name: battle_prepare_battle_render_frame, address: "0x8007aed4", end: "0x8007af08", kind: function, ownership: game, confidence: high, external_name: "Call Store Screen Offsets to GTE" }
+  - { name: battle_increment_gfx_counter, address: "0x8007af08", end: "0x8007af44", kind: function, ownership: game, confidence: high, external_name: "Increment GFX Animation Counter" }
+  - { name: battle_store_sprite_display_data, address: "0x8007b4ec", end: "0x8007b530", kind: function, ownership: game, confidence: high, external_name: "Store Sprite Display Data" }
+  - { name: battle_set_sprite_part_flag_bits_1_2, address: "0x8007b530", end: "0x8007b554", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_sprite_part_flag_bit_0, address: "0x8007b554", end: "0x8007b58c", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_relative_camera_offset, address: "0x8007b58c", end: "0x8007b688", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_relative_camera_offset_1, address: "0x8007b688", end: "0x8007b6a8", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_relative_camera_offset_5, address: "0x8007b6a8", end: "0x8007b6c8", kind: function, ownership: game, confidence: high, external_name: "Calculate Relative Camera Offset 5" }
+  - { name: battle_convert_screen_coords_modify_by_1, address: "0x8007b92c", end: "0x8007b94c", kind: function, ownership: game, confidence: high, external_name: "Convert Screen Coordinates Modify by 1" }
+  - { name: battle_convert_screen_coords_modify_by_5, address: "0x8007b94c", end: "0x8007b96c", kind: function, ownership: game, confidence: high, external_name: "Convert Screen Coordinates Modify by 5" }
+  - { name: battle_copy_misc_data_xyz_values, address: "0x8007b96c", end: "0x8007b9d0", kind: function, ownership: game, confidence: high, external_name: "Copy Misc Data XYZ Values" }
+  - { name: battle_float_fly_slope_calculation, address: "0x8007cff8", end: "0x8007d0a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_mount_misc_data, address: "0x8007d0a0", end: "0x8007d0d4", kind: function, ownership: game, confidence: high, external_name: "Get Mount Misc Data" }
+  - { name: battle_calculate_screen_z_with_caller_data, address: "0x8007d2dc", end: "0x8007d350", kind: function, ownership: game, confidence: high, external_name: "Calculate Screen Z With Caller Data" }
+  - { name: battle_calculate_screen_z_from_misc_move_data, address: "0x8007d350", end: "0x8007d3f4", kind: function, ownership: game, confidence: high, external_name: "Calculate Screen Z From Misc Move Data" }
+  - { name: battle_calculate_screen_z_from_misc_screen_data, address: "0x8007d3f4", end: "0x8007d478", kind: function, ownership: game, confidence: high, external_name: "Calculate Screen Z From Misc Screen Data" }
+  - { name: battle_calculate_screen_z_from_misc_map_data, address: "0x8007d478", end: "0x8007d51c", kind: function, ownership: game, confidence: high, external_name: "Calculate Screen Z From Misc Map Data" }
+  - { name: battle_calculate_screen_z_from_misc_battle_map_data, address: "0x8007d51c", end: "0x8007d5d0", kind: function, ownership: game, confidence: high, external_name: "Calculate Screen Z From Misc Battle Map Data" }
+  - { name: battle_status_bubble_prep, address: "0x8007f1d4", end: "0x8007f240", kind: function, ownership: game, confidence: high }
+  - { name: battle_initialize_position_vector_copies, address: "0x8007f240", end: "0x8007f2ac", kind: function, ownership: game, confidence: high, external_name: "Scrapped animation code" }
+  - { name: battle_shift_and_fill_display_svectors, address: "0x8007f400", end: "0x8007f45c", kind: function, ownership: game, confidence: high, external_name: "Shift and Fill Display SVectors" }
+  - { name: battle_store_item_display_data, address: "0x8007f45c", end: "0x8007f50c", kind: function, ownership: game, confidence: high, external_name: "Store Item's Display Data" }
+  - { name: battle_setup_item_get_rendering, address: "0x8007f50c", end: "0x8007f5f8", kind: function, ownership: game, confidence: high, external_name: "Setup Item Get Rendering" }
+  - { name: battle_prep_for_displaying_earned_exp_jp, address: "0x80080f44", end: "0x80080fec", kind: function, ownership: game, confidence: high }
+  - { name: battle_activate_numerical_sprite_data, address: "0x80080fec", end: "0x800810a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_unit_animation_facing, address: "0x80081978", end: "0x80081988", kind: function, ownership: game, confidence: high, external_name: "Store Unit Animation and Facing" }
+  - { name: battle_store_unit_animation_facing_movement_data, address: "0x80081988", end: "0x800819a8", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_spritesheet_shp_data_address, address: "0x800819a8", end: "0x80081a08", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_spritesheet_seq_data_address, address: "0x80081a08", end: "0x80081a58", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_spritesheet_shp_data, address: "0x80081a58", end: "0x80081a94", kind: function, ownership: game, confidence: high, external_name: "Get Spritesheet SHP Data" }
+  - { name: battle_get_spritesheet_seq_data, address: "0x80081a94", end: "0x80081ad0", kind: function, ownership: game, confidence: high, external_name: "Get Spritesheet SEQ Data" }
+  - { name: battle_get_body_part_sprite_data, address: "0x80081ad0", end: "0x80081ae0", kind: function, ownership: game, confidence: high, external_name: "Get Resident Body-Part Sprite Data" }
+  - { name: battle_get_body_part_seq_data, address: "0x80081ae0", end: "0x80081af0", kind: function, ownership: game, confidence: high, external_name: "Get Resident Body-Part SEQ Data" }
+  - { name: battle_get_spritesheet_graphic_height, address: "0x80081af0", end: "0x80081b0c", kind: function, ownership: game, confidence: high, external_name: "Get Spritesheet Graphic Height" }
+  - { name: battle_set_move_and_screen_coords, address: "0x80081b0c", end: "0x80081b88", kind: function, ownership: game, confidence: high, external_name: "Set Move and Screen Coordinates" }
+  - { name: battle_set_map_coords_after_death_dismount, address: "0x80081b88", end: "0x80081c1c", kind: function, ownership: game, confidence: high, external_name: "Set Map Coords After Death/Dismount" }
+  - { name: battle_is_spritesheet_id_loaded, address: "0x80081c1c", end: "0x80081c60", kind: function, ownership: game, confidence: high, external_name: "Save Spritesheet ID to Sprite Data" }
+  - { name: battle_check_for_tile_status_palette_mod, address: "0x80082468", end: "0x80082508", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_status_bubble_graphic_trigger, address: "0x80082508", end: "0x80082550", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_sprite_transparency_flag, address: "0x80082550", end: "0x8008258c", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_float_and_jump_height, address: "0x8008258c", end: "0x80082620", kind: function, ownership: game, confidence: high }
+  - { name: battle_movement_validation_float_fly, address: "0x8008278c", end: "0x8008288c", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_animation_for_item_abilities, address: "0x80082a44", end: "0x80082b1c", kind: function, ownership: game, confidence: high }
+  - { name: battle_start_ability_charge_animation, address: "0x80082b1c", end: "0x80082b80", kind: function, ownership: game, confidence: high }
+  - { name: battle_start_ability_charge_animation_for_movement, address: "0x80082b80", end: "0x80082c10", kind: function, ownership: game, confidence: high }
+  - { name: battle_select_attack_animation_for_ability, address: "0x80082c10", end: "0x80082cc4", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_level_up_animation, address: "0x80082cc4", end: "0x80082d50", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_animation_based_on_unit_mounted_state, address: "0x80082d50", end: "0x80082df8", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_idle_animation_based_on_status, address: "0x80082df8", end: "0x80082eec", kind: function, ownership: game, confidence: high }
+  - { name: battle_poach_morbol_transformation, address: "0x8008346c", end: "0x80083570", kind: function, ownership: game, confidence: high }
+  - { name: battle_call_set_animation_based_on_status, address: "0x80083854", end: "0x80083874", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_attacker_animation_for_shield_block, address: "0x80083874", end: "0x80083978", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_anim_display_for_all_targets, address: "0x80083c58", end: "0x80083cd4", kind: function, ownership: game, confidence: high }
+  - { name: battle_move_unit_right_left, address: "0x800846b0", end: "0x80084758", kind: function, ownership: game, confidence: high }
+  - { name: battle_add_signed_byte_to_unit_height, address: "0x80084758", end: "0x80084770", kind: function, ownership: game, confidence: high }
+  - { name: battle_move_unit_forward_or_backward, address: "0x80084770", end: "0x80084818", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_casting_unit_graphics, address: "0x80085234", end: "0x8008526c", kind: function, ownership: game, confidence: high }
+  - { name: battle_release_unit_vram_slot, address: "0x80085ba0", end: "0x80085c0c", kind: function, ownership: game, confidence: high }
+  - { name: battle_process_status_bubble_display, address: "0x800865a4", end: "0x80086640", kind: function, ownership: game, confidence: high, external_name: "PROCESS STATUS BUBBLE DISPLAY" }
+  - { name: battle_cleanup_battle_misc_units, address: "0x80087064", end: "0x800870ac", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_and_animate_units, address: "0x8008719c", end: "0x800871f4", kind: function, ownership: game, confidence: high }
+  - { name: battle_copy_other_spr_palette_data_to_ram, address: "0x800879b8", end: "0x80087a28", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_and_animate_units_three_times, address: "0x80088808", end: "0x80088840", kind: function, ownership: game, confidence: high }
+  - { name: battle_clear_four_graphics_state_words, address: "0x80088840", end: "0x80088868", kind: function, ownership: game, confidence: high }
+  - { name: battle_80088868, address: "0x80088868", end: "0x80088904", kind: function, ownership: game, confidence: high }
+  - { name: battle_configure_misc_unit_palette_modulation_1f, address: "0x80089528", end: "0x80089554", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_real_coords_from_screen_coords, address: "0x80089554", end: "0x8008957c", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_screen_coords_from_real_coords, address: "0x8008957c", end: "0x800895c4", kind: function, ownership: game, confidence: high }
+  - { name: battle_something_height_related, address: "0x800897dc", end: "0x800898a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_80089da0, address: "0x80089da0", end: "0x80089dc0", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_80089dc0, address: "0x80089dc0", end: "0x80089de0", kind: function, ownership: game, confidence: high }
+  - { name: battle_accelerate_unit_to_destination_no_height_change, address: "0x80089de0", end: "0x80089e00", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_80089e00, address: "0x80089e00", end: "0x80089e20", kind: function, ownership: game, confidence: high }
+  - { name: battle_initialize_altima_teleport_data, address: "0x8008a6d8", end: "0x8008a700", kind: function, ownership: game, confidence: high, external_name: "Initialize Altima Teleport Data" }
+  - { name: battle_start_altima_teleport_departure_effect, address: "0x8008a700", end: "0x8008a780", kind: function, ownership: game, confidence: high }
+  - { name: battle_start_altima_teleport_arrival_effect, address: "0x8008a780", end: "0x8008a800", kind: function, ownership: game, confidence: high }
+  - { name: battle_dispatch_unit_distortion_animation, address: "0x8008b234", end: "0x8008b28c", kind: function, ownership: game, confidence: high, external_name: "Animate Unit Distorts" }
+  - { name: battle_copy_current_real_coords, address: "0x8008b28c", end: "0x8008b2c4", kind: function, ownership: game, confidence: high, external_name: "Copy Current Real Coordinates" }
+  - { name: battle_restore_current_real_coords, address: "0x8008b2c4", end: "0x8008b2fc", kind: function, ownership: game, confidence: high, external_name: "Restore Current Real Coordinates" }
+  - { name: battle_get_current_real_coords, address: "0x8008b2fc", end: "0x8008b30c", kind: function, ownership: game, confidence: high, external_name: "Get Current Real Coordinates" }
+  - { name: battle_set_current_real_coords, address: "0x8008b30c", end: "0x8008b338", kind: function, ownership: game, confidence: high, external_name: "Set Current Real Coordinates" }
+  - { name: battle_set_real_coord_delta_from_destination, address: "0x8008b338", end: "0x8008b3cc", kind: function, ownership: game, confidence: high, external_name: "Set Real Coordinate Delta from Destination" }
+  - { name: battle_set_real_coord_delta_from_values, address: "0x8008b3cc", end: "0x8008b440", kind: function, ownership: game, confidence: high, external_name: "Set Real Coordinate Delta from Values" }
+  - { name: battle_tick_real_coord_animation, address: "0x8008b440", end: "0x8008b4b8", kind: function, ownership: game, confidence: high, external_name: "Increment Real Coordinates and Countdown" }
+  - { name: battle_copy_camera_offset_screen_coords, address: "0x8008b4b8", end: "0x8008b4f0", kind: function, ownership: game, confidence: high, external_name: "Copy Camera Offset Screen Coordinates" }
+  - { name: battle_restore_camera_offset_screen_coords, address: "0x8008b4f0", end: "0x8008b528", kind: function, ownership: game, confidence: high, external_name: "Restore Camera Offset Screen Coordinates" }
+  - { name: battle_get_battle_offset_screen_coords, address: "0x8008b528", end: "0x8008b538", kind: function, ownership: game, confidence: high, external_name: "Get Offset Screen Coordinates" }
+  - { name: battle_set_battle_offset_screen_coords, address: "0x8008b538", end: "0x8008b564", kind: function, ownership: game, confidence: high, external_name: "Set Offset Screen Coordinates" }
+  - { name: battle_set_offset_screen_coord_delta_from_value, address: "0x8008b564", end: "0x8008b62c", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_offset_screen_coord_delta_from_values, address: "0x8008b62c", end: "0x8008b6e4", kind: function, ownership: game, confidence: high, external_name: "Set Offset Screen Coordinate Delta from Values" }
+  - { name: battle_tick_offset_screen_coord_animation, address: "0x8008b6e4", end: "0x8008b7b4", kind: function, ownership: game, confidence: high, external_name: "Increment Real and Screen Coords" }
+  - { name: battle_copy_camera_zoom, address: "0x8008b7b4", end: "0x8008b7ec", kind: function, ownership: game, confidence: high }
+  - { name: battle_restore_camera_zoom, address: "0x8008b7ec", end: "0x8008b824", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_camera_zoom, address: "0x8008b824", end: "0x8008b834", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_camera_zoom, address: "0x8008b834", end: "0x8008b860", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_camera_zoom_delta_from_value, address: "0x8008b860", end: "0x8008b8f4", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_camera_zoom_delta_from_values, address: "0x8008b8f4", end: "0x8008b968", kind: function, ownership: game, confidence: high }
+  - { name: battle_tick_camera_zoom_animation, address: "0x8008b968", end: "0x8008b9e0", kind: function, ownership: game, confidence: high }
+  - { name: battle_copy_camera_rotation, address: "0x8008b9e0", end: "0x8008ba18", kind: function, ownership: game, confidence: high }
+  - { name: battle_restore_camera_rotation, address: "0x8008ba18", end: "0x8008ba50", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_camera_rotation, address: "0x8008ba50", end: "0x8008ba60", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_camera_rotation, address: "0x8008ba60", end: "0x8008ba8c", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_camera_rotation_delta_from_value, address: "0x8008ba8c", end: "0x8008bb20", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_camera_rotation_delta_from_values, address: "0x8008bb20", end: "0x8008bb94", kind: function, ownership: game, confidence: high }
+  - { name: battle_tick_camera_rotation_animation, address: "0x8008bb94", end: "0x8008bc0c", kind: function, ownership: game, confidence: high, external_name: "Increment All Camera Pitch and Countdown" }
+  - { name: battle_copy_background_color, address: "0x8008bc0c", end: "0x8008bc44", kind: function, ownership: game, confidence: high }
+  - { name: battle_restore_background_color, address: "0x8008bc44", end: "0x8008bcac", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_background_color, address: "0x8008bcac", end: "0x8008bcbc", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_background_color, address: "0x8008bcbc", end: "0x8008bd0c", kind: function, ownership: game, confidence: high }
+  - { name: battle_adjust_background_color, address: "0x8008bd0c", end: "0x8008bde4", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_unit_graphics_by_misc_id_wrapper, address: "0x8008bde4", end: "0x8008be04", kind: function, ownership: game, confidence: high, external_name: "Update Status/Sprite/Animation Display by Unit Misc ID Wrapper" }
+  - { name: battle_set_mounted_animation_by_misc_id, address: "0x8008be04", end: "0x8008be2c", kind: function, ownership: game, confidence: high, external_name: "Set Animation Based on Unit Mounted State from Unit Misc ID" }
+  - { name: battle_set_idle_animation_from_status_by_misc_id, address: "0x8008be2c", end: "0x8008be54", kind: function, ownership: game, confidence: high, external_name: "Set Idle Animation Based on Unit Status from Unit Misc ID" }
+  - { name: battle_set_idle_animation_by_misc_id, address: "0x8008be54", end: "0x8008be7c", kind: function, ownership: game, confidence: high, external_name: "Set Idle Animation Based on Unit Status from Unit Misc ID" }
+  - { name: battle_set_specific_animation_by_misc_id, address: "0x8008be7c", end: "0x8008bebc", kind: function, ownership: game, confidence: high, external_name: "Set Specific Animation Value from Unit Misc ID" }
+  - { name: battle_store_unknown_facing_for_all_units, address: "0x8008bebc", end: "0x8008bf14", kind: function, ownership: game, confidence: high, external_name: "Store Animation and Unknown Facing for all Misc Unit Data" }
+  - { name: battle_return_one, address: "0x8008bf14", end: "0x8008bf1c", kind: function, ownership: game, confidence: high, external_name: "Return 1" }
+  - { name: battle_get_facing_quadrant_by_misc_id, address: "0x8008bf1c", end: "0x8008bf84", kind: function, ownership: game, confidence: high, external_name: "Get Facing from Unit Misc ID" }
+  - { name: battle_set_animation_from_facing_hint, address: "0x8008bf84", end: "0x8008bffc", kind: function, ownership: game, confidence: high, external_name: "Set Animation and Facing from Unit Misc ID" }
+  - { name: battle_get_alternate_facing_quadrant_by_misc_id, address: "0x8008bffc", end: "0x8008c054", kind: function, ownership: game, confidence: high, external_name: "Get Unknown Facing from Unit Misc ID" }
+  - { name: battle_get_alternate_facing_quadrant_by_battle_id, address: "0x8008c054", end: "0x8008c0ac", kind: function, ownership: game, confidence: high, external_name: "Get Unknown Facing from Unit Battle ID" }
+  - { name: battle_get_facing_nibble_by_misc_id, address: "0x8008c0ac", end: "0x8008c114", kind: function, ownership: game, confidence: high, external_name: "Get Specific Facing from Unit Misc ID" }
+  - { name: battle_set_animation_from_facing_nibble, address: "0x8008c114", end: "0x8008c18c", kind: function, ownership: game, confidence: high, external_name: "Set Animation and Specific Facing from Unit Misc ID" }
+  - { name: battle_get_facing_field_0x6e_nibble_by_misc_id, address: "0x8008c18c", end: "0x8008c1e4", kind: function, ownership: game, confidence: high }
+  - { name: battle_snap_all_unit_facings_to_quadrants, address: "0x8008c1e4", end: "0x8008c268", kind: function, ownership: game, confidence: high, external_name: "Clamp All Unit Facing Directions" }
+  - { name: battle_set_shadow_graphic_trigger_by_misc_id, address: "0x8008c268", end: "0x8008c2a4", kind: function, ownership: game, confidence: high, external_name: "Set Shadow Graphic Trigger from Misc ID" }
+  - { name: battle_unset_shadow_graphic_trigger_by_misc_id, address: "0x8008c2a4", end: "0x8008c2dc", kind: function, ownership: game, confidence: high, external_name: "Unset Shadow Graphic Trigger from Misc ID" }
+  - { name: battle_begin_map_jump_out, address: "0x8008c2dc", end: "0x8008c320", kind: function, ownership: game, confidence: high, external_name: "Jump to Map" }
+  - { name: battle_begin_map_jump_out_2, address: "0x8008c320", end: "0x8008c364", kind: function, ownership: game, confidence: high, external_name: "Jump to Map 2" }
+  - { name: battle_begin_map_jump_in_2, address: "0x8008c364", end: "0x8008c3a0", kind: function, ownership: game, confidence: high, external_name: "Reveal Map 2" }
+  - { name: battle_begin_close_battle, address: "0x8008c3a0", end: "0x8008c3e4", kind: function, ownership: game, confidence: high, external_name: "Close Battle" }
+  - { name: battle_count_units_from_misc_data, address: "0x8008c3e4", end: "0x8008c410", kind: function, ownership: game, confidence: high, external_name: "Count Units from Misc Data" }
+  - { name: battle_get_screen_data_ptr_by_misc_id, address: "0x8008c410", end: "0x8008c43c", kind: function, ownership: game, confidence: high, external_name: "Get Screen Data Pointer from Misc ID" }
+  - { name: battle_get_screen_data_ptr_by_battle_id, address: "0x8008c43c", end: "0x8008c468", kind: function, ownership: game, confidence: high, external_name: "Get Screen Data Pointer from Battle ID" }
+  - { name: battle_get_unit_tile_center_and_height_by_battle_id, address: "0x8008c468", end: "0x8008c518", kind: function, ownership: game, confidence: high, external_name: "Get Screen Coords from Battle ID" }
+  - { name: battle_convert_screen_coords_by_1_from_misc_id, address: "0x8008c518", end: "0x8008c550", kind: function, ownership: game, confidence: high, external_name: "Convert Screen Coords by 1 from Misc ID" }
+  - { name: battle_project_world_coords_to_screen, address: "0x8008c550", end: "0x8008c5e8", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_map_coords_from_misc_id, address: "0x8008c5e8", end: "0x8008c664", kind: function, ownership: game, confidence: high, external_name: "Get Map Coords from Misc ID" }
+  - { name: battle_mount_by_misc_ids, address: "0x8008c8e4", end: "0x8008c940", kind: function, ownership: game, confidence: high, external_name: "Mount by Misc IDs" }
+  - { name: battle_increment_another_coords_by_misc_id_copy, address: "0x8008c940", end: "0x8008c9c4", kind: function, ownership: game, confidence: high, external_name: "Increment Another Coords from Misc ID" }
+  - { name: battle_increment_another_coords_by_misc_id, address: "0x8008c9c4", end: "0x8008ca48", kind: function, ownership: game, confidence: high, external_name: "Increment Another Coords from Misc ID" }
+  - { name: battle_get_another_coord_ptr_by_misc_id, address: "0x8008ca48", end: "0x8008ca7c", kind: function, ownership: game, confidence: high, external_name: "Get Another Coord Pointer from Misc ID" }
+  - { name: battle_does_misc_unit_id_exist, address: "0x8008cbb4", end: "0x8008cbd8", kind: function, ownership: game, confidence: high, external_name: "Does Misc Unit Exist With ID" }
+  - { name: battle_flip_misc_data_move_flag_bit_1, address: "0x8008cbd8", end: "0x8008cc14", kind: function, ownership: game, confidence: high, external_name: "Flip Misc Data Move Flag Bit 1" }
+  - { name: battle_unset_misc_data_move_flag_bit_1, address: "0x8008cc14", end: "0x8008cc50", kind: function, ownership: game, confidence: high, external_name: "Unset Misc Data Move Flag Bit 1" }
+  - { name: battle_set_horizontal_flip_flag, address: "0x8008cc50", end: "0x8008cc80", kind: function, ownership: game, confidence: high, external_name: "Set Horizontal Flip Flag" }
+  - { name: battle_unset_horizontal_flip_flag, address: "0x8008cc80", end: "0x8008ccac", kind: function, ownership: game, confidence: high, external_name: "Unset Horizontal Flip Flag" }
+  - { name: battle_flip_misc_data_move_flag_bit_3, address: "0x8008ccac", end: "0x8008cce8", kind: function, ownership: game, confidence: high, external_name: "Flip Misc Data Move Flag Bit 3" }
+  - { name: battle_unset_misc_data_move_flag_bit_3, address: "0x8008cce8", end: "0x8008cd24", kind: function, ownership: game, confidence: high, external_name: "Unset Misc Data Move Flag Bit 3" }
+  - { name: battle_weather_time_tile_palette_mod_by_misc_id, address: "0x8008cd24", end: "0x8008cd58", kind: function, ownership: game, confidence: high, external_name: "Weather Time Tile Palette Mod by Misc ID" }
+  - { name: battle_flip_misc_data_move_flag_bit_2, address: "0x8008cd58", end: "0x8008cd94", kind: function, ownership: game, confidence: high, external_name: "Flip Misc Data Move Flag Bit 2" }
+  - { name: battle_unset_misc_data_move_flag_bit_2, address: "0x8008cd94", end: "0x8008cdd0", kind: function, ownership: game, confidence: high, external_name: "Unset Misc Data Move Flag Bit 2" }
+  - { name: battle_get_battle_unit_index_by_misc_id, address: "0x8008cdd0", end: "0x8008ce20", kind: function, ownership: game, confidence: high, external_name: "Get Battle Unit Index By Unit Misc ID" }
+  - { name: battle_get_unit_misc_id_by_battle_id, address: "0x8008ce20", end: "0x8008ce78", kind: function, ownership: game, confidence: high, external_name: "Get Unit Misc ID by Unit Index" }
+  - { name: battle_get_spritesheet_vram_by_battle_id, address: "0x8008ce78", end: "0x8008ced0", kind: function, ownership: game, confidence: high, external_name: "Get Spritesheet VRAM by Battle ID" }
+  - { name: battle_get_target_id_ptr_by_battle_id, address: "0x8008ced0", end: "0x8008cefc", kind: function, ownership: game, confidence: high, external_name: "Get Target ID Pointer by Battle ID" }
+  - { name: battle_unit_moving_check_by_misc_id, address: "0x8008cefc", end: "0x8008cf3c", kind: function, ownership: game, confidence: high, external_name: "Unit Moving Check by Misc ID" }
+  - { name: battle_set_thrown_item_palette_by_misc_id, address: "0x8008cf3c", end: "0x8008cf78", kind: function, ownership: game, confidence: high, external_name: "Set Thrown Item Palette from Misc ID" }
+  - { name: battle_event_instruction_add_ghost_unit, address: "0x8008cf78", end: "0x8008d05c", kind: function, ownership: game, confidence: high }
+  - { name: battle_wait_for_lucavi_graphics_and_sequence_load, address: "0x8008d104", end: "0x8008d138", kind: function, ownership: game, confidence: high, external_name: "Wait for Lucavi SHP and SEQ Data" }
+  - { name: battle_animate_and_set_enemy_level_data_by_misc_id, address: "0x8008d138", end: "0x8008d18c", kind: function, ownership: game, confidence: high, external_name: "Set Enemy Level Data by Misc ID" }
+  - { name: battle_reset_unit_graphic_trigger, address: "0x8008d18c", end: "0x8008d1c8", kind: function, ownership: game, confidence: high, external_name: "Reset Misc Unit Graphic Trigger" }
+  - { name: battle_reset_jumping_unit_graphic_triggers, address: "0x8008d1c8", end: "0x8008d228", kind: function, ownership: game, confidence: high, external_name: "Reset Jumping Unit Graphic Triggers" }
+  - { name: battle_remove_misc_unit_by_id, address: "0x8008d228", end: "0x8008d26c", kind: function, ownership: game, confidence: high, external_name: "Remove Unit by Misc ID" }
+  - { name: battle_prepare_misc_unit_palette_modulation, address: "0x8008d26c", end: "0x8008d2a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_save_evtchr_slot, address: "0x8008d5c8", end: "0x8008d650", kind: function, ownership: game, confidence: high, external_name: "Save EVTCHR" }
+  - { name: battle_clear_saved_evtchr_slot, address: "0x8008d650", end: "0x8008d6a8", kind: function, ownership: game, confidence: high, external_name: "Save EVTCHR Clear" }
+  - { name: battle_clear_loaded_evtchr_slot, address: "0x8008d6a8", end: "0x8008d708", kind: function, ownership: game, confidence: high, external_name: "Load EVTCHR Clear" }
+  - { name: battle_release_reserved_vram_slot, address: "0x8008d8e4", end: "0x8008d950", kind: function, ownership: game, confidence: high }
+  - { name: battle_initialize_evtchr_vram_slots, address: "0x8008d950", end: "0x8008d998", kind: function, ownership: game, confidence: high, external_name: "Initialize EVTCHR VRAM Slots" }
+  - { name: battle_get_unit_spritesheet_height, address: "0x8008dc24", end: "0x8008dc74", kind: function, ownership: game, confidence: high, external_name: "Get Unit Spritesheet Height from Misc Data" }
+  - { name: battle_get_unit_spritesheet_height_by_misc_id, address: "0x8008dc74", end: "0x8008dc9c", kind: function, ownership: game, confidence: high, external_name: "Get Unit Spritesheet Height from Misc ID" }
+  - { name: battle_get_unit_spritesheet_height_by_unit_id, address: "0x8008dc9c", end: "0x8008dcc4", kind: function, ownership: game, confidence: high, external_name: "Find Unit Misc Data and Get Spritesheet Height" }
+  - { name: battle_start_basic_ability_animation, address: "0x8008dcc4", end: "0x8008dd10", kind: function, ownership: game, confidence: high }
+  - { name: battle_start_new_effect, address: "0x8008dd10", end: "0x8008dda8", kind: function, ownership: game, confidence: high, external_name: "Start New Effect" }
+  - { name: battle_try_prepare_effect_data, address: "0x8008dda8", end: "0x8008ddcc", kind: function, ownership: game, confidence: high }
+  - { name: battle_call_play_effect, address: "0x8008ddcc", end: "0x8008ddec", kind: function, ownership: game, confidence: high, external_name: "Call Play Effect" }
+  - { name: battle_get_animation_continue_check, address: "0x8008ddec", end: "0x8008ddfc", kind: function, ownership: game, confidence: high, external_name: "Get Animation Continue Check" }
+  - { name: battle_reset_frame_pacing_timer, address: "0x8008de90", end: "0x8008dea0", kind: function, ownership: game, confidence: high }
+  - { name: battle_enter_status_screen_selection, address: "0x8008dea0", end: "0x8008dec8", kind: function, ownership: game, confidence: high }
+  - { name: battle_leave_status_screen_selection, address: "0x8008dec8", end: "0x8008ded8", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_animation_speed, address: "0x8008ded8", end: "0x8008dee8", kind: function, ownership: game, confidence: high, external_name: "Get Animation Speed" }
+  - { name: battle_set_animation_speed, address: "0x8008dee8", end: "0x8008df10", kind: function, ownership: game, confidence: high, external_name: "Set Event Speed Inner" }
+  - { name: battle_store_selected_tile_coordinates, address: "0x8008df10", end: "0x8008df48", kind: function, ownership: game, confidence: high, external_name: "Store Selected Tile Coordinates" }
+  - { name: battle_store_map_max_coordinates, address: "0x8008df48", end: "0x8008df78", kind: function, ownership: game, confidence: high, external_name: "Store Map Max Coordinates" }
+  - { name: battle_get_tile_data_ptr_from_misc_id, address: "0x8008df78", end: "0x8008dfac", kind: function, ownership: game, confidence: high, external_name: "Get Tile Data Pointer From Unit Misc ID" }
+  - { name: battle_get_tile_data_ptr_from_battle_id, address: "0x8008dfac", end: "0x8008dfe0", kind: function, ownership: game, confidence: high, external_name: "Get Tile Data Pointer From Unit ID" }
+  - { name: battle_get_tile_data_ptr_from_misc_screen_coords, address: "0x8008dfe0", end: "0x8008e068", kind: function, ownership: game, confidence: high, external_name: "Get Tile Data Pointer From Misc Screen Coordinates" }
+  - { name: battle_load_map_data_stage_0x75, address: "0x8008e068", end: "0x8008e094", kind: function, ownership: game, confidence: medium }
+  - { name: battle_load_map_data_stage_0x76, address: "0x8008e094", end: "0x8008e0bc", kind: function, ownership: game, confidence: medium }
+  - { name: battle_run_map_data_command_0x80, address: "0x8008e0bc", end: "0x8008e0f0", kind: function, ownership: game, confidence: medium }
+  - { name: battle_run_map_data_command_0x81, address: "0x8008e0f0", end: "0x8008e11c", kind: function, ownership: game, confidence: medium }
+  - { name: battle_run_map_data_command_0x83, address: "0x8008e11c", end: "0x8008e150", kind: function, ownership: game, confidence: medium }
+  - { name: battle_run_map_data_command_0x82, address: "0x8008e150", end: "0x8008e17c", kind: function, ownership: game, confidence: medium }
+  - { name: battle_is_battle_camera_active, address: "0x8008e17c", end: "0x8008e1f8", kind: function, ownership: game, confidence: high, external_name: "Is Battle Camera Active" }
+  - { name: battle_move_cursor_to_battle_id, address: "0x8008e1f8", end: "0x8008e234", kind: function, ownership: game, confidence: high }
+  - { name: battle_prepare_single_target_trajectory, address: "0x8008e234", end: "0x8008e2c8", kind: function, ownership: game, confidence: high }
+  - { name: battle_teleport_effect_callback, address: "0x8008e2c8", end: "0x8008e304", kind: function, ownership: game, confidence: high }
+  - { name: battle_mark_map_data_load_complete, address: "0x8008e304", end: "0x8008e318", kind: function, ownership: game, confidence: high, external_name: "Mark Map Data Load Complete" }
+  - { name: battle_get_battle_frame_measurement, address: "0x8008e318", end: "0x8008e328", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_time_scale, address: "0x8008e328", end: "0x8008e348", kind: function, ownership: game, confidence: high, external_name: "Set Time Scale" }
+  - { name: battle_clear_frame_pacing, address: "0x8008e348", end: "0x8008e358", kind: function, ownership: game, confidence: high, external_name: "Clear Frame Pacing" }
+  - { name: battle_initialize_battle_camera_defaults, address: "0x8008e468", end: "0x8008e540", kind: function, ownership: game, confidence: high, external_name: "Init Camera Draw Defaults" }
+  - { name: battle_append_unit_graphics_load_descriptor, address: "0x8008e540", end: "0x8008e6d0", kind: function, ownership: game, confidence: high }
+  - { name: battle_select_and_open_battle_entd, address: "0x8008e6d8", end: "0x8008e7b8", kind: function, ownership: game, confidence: high }
+  - { name: battle_poll_and_load_entd_units, address: "0x8008e7b8", end: "0x8008e80c", kind: function, ownership: game, confidence: high, external_name: "Get ENTD Data Pointer and Load Units" }
+  - { name: battle_clear_screen_color_modulation, address: "0x8008ef24", end: "0x8008ef44", kind: function, ownership: game, confidence: high }
+  - { name: battle_copy_screen_color_modulation, address: "0x8008ef44", end: "0x8008ef7c", kind: function, ownership: game, confidence: high }
+  - { name: battle_restore_screen_color_modulation, address: "0x8008ef7c", end: "0x8008efb4", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_map_palette_colors, address: "0x8008f498", end: "0x8008f53c", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_and_store_map_palette_colors, address: "0x8008f53c", end: "0x8008f63c", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_modified_map_palette_colors, address: "0x8008f63c", end: "0x8008f710", kind: function, ownership: game, confidence: high }
+  - { name: battle_transition_and_store_map_background_gradient, address: "0x800901f8", end: "0x80090258", kind: function, ownership: game, confidence: high }
+  - { name: battle_transition_and_store_map_ambient_light_color, address: "0x800907fc", end: "0x80090840", kind: function, ownership: game, confidence: high }
+  - { name: battle_transition_and_store_map_darkness_color, address: "0x80090da8", end: "0x80090dec", kind: function, ownership: game, confidence: high }
+  - { name: battle_start_map_texture_animation, address: "0x800911f4", end: "0x80091248", kind: function, ownership: game, confidence: high }
+  - { name: battle_stop_map_texture_animation, address: "0x80091248", end: "0x80091280", kind: function, ownership: game, confidence: high }
+  - { name: battle_reset_map_texture_animations, address: "0x80091280", end: "0x800912a4", kind: function, ownership: game, confidence: high }
+  - { name: update_map_animations, address: "0x800912a4", end: "0x8009259c", kind: function, ownership: game, confidence: medium }
+  - { name: battle_stop_map_palette_animation, address: "0x8009259c", end: "0x80092620", kind: function, ownership: game, confidence: high }
+  - { name: battle_extract_palette_colors, address: "0x80092620", end: "0x800926d8", kind: function, ownership: game, confidence: high, external_name: "Extract RGB+Alpha from Palette" }
+  - { name: battle_load_map_palette_data, address: "0x800926d8", end: "0x800927bc", kind: function, ownership: game, confidence: high, external_name: "Extract Palette Data" }
+  - { name: modify_vram_palette, address: "0x800927bc", end: "0x80092d4c", kind: function, ownership: game, confidence: high, external_name: "Change VRAM Palette" }
+  - { name: battle_update_palette_from_other, address: "0x80092d4c", end: "0x80092dc0", kind: function, ownership: game, confidence: high, external_name: "Update Palette From Other" }
+  - { name: battle_initialize_map_ambient_light, address: "0x80092e98", end: "0x80092f18", kind: function, ownership: game, confidence: high }
+  - { name: battle_initialize_map_darkness, address: "0x80092f18", end: "0x80092f98", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_map_lighting, address: "0x80092f98", end: "0x80093048", kind: function, ownership: game, confidence: high, external_name: "Update Map Lighting" }
+  - { name: battle_initialize_map_palette_state, address: "0x80093048", end: "0x80093118", kind: function, ownership: game, confidence: high }
+  - { name: battle_map_freeze, address: "0x80093118", end: "0x80093144", kind: function, ownership: game, confidence: high, external_name: "Map Freeze" }
+  - { name: battle_map_unfreeze, address: "0x80093144", end: "0x80093170", kind: function, ownership: game, confidence: high, external_name: "Map Unfreeze" }
+  - { name: battle_color_field, address: "0x80093170", end: "0x800931c4", kind: function, ownership: game, confidence: high, external_name: "Color Field" }
+  - { name: battle_apply_misc_unit_palette_modulation, address: "0x800931c4", end: "0x800933c4", kind: function, ownership: game, confidence: high, external_name: "Call Palette Mod based on Tile Height" }
+  - { name: battle_start_misc_unit_palette_modulation, address: "0x800933c4", end: "0x8009349c", kind: function, ownership: game, confidence: high, external_name: "Preparation for Palette Mod based on Tile Height" }
+  - { name: battle_modify_map_background_gradient, address: "0x8009349c", end: "0x800934d0", kind: function, ownership: game, confidence: high, external_name: "Color BG Beta" }
+  - { name: battle_set_map_darkness, address: "0x800934d0", end: "0x80093504", kind: function, ownership: game, confidence: high, external_name: "Map Darkness Wrapper" }
+  - { name: battle_apply_scaled_palette_effect, address: "0x80093504", end: "0x80093538", kind: function, ownership: game, confidence: high, external_name: "Apply with Position-Based Scaling" }
+  - { name: battle_update_all_map_palettes_from_color_data, address: "0x80093538", end: "0x80093564", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_map_palette_colors_by_index, address: "0x80093564", end: "0x800935f4", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_map_background_gradient, address: "0x800935f4", end: "0x80093614", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_map_ambient_light_color, address: "0x80093614", end: "0x80093634", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_map_darkness_color, address: "0x80093634", end: "0x80093654", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_battle_controller_input, address: "0x80093654", end: "0x800937f8", kind: function, ownership: game, confidence: high, external_name: "Get Controller Input Greater" }
+  - { name: battle_update_deployment_controller_input, address: "0x800937f8", end: "0x8009386c", kind: function, ownership: game, confidence: high, external_name: "Get Controller Input Lesser" }
+  - { name: battle_initialize_deployment_display, address: "0x8009386c", end: "0x80093a98", kind: function, ownership: game, confidence: high }
+  - { name: battle_frame_sync, address: "0x80093a98", end: "0x80093bf0", kind: function, ownership: game, confidence: high }
+  - { name: battle_sync_and_submit_deployment_frame, address: "0x80093bf0", end: "0x80093c98", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_battle_camera_matrices, address: "0x800ee95c", end: "0x800eeaf8", kind: function, ownership: game, confidence: high }
+  - { name: battle_configure_map_effect_data_state, address: "0x800ef6a0", end: "0x800ef6f0", kind: function, ownership: game, confidence: high }
+  - { name: battle_gns_record_matches_map_state, address: "0x800f2618", end: "0x800f26bc", kind: function, ownership: game, confidence: high }
+  - { name: dispatch_map_gns_resource, address: "0x800f26bc", end: "0x800f34c4", kind: function, ownership: game, confidence: high }
+  - { name: battle_process_map_gns_record, address: "0x800f34c4", end: "0x800f3638", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_map_gns_and_move_find_items, address: "0x800f3638", end: "0x800f36c4", kind: function, ownership: game, confidence: high, external_name: "Load Move-Find Item and GNS Map Data" }
+  - { name: battle_start_map_file_load, address: "0x800f36c4", end: "0x800f3718", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_map_mesh_variant, address: "0x800f4acc", end: "0x800f4dd4", kind: function, ownership: game, confidence: high }
+  - { name: battle_append_map_mesh_geometry, address: "0x800f4dd4", end: "0x800f5578", kind: function, ownership: game, confidence: high }
+  - { name: battle_initialize_map_mesh_render_records, address: "0x800f5578", end: "0x800f5984", kind: function, ownership: game, confidence: high }
+  - { name: battle_stop_map_texture_animations_and_weather_sfx, address: "0x800f5984", end: "0x800f59f0", kind: function, ownership: game, confidence: high }
+  - { name: battle_start_weather_sfx, address: "0x800f59f0", end: "0x800f5a2c", kind: function, ownership: game, confidence: high, external_name: "Play Weather SFX" }
+  - { name: battle_func_800f5a2c, address: "0x800f5a2c", end: "0x800f5a64", kind: function, ownership: game, confidence: high }
+  - { name: battle_stop_weather_sfx, address: "0x800f5a64", end: "0x800f5aec", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_specific_unit_animation_value_when_battle_init, address: "0x8012da0c", end: "0x8012db00", kind: function, ownership: game, confidence: high }
+  - { name: battle_preparation_for_store_anim_facing_move, address: "0x8012db00", end: "0x8012db90", kind: function, ownership: game, confidence: high }
+  - { name: battle_ramp_up_to_0x7f, address: "0x8012db90", end: "0x8012dbdc", kind: function, ownership: game, confidence: high }
+  - { name: battle_tutorial_thread_switching_for_event_instructions, address: "0x8012dbdc", end: "0x8012dc30", kind: function, ownership: game, confidence: high }
+  - { name: battle_tutorial_thread_switching_for_eventend, address: "0x8012dc30", end: "0x8012dc84", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_tutorial_event_slot, address: "0x8012dc84", end: "0x8012dcac", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_battle_unit_index_by_entd_unit_id, address: "0x8012dcac", end: "0x8012dcf8", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_option_menu_open, address: "0x8012dcf8", end: "0x8012dd0c", kind: function, ownership: game, confidence: high }
+  - { name: battle_clear_option_menu_open, address: "0x8012dd0c", end: "0x8012dd1c", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_sound_effect_to_confirm, address: "0x8012dd1c", end: "0x8012dd30", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_sound_effect_to_cancel, address: "0x8012dd30", end: "0x8012dd44", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_sound_effect_to_cursor_move, address: "0x8012dd44", end: "0x8012dd58", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_sound_effect_to_invalid, address: "0x8012dd58", end: "0x8012dd6c", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_sound_to_invalid_and_stop_thread, address: "0x8012dd6c", end: "0x8012dd94", kind: function, ownership: game, confidence: high }
+  - { name: battle_run_camera_move_thread, address: "0x8012dd94", end: "0x8012ddc4", kind: function, ownership: game, confidence: high }
+  - { name: battle_initialize_battle_camera_yaw_angle, address: "0x8012ddc4", end: "0x8012dde8", kind: function, ownership: game, confidence: high, external_name: "Initialize Camera Yaw Angle" }
+  - { name: battle_initialize_battle_camera_tilt_and_zoom, address: "0x8012dde8", end: "0x8012df0c", kind: function, ownership: game, confidence: high, external_name: "Initialize Camera Elevation and Zoom" }
+  - { name: battle_wrap_battle_camera_yaw_angle, address: "0x8012df0c", end: "0x8012df40", kind: function, ownership: game, confidence: high, external_name: "Wrap Camera Yaw Angle" }
+  - { name: battle_get_attacker_data_pointer, address: "0x8012df40", end: "0x8012df68", kind: function, ownership: game, confidence: high }
+  - { name: battle_clamp_s32_to_range, address: "0x8012df68", end: "0x8012df98", kind: function, ownership: game, confidence: high, external_name: "Store Smaller or Larger" }
+  - { name: battle_update_event_input_state, address: "0x8012df98", end: "0x8012e190", kind: function, ownership: game, confidence: high, external_name: "0x12df98" }
+  - { name: battle_noop_8012e190, address: "0x8012e190", end: "0x8012e198", kind: function, ownership: game, confidence: high, external_name: "Empty routine" }
+  - { name: battle_make_default_poly_ft4, address: "0x8012e198", end: "0x8012e244", kind: function, ownership: game, confidence: high, external_name: "Make Default FT4" }
+  - { name: battle_initialize_semitransparent_menu_sprt, address: "0x8012e244", end: "0x8012e2b8", kind: function, ownership: game, confidence: high, external_name: "0012e244 - 0012e2b4" }
+  - { name: battle_initialize_battle_menu_sprite_array, address: "0x8012e2b8", end: "0x8012e320", kind: function, ownership: game, confidence: high, external_name: "0012e2b8 - 0012e31c" }
+  - { name: battle_reset_menu_buffer_slots, address: "0x8012e320", end: "0x8012e348", kind: function, ownership: game, confidence: high, external_name: "0012e320 - 0012e344" }
+  - { name: battle_noop_8012e59c, address: "0x8012e59c", end: "0x8012e5a4", kind: function, ownership: game, confidence: high, external_name: "Empty routine" }
+  - { name: battle_release_menu_buffer, address: "0x8012e5a4", end: "0x8012e64c", kind: function, ownership: game, confidence: high, external_name: "0012e5a4 - 0012e648" }
+  - { name: battle_set_primitive_brightness, address: "0x8012e64c", end: "0x8012e65c", kind: function, ownership: game, confidence: high, external_name: "0012e64c - 0012e658" }
+  - { name: battle_clear_tpage7_vram_allocation_grid, address: "0x8012e9c0", end: "0x8012e9fc", kind: function, ownership: game, confidence: high, external_name: "0012e9c0 - 0012e9f8" }
+  - { name: battle_initialize_menu_buffer_allocator, address: "0x8012ee3c", end: "0x8012eeb0", kind: function, ownership: game, confidence: high, external_name: "0012ee3c - 0012eeac" }
+  - { name: battle_allocate_menu_buffer, address: "0x8012f02c", end: "0x8012f04c", kind: function, ownership: game, confidence: high, external_name: "0012f02c - 0012f048" }
+  - { name: battle_free_battle_memory, address: "0x8012f04c", end: "0x8012f10c", kind: function, ownership: game, confidence: high, external_name: "? 0x12f04c" }
+  - { name: battle_initialize_numeric_display_frame_primitives, address: "0x8012f10c", end: "0x8012f360", kind: function, ownership: game, confidence: high, external_name: "0012f10c - 0012f35c" }
+  - { name: battle_submit_numeric_display_frame_primitives, address: "0x8012f360", end: "0x8012f3cc", kind: function, ownership: game, confidence: high, external_name: "0012f360 - 0012f3c8" }
+  - { name: battle_initialize_menu_primitive_colors_palette_bank_0, address: "0x8012f3cc", end: "0x8012f454", kind: function, ownership: game, confidence: high, external_name: "0012f3cc - 0012f450" }
+  - { name: battle_initialize_menu_primitive_colors_palette_bank_1, address: "0x8012f454", end: "0x8012f4e0", kind: function, ownership: game, confidence: high, external_name: "0012f454 - 0012f4dc" }
+  - { name: battle_release_current_thread_menu_slot, address: "0x8012f65c", end: "0x8012f6b0", kind: function, ownership: game, confidence: high, external_name: "0012f65c - 0012f6ac" }
+  - { name: battle_get_current_thread_task_id, address: "0x8012f6b0", end: "0x8012f6d4", kind: function, ownership: game, confidence: high, external_name: "Get Thread Task ID" }
+  - { name: battle_resolve_text_format_string_id, address: "0x8012fd20", end: "0x8012fd8c", kind: function, ownership: game, confidence: high, external_name: "Text Format String Fetching" }
+  - { name: battle_fnt_print_value_and_next, address: "0x80130874", end: "0x801308c0", kind: function, ownership: game, confidence: high, external_name: "00130874 - 001308bc" }
+  - { name: battle_prepare_text_entry, address: "0x80132824", end: "0x8013285c", kind: function, ownership: game, confidence: high, external_name: "Prepare text entry" }
+  - { name: battle_count_decimal_digits, address: "0x8013285c", end: "0x801328ac", kind: function, ownership: game, confidence: high, external_name: "Calculate number of digits needed for a number readout" }
+  - { name: battle_flip_poly_ft4_uv_if_negative, address: "0x801328ac", end: "0x80132914", kind: function, ownership: game, confidence: high, external_name: "Flip POLY_FT4 UV axis when orientation is negative" }
+  - { name: battle_lerp_fixed12, address: "0x80132e50", end: "0x80132e74", kind: function, ownership: game, confidence: high, external_name: "Interpolate a value using a 12-bit fixed-point fraction" }
+  - { name: battle_pause_event_instruction, address: "0x80132f9c", end: "0x80132ff0", kind: function, ownership: game, confidence: high, external_name: "Pause event instruction" }
+  - { name: battle_project_misc_unit_to_screen, address: "0x80133048", end: "0x80133088", kind: function, ownership: game, confidence: high, external_name: "Project Misc Unit coordinates for unit-anchored text" }
+  - { name: battle_copy_misc_unit_screen_coords, address: "0x80133088", end: "0x801330e4", kind: function, ownership: game, confidence: high, external_name: "Copy Misc Unit screen-coordinate triple" }
+  - { name: battle_copy_misc_unit_screen_location, address: "0x801330e4", end: "0x80133130", kind: function, ownership: game, confidence: high, external_name: "Copy Unit Screen Location Data" }
+  - { name: battle_copy_map_coords_from_misc_id, address: "0x80133130", end: "0x80133150", kind: function, ownership: game, confidence: high, external_name: "Copy map coordinates from Misc Unit ID" }
+  - { name: battle_return_parameter_1, address: "0x80133494", end: "0x801334a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_fill_text_field_with_terminators, address: "0x80133568", end: "0x80133588", kind: function, ownership: game, confidence: high, external_name: "Fill sixteen-byte text field with terminators" }
+  - { name: battle_has_status_effect_for_status_window, address: "0x80133c98", end: "0x80133cec", kind: function, ownership: game, confidence: high }
+  - { name: battle_copy_at_and_cursor_to, address: "0x80133ef0", end: "0x80133f78", kind: function, ownership: game, confidence: high }
+  - { name: battle_copy_active_turn_data_from, address: "0x80133f78", end: "0x80133fe8", kind: function, ownership: game, confidence: high, external_name: "Copy AT From" }
+  - { name: battle_relocate_text_pointer_table, address: "0x80133fe8", end: "0x80134020", kind: function, ownership: game, confidence: high, external_name: "Relocate 32-entry text pointer table" }
+  - { name: battle_save_text_pointer_table, address: "0x80134020", end: "0x80134074", kind: function, ownership: game, confidence: high, external_name: "Save text pointer table once" }
+  - { name: battle_restore_text_pointer_table, address: "0x80134074", end: "0x801340ac", kind: function, ownership: game, confidence: high, external_name: "Restore saved text pointer table" }
+  - { name: battle_units_join_silently_without_needing_darkscreen, address: "0x80134180", end: "0x80134224", kind: function, ownership: game, confidence: high }
+  - { name: battle_advance_date_by_one_year, address: "0x80134224", end: "0x80134248", kind: function, ownership: game, confidence: high, external_name: "Advance Date By One Year" }
+  - { name: battle_increase_blue_team_brave_by_10, address: "0x80134248", end: "0x801342cc", kind: function, ownership: game, confidence: high, external_name: "Increase Blue Team Brave by 10" }
+  - { name: battle_suppress_height_display, address: "0x801343bc", end: "0x801343d0", kind: function, ownership: game, confidence: high, external_name: "Suppress Height Display" }
+  - { name: battle_enable_height_display, address: "0x801343d0", end: "0x801343e0", kind: function, ownership: game, confidence: high, external_name: "Enable Height Display" }
+  - { name: battle_configure_text_sprite_vram, address: "0x801343e0", end: "0x80134430", kind: function, ownership: game, confidence: high, external_name: "Configure Text Sprite VRAM" }
+  - { name: battle_refresh_hovered_unit_stats_display, address: "0x80136128", end: "0x80136188", kind: function, ownership: game, confidence: high, external_name: "Display Stats of Hovered Unit" }
+  - { name: battle_refresh_right_unit_stats_display, address: "0x80136188", end: "0x801361e8", kind: function, ownership: game, confidence: high, external_name: "Right Unit Portrait Only" }
+  - { name: battle_attack_preview_target_stats, address: "0x80136324", end: "0x801363dc", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_menu_action, address: "0x80137c10", end: "0x80137ed4", kind: function, ownership: game, confidence: high, external_name: "Handle Menu Action" }
+  - { name: battle_update_menu_selection_from_input, address: "0x80137ed4", end: "0x80137f84", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_menu_cancel_input, address: "0x80137f84", end: "0x80138094", kind: function, ownership: game, confidence: high }
+  - { name: battle_should_close_menu_thread, address: "0x80138094", end: "0x80138174", kind: function, ownership: game, confidence: high }
+  - { name: battle_update_menu_cursor_primitives, address: "0x80138570", end: "0x8013871c", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_menu_disabled_texture_window, address: "0x80138adc", end: "0x80138b10", kind: function, ownership: game, confidence: high }
+  - { name: battle_preview_ability_turn_at_list, address: "0x8013957c", end: "0x801395ac", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_event_initial_repeat_counter, address: "0x80139bdc", end: "0x80139bec", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_message_duration_frames, address: "0x8013aedc", end: "0x8013aeec", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_script_variable, address: "0x8013b590", end: "0x8013b644", kind: function, ownership: game, confidence: high, external_name: "Get Script Variable" }
+  - { name: battle_set_script_variable, address: "0x8013b644", end: "0x8013b6e4", kind: function, ownership: game, confidence: high, external_name: "Set Script Variable" }
+  - { name: battle_retry_alloc_with_message, address: "0x8013bb70", end: "0x8013bbec", kind: function, ownership: game, confidence: high }
+  - { name: battle_free_high_overlay, address: "0x8013bbec", end: "0x8013bc14", kind: function, ownership: game, confidence: high }
+  - { name: battle_setup_open_companion_executable, address: "0x8013bc14", end: "0x8013bcbc", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_8013bd6c, address: "0x8013bd6c", end: "0x8013bd94", kind: function, ownership: game, confidence: high }
+  - { name: battle_open_companion_executable_6, address: "0x8013bd94", end: "0x8013bdc4", kind: function, ownership: game, confidence: high }
+  - { name: battle_open_option_menu_0, address: "0x8013bf2c", end: "0x8013bf5c", kind: function, ownership: game, confidence: high }
+  - { name: battle_open_option_menu_1, address: "0x8013bf5c", end: "0x8013bf8c", kind: function, ownership: game, confidence: high }
+  - { name: battle_open_option_menu_2, address: "0x8013bf8c", end: "0x8013bfbc", kind: function, ownership: game, confidence: high }
+  - { name: battle_display_triangle_selection_menu, address: "0x8013bfbc", end: "0x8013c028", kind: function, ownership: game, confidence: high }
+  - { name: battle_menu_building_thread, address: "0x8013c284", end: "0x8013c2dc", kind: function, ownership: game, confidence: high }
+  - { name: battle_show_graphic, address: "0x8013c710", end: "0x8013c740", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_event, address: "0x8013c9c0", end: "0x8013ca70", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_8013cac4, address: "0x8013cac4", end: "0x8013caf4", kind: function, ownership: game, confidence: high }
+  - { name: battle_open_companion_executable, address: "0x8013cbdc", end: "0x8013cccc", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_8013cccc, address: "0x8013cccc", end: "0x8013ccec", kind: function, ownership: game, confidence: high }
+  - { name: battle_start_menu_building_thread, address: "0x8013d0ac", end: "0x8013d188", kind: function, ownership: game, confidence: high }
+  - { name: battle_request_companion_executable_8, address: "0x8013d188", end: "0x8013d19c", kind: function, ownership: game, confidence: high }
+  - { name: battle_map_data_load_complete_thread, address: "0x8013d1f8", end: "0x8013d230", kind: function, ownership: game, confidence: high }
+  - { name: battle_is_menu_still_building, address: "0x8013d578", end: "0x8013d610", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_8016604c_to_1, address: "0x8013d610", end: "0x8013d624", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_unit_names_and_some_event_block_data, address: "0x8013d634", end: "0x8013d704", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_event_speed, address: "0x8013da00", end: "0x8013da28", kind: function, ownership: game, confidence: high }
+  - { name: battle_wait_for_threads_10_to_13, address: "0x8013da28", end: "0x8013da60", kind: function, ownership: game, confidence: high }
+  - { name: battle_unlockdate_event_instruction, address: "0x8013dae4", end: "0x8013db9c", kind: function, ownership: game, confidence: high }
+  - { name: battle_event_instruction_0x72, address: "0x8013e584", end: "0x8013e5c0", kind: function, ownership: game, confidence: high }
+  - { name: battle_mirrorsprite_event_instruction, address: "0x8013e65c", end: "0x8013e6c4", kind: function, ownership: game, confidence: high }
+  - { name: battle_resetpalette_event_instruction, address: "0x8013e6c4", end: "0x8013e708", kind: function, ownership: game, confidence: high }
+  - { name: battle_jump_event_instruction, address: "0x8013e708", end: "0x8013e7d0", kind: function, ownership: game, confidence: high }
+  - { name: battle_waitwalk_event_instruction, address: "0x8013e7d0", end: "0x8013e81c", kind: function, ownership: game, confidence: high }
+  - { name: battle_event_instruction_0x82, address: "0x8013e81c", end: "0x8013e874", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_8013e8d4, address: "0x8013e8d4", end: "0x8013e904", kind: function, ownership: game, confidence: high }
+  - { name: battle_is_deployment_running, address: "0x8013f4f8", end: "0x8013f520", kind: function, ownership: game, confidence: high, external_name: "Check Deployment Event Thread" }
+  - { name: battle_store_selected_tile_data, address: "0x8013f668", end: "0x8013f76c", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_selected_ability_address, address: "0x8013f978", end: "0x8013f988", kind: function, ownership: game, confidence: high, external_name: "Get Selected Ability Address" }
+  - { name: battle_copy_ff_terminated_bytes_to_halfwords, address: "0x8013fa00", end: "0x8013fa38", kind: function, ownership: game, confidence: high }
+  - { name: battle_widen_bytes_to_halfwords, address: "0x8013fa38", end: "0x8013fa6c", kind: function, ownership: game, confidence: high }
+  - { name: battle_build_main_menu, address: "0x80140908", end: "0x80140980", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_sound_effect_to_confirm_checked, address: "0x80140980", end: "0x801409a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_disable_move_act_based_on_menu_id, address: "0x80140a30", end: "0x80140b04", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_main_target_id_auto_battle, address: "0x8014171c", end: "0x8014175c", kind: function, ownership: game, confidence: high }
+  - { name: battle_system_function_setup_routine, address: "0x801419b8", end: "0x80141a8c", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_battle_unit_by_unit_id, address: "0x80142508", end: "0x801425b0", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_current_scenario_finish_operation, address: "0x80142b5c", end: "0x80142ba4", kind: function, ownership: game, confidence: high }
+  - { name: battle_80142ba4, address: "0x80142ba4", end: "0x80142bd0", kind: function, ownership: game, confidence: high }
+  - { name: battle_80142bd0, address: "0x80142bd0", end: "0x80142c24", kind: function, ownership: game, confidence: high }
+  - { name: battle_apply_battle_input_script_overrides, address: "0x80142c24", end: "0x80142ca8", kind: function, ownership: game, confidence: high, external_name: "? 0x142c24" }
+  - { name: battle_route_event_input, address: "0x80142ca8", end: "0x80142d2c", kind: function, ownership: game, confidence: high }
+  - { name: battle_filter_battle_controller_input, address: "0x80142d2c", end: "0x80142d58", kind: function, ownership: game, confidence: high, external_name: "? 0x142d2c" }
+  - { name: battle_increment_8016605c_if_one, address: "0x801433e8", end: "0x80143418", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_weather, address: "0x80143b68", end: "0x80143b80", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_80143b80, address: "0x80143b80", end: "0x80143ba8", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_80143ba8, address: "0x80143ba8", end: "0x80143bd0", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_next_event, address: "0x80145f78", end: "0x80146004", kind: function, ownership: game, confidence: high }
+  - { name: battle_event_instruction_unit_moving_check, address: "0x80146004", end: "0x80146078", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_halfword, address: "0x80146078", end: "0x80146094", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_halfword, address: "0x80146094", end: "0x801460a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_clear_indexed_script_variable_bit0, address: "0x801460e4", end: "0x80146110", kind: function, ownership: game, confidence: high }
+  - { name: battle_map_darkness, address: "0x801466b4", end: "0x8014672c", kind: function, ownership: game, confidence: high }
+  - { name: battle_sprite_move, address: "0x80146ee4", end: "0x80146f20", kind: function, ownership: game, confidence: high }
+  - { name: battle_sprite_move_beta, address: "0x80146f20", end: "0x80146f5c", kind: function, ownership: game, confidence: high }
+  - { name: battle_waitspritemove_event_instruction, address: "0x80146f5c", end: "0x8014701c", kind: function, ownership: game, confidence: high }
+  - { name: battle_copy_32_bytes, address: "0x8014701c", end: "0x8014703c", kind: function, ownership: game, confidence: high }
+  - { name: battle_event_instruction_0x73, address: "0x801474a4", end: "0x80147584", kind: function, ownership: game, confidence: high }
+  - { name: battle_noop_80147918, address: "0x80147918", end: "0x80147928", kind: function, ownership: game, confidence: high }
+  - { name: battle_teleportout_event_instruction, address: "0x80147bd0", end: "0x80147ca8", kind: function, ownership: game, confidence: high }
+  - { name: battle_teleportin_event_instruction, address: "0x80147ca8", end: "0x80147cf0", kind: function, ownership: game, confidence: high }
+  - { name: battle_blueremoveunit_all_enemy_units, address: "0x80147cf0", end: "0x80147d98", kind: function, ownership: game, confidence: high }
+  - { name: battle_event_instruction_0x99_blueremoveunit, address: "0x80147d98", end: "0x80147e60", kind: function, ownership: game, confidence: high }
+  - { name: battle_zalera_special_status_flag_enabling_when_drawing_units, address: "0x80148488", end: "0x8014853c", kind: function, ownership: game, confidence: high }
+  - { name: battle_clear_some_staging_data, address: "0x8014853c", end: "0x80148580", kind: function, ownership: game, confidence: high }
+  - { name: battle_inflict_unit_status_by_entd_unit_id, address: "0x80149100", end: "0x801491d8", kind: function, ownership: game, confidence: high }
+  - { name: battle_unit_anim, address: "0x80149398", end: "0x80149490", kind: function, ownership: game, confidence: high }
+  - { name: battle_color_unit_event_instruction, address: "0x801495e0", end: "0x8014968c", kind: function, ownership: game, confidence: high }
+  - { name: battle_event_instruction_0x6c_and_0x6d, address: "0x8014968c", end: "0x80149734", kind: function, ownership: game, confidence: high }
+  - { name: battle_waitrotateunit_and_waitrotateall_event_instruction, address: "0x801498fc", end: "0x801499ac", kind: function, ownership: game, confidence: high }
+  - { name: battle_event_instruction_0x37, address: "0x80149b38", end: "0x80149be4", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_next_available_thread_id, address: "0x80149bec", end: "0x80149c48", kind: function, ownership: game, confidence: high }
+  - { name: battle_find_next_inactive_thread, address: "0x80149c48", end: "0x80149cbc", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_thread_running_task, address: "0x80149cbc", end: "0x80149d48", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_thread_task_id, address: "0x80149d48", end: "0x80149d6c", kind: function, ownership: game, confidence: high }
+  - { name: battle_find_event_instruction_byte_offset, address: "0x80149ebc", end: "0x80149f10", kind: function, ownership: game, confidence: high }
+  - { name: battle_event_instructions_a0_a5, address: "0x80149f10", end: "0x8014a018", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_variable_s_word_pointer_from_variable_s_id, address: "0x8014a2ec", end: "0x8014a39c", kind: function, ownership: game, confidence: high }
+  - { name: battle_wait_value_event_instruction, address: "0x8014a3f8", end: "0x8014a464", kind: function, ownership: game, confidence: high }
+  - { name: battle_seed_random_from_vsync, address: "0x8014a464", end: "0x8014a48c", kind: function, ownership: game, confidence: high }
+  - { name: battle_rand16, address: "0x8014a48c", end: "0x8014a4d8", kind: function, ownership: game, confidence: high }
+  - { name: battle_return_1_with_extra_steps_0x14a4d8, address: "0x8014a4d8", end: "0x8014a51c", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_controller_input_pointer, address: "0x8014a578", end: "0x8014a598", kind: function, ownership: game, confidence: high }
+  - { name: battle_image_loading_setup, address: "0x8014a5e8", end: "0x8014a660", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_8014a6a4, address: "0x8014a6a4", end: "0x8014a6cc", kind: function, ownership: game, confidence: high }
+  - { name: battle_8014a6cc, address: "0x8014a6cc", end: "0x8014a6e4", kind: function, ownership: game, confidence: high }
+  - { name: battle_world_display_menu_text_entry, address: "0x8014b2f0", end: "0x8014b320", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_8014b320, address: "0x8014b320", end: "0x8014b350", kind: function, ownership: game, confidence: high }
+  - { name: battle_world_display_specific_menu_text, address: "0x8014b350", end: "0x8014b394", kind: function, ownership: game, confidence: high }
+  - { name: battle_find_next_text_character, address: "0x8014ba28", end: "0x8014bae4", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_8014c164, address: "0x8014c164", end: "0x8014c18c", kind: function, ownership: game, confidence: high }
+  - { name: battle_thread_wait, address: "0x8014c858", end: "0x8014c8a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_thread_initialize, address: "0x8014c8a0", end: "0x8014c924", kind: function, ownership: game, confidence: high }
+  - { name: battle_mark_thread_as_running, address: "0x8014c924", end: "0x8014c940", kind: function, ownership: game, confidence: high }
+  - { name: battle_mark_thread_as_stopped, address: "0x8014c940", end: "0x8014c958", kind: function, ownership: game, confidence: high }
+  - { name: battle_stop_current_thread, address: "0x8014c958", end: "0x8014c994", kind: function, ownership: game, confidence: high }
+  - { name: battle_wait_for_thread, address: "0x8014c9d0", end: "0x8014ca1c", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_thread_r4_running_status, address: "0x8014ca1c", end: "0x8014ca38", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_thread_function_parameters, address: "0x8014ca38", end: "0x8014ca58", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_thread_parameters, address: "0x8014ca58", end: "0x8014ca80", kind: function, ownership: game, confidence: high }
+  - { name: battle_return_global_pointer, address: "0x8014cbb4", end: "0x8014cbc0", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_first_thread_parameter, address: "0x8014cbc0", end: "0x8014cbf4", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_second_thread_parameter, address: "0x8014cbf4", end: "0x8014cc28", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_third_thread_parameter, address: "0x8014cc28", end: "0x8014cc5c", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_thread_running_status, address: "0x8014cc94", end: "0x8014ccb8", kind: function, ownership: game, confidence: high }
+  - { name: battle_chocobo_check, address: "0x801743c8", end: "0x80174430", kind: function, ownership: game, confidence: high }
+  - { name: battle_spread_move_to_east_preset, address: "0x801754d0", end: "0x801754f4", kind: function, ownership: game, confidence: high }
+  - { name: battle_spread_move_to_north_preset, address: "0x801754f4", end: "0x8017551c", kind: function, ownership: game, confidence: high }
+  - { name: battle_spread_move_to_west_preset, address: "0x8017551c", end: "0x80175540", kind: function, ownership: game, confidence: high }
+  - { name: battle_spread_move_to_south_preset, address: "0x80175540", end: "0x80175568", kind: function, ownership: game, confidence: high }
+  - { name: battle_transfer_tiles_height_halves_and_slope_in_scratch_pad, address: "0x801755a8", end: "0x801755e8", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_spreading_tile_x_and_y_coordinates, address: "0x801755e8", end: "0x80175618", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_and_spread_movement_one_tile_around, address: "0x80175ea0", end: "0x80175fa4", kind: function, ownership: game, confidence: high }
+  - { name: battle_teleport_chances, address: "0x80176c10", end: "0x80176c90", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_walkto_pathing, address: "0x801780ec", end: "0x8017813c", kind: function, ownership: game, confidence: high }
+  - { name: battle_moldball_virus_depth_check, address: "0x80179204", end: "0x8017925c", kind: function, ownership: game, confidence: high }
+  - { name: battle_clear_some_stuff_for_untargetable_terrain, address: "0x8017925c", end: "0x801792a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_null_some_tile_data, address: "0x80179400", end: "0x80179424", kind: function, ownership: game, confidence: high }
+  - { name: battle_remove_close_range_routine, address: "0x80179424", end: "0x80179518", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_aoe_vertical_tolerance, address: "0x80179c9c", end: "0x80179d84", kind: function, ownership: game, confidence: high }
+  - { name: battle_can_select_target_tile_routine, address: "0x80179d84", end: "0x80179dc8", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_targeting_for_weapon_attack_2, address: "0x8017a518", end: "0x8017a5bc", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_all_panels_targeted_if_targetable, address: "0x8017a5bc", end: "0x8017a64c", kind: function, ownership: game, confidence: high }
+  - { name: battle_remove_selection_state_of_all_panels, address: "0x8017a64c", end: "0x8017a6dc", kind: function, ownership: game, confidence: high }
+  - { name: battle_disable_green_panel_flags, address: "0x8017b4a0", end: "0x8017b4d0", kind: function, ownership: game, confidence: high }
+  - { name: battle_disable_green_panel_on_all_but_target_s_tile, address: "0x8017b7b4", end: "0x8017b874", kind: function, ownership: game, confidence: high }
+  - { name: battle_linear_attack_tile_calculation, address: "0x8017c044", end: "0x8017c158", kind: function, ownership: game, confidence: high }
+  - { name: battle_call_attack_preparation, address: "0x8017c3b8", end: "0x8017c3dc", kind: function, ownership: game, confidence: high }
+  - { name: battle_call_attack_preparation_at_preview, address: "0x8017c3dc", end: "0x8017c45c", kind: function, ownership: game, confidence: high }
+  - { name: battle_unit_exists_party_member_check, address: "0x8017c90c", end: "0x8017c954", kind: function, ownership: game, confidence: high }
+  - { name: battle_player_item_quantity_decrement, address: "0x8017c954", end: "0x8017c9b8", kind: function, ownership: game, confidence: high }
+  - { name: battle_prep_current_action_data, address: "0x8017c9b8", end: "0x8017cacc", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_target_coordinates_for_ability, address: "0x8017d350", end: "0x8017d410", kind: function, ownership: game, confidence: high }
+  - { name: battle_draw_out_routine_dealing_with_experience_gain, address: "0x8017d410", end: "0x8017d4a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_id_of_unit_if_tile_is_targetable, address: "0x8017dc88", end: "0x8017dca8", kind: function, ownership: game, confidence: high }
+  - { name: battle_clear_targeting_panel_data, address: "0x8017ded0", end: "0x8017defc", kind: function, ownership: game, confidence: high }
+  - { name: battle_reflect_targeting, address: "0x8017e590", end: "0x8017e650", kind: function, ownership: game, confidence: high }
+  - { name: battle_auto_potion, address: "0x8017e780", end: "0x8017e7e4", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_move_exp_jp_up_to_earn, address: "0x8017f0ec", end: "0x8017f17c", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_elemental_ability_id, address: "0x8017f2d8", end: "0x8017f31c", kind: function, ownership: game, confidence: high }
+  - { name: battle_prep_for_initialize_deployed_units_data, address: "0x8017f620", end: "0x8017f640", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_unit_placement_and_validate, address: "0x8017f640", end: "0x8017f6c4", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_entd_units, address: "0x8017f8a0", end: "0x8017fbec", kind: function, ownership: game, confidence: high, external_name: "Load ENTD Units" }
+  - { name: battle_add_unique_value_to_list, address: "0x8017fbec", end: "0x8017fcc8", kind: function, ownership: game, confidence: high }
+  - { name: battle_disable_remove_unit, address: "0x8017fcc8", end: "0x8017fd08", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_enemy_level_data_by_battle_id, address: "0x8017fd08", end: "0x8017fd80", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_unit_cannot_exist_return_r2_0, address: "0x8017fd80", end: "0x8017fdac", kind: function, ownership: game, confidence: high }
+  - { name: battle_erase_unit_set_to_be_removed_from_party, address: "0x8017fdac", end: "0x8017fddc", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_movement_support_flags, address: "0x80180134", end: "0x80180178", kind: function, ownership: game, confidence: high }
+  - { name: battle_remove_charging_status_ability_ct, address: "0x80180178", end: "0x80180210", kind: function, ownership: game, confidence: high }
+  - { name: battle_disable_acting_statuses, address: "0x80180210", end: "0x80180230", kind: function, ownership: game, confidence: high }
+  - { name: battle_rare_common_item_determination, address: "0x80180230", end: "0x801802c8", kind: function, ownership: game, confidence: high }
+  - { name: battle_move_find_item_flag_calculation, address: "0x801804c4", end: "0x80180530", kind: function, ownership: game, confidence: high }
+  - { name: battle_learn_from_crystal, address: "0x80180904", end: "0x80180a08", kind: function, ownership: game, confidence: high }
+  - { name: battle_generate_treasure, address: "0x80180a08", end: "0x80180afc", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_battle_stats_from_battle_id, address: "0x80180afc", end: "0x80180b2c", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_enemy_level_data, address: "0x80180db0", end: "0x80180e00", kind: function, ownership: game, confidence: high }
+  - { name: battle_prep_for_special_status_flag_enabling, address: "0x80180fe4", end: "0x801810a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_map_location_calculation, address: "0x801810a0", end: "0x801810d4", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_existent_battle_unit_pointer, address: "0x801810d4", end: "0x80181114", kind: function, ownership: game, confidence: high }
+  - { name: battle_find_active_unit_data_pointer, address: "0x80181114", end: "0x8018114c", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_menu_id_based_on_mount_moveable_actable, address: "0x8018114c", end: "0x801811f8", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_unit_can_evade, address: "0x8018130c", end: "0x801813c0", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_number_of_turns_to_resolve, address: "0x80181720", end: "0x801817c0", kind: function, ownership: game, confidence: high }
+  - { name: battle_item_inventory_ability_display, address: "0x80181b70", end: "0x80181b94", kind: function, ownership: game, confidence: high }
+  - { name: battle_throw, address: "0x80181cb8", end: "0x80181cdc", kind: function, ownership: game, confidence: high }
+  - { name: battle_math_skill_ability_display, address: "0x80181ef0", end: "0x80181f14", kind: function, ownership: game, confidence: high }
+  - { name: battle_math_skill_ability_loading_routine, address: "0x80181f14", end: "0x80181f38", kind: function, ownership: game, confidence: high }
+  - { name: battle_elemental_ability_loading, address: "0x801821cc", end: "0x801822cc", kind: function, ownership: game, confidence: high }
+  - { name: battle_monster_skill_check_prep, address: "0x80182430", end: "0x80182508", kind: function, ownership: game, confidence: high }
+  - { name: battle_draw_out, address: "0x80182664", end: "0x80182688", kind: function, ownership: game, confidence: high }
+  - { name: battle_draw_out_2, address: "0x80182688", end: "0x80182788", kind: function, ownership: game, confidence: high }
+  - { name: battle_call_charge_skillset_loading, address: "0x80182788", end: "0x801827b4", kind: function, ownership: game, confidence: high }
+  - { name: battle_charge_skillset_loading, address: "0x801827b4", end: "0x801827f0", kind: function, ownership: game, confidence: high }
+  - { name: battle_status_checks, address: "0x801832cc", end: "0x80183374", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_at_list_for_unit_battle_id, address: "0x801834bc", end: "0x80183544", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_at_list_and_get_specific_unit_id, address: "0x80183544", end: "0x801835a8", kind: function, ownership: game, confidence: high }
+  - { name: battle_at_list_preview, address: "0x801835f8", end: "0x8018370c", kind: function, ownership: game, confidence: high }
+  - { name: battle_at_list_sorting, address: "0x80183acc", end: "0x80183ba8", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_only_action_taken, address: "0x80183ba8", end: "0x80183bcc", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_only_movement_taken, address: "0x80183bcc", end: "0x80183bf0", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_move_act_flags, address: "0x80183bf0", end: "0x80183c6c", kind: function, ownership: game, confidence: high }
+  - { name: battle_end_of_turn, address: "0x80183c6c", end: "0x80183d10", kind: function, ownership: game, confidence: high }
+  - { name: battle_change_of_turn_check, address: "0x80183d70", end: "0x80183de0", kind: function, ownership: game, confidence: high }
+  - { name: battle_enable_disable_acting_status, address: "0x80183de0", end: "0x80183e00", kind: function, ownership: game, confidence: high }
+  - { name: battle_inflict_defending_to_battle_id, address: "0x80183e00", end: "0x80183e3c", kind: function, ownership: game, confidence: high }
+  - { name: battle_unit_exists_checks, address: "0x80183e3c", end: "0x80183e94", kind: function, ownership: game, confidence: high }
+  - { name: battle_activates_move_act, address: "0x80183e94", end: "0x80183ea0", kind: function, ownership: game, confidence: high }
+  - { name: battle_copy_xy_coords_and_map_tile_data, address: "0x80183ea0", end: "0x80183f60", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_move_find_item_data, address: "0x80183f60", end: "0x80183fb4", kind: function, ownership: game, confidence: high, external_name: "Load Move Find-Item data" }
+  - { name: battle_get_tile_data_pointer, address: "0x80183fb4", end: "0x8018401c", kind: function, ownership: game, confidence: high }
+  - { name: battle_clear_r2_2, address: "0x801842f8", end: "0x8018430c", kind: function, ownership: game, confidence: high }
+  - { name: battle_force_attack_miss, address: "0x8018430c", end: "0x8018433c", kind: function, ownership: game, confidence: high, external_name: "Force Attack Miss" }
+  - { name: battle_cause_action_miss, address: "0x8018433c", end: "0x80184360", kind: function, ownership: game, confidence: high }
+  - { name: battle_attack_evaded_calculations, address: "0x801848d8", end: "0x80184964", kind: function, ownership: game, confidence: high }
+  - { name: battle_nullify_action, address: "0x80184e40", end: "0x80184e98", kind: function, ownership: game, confidence: high }
+  - { name: battle_elemental_damage_modification_2, address: "0x80184e98", end: "0x80184f9c", kind: function, ownership: game, confidence: high }
+  - { name: battle_concentrate_calculation, address: "0x801852e4", end: "0x80185328", kind: function, ownership: game, confidence: high }
+  - { name: battle_dark_confuse_caclulation, address: "0x80185328", end: "0x8018537c", kind: function, ownership: game, confidence: high }
+  - { name: battle_abandon_calculation, address: "0x8018537c", end: "0x801853f4", kind: function, ownership: game, confidence: high }
+  - { name: battle_evasion_changes_due_to_statuses, address: "0x801853f4", end: "0x801854b8", kind: function, ownership: game, confidence: high }
+  - { name: battle_transparent_calculation, address: "0x801854b8", end: "0x801854fc", kind: function, ownership: game, confidence: high }
+  - { name: battle_weather_effects_on_bows, address: "0x80185738", end: "0x80185814", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_ma_and_y, address: "0x80185c94", end: "0x80185cc0", kind: function, ownership: game, confidence: high, external_name: "Store MA and Y" }
+  - { name: battle_store_ma_and_ma_plus_y_divided_by_two, address: "0x80185cc0", end: "0x80185d00", kind: function, ownership: game, confidence: high, external_name: "Base XA and YA for MA + Y / 2" }
+  - { name: battle_store_pa_and_pa_plus_y_divided_by_two, address: "0x80185d00", end: "0x80185d40", kind: function, ownership: game, confidence: high, external_name: "Store PA and PA + Y / 2" }
+  - { name: battle_store_ma_and_pa_plus_y_divided_by_two, address: "0x80185d40", end: "0x80185d80", kind: function, ownership: game, confidence: high, external_name: "Store MA and PA + Y / 2" }
+  - { name: battle_store_ma_and_x, address: "0x80185d80", end: "0x80185dac", kind: function, ownership: game, confidence: high, external_name: "Store MA and X" }
+  - { name: battle_store_pa_and_x, address: "0x80185dac", end: "0x80185dd8", kind: function, ownership: game, confidence: high, external_name: "Store PA and X" }
+  - { name: battle_store_pa_and_weapon_power, address: "0x80185dd8", end: "0x80185e04", kind: function, ownership: game, confidence: high, external_name: "Store PA and WP" }
+  - { name: battle_store_pa_and_y, address: "0x80185e04", end: "0x80185e30", kind: function, ownership: game, confidence: high, external_name: "Store PA and Y" }
+  - { name: battle_store_speed_and_x, address: "0x80185e30", end: "0x80185e5c", kind: function, ownership: game, confidence: high, external_name: "Store Speed and X" }
+  - { name: battle_store_pa_and_weapon_power_plus_y, address: "0x80185e5c", end: "0x80185e94", kind: function, ownership: game, confidence: high, external_name: "Store PA and WP + Y" }
+  - { name: battle_setup_weapon_formula_xa_ya, address: "0x80185e94", end: "0x80185f80", kind: function, ownership: game, confidence: medium, external_name: "Formula 64 or Jump Base XA / YA" }
+  - { name: battle_apply_charge, address: "0x80185f80", end: "0x80185fa4", kind: function, ownership: game, confidence: high, external_name: "Charge Calculation" }
+  - { name: battle_apply_weapon_element_strengthen, address: "0x80185fa4", end: "0x80185ffc", kind: function, ownership: game, confidence: high, external_name: "Weapon Element Strengthen" }
+  - { name: battle_apply_elemental_strengthen, address: "0x80185ffc", end: "0x80186054", kind: function, ownership: game, confidence: high, external_name: "Elemental Strengthen" }
+  - { name: battle_apply_physical_attack_supports, address: "0x80186054", end: "0x8018614c", kind: function, ownership: game, confidence: medium, external_name: "Attack UP/Two Hands/Martial Arts" }
+  - { name: battle_apply_attack_up_and_martial_arts, address: "0x8018614c", end: "0x80186204", kind: function, ownership: game, confidence: high, external_name: "Formula 32, 33, 34, 35 Attack Up and Martial Arts" }
+  - { name: battle_apply_magic_attack_up, address: "0x80186204", end: "0x80186254", kind: function, ownership: game, confidence: high, external_name: "Magic Attack Up routine" }
+  - { name: battle_apply_attacker_berserk_frog, address: "0x80186254", end: "0x801862cc", kind: function, ownership: game, confidence: high, external_name: "Attacker Berserk/Frog Check" }
+  - { name: battle_defense_up_routine, address: "0x801862cc", end: "0x8018631c", kind: function, ownership: game, confidence: high }
+  - { name: battle_magic_defense_up_routine, address: "0x8018631c", end: "0x8018636c", kind: function, ownership: game, confidence: high }
+  - { name: battle_target_xa_affecting_statuses, address: "0x8018636c", end: "0x80186460", kind: function, ownership: game, confidence: high }
+  - { name: battle_critical_hit_calculation, address: "0x801864f8", end: "0x80186568", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_xa_times_ya_damage, address: "0x80186568", end: "0x8018659c", kind: function, ownership: game, confidence: high, external_name: "XA * YA Calculation" }
+  - { name: battle_store_xa_plus_ya_status_damage, address: "0x8018659c", end: "0x80186624", kind: function, ownership: game, confidence: high, external_name: "Set XA + YA for Status Formulas" }
+  - { name: battle_calculate_hp_percent_damage, address: "0x80186624", end: "0x8018668c", kind: function, ownership: game, confidence: high, external_name: "Calculate HP% Damage" }
+  - { name: battle_calculate_mp_percent_damage, address: "0x8018668c", end: "0x801866ec", kind: function, ownership: game, confidence: high, external_name: "Calculate MP% Damage" }
+  - { name: battle_gravi2_damage_routine, address: "0x801866ec", end: "0x80186744", kind: function, ownership: game, confidence: high }
+  - { name: battle_steal_gil, address: "0x80186744", end: "0x80186814", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_add_pa_y, address: "0x801868f0", end: "0x8018691c", kind: function, ownership: game, confidence: high }
+  - { name: battle_damage_and_knockback_routine, address: "0x8018691c", end: "0x801869ec", kind: function, ownership: game, confidence: high }
+  - { name: battle_song_abilities, address: "0x801869ec", end: "0x80186af8", kind: function, ownership: game, confidence: high }
+  - { name: battle_dance_abilities, address: "0x80186af8", end: "0x80186c04", kind: function, ownership: game, confidence: high }
+  - { name: battle_talk_skill, address: "0x80186c04", end: "0x80186d00", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_add_brave_y, address: "0x80186d00", end: "0x80186d2c", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_add_speed_y, address: "0x80186d2c", end: "0x80186d58", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_add_brave_x_stats_y, address: "0x80186d58", end: "0x80186dbc", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_43_damage_caster_missing_hp, address: "0x80186e28", end: "0x80186e54", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_target_current_mp, address: "0x80186e54", end: "0x80186e78", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_target_missing_hp, address: "0x80186e78", end: "0x80186ea4", kind: function, ownership: game, confidence: high }
+  - { name: battle_y_brave, address: "0x80186ea4", end: "0x80186ed0", kind: function, ownership: game, confidence: high }
+  - { name: battle_weather_elemental_effects, address: "0x80186ed0", end: "0x80186fd0", kind: function, ownership: game, confidence: high }
+  - { name: battle_elemental_damage_modification, address: "0x80186fd0", end: "0x80186ff8", kind: function, ownership: game, confidence: high }
+  - { name: battle_apply_elemental, address: "0x80186ff8", end: "0x801870fc", kind: function, ownership: game, confidence: high }
+  - { name: battle_elemental_absorption, address: "0x801870fc", end: "0x80187150", kind: function, ownership: game, confidence: high }
+  - { name: battle_faith_calculation, address: "0x80187150", end: "0x80187248", kind: function, ownership: game, confidence: high }
+  - { name: battle_hp_absorbtion, address: "0x80187248", end: "0x80187350", kind: function, ownership: game, confidence: high }
+  - { name: battle_undead_reversal, address: "0x80187350", end: "0x801873d8", kind: function, ownership: game, confidence: high }
+  - { name: battle_mp_recovery_routine, address: "0x8018746c", end: "0x801874ec", kind: function, ownership: game, confidence: high }
+  - { name: battle_convert_hp_damage_to_mp_recovery, address: "0x801874ec", end: "0x80187510", kind: function, ownership: game, confidence: high, external_name: "Convert HP Damage into MP Recovery (Formula 54)" }
+  - { name: battle_dragon_check, address: "0x801875bc", end: "0x801875fc", kind: function, ownership: game, confidence: high }
+  - { name: battle_force_sleeping_target_miss, address: "0x801875fc", end: "0x80187638", kind: function, ownership: game, confidence: high, external_name: "Sleep Check" }
+  - { name: battle_maintenance, address: "0x80187638", end: "0x80187690", kind: function, ownership: game, confidence: high }
+  - { name: battle_conditional_status_proc_roll_inner_routine, address: "0x80187690", end: "0x801876e4", kind: function, ownership: game, confidence: high }
+  - { name: battle_quick_effect, address: "0x8018783c", end: "0x80187860", kind: function, ownership: game, confidence: high }
+  - { name: battle_determine_which_stat_will_be_reduced, address: "0x80187860", end: "0x80187910", kind: function, ownership: game, confidence: high }
+  - { name: battle_apply_status, address: "0x80187eb4", end: "0x80187f24", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_heal_mp_z_times_ten, address: "0x80188288", end: "0x801882c8", kind: function, ownership: game, confidence: high }
+  - { name: battle_apply_full_hp_mp_heal, address: "0x801882c8", end: "0x801882f8", kind: function, ownership: game, confidence: high }
+  - { name: battle_finger_guard, address: "0x801882f8", end: "0x801883ac", kind: function, ownership: game, confidence: high }
+  - { name: battle_catch, address: "0x801883ac", end: "0x80188488", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_hit, address: "0x80188488", end: "0x801884c0", kind: function, ownership: game, confidence: high }
+  - { name: battle_physical_evade_calculation, address: "0x80188510", end: "0x80188568", kind: function, ownership: game, confidence: high }
+  - { name: battle_physical_evade_calculation_charge, address: "0x80188568", end: "0x801885b8", kind: function, ownership: game, confidence: high }
+  - { name: battle_magical_evade_calculation, address: "0x801885b8", end: "0x801885f8", kind: function, ownership: game, confidence: high }
+  - { name: battle_physical_xa_modifying_statuses_support, address: "0x801885f8", end: "0x80188638", kind: function, ownership: game, confidence: high }
+  - { name: battle_weapon_damage_calculation, address: "0x80188638", end: "0x801886a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_physical_damage, address: "0x801886a4", end: "0x801886d4", kind: function, ownership: game, confidence: high, external_name: "Damage Calculation" }
+  - { name: battle_calculate_physical_accuracy, address: "0x801886d4", end: "0x8018871c", kind: function, ownership: game, confidence: high, external_name: "Calculate Accuracy for Physical" }
+  - { name: battle_apply_elemental_absorption_and_status_proc, address: "0x8018871c", end: "0x80188744", kind: function, ownership: game, confidence: high, external_name: "Elemental Absorption and Status Proc" }
+  - { name: battle_apply_magical_support_status_compatibility, address: "0x80188744", end: "0x8018877c", kind: function, ownership: game, confidence: high, external_name: "Magical Support Status Compatibility" }
+  - { name: battle_calculate_elemental_xa_times_ya, address: "0x8018877c", end: "0x801887c4", kind: function, ownership: game, confidence: high, external_name: "Elemental XA * YA" }
+  - { name: battle_apply_elemental_absorption_and_status, address: "0x801887c4", end: "0x80188800", kind: function, ownership: game, confidence: high, external_name: "Elemental Absorption and Status" }
+  - { name: battle_calculate_friendly_magic_accuracy, address: "0x80188800", end: "0x80188858", kind: function, ownership: game, confidence: high, external_name: "MA + X" }
+  - { name: battle_calculate_magical_xa_times_ya, address: "0x80188858", end: "0x80188888", kind: function, ownership: game, confidence: high, external_name: "Magical XA * YA" }
+  - { name: battle_golem_accuracy, address: "0x80188888", end: "0x80188964", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_truth_magical_damage, address: "0x80188964", end: "0x801889a4", kind: function, ownership: game, confidence: high, external_name: "Truth Magical Damage" }
+  - { name: battle_calculate_truth_formula_damage, address: "0x801889a4", end: "0x801889cc", kind: function, ownership: game, confidence: high, external_name: "Truth Formula Damage" }
+  - { name: battle_calculate_magic_accuracy_no_elemental, address: "0x801889cc", end: "0x80188a24", kind: function, ownership: game, confidence: high, external_name: "Calculate Accuracy for Magical Spells" }
+  - { name: battle_calculate_magic_accuracy, address: "0x80188a24", end: "0x80188a84", kind: function, ownership: game, confidence: high, external_name: "Calculate Accuracy for Magical" }
+  - { name: battle_calculate_magic_accuracy_without_faith, address: "0x80188a84", end: "0x80188adc", kind: function, ownership: game, confidence: high, external_name: "MA + X Without Faith" }
+  - { name: battle_apply_physical_status_support_compatibility, address: "0x80188adc", end: "0x80188b14", kind: function, ownership: game, confidence: high, external_name: "Cluster of Physical Routines" }
+  - { name: battle_calculate_physical_status_accuracy, address: "0x80188b14", end: "0x80188b64", kind: function, ownership: game, confidence: high, external_name: "Physical Routine for Hit % Abilities" }
+  - { name: battle_formula_weapon_damage, address: "0x80188b64", end: "0x80188ba4", kind: function, ownership: game, confidence: high, external_name: "Formula 01: Damage (Weapon)" }
+  - { name: battle_formula_weapon_damage_with_proc, address: "0x80188ba4", end: "0x80188be4", kind: function, ownership: game, confidence: high, external_name: "Formula 02: Damage (Weapon)" }
+  - { name: battle_formula_gun_damage, address: "0x80188be4", end: "0x80188c24", kind: function, ownership: game, confidence: high, external_name: "Formula 03: Damage (Gun)" }
+  - { name: battle_formula_magic_gun, address: "0x80188c24", end: "0x80188c9c", kind: function, ownership: game, confidence: high, external_name: "Formula 04: Magic Gun" }
+  - { name: battle_formula_weapon_damage_charge, address: "0x80188c9c", end: "0x80188cf4", kind: function, ownership: game, confidence: high, external_name: "Formula 05: Damage (Weapon)" }
+  - { name: battle_formula_weapon_absorb_hp, address: "0x80188cf4", end: "0x80188d3c", kind: function, ownership: game, confidence: high, external_name: "Formula 06: Absorb HP (Weapon)" }
+  - { name: battle_formula_weapon_heal, address: "0x80188d3c", end: "0x80188d84", kind: function, ownership: game, confidence: high, external_name: "Formula 07: Heal (Weapon)" }
+  - { name: battle_formula_magical_damage, address: "0x80188d84", end: "0x80188df4", kind: function, ownership: game, confidence: high, external_name: "Formula 08: Damage (MA * Y)" }
+  - { name: battle_formula_magic_hp_percent_damage, address: "0x80188df4", end: "0x80188e78", kind: function, ownership: game, confidence: high, external_name: "Formula 09: HP% Damage" }
+  - { name: battle_formula_hit_faith_ma_x_percent, address: "0x80188e78", end: "0x80188eb8", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_friendly_magic_accuracy, address: "0x80188eb8", end: "0x80188ef8", kind: function, ownership: game, confidence: high, external_name: "Formula 0B: Friendly Magic Accuracy" }
+  - { name: battle_formula_magical_heal, address: "0x80188ef8", end: "0x80188f38", kind: function, ownership: game, confidence: high, external_name: "Formula 0C: Heal (MA * Y)" }
+  - { name: battle_formula_heal_y_percent_faith, address: "0x80188f38", end: "0x80188f90", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_absorb_mp_y_percent, address: "0x80189084", end: "0x801890dc", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_magic_hp_absorb, address: "0x801890dc", end: "0x80189124", kind: function, ownership: game, confidence: high, external_name: "Formula 10: Absorb HP (Y)%" }
+  - { name: battle_formula_set_quick, address: "0x8018912c", end: "0x80189164", kind: function, ownership: game, confidence: high, external_name: "Formula 12: Set Quick Hit F(MA+X)%" }
+  - { name: battle_formula_set_golem, address: "0x8018916c", end: "0x801891ac", kind: function, ownership: game, confidence: high, external_name: "Formula 14: Set Golem Hit CasF/100*(MA+X)%" }
+  - { name: battle_formula_set_ct_zero, address: "0x801891ac", end: "0x80189204", kind: function, ownership: game, confidence: high, external_name: "Formula 15: Set CT00 Hit F(MA+X)%" }
+  - { name: battle_formula_damage_target_mp, address: "0x80189204", end: "0x8018925c", kind: function, ownership: game, confidence: high, external_name: "Formula 16: DmgMP (TarCurMP) Hit F(MA+X)%" }
+  - { name: battle_formula_damage_target_hp_minus_one, address: "0x8018925c", end: "0x8018929c", kind: function, ownership: game, confidence: high, external_name: "Formula 17: Dmg (TarCurHP-1) Hit F(MA+X)%" }
+  - { name: battle_formula_status_reduction, address: "0x801892ac", end: "0x8018933c", kind: function, ownership: game, confidence: high, external_name: "Formula 1A: Status Reduction" }
+  - { name: battle_formula_damage_mp_percent, address: "0x8018933c", end: "0x8018937c", kind: function, ownership: game, confidence: high, external_name: "Formula 1B: DmgMP(Y)% Hit F(MA+X)%" }
+  - { name: battle_formula_song, address: "0x8018937c", end: "0x801893d8", kind: function, ownership: game, confidence: high, external_name: "Formula 1C: Song" }
+  - { name: battle_formula_dance, address: "0x801893d8", end: "0x80189434", kind: function, ownership: game, confidence: high, external_name: "Formula 1D: Dance" }
+  - { name: battle_formula_multihit_truth_magic, address: "0x80189434", end: "0x80189464", kind: function, ownership: game, confidence: high, external_name: "Formula 1E: Multi-Hit Truth Magic" }
+  - { name: battle_formula_draw_out_damage, address: "0x801895c4", end: "0x801895f4", kind: function, ownership: game, confidence: high, external_name: "Formula 20: Draw Out Damage" }
+  - { name: battle_formula_draw_out_mp_damage, address: "0x801895f4", end: "0x80189654", kind: function, ownership: game, confidence: high, external_name: "Formula 21: Draw Out MP Damage" }
+  - { name: battle_formula_draw_out_status, address: "0x80189654", end: "0x8018967c", kind: function, ownership: game, confidence: high, external_name: "Formula 22: Draw Out Status" }
+  - { name: battle_formula_draw_out_heal, address: "0x8018967c", end: "0x801896b4", kind: function, ownership: game, confidence: high, external_name: "Formula 23: Draw Out Heal" }
+  - { name: battle_formula_ma_pa_half_damage, address: "0x801896b4", end: "0x801896ec", kind: function, ownership: game, confidence: high, external_name: "Formula 24: MA*(PA+Y)/2" }
+  - { name: battle_formula_break_equipped_hit_pa_wp_x_percent, address: "0x801896ec", end: "0x80189794", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_steal_equipment, address: "0x80189794", end: "0x80189828", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_steal_gil, address: "0x80189828", end: "0x80189870", kind: function, ownership: game, confidence: high, external_name: "Formula 27: Steal Gil" }
+  - { name: battle_formula_steal_exp_hit_sp_x_percent, address: "0x80189870", end: "0x80189910", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_opposite_sex_hit_ma_x_percent, address: "0x80189910", end: "0x801899a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_physical_status_reduction, address: "0x80189a90", end: "0x80189ad8", kind: function, ownership: game, confidence: high, external_name: "Formula 2B: Physical Status Reduction" }
+  - { name: battle_formula_physical_mp_percent_damage, address: "0x80189ad8", end: "0x80189b20", kind: function, ownership: game, confidence: high, external_name: "Formula 2C: Physical MP Percent Damage" }
+  - { name: battle_formula_damage_pa_times_wp_plus_y_status, address: "0x80189b20", end: "0x80189b94", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_break_equipped_damage_pa_times_wp, address: "0x80189b94", end: "0x80189c50", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_absorb_mp_pa_times_wp, address: "0x80189c50", end: "0x80189c90", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_absorb_hp_pa_times_wp, address: "0x80189c90", end: "0x80189cd0", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_pa_plus_y_half_times_pa, address: "0x80189cd0", end: "0x80189d74", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_random_x_times_pa_plus_y_half_times_pa, address: "0x80189d74", end: "0x80189e28", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_hit_pa_x_percent, address: "0x80189e28", end: "0x80189e94", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_heal_pa_times_y_and_mp, address: "0x80189e94", end: "0x80189f08", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_heal_y_percent_hit_pa_x_percent, address: "0x80189f08", end: "0x80189f84", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_random_y_times_pa, address: "0x80189f84", end: "0x80189fcc", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_3d_hit_ma_x_percent, address: "0x80189fcc", end: "0x8018a00c", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_target_max_hp_minus_one, address: "0x8018a00c", end: "0x8018a02c", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_hit_sp_x_percent, address: "0x8018a02c", end: "0x8018a088", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_undead_hit_sp_x_percent, address: "0x8018a088", end: "0x8018a114", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_41_hit_ma_x_percent_enemy_only, address: "0x8018a114", end: "0x8018a17c", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_pa_times_y_damage_caster_pa_times_y_over_x, address: "0x8018a17c", end: "0x8018a218", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_absorb_hp_y_percent_status, address: "0x8018a220", end: "0x8018a250", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_heal_z_times_ten, address: "0x8018a250", end: "0x8018a2a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_unused_formula_49_with_extra_steps, address: "0x8018a2a4", end: "0x8018a2c4", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_heal_full_hp_mp, address: "0x8018a2c4", end: "0x8018a2ec", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_heal_random_one_to_z_add_status, address: "0x8018a2ec", end: "0x8018a3a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_heal_ma_times_y, address: "0x8018a3a0", end: "0x8018a3d0", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_absorb_hp_y_percent_hit_ma_x_percent, address: "0x8018a3d0", end: "0x8018a420", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_ma_times_y, address: "0x8018a420", end: "0x8018a458", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_caster_missing_hp, address: "0x8018a458", end: "0x8018a4a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_hit_ma_x_percent, address: "0x8018a4a0", end: "0x8018a4e8", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_51_hit_ma_x_percent, address: "0x8018a4e8", end: "0x8018a554", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_caster_missing_hp_self_sacrifice, address: "0x8018a554", end: "0x8018a5e4", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_x_percent_hit_ma_x_percent, address: "0x8018a5e4", end: "0x8018a668", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_heal_mp_ma_times_y, address: "0x8018a668", end: "0x8018a698", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_lower_pa_y, address: "0x8018a698", end: "0x8018a6f8", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_lower_ma_y, address: "0x8018a6f8", end: "0x8018a758", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_raise_level_by_one_add_status_on_caster, address: "0x8018a758", end: "0x8018a824", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_lower_level_by_one, address: "0x8018a908", end: "0x8018a980", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_dragon_hit_100, address: "0x8018a980", end: "0x8018a9c4", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_dragon_heal_y_percent_add_status, address: "0x8018a9c4", end: "0x8018aa10", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_dragon_brave_x_stats_y, address: "0x8018aa10", end: "0x8018aa54", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_dragon_set_quick, address: "0x8018aa54", end: "0x8018aa98", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_5e_damage_ma_plus_y_half_times_ma, address: "0x8018aa98", end: "0x8018aac8", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_5f_damage_ma_plus_y_half_times_ma, address: "0x8018aac8", end: "0x8018aaf8", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_ma_plus_y_half_times_ma_status, address: "0x8018aaf8", end: "0x8018ab18", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_lower_brave_y, address: "0x8018ab18", end: "0x8018ab58", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_lower_brave_y_without_faith, address: "0x8018ab58", end: "0x8018ab98", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_sp_times_wp, address: "0x8018ab98", end: "0x8018ac44", kind: function, ownership: game, confidence: high }
+  - { name: battle_formula_damage_pa_times_wp, address: "0x8018ac44", end: "0x8018ac74", kind: function, ownership: game, confidence: high }
+  - { name: battle_remove_transparent_status_if_jump_is_used, address: "0x8018ac74", end: "0x8018acdc", kind: function, ownership: game, confidence: high }
+  - { name: battle_apply_status_and_check_undead, address: "0x8018acdc", end: "0x8018ad58", kind: function, ownership: game, confidence: high }
+  - { name: battle_switch_ability_to_default_attack, address: "0x8018ad58", end: "0x8018adf4", kind: function, ownership: game, confidence: high }
+  - { name: battle_action_data_nulling, address: "0x8018adf4", end: "0x8018ae3c", kind: function, ownership: game, confidence: high }
+  - { name: battle_knockback, address: "0x8018ae3c", end: "0x8018af2c", kind: function, ownership: game, confidence: high }
+  - { name: battle_remove_status, address: "0x8018b9f8", end: "0x8018ba44", kind: function, ownership: game, confidence: high }
+  - { name: battle_called_by_nullify_action, address: "0x8018bcf0", end: "0x8018bd34", kind: function, ownership: game, confidence: high }
+  - { name: battle_remove_knockback_flag, address: "0x8018bd34", end: "0x8018bd74", kind: function, ownership: game, confidence: high }
+  - { name: battle_current_action_data_nulling, address: "0x8018bd74", end: "0x8018bdd4", kind: function, ownership: game, confidence: high }
+  - { name: battle_null_some_status_data, address: "0x8018bdd4", end: "0x8018be08", kind: function, ownership: game, confidence: high }
+  - { name: battle_some_kind_of_entd_unit_manipulation, address: "0x8018c758", end: "0x8018c85c", kind: function, ownership: game, confidence: high }
+  - { name: battle_level_up_down_ability, address: "0x8018c85c", end: "0x8018c920", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_unit_can_react_1, address: "0x8018c920", end: "0x8018c968", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_unit_can_react, address: "0x8018c968", end: "0x8018c9a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_reaction_check, address: "0x8018c9a0", end: "0x8018c9e4", kind: function, ownership: game, confidence: high }
+  - { name: battle_reflect_blade_grasp_and_arrow_guard, address: "0x8018c9e4", end: "0x8018cb00", kind: function, ownership: game, confidence: high }
+  - { name: battle_mp_switch_distribute_and_damage_split_usability, address: "0x8018cc34", end: "0x8018ccd8", kind: function, ownership: game, confidence: high }
+  - { name: battle_counter_reaction_usability, address: "0x8018ce04", end: "0x8018ce88", kind: function, ownership: game, confidence: high }
+  - { name: battle_pa_save_ma_save_speed_save_regenerator_auto_potion_gilgame_h, address: "0x8018ce88", end: "0x8018cef4", kind: function, ownership: game, confidence: high }
+  - { name: battle_critical_quick_hp_restore_mp_restore_meatbone_slash_usabilit, address: "0x8018cef4", end: "0x8018cf74", kind: function, ownership: game, confidence: high }
+  - { name: battle_face_up_and_absorb_used_mp_usability, address: "0x8018cf74", end: "0x8018cfe8", kind: function, ownership: game, confidence: high }
+  - { name: battle_reflect_reaction, address: "0x8018cfe8", end: "0x8018d050", kind: function, ownership: game, confidence: high }
+  - { name: battle_blade_grasp_usability, address: "0x8018d050", end: "0x8018d0e8", kind: function, ownership: game, confidence: high }
+  - { name: battle_arrow_guard_usability, address: "0x8018d0e8", end: "0x8018d1b8", kind: function, ownership: game, confidence: high }
+  - { name: battle_mp_switch_usability, address: "0x8018d1b8", end: "0x8018d2a8", kind: function, ownership: game, confidence: high }
+  - { name: battle_distribute_usability, address: "0x8018d2a8", end: "0x8018d318", kind: function, ownership: game, confidence: high }
+  - { name: battle_damage_split_usability, address: "0x8018d318", end: "0x8018d384", kind: function, ownership: game, confidence: high }
+  - { name: battle_chance_to_react, address: "0x8018d384", end: "0x8018d3c0", kind: function, ownership: game, confidence: high }
+  - { name: battle_stat_increment_decrement, address: "0x8018d570", end: "0x8018d620", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_target_stats_pointer_data, address: "0x8018d70c", end: "0x8018d7c8", kind: function, ownership: game, confidence: high }
+  - { name: battle_poison_and_regen, address: "0x8018d7c8", end: "0x8018d868", kind: function, ownership: game, confidence: high }
+  - { name: battle_transparent_removal_routine, address: "0x8018d868", end: "0x8018d910", kind: function, ownership: game, confidence: high }
+  - { name: battle_process_expiring_statuses, address: "0x8018d910", end: "0x8018da04", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_action_target_variables, address: "0x8018da04", end: "0x8018da44", kind: function, ownership: game, confidence: high }
+  - { name: battle_crystal_dead_jump_petrify_treasure_check, address: "0x8018da44", end: "0x8018da88", kind: function, ownership: game, confidence: high }
+  - { name: battle_prep_gained_exp_jp_level_job_level, address: "0x8018df0c", end: "0x8018dff8", kind: function, ownership: game, confidence: high }
+  - { name: battle_main_reaction_subroutine_entd_id_stuff, address: "0x8018dff8", end: "0x8018e07c", kind: function, ownership: game, confidence: high }
+  - { name: battle_remove_control_based_on_status, address: "0x8018e1b0", end: "0x8018e248", kind: function, ownership: game, confidence: high }
+  - { name: battle_inflicted_status_ct_setting_xfer_last_used_ct, address: "0x8018e248", end: "0x8018e310", kind: function, ownership: game, confidence: high }
+  - { name: battle_transfer_considered_action_data_to_ai, address: "0x8018e5e4", end: "0x8018e628", kind: function, ownership: game, confidence: high }
+  - { name: battle_restore_considered_action_data_from_ai, address: "0x8018e628", end: "0x8018e660", kind: function, ownership: game, confidence: high }
+  - { name: battle_learn_used_ability, address: "0x8018e8ac", end: "0x8018e9bc", kind: function, ownership: game, confidence: high }
+  - { name: battle_enable_special_status_flags, address: "0x8018e9bc", end: "0x8018e9e8", kind: function, ownership: game, confidence: high }
+  - { name: battle_item_quantity_increment_for_steal_break, address: "0x8018e9e8", end: "0x8018ea98", kind: function, ownership: game, confidence: high }
+  - { name: battle_add_price_of_item_4_to_total_gil, address: "0x8018ea98", end: "0x8018eb50", kind: function, ownership: game, confidence: high }
+  - { name: battle_handle_steal_exp, address: "0x8018eb50", end: "0x8018ec10", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_targeting_executing_state_call_18e07c, address: "0x8018ec10", end: "0x8018ec44", kind: function, ownership: game, confidence: high }
+  - { name: battle_sort_target_list, address: "0x8018ed7c", end: "0x8018edf8", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_ability_data, address: "0x8018edf8", end: "0x8018ee24", kind: function, ownership: game, confidence: high }
+  - { name: battle_count_number_of_targets_hit_by_ability, address: "0x8018ee24", end: "0x8018ee68", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_8019837c_if_not_reacting, address: "0x8018ee68", end: "0x8018eea0", kind: function, ownership: game, confidence: high }
+  - { name: battle_random_process_gives_a_number_between_0_7fff, address: "0x8018eea0", end: "0x8018eed8", kind: function, ownership: game, confidence: high }
+  - { name: battle_random_process_and_checks_against_r5, address: "0x8018eed8", end: "0x8018ef2c", kind: function, ownership: game, confidence: high }
+  - { name: battle_current_action_attacker_data_setting, address: "0x8018ef34", end: "0x8018f038", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_last_used_ability, address: "0x8018f4c8", end: "0x8018f4d8", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_main_target_id_and_focus_on_target_flag, address: "0x8019490c", end: "0x80194944", kind: function, ownership: game, confidence: high }
+  - { name: battle_initialize_some_ai_data, address: "0x80195f6c", end: "0x80195f8c", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_longest_range_ability_or_move, address: "0x801962a0", end: "0x8019630c", kind: function, ownership: game, confidence: high }
+  - { name: battle_find_positive_priority_target_within_3_range, address: "0x8019689c", end: "0x80196908", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_positive_priority, address: "0x80196908", end: "0x8019693c", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_target_type, address: "0x80196c8c", end: "0x80196ce8", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_unit_can_be_targeted_cryst_trea_mount_trans, address: "0x80196ce8", end: "0x80196db0", kind: function, ownership: game, confidence: high }
+  - { name: battle_compare_target_priority_and_hit_rate, address: "0x80196db0", end: "0x80196e20", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_map_allows_use_and_find_highest_target, address: "0x80196ef4", end: "0x80196fc4", kind: function, ownership: game, confidence: high }
+  - { name: battle_randomly_transfer_data, address: "0x801970bc", end: "0x801971b8", kind: function, ownership: game, confidence: high }
+  - { name: battle_find_direction_of_target, address: "0x801978e4", end: "0x8019795c", kind: function, ownership: game, confidence: high }
+  - { name: battle_count_flagged_tiles_within_map_bounds, address: "0x80197c68", end: "0x80197d0c", kind: function, ownership: game, confidence: high }
+  - { name: battle_chose_move_from_move_list, address: "0x80197e60", end: "0x80197f14", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_for_0x00_status, address: "0x80198d80", end: "0x80198df0", kind: function, ownership: game, confidence: high }
+  - { name: battle_save_fading_life_auto_battle, address: "0x80198df0", end: "0x80198e60", kind: function, ownership: game, confidence: high }
+  - { name: battle_ai_cowardly_movement_routine, address: "0x8019905c", end: "0x80199124", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_distance_between_units, address: "0x8019936c", end: "0x801993a0", kind: function, ownership: game, confidence: high }
+  - { name: battle_tranfer_ai_ability_data_and_set_defend_flag, address: "0x80199498", end: "0x801994f8", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_regen_charm_dm_reraise_da_can_be_inflicted, address: "0x801998c8", end: "0x801999c8", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_clockticks_until_unit_acts, address: "0x80199b98", end: "0x80199c88", kind: function, ownership: game, confidence: high }
+  - { name: battle_dividend_4_divisor, address: "0x8019a2cc", end: "0x8019a2f0", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_weapon_attack_data, address: "0x8019a52c", end: "0x8019a5f8", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_known_ability_flag, address: "0x8019aa50", end: "0x8019ab08", kind: function, ownership: game, confidence: high }
+  - { name: battle_transfer_halfword_values, address: "0x8019ab08", end: "0x8019ab48", kind: function, ownership: game, confidence: high }
+  - { name: battle_transfer_byte_values, address: "0x8019ab48", end: "0x8019ab78", kind: function, ownership: game, confidence: high }
+  - { name: battle_zero_words, address: "0x8019ab78", end: "0x8019abb4", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_8019ae30, address: "0x8019ae30", end: "0x8019ae58", kind: function, ownership: game, confidence: high }
+  - { name: battle_vsync_hblank_past_threshold, address: "0x8019aef0", end: "0x8019af18", kind: function, ownership: game, confidence: high }
+  - { name: battle_calculate_height_difference_between_units, address: "0x8019b6b0", end: "0x8019b754", kind: function, ownership: game, confidence: high }
+  - { name: battle_see_if_elemental_ability_can_be_used, address: "0x8019b754", end: "0x8019b7b8", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_unit_for_crystal_or_treasure_status, address: "0x8019bb20", end: "0x8019bbbc", kind: function, ownership: game, confidence: high }
+  - { name: battle_see_if_any_units_are_on_target_panel, address: "0x8019d218", end: "0x8019d294", kind: function, ownership: game, confidence: high }
+  - { name: battle_find_unit_at_coordinates, address: "0x8019d294", end: "0x8019d308", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_set_highest_unit_priority, address: "0x8019d308", end: "0x8019d37c", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_skillset_0, address: "0x8019dcac", end: "0x8019dcbc", kind: function, ownership: game, confidence: high }
+  - { name: battle_call_ai_ability_processing, address: "0x8019dcbc", end: "0x8019dd8c", kind: function, ownership: game, confidence: high }
+  - { name: battle_see_if_any_unit_decided_to_use_an_ability, address: "0x8019e540", end: "0x8019e5d8", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_status_should_can_be_added, address: "0x8019ef24", end: "0x8019efb0", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_unit_will_get_his_turn_without_status, address: "0x8019efb0", end: "0x8019f01c", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_unit_untargetable_based_on_19f0d8_routine, address: "0x8019f01c", end: "0x8019f0d8", kind: function, ownership: game, confidence: high }
+  - { name: battle_see_if_ability_should_be_used_based_on_ct, address: "0x8019f0d8", end: "0x8019f15c", kind: function, ownership: game, confidence: high }
+  - { name: battle_status_ct_based_decision, address: "0x8019f15c", end: "0x8019f258", kind: function, ownership: game, confidence: high }
+  - { name: battle_save_coordinates_to_temp_unit, address: "0x8019f258", end: "0x8019f2a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_transfer_unit_coordinates_to_ai, address: "0x8019f2a4", end: "0x8019f2f4", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_palette_setup, address: "0x801a0e80", end: "0x801a0f70", kind: function, ownership: game, confidence: high }
+  - { name: battle_reset_effect_frame_data_pointer, address: "0x801a0f70", end: "0x801a0f88", kind: function, ownership: game, confidence: high }
+  - { name: battle_reset_effect_parameter_sets_pointer, address: "0x801a0f88", end: "0x801a0fa0", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_effect_frame_data_pointer, address: "0x801a0fa0", end: "0x801a0fd8", kind: function, ownership: game, confidence: high, external_name: "Set Effect Frame Data Pointer" }
+  - { name: battle_get_effect_parameter_sets_address, address: "0x801a0fd8", end: "0x801a1010", kind: function, ownership: game, confidence: high, external_name: "Get Start of Parameter Sets Address" }
+  - { name: battle_get_effect_motion_header_address, address: "0x801a1010", end: "0x801a1044", kind: function, ownership: game, confidence: high, external_name: "Get Header before Motion Data Address" }
+  - { name: battle_set_effect_animation_curve_data_pointer, address: "0x801a1044", end: "0x801a1078", kind: function, ownership: game, confidence: high, external_name: "Get Coordinate Data Address" }
+  - { name: battle_set_effect_particle_system_data_pointer, address: "0x801a1078", end: "0x801a10ac", kind: function, ownership: game, confidence: high, external_name: "Get Motion Data Address" }
+  - { name: battle_get_effect_misc_palette_addresses, address: "0x801a10ac", end: "0x801a10ec", kind: function, ownership: game, confidence: high, external_name: "Get Misc. Data and Palette Data Addresses" }
+  - { name: battle_some_sound_effect_prep, address: "0x801a10ec", end: "0x801a1198", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_effect_unknown_data_address, address: "0x801a1198", end: "0x801a11cc", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_effect_nibble_table_pointer, address: "0x801a11cc", end: "0x801a1200", kind: function, ownership: game, confidence: high }
+  - { name: battle_lookup_effect_timing_curve_value, address: "0x801a1200", end: "0x801a1244", kind: function, ownership: game, confidence: high }
+  - { name: battle_lookup_effect_animation_timing_curve_value, address: "0x801a1244", end: "0x801a1288", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_effect_file_pointer, address: "0x801a1288", end: "0x801a12a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_effect_lba_and_size, address: "0x801a12a4", end: "0x801a12dc", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_noop_return_zero, address: "0x801a12dc", end: "0x801a1304", kind: function, ownership: game, confidence: high, external_name: "Effect No-op (Returns Zero)" }
+  - { name: battle_effect_noop, address: "0x801a1304", end: "0x801a1328", kind: function, ownership: game, confidence: high, external_name: "Effect No-op" }
+  - { name: battle_noop_801a1328, address: "0x801a1328", end: "0x801a134c", kind: function, ownership: game, confidence: high }
+  - { name: battle_load_effect_data, address: "0x801a134c", end: "0x801a13bc", kind: function, ownership: game, confidence: high }
+  - { name: battle_check_if_ability_is_item_ability, address: "0x801a1854", end: "0x801a1880", kind: function, ownership: game, confidence: high }
+  - { name: battle_play_effect, address: "0x801a1880", end: "0x801a18a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_effect_phase_none, address: "0x801a18a4", end: "0x801a18c8", kind: function, ownership: game, confidence: high, external_name: "Set Effect phase to No Effect" }
+  - { name: battle_get_effect_phase, address: "0x801a18c8", end: "0x801a18d8", kind: function, ownership: game, confidence: high }
+  - { name: battle_process_effect_cycle, address: "0x801a1c40", end: "0x801a1c90", kind: function, ownership: game, confidence: high, external_name: "Effect Cycle Processing" }
+  - { name: battle_effect_related, address: "0x801a1c90", end: "0x801a1d28", kind: function, ownership: game, confidence: high }
+  - { name: battle_clear_temp_effect_data, address: "0x801a2084", end: "0x801a20b4", kind: function, ownership: game, confidence: high, external_name: "Clear some data in temp effect data" }
+  - { name: battle_clear_temp_effect_data_2, address: "0x801a20b4", end: "0x801a20e8", kind: function, ownership: game, confidence: high, external_name: "Clear some data in temp effect data 2" }
+  - { name: battle_effect_code_script_2e, address: "0x801a2214", end: "0x801a2238", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_00_store_next_half_as_new_counter_return_, address: "0x801a2238", end: "0x801a225c", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_01_store_next_half_as_new_counter_return_, address: "0x801a225c", end: "0x801a2280", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_03, address: "0x801a22f8", end: "0x801a236c", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_06, address: "0x801a23a8", end: "0x801a2414", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_07, address: "0x801a2414", end: "0x801a2488", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_08, address: "0x801a2488", end: "0x801a2524", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_09, address: "0x801a2524", end: "0x801a2560", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_0a, address: "0x801a2560", end: "0x801a259c", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_0b, address: "0x801a259c", end: "0x801a262c", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_0c, address: "0x801a262c", end: "0x801a2668", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_0d, address: "0x801a2668", end: "0x801a26a4", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_0e, address: "0x801a26a4", end: "0x801a2734", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_0f, address: "0x801a2734", end: "0x801a2770", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_10, address: "0x801a2770", end: "0x801a27b0", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_11, address: "0x801a27b0", end: "0x801a2810", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_12, address: "0x801a2810", end: "0x801a2870", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_13, address: "0x801a2870", end: "0x801a28d4", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_14, address: "0x801a28d4", end: "0x801a2938", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_15, address: "0x801a2938", end: "0x801a2998", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_0x16, address: "0x801a2998", end: "0x801a29e0", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_17, address: "0x801a29e0", end: "0x801a2a2c", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_18, address: "0x801a2a2c", end: "0x801a2a7c", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_19, address: "0x801a2a7c", end: "0x801a2b18", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_1a, address: "0x801a2b18", end: "0x801a2b70", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_1b, address: "0x801a2b70", end: "0x801a2bc8", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_1c, address: "0x801a2bc8", end: "0x801a2c28", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_0x1d, address: "0x801a2c28", end: "0x801a2c7c", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_1e_check_all_timing_bytes, address: "0x801a2c7c", end: "0x801a2cfc", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_1f_go_to_end_if_hit_counter_0, address: "0x801a2cfc", end: "0x801a2d48", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_27_store_first_4_words_of_on_hit_effects_, address: "0x801a3148", end: "0x801a31a8", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_2a_clear_some_temp_effect_data, address: "0x801a4c44", end: "0x801a4c84", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_2b_clear_some_temp_effect_data_2, address: "0x801a4c84", end: "0x801a4cc0", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_2c_increment_counter, address: "0x801a4cc0", end: "0x801a4cd8", kind: function, ownership: game, confidence: high }
+  - { name: battle_effect_code_script_2d_duplicate_of_2c, address: "0x801a4cd8", end: "0x801a4cf0", kind: function, ownership: game, confidence: high }
+  - { name: battle_run_effect_block, address: "0x801a4cf0", end: "0x801a4d9c", kind: function, ownership: game, confidence: high }
+  - { name: battle_heap_allocate_block, address: "0x801a4de8", end: "0x801a4e9c", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_effect_prim_buffer_offset, address: "0x801a521c", end: "0x801a522c", kind: function, ownership: game, confidence: high }
+  - { name: battle_noop_801a866c, address: "0x801a866c", end: "0x801a8690", kind: function, ownership: game, confidence: high }
+  - { name: battle_interpolate_s16, address: "0x801a8898", end: "0x801a88d0", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_801a8a14, address: "0x801a8a14", end: "0x801a8a44", kind: function, ownership: game, confidence: high }
+  - { name: battle_lerp_component_q13, address: "0x801a8a44", end: "0x801a8a6c", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_801a8bb0, address: "0x801a8bb0", end: "0x801a8be0", kind: function, ownership: game, confidence: high }
+  - { name: battle_lerp_linear_interpolation, address: "0x801a8be0", end: "0x801a8bf8", kind: function, ownership: game, confidence: high }
+  - { name: battle_lerp_and_store, address: "0x801a8bf8", end: "0x801a8c14", kind: function, ownership: game, confidence: high }
+  - { name: battle_interpolate_effect_emitter_spawn_position, address: "0x801a8c14", end: "0x801a8c8c", kind: function, ownership: game, confidence: high }
+  - { name: battle_interpolate_effect_emitter_spawn_spread, address: "0x801a8c8c", end: "0x801a8d04", kind: function, ownership: game, confidence: high }
+  - { name: battle_interpolate_effect_emitter_velocity_base_angles, address: "0x801a8d04", end: "0x801a8d7c", kind: function, ownership: game, confidence: high }
+  - { name: battle_interpolate_effect_emitter_velocity_direction_spread, address: "0x801a8d7c", end: "0x801a8df4", kind: function, ownership: game, confidence: high }
+  - { name: battle_random_between, address: "0x801a8df4", end: "0x801a8e74", kind: function, ownership: game, confidence: high, external_name: "BATTLE_random_between" }
+  - { name: battle_svector_to_vector, address: "0x801a9370", end: "0x801a9394", kind: function, ownership: game, confidence: high }
+  - { name: battle_copy_svector, address: "0x801a9394", end: "0x801a93b8", kind: function, ownership: game, confidence: high }
+  - { name: battle_vector_shift_right_12, address: "0x801a93b8", end: "0x801a93ec", kind: function, ownership: game, confidence: high }
+  - { name: battle_vector_shift_left_12, address: "0x801a93ec", end: "0x801a9420", kind: function, ownership: game, confidence: high }
+  - { name: battle_vector_mask_low_12_bits, address: "0x801a9420", end: "0x801a9454", kind: function, ownership: game, confidence: high }
+  - { name: battle_add_2_to_halfword, address: "0x801a9834", end: "0x801a9848", kind: function, ownership: game, confidence: high }
+  - { name: battle_add_4_to_halfword, address: "0x801a9848", end: "0x801a985c", kind: function, ownership: game, confidence: high }
+  - { name: battle_add_6_to_halfword, address: "0x801a985c", end: "0x801a9870", kind: function, ownership: game, confidence: high }
+  - { name: battle_add_8_to_halfword, address: "0x801a9870", end: "0x801a9884", kind: function, ownership: game, confidence: high }
+  - { name: battle_store_first_section_of_on_hit_effects_data, address: "0x801a9984", end: "0x801a99ac", kind: function, ownership: game, confidence: high }
+  - { name: battle_set_effect_inertia_threshold, address: "0x801a99ac", end: "0x801a99bc", kind: function, ownership: game, confidence: high }
+  - { name: battle_copy_on_hit_effects_data_to_second_section, address: "0x801a99bc", end: "0x801a99f0", kind: function, ownership: game, confidence: high }
+  - { name: battle_copy_second_section_to_on_hit_effects_data, address: "0x801a99f0", end: "0x801a9a24", kind: function, ownership: game, confidence: high }
+  - { name: battle_save_effect_inertia_threshold, address: "0x801a9a24", end: "0x801a9a3c", kind: function, ownership: game, confidence: high }
+  - { name: battle_restore_effect_inertia_threshold, address: "0x801a9a3c", end: "0x801a9a54", kind: function, ownership: game, confidence: high }
+  - { name: battle_some_parameter_set_stuff, address: "0x801aa1a0", end: "0x801aa1f8", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_801aa7c4, address: "0x801aa7c4", end: "0x801aa7dc", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_801aa8e8, address: "0x801aa8e8", end: "0x801aa920", kind: function, ownership: game, confidence: high }
+  - { name: battle_init_camera_and_screen_data, address: "0x801aaafc", end: "0x801aab44", kind: function, ownership: game, confidence: high }
+  - { name: battle_tile_coords_to_world_coords, address: "0x801aab90", end: "0x801aac28", kind: function, ownership: game, confidence: high }
+  - { name: battle_noop_801aad30, address: "0x801aad30", end: "0x801aad3c", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_801adae0, address: "0x801adae0", end: "0x801adb0c", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_801adb0c, address: "0x801adb0c", end: "0x801adb3c", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_ninja_ball_effect, address: "0x801adfac", end: "0x801adfec", kind: function, ownership: game, confidence: high }
+  - { name: battle_func_801af3a4, address: "0x801af3a4", end: "0x801af3dc", kind: function, ownership: game, confidence: high }
+  - { name: battle_find_xyz_position_of_projectile_along_trajectory, address: "0x801af6d8", end: "0x801af734", kind: function, ownership: game, confidence: high }
+  - { name: battle_give_gravity_impact, address: "0x801af734", end: "0x801af770", kind: function, ownership: game, confidence: high }
+  - { name: battle_get_bow_shot_angle, address: "0x801b0460", end: "0x801b04dc", kind: function, ownership: game, confidence: high }
+  - { name: battle_golem_secondary_effect, address: "0x801b1aec", end: "0x801b1c04", kind: function, ownership: game, confidence: high }
+  - { name: battle_process_secondary_effects, address: "0x801b47e0", end: "0x801b48d0", kind: function, ownership: game, confidence: high, external_name: "Effect Related (0x1b47e0)" }

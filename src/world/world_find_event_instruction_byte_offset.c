@@ -1,0 +1,20 @@
+#include "psx/types.h"
+
+extern const u8* g_world_event_script;
+extern u8 g_world_event_instruction_sizes[];
+
+s32 world_find_event_instruction_byte_offset(s32 offset, s32 instruction) {
+    const u8* event = g_world_event_script;
+
+    do {
+        u8 opcode = event[offset];
+
+        if (opcode == 0xdb) {
+            return 0;
+        }
+        if (opcode == instruction) {
+            return offset;
+        }
+        offset += g_world_event_instruction_sizes[opcode] + 1;
+    } while (1);
+}

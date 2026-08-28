@@ -1,0 +1,318 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: world
+
+address_model:
+  runtime_base: "0x800e0000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00000161.wiki
+  - original/ffhacktics/wiki/pages/00007099.wiki
+  - original/ffhacktics/wiki/pages/00007072.wiki
+  - original/ffhacktics/wiki/pages/00012601.wiki
+  - original/ffhacktics/wiki/pages/00012619.wiki
+  - original/ffhacktics/wiki/pages/00012622.wiki
+  - original/ffhacktics/wiki/pages/00005084.wiki
+  - original/ffhacktics/wiki/pages/00004749.wiki
+  - original/ffhacktics/wiki/pages/00004754.wiki
+  - original/ffhacktics/wiki/pages/00004843.wiki
+  - original/ffhacktics/wiki/pages/00004981.wiki
+  - original/ffhacktics/wiki/pages/00004992.wiki
+  - original/ffhacktics/wiki/pages/00004999.wiki
+  - original/ffhacktics/wiki/pages/00005000.wiki
+  - original/ffhacktics/wiki/pages/00005002.wiki
+  - original/ffhacktics/wiki/pages/00005003.wiki
+  - original/ffhacktics/wiki/pages/00005004.wiki
+  - original/ffhacktics/wiki/pages/00005005.wiki
+  - original/ffhacktics/wiki/pages/00005007.wiki
+  - original/ffhacktics/wiki/pages/00005010.wiki
+  - original/ffhacktics/wiki/pages/00005011.wiki
+  - original/ffhacktics/wiki/pages/00005067.wiki
+  - original/ffhacktics/wiki/pages/00005172.wiki
+  - original/ffhacktics/wiki/pages/00005173.wiki
+  - original/ffhacktics/wiki/pages/00005179.wiki
+  - original/ffhacktics/wiki/pages/00005129.wiki
+  - original/ffhacktics/wiki/pages/00005130.wiki
+  - original/ffhacktics/wiki/pages/00004727.wiki
+  - build/extracted/files/WORLD/WORLD.BIN
+
+symbols:
+  - { name: world_gs_sortboxfill, address: "0x800e0e34", end: "0x800e0f0c", kind: function, ownership: game, confidence: high }
+  - { name: world_gs_getactivebuff, address: "0x800e1524", end: "0x800e1534", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800e16d8, address: "0x800e16d8", end: "0x800e1710", kind: function, ownership: game, confidence: high }
+  - { name: world_gs_init3d, address: "0x800e1864", end: "0x800e18dc", kind: function, ownership: game, confidence: high }
+  - { name: world_gs_drawot, address: "0x800e18dc", end: "0x800e1900", kind: function, ownership: game, confidence: high }
+  - { name: world_gs_clearot, address: "0x800e1900", end: "0x800e1958", kind: function, ownership: game, confidence: high }
+  - { name: world_gs_gte_init, address: "0x800e1958", end: "0x800e19a4", kind: function, ownership: game, confidence: high }
+  - { name: world_gs_gettiminfo, address: "0x800e19a4", end: "0x800e1a88", kind: function, ownership: game, confidence: high }
+  - { name: world_gs_setworkbase, address: "0x800e1a88", end: "0x800e1a98", kind: function, ownership: game, confidence: high }
+  - { name: world_tutorial_thread_switch, address: "0x800e1d90", end: "0x800e1de4", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Tutorial thread switching for Event Instructions" }
+  - { name: world_check_tutorial_event_slot, address: "0x800e1e38", end: "0x800e1e40", kind: function, ownership: game, confidence: high, external_name: "WORLD Check If Tutorial Event Slot" }
+  - { name: world_set_menu_transition_active_flag, address: "0x800e1e8c", end: "0x800e1ea0", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Menu Transition Active Flag" }
+  - { name: world_clear_menu_transition_active_flag, address: "0x800e1ea0", end: "0x800e1eb0", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Clear Menu Transition Active Flag" }
+  - { name: world_set_sound_effect_to_confirm, address: "0x800e1eb0", end: "0x800e1ec4", kind: function, ownership: game, confidence: high }
+  - { name: world_set_sound_effect_to_cancel, address: "0x800e1ec4", end: "0x800e1ed8", kind: function, ownership: game, confidence: high }
+  - { name: world_set_scroll_sound_effect, address: "0x800e1ed8", end: "0x800e1eec", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Scroll Sound Effect" }
+  - { name: world_set_sound_effect_to_invalid, address: "0x800e1eec", end: "0x800e1f00", kind: function, ownership: game, confidence: high }
+  - { name: world_stop_thread_with_invalid_sound, address: "0x800e1f00", end: "0x800e1f28", kind: function, ownership: game, confidence: high }
+  - { name: world_run_camera_move_thread, address: "0x800e1f28", end: "0x800e1f58", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Run Camera Move Thread" }
+  - { name: world_initialize_camera_yaw_angle, address: "0x800e1f58", end: "0x800e1f7c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Initialize Camera Yaw Angle" }
+  - { name: world_get_event_word_0x1e_mod_0x1000, address: "0x800e20a0", end: "0x800e20d4", kind: function, ownership: game, confidence: high }
+  - { name: world_get_battle_stats_for_stored_unit, address: "0x800e20d4", end: "0x800e20fc", kind: function, ownership: game, confidence: high }
+  - { name: world_clamp_s32, address: "0x800e20fc", end: "0x800e212c", kind: function, ownership: game, confidence: high }
+  - { name: world_initialize_menu_quad, address: "0x800e2398", end: "0x800e2444", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Initialize Menu Quad" }
+  - { name: world_initialize_menu_sprite, address: "0x800e2444", end: "0x800e24b8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Initialize Menu Sprite" }
+  - { name: world_initialize_menu_sprite_array, address: "0x800e24b8", end: "0x800e2520", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 000e24b8 - 000e251c" }
+  - { name: world_clear_menu_window_buffer_pointers, address: "0x800e2520", end: "0x800e2548", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 000e2520 - 000e2544" }
+  - { name: world_set_primitive_brightness, address: "0x800e289c", end: "0x800e28ac", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 000e289c - 000e28a8" }
+  - { name: world_clear_texture_allocation_grid, address: "0x800e2c0c", end: "0x800e2c48", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 000e2c0c - 000e2c44" }
+  - { name: world_allocate_menu_buffer, address: "0x800e3278", end: "0x800e3298", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 000e3278 - 000e3294" }
+  - { name: world_get_thread_task_id, address: "0x800e3b8c", end: "0x800e3bb0", kind: function, ownership: game, confidence: high, external_name: "WORLD Get Thread TaskID" }
+  - { name: world_bin_find_text_entry, address: "0x800e6edc", end: "0x800e6f14", kind: function, ownership: game, confidence: high }
+  - { name: world_lerp_fixed12, address: "0x800e7508", end: "0x800e752c", kind: function, ownership: game, confidence: high }
+  - { name: world_get_map_coords_from_misc_id, address: "0x800e77e8", end: "0x800e7808", kind: function, ownership: game, confidence: high }
+  - { name: world_noop_800e7808, address: "0x800e7808", end: "0x800e7810", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Empty Routine 0xE7808" }
+  - { name: world_fill_16_bytes_fe, address: "0x800e7c20", end: "0x800e7c40", kind: function, ownership: game, confidence: high }
+  - { name: world_initialize_text_format_section_pointers, address: "0x800e8660", end: "0x800e8698", kind: function, ownership: game, confidence: high, external_name: "Initialize Text Format Section Pointers" }
+  - { name: world_restore_text_section_pointers, address: "0x800e86ec", end: "0x800e8724", kind: function, ownership: game, confidence: high }
+  - { name: world_bin_units_join_silently_without_needing_darkscreen, address: "0x800e87f8", end: "0x800e889c", kind: function, ownership: game, confidence: high }
+  - { name: world_set_script_variable_0x54_to_0x16d, address: "0x800e889c", end: "0x800e88c0", kind: function, ownership: game, confidence: high }
+  - { name: world_set_draw_suppress_flag, address: "0x800e8a34", end: "0x800e8a48", kind: function, ownership: game, confidence: high }
+  - { name: world_clear_draw_suppress_flag, address: "0x800e8a48", end: "0x800e8a58", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800ecb24, address: "0x800ecb24", end: "0x800ecb58", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800ed5c4, address: "0x800ed5c4", end: "0x800ed5f4", kind: function, ownership: game, confidence: high }
+  - { name: world_get_menu_input_repeat_counter, address: "0x800eda98", end: "0x800edaa8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 000eda98 - 000edaa4" }
+  - { name: world_func_800eeaf4, address: "0x800eeaf4", end: "0x800eeb04", kind: function, ownership: game, confidence: high }
+  - { name: world_get_script_variable, address: "0x800ef1a8", end: "0x800ef25c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get Script Variable" }
+  - { name: world_set_script_variable, address: "0x800ef25c", end: "0x800ef2fc", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Script Variable" }
+  - { name: world_free_high_overlay, address: "0x800ef804", end: "0x800ef82c", kind: function, ownership: game, confidence: high }
+  - { name: world_bin_load_file, address: "0x800ef82c", end: "0x800ef8d4", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800ef984, address: "0x800ef984", end: "0x800ef9ac", kind: function, ownership: game, confidence: high }
+  - { name: world_set_thread_task_id_36, address: "0x800ef9ac", end: "0x800ef9cc", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800ef9dc, address: "0x800ef9dc", end: "0x800efa0c", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800efa0c, address: "0x800efa0c", end: "0x800efa3c", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800efa3c, address: "0x800efa3c", end: "0x800efa6c", kind: function, ownership: game, confidence: high }
+  - { name: world_show_graphic, address: "0x800f01c0", end: "0x800f01f0", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800f0574, address: "0x800f0574", end: "0x800f05a4", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800f077c, address: "0x800f077c", end: "0x800f079c", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800f0a08, address: "0x800f0a08", end: "0x800f0a18", kind: function, ownership: game, confidence: high }
+  - { name: world_request_bin_file_load_8, address: "0x800f0af4", end: "0x800f0b08", kind: function, ownership: game, confidence: high }
+  - { name: world_map_data_load_complete_thread, address: "0x800f0b64", end: "0x800f0b9c", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800f0f40, address: "0x800f0f40", end: "0x800f0f54", kind: function, ownership: game, confidence: high }
+  - { name: world_set_event_speed, address: "0x800f1330", end: "0x800f1340", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Event Speed" }
+  - { name: world_wait_for_threads_10_to_13, address: "0x800f1340", end: "0x800f1378", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800f21ec, address: "0x800f21ec", end: "0x800f221c", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800f2d70, address: "0x800f2d70", end: "0x800f2d98", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800f31f0, address: "0x800f31f0", end: "0x800f3200", kind: function, ownership: game, confidence: high }
+  - { name: world_widen_bytes_to_halfwords, address: "0x800f3278", end: "0x800f32b0", kind: function, ownership: game, confidence: high }
+  - { name: world_copy_bytes_to_s16_array, address: "0x800f32b0", end: "0x800f32e4", kind: function, ownership: game, confidence: high }
+  - { name: world_set_sound_effect_to_confirm_checked, address: "0x800f41f8", end: "0x800f421c", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800f6464, address: "0x800f6464", end: "0x800f6490", kind: function, ownership: game, confidence: high }
+  - { name: world_filter_battle_controller_input, address: "0x800f67c4", end: "0x800f67f0", kind: function, ownership: game, confidence: high }
+  - { name: world_increment_80153340_if_one, address: "0x800f6e68", end: "0x800f6e98", kind: function, ownership: game, confidence: high }
+  - { name: world_get_weather, address: "0x800f6eb0", end: "0x800f6ec8", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800f6ec8, address: "0x800f6ec8", end: "0x800f6ef0", kind: function, ownership: game, confidence: high }
+  - { name: world_func_800f6ef0, address: "0x800f6ef0", end: "0x800f6f18", kind: function, ownership: game, confidence: high }
+  - { name: world_noop_800f6f18, address: "0x800f6f18", end: "0x800f6f20", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Empty Routine 0xF6F18" }
+  - { name: world_is_unit_moving, address: "0x800f932c", end: "0x800f93a0", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Check Unit Movement" }
+  - { name: world_load_halfword, address: "0x800f93a0", end: "0x800f93bc", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Load Halfword" }
+  - { name: world_store_halfword, address: "0x800f93bc", end: "0x800f93cc", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 000f93bc - 000f93c8" }
+  - { name: world_clear_current_event_word_bit_0, address: "0x800f940c", end: "0x800f9438", kind: function, ownership: game, confidence: high }
+  - { name: world_copy_32_bytes, address: "0x800fa38c", end: "0x800fa3ac", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Copy 32 Bytes" }
+  - { name: world_noop_800fad84, address: "0x800fad84", end: "0x800fad94", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Stack-frame No-op 0xFAD84" }
+  - { name: world_try_get_unit_misc_data_by_id, address: "0x800fad94", end: "0x800fae18", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Try Get Unit Misc Data By Unit ID" }
+  - { name: world_teleport_unit_out, address: "0x800fb03c", end: "0x800fb114", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN TeleportOut Event Instruction" }
+  - { name: world_teleport_unit_in, address: "0x800fb114", end: "0x800fb15c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN TeleportIn Event Instruction" }
+  - { name: world_blue_remove_all_enemy_units, address: "0x800fb15c", end: "0x800fb204", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN BlueRemoveUnit all enemy units" }
+  - { name: world_blue_remove_unit, address: "0x800fb204", end: "0x800fb2cc", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN BlueRemoveUnit Event Instruction" }
+  - { name: world_unit_animation_rotate, address: "0x800fb418", end: "0x800fb4f0", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN UnitAnimRotate Event Instruction" }
+  - { name: world_apply_zalera_draw_status_flags, address: "0x800fb8f4", end: "0x800fb9a8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Zalera Special Status Flag Enabling when Drawing units" }
+  - { name: world_clear_unit_status_staging_data, address: "0x800fb9a8", end: "0x800fb9ec", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Clear Some Staging Data" }
+  - { name: world_inflict_unit_status_by_entd_id, address: "0x800fc56c", end: "0x800fc644", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Inflict Unit Status By ENTD Unit ID" }
+  - { name: world_march_units, address: "0x800fc8fc", end: "0x800fc998", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN March Event Instruction" }
+  - { name: world_update_misc_move_flag_bit_2, address: "0x800fc998", end: "0x800fca4c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Event Opcode 0x81" }
+  - { name: world_color_units, address: "0x800fca4c", end: "0x800fcaf8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN ColorUnit Event Instruction" }
+  - { name: world_check_unit_facing_relative_to_camera, address: "0x800fcba0", end: "0x800fcbf8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Check Unit Facing Relative To Camera" }
+  - { name: world_noop_800fd074, address: "0x800fd074", end: "0x800fd07c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Empty Routine 0xFD074" }
+  - { name: world_get_next_available_thread_id, address: "0x800fd07c", end: "0x800fd0d8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get Next Available Thread ID" }
+  - { name: world_find_next_inactive_thread, address: "0x800fd0d8", end: "0x800fd14c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Find Next Inactive Thread" }
+  - { name: world_set_thread_task_id, address: "0x800fd1d8", end: "0x800fd1fc", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Thread Task ID" }
+  - { name: world_find_event_instruction_byte_offset, address: "0x800fd34c", end: "0x800fd3a0", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Find Event Instruction Byte Offset" }
+  - { name: world_run_event_condition, address: "0x800fd3a0", end: "0x800fd4a8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Event Condition Instructions A0-A5" }
+  - { name: world_wait_for_script_value, address: "0x800fd8d0", end: "0x800fd93c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Wait Value Event Instruction" }
+  - { name: world_seed_event_rng_from_vsync, address: "0x800fd93c", end: "0x800fd964", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Seed Event RNG From VSync" }
+  - { name: world_random_event_u16, address: "0x800fd964", end: "0x800fd9b0", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Rand16 (Events)" }
+  - { name: world_wait_for_unit_ready, address: "0x800fd9b0", end: "0x800fd9f4", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Opcode 0x12 No-op With Extra Steps" }
+  - { name: world_initialize_text_section_pointers, address: "0x800fd9f4", end: "0x800fda34", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Initialize Text Format Section Pointers" }
+  - { name: world_get_menu_controller_input, address: "0x800fda34", end: "0x800fda54", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get Menu Controller Input" }
+  - { name: world_store_menu_input_state, address: "0x800fda54", end: "0x800fdaa4", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Store Menu Input State" }
+  - { name: world_draw_or_append_gpu_primitive, address: "0x800fdaa4", end: "0x800fdb1c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Draw Or Append GPU Primitive" }
+  - { name: world_append_gpu_primitive_to_secondary_otag, address: "0x800fdb1c", end: "0x800fdb60", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Append GPU Primitive To Secondary OTAG" }
+  - { name: world_store_graphic_rect, address: "0x800fdb60", end: "0x800fdb88", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Store Graphic Rectangle" }
+  - { name: world_set_menu_text_origin, address: "0x800fdb88", end: "0x800fdba0", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Menu Text Origin" }
+  - { name: world_set_image_draw_mode, address: "0x800fdba0", end: "0x800fdc64", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 000fdba0 - 000fdc60" }
+  - { name: world_set_draw_mode_from_rect, address: "0x800fdc64", end: "0x800fdcd8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Draw Mode From Graphic Rectangle" }
+  - { name: world_return_zero, address: "0x800fdcd8", end: "0x800fdce0", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Image Path Return Zero Stub" }
+  - { name: world_noop, address: "0x800fdce0", end: "0x800fdce8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Image Path No-op Stub" }
+  - { name: world_image_loading_setup, address: "0x800fdcf0", end: "0x800fdf38", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Image Loading Setup" }
+  - { name: battle_world_display_menu_text_entry, address: "0x800fe774", end: "0x800fe7a4", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Display Menu Text Entry" }
+  - { name: world_display_menu_text_entry_mode_1, address: "0x800fe7a4", end: "0x800fe7d4", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Display Menu Text Entry Mode 1" }
+  - { name: battle_world_display_specific_menu_text, address: "0x800fe7d4", end: "0x800fe818", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Display Specific Menu Text" }
+  - { name: world_copy_bytes, address: "0x800ff450", end: "0x800ff478", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Copy Bytes" }
+  - { name: world_func_800ff668, address: "0x800ff668", end: "0x800ff690", kind: function, ownership: game, confidence: high }
+  - { name: world_wait, address: "0x800ffd28", end: "0x800ffd70", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Wait" }
+  - { name: world_initialize_thread, address: "0x800ffd70", end: "0x800ffdf4", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Initialize Thread" }
+  - { name: world_mark_thread_running, address: "0x800ffdf4", end: "0x800ffe10", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Mark Thread As Running" }
+  - { name: world_mark_thread_stopped, address: "0x800ffe10", end: "0x800ffe28", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Mark Thread As Stopped" }
+  - { name: world_stop_current_thread, address: "0x800ffe28", end: "0x800ffe64", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Stop Current Thread" }
+  - { name: world_reset_threads, address: "0x800ffe64", end: "0x800ffea0", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Reset Threads" }
+  - { name: world_wait_for_thread, address: "0x800ffea0", end: "0x800ffeec", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Wait For Thread" }
+  - { name: world_check_thread_running_status, address: "0x800ffeec", end: "0x800fff08", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Check Thread Running Status" }
+  - { name: world_store_thread_function_parameters, address: "0x800fff08", end: "0x800fff28", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Store Thread Function Parameters" }
+  - { name: world_store_thread_function_parameters_4, address: "0x800fff28", end: "0x800fff50", kind: function, ownership: game, confidence: high }
+  - { name: world_return_global_pointer, address: "0x80100084", end: "0x80100090", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Return Global Pointer" }
+  - { name: world_get_first_thread_parameter, address: "0x80100090", end: "0x801000c4", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get First Thread Parameter" }
+  - { name: world_get_second_thread_parameter, address: "0x801000c4", end: "0x801000f8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get Second Thread Parameter" }
+  - { name: world_get_third_thread_parameter, address: "0x801000f8", end: "0x8010012c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get Third Thread Parameter" }
+  - { name: world_check_previous_thread_running_status, address: "0x8010012c", end: "0x80100164", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Check Previous Thread Running Status" }
+  - { name: world_check_thread_running_status_by_id, address: "0x80100164", end: "0x80100188", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Check Thread Running Status (2)" }
+  - { name: world_get_inner_text, address: "0x80100348", end: "0x80100384", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get Inner Text" }
+  - { name: world_set_image_blit_source_rect, address: "0x801014fc", end: "0x80101524", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Image Blit Source Rectangle" }
+  - { name: world_set_image_blit_destination_origin, address: "0x80101524", end: "0x8010153c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Image Blit Destination Origin" }
+  - { name: world_initialize_menu_record, address: "0x8010170c", end: "0x80101740", kind: function, ownership: game, confidence: medium, external_name: "WORLD.BIN Initialize Menu Record" }
+  - { name: world_yield_forever, address: "0x8010226c", end: "0x80102294", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Yield Forever" }
+  - { name: world_yield_then_stop_current_thread, address: "0x80102294", end: "0x801022bc", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Yield Then Stop Current Thread" }
+  - { name: world_restore_text_sections_and_stop_thread, address: "0x8010482c", end: "0x8010487c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Restore Text Sections And Stop Thread" }
+  - { name: world_find_running_thread_at_or_after_4, address: "0x80105600", end: "0x8010563c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Find Running Thread At Or After 4" }
+  - { name: world_func_80106128, address: "0x80106128", end: "0x80106138", kind: function, ownership: game, confidence: high }
+  - { name: world_func_80106374, address: "0x80106374", end: "0x80106394", kind: function, ownership: game, confidence: high }
+  - { name: world_func_80106394, address: "0x80106394", end: "0x801063ac", kind: function, ownership: game, confidence: high }
+  - { name: world_take_and_clear_menu_thread_result, address: "0x801067f0", end: "0x80106808", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Take And Clear Menu Thread Result" }
+  - { name: world_get_menu_event_state_flag, address: "0x80106808", end: "0x80106818", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get Menu Event State Flag" }
+  - { name: world_set_thread_task_id_to_three, address: "0x80106818", end: "0x80106834", kind: function, ownership: game, confidence: high }
+  - { name: world_resume_text_printing, address: "0x80106834", end: "0x80106868", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Resume Text Printing" }
+  - { name: world_get_is_text_printing, address: "0x80106868", end: "0x8010688c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get Is Text Printing" }
+  - { name: world_idle_thread_yield_forever, address: "0x8010688c", end: "0x801068b4", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Idle Thread Yield Forever" }
+  - { name: world_start_idle_threads_5_to_8, address: "0x801068b4", end: "0x80106918", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Start Idle Threads 5 To 8" }
+  - { name: world_enable_alternate_main_menu_palette, address: "0x80106918", end: "0x8010692c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 00106918 - 00106928" }
+  - { name: world_stop_threads_after_empty_slots_5_to_8, address: "0x8010692c", end: "0x80106988", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 0010692c - 00106984" }
+  - { name: world_disable_alternate_main_menu_palette, address: "0x80106988", end: "0x80106998", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 00106988 - 00106994" }
+  - { name: world_set_main_menu_scroll_parameters, address: "0x80106a10", end: "0x80106a28", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 00106a10 - 00106a24" }
+  - { name: world_set_menu_brightness, address: "0x80106a28", end: "0x80106a48", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 00106a28 - 00106a44" }
+  - { name: world_run_main_menu_mode_0_thread, address: "0x80106f44", end: "0x80106f64", kind: function, ownership: game, confidence: medium, external_name: "WORLD.BIN 00106f44 - 00106f60" }
+  - { name: world_bin_open_formation, address: "0x801070e8", end: "0x8010712c", kind: function, ownership: game, confidence: high }
+  - { name: world_save_and_set_formation_system_flags, address: "0x80107170", end: "0x80107194", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 00107170 - 00107190" }
+  - { name: world_restore_saved_system_flags, address: "0x80107194", end: "0x801071ac", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN 00107194 - 001071a8" }
+  - { name: world_set_formation_menu_entry_mask, address: "0x80107e00", end: "0x80107e10", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Formation Menu Entry Mask" }
+  - { name: world_bin_generate_formation_unit_name_string, address: "0x80108920", end: "0x801089f8", kind: function, ownership: game, confidence: high }
+  - { name: world_set_formation_display_mode, address: "0x801089f8", end: "0x80108a08", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Formation Display Mode" }
+  - { name: world_set_formation_ordering_table_pointer, address: "0x80108a08", end: "0x80108a18", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Set Formation Ordering Table Pointer" }
+  - { name: world_set_thread_field_0x60_to_one, address: "0x80109358", end: "0x80109374", kind: function, ownership: game, confidence: medium, external_name: "WORLD.BIN 00109358 - 00109370" }
+  - { name: world_func_8010a480, address: "0x8010a480", end: "0x8010a4a8", kind: function, ownership: game, confidence: high }
+  - { name: world_set_blit_dest_position, address: "0x8010a4a8", end: "0x8010a4c0", kind: function, ownership: game, confidence: high }
+  - { name: world_func_8010a690, address: "0x8010a690", end: "0x8010a6c4", kind: function, ownership: game, confidence: high }
+  - { name: world_func_8010ca18, address: "0x8010ca18", end: "0x8010ca4c", kind: function, ownership: game, confidence: high }
+  - { name: world_func_8010ca4c, address: "0x8010ca4c", end: "0x8010ca84", kind: function, ownership: game, confidence: high }
+  - { name: world_set_clut_rect_from_id, address: "0x8010ca84", end: "0x8010cab0", kind: function, ownership: game, confidence: high }
+  - { name: world_lerp_fixed12_b, address: "0x8010ea84", end: "0x8010eaa8", kind: function, ownership: game, confidence: high }
+  - { name: world_is_thread_running_by_id, address: "0x80112c6c", end: "0x80112c88", kind: function, ownership: game, confidence: high }
+  - { name: world_get_input_lockout_timer, address: "0x80113608", end: "0x80113618", kind: function, ownership: game, confidence: high }
+  - { name: world_bin_toggle_unit_status_banner, address: "0x80115460", end: "0x801154c4", kind: function, ownership: game, confidence: high }
+  - { name: world_get_formation_unit_level, address: "0x801159ac", end: "0x801159cc", kind: function, ownership: game, confidence: high }
+  - { name: world_get_formation_unit_experience, address: "0x801159cc", end: "0x801159ec", kind: function, ownership: game, confidence: high }
+  - { name: world_get_formation_unit_brave, address: "0x801159ec", end: "0x80115a0c", kind: function, ownership: game, confidence: high }
+  - { name: world_get_formation_unit_faith, address: "0x80115a0c", end: "0x80115a2c", kind: function, ownership: game, confidence: high }
+  - { name: world_get_formation_unit_field_120_shr_4_minus_low_nibble, address: "0x80115a2c", end: "0x80115a60", kind: function, ownership: game, confidence: high }
+  - { name: world_get_formation_unit_field_120_shr_4, address: "0x80115a60", end: "0x80115a80", kind: function, ownership: game, confidence: high }
+  - { name: world_coords_fit_in_byte, address: "0x8011822c", end: "0x80118244", kind: function, ownership: game, confidence: high }
+  - { name: world_func_80118b3c, address: "0x80118b3c", end: "0x80118b68", kind: function, ownership: game, confidence: high }
+  - { name: world_func_80118ee8, address: "0x80118ee8", end: "0x80118f14", kind: function, ownership: game, confidence: high }
+  - { name: world_bin_prepare_job_name_on_job_wheel, address: "0x8011a778", end: "0x8011a880", kind: function, ownership: game, confidence: high }
+  - { name: world_idle_thread_wait_forever, address: "0x8011a954", end: "0x8011a97c", kind: function, ownership: game, confidence: high }
+  - { name: world_func_8011bdb8, address: "0x8011bdb8", end: "0x8011bdd8", kind: function, ownership: game, confidence: high }
+  - { name: world_get_menu_value_1, address: "0x8011bdd8", end: "0x8011bde8", kind: function, ownership: game, confidence: high }
+  - { name: world_get_menu_value_2, address: "0x8011bde8", end: "0x8011bdf8", kind: function, ownership: game, confidence: high }
+  - { name: world_get_menu_display_value_1, address: "0x8011bdf8", end: "0x8011be18", kind: function, ownership: game, confidence: high }
+  - { name: world_get_menu_display_value_2, address: "0x8011be18", end: "0x8011be38", kind: function, ownership: game, confidence: high }
+  - { name: world_idle_thread_wait_forever_b, address: "0x8011dc70", end: "0x8011dc98", kind: function, ownership: game, confidence: high }
+  - { name: world_bin_max_equip_on_support_change, address: "0x8011ee04", end: "0x8011ee78", kind: function, ownership: game, confidence: high }
+  - { name: world_is_task_thread_active, address: "0x8011ee78", end: "0x8011ee88", kind: function, ownership: game, confidence: high }
+  - { name: world_get_selected_unit_job_points_entry, address: "0x8011f31c", end: "0x8011f350", kind: function, ownership: game, confidence: high }
+  - { name: world_get_cached_job_level, address: "0x8011f350", end: "0x8011f360", kind: function, ownership: game, confidence: high }
+  - { name: world_get_cached_job_level_jp_requirement, address: "0x8011f360", end: "0x8011f370", kind: function, ownership: game, confidence: high }
+  - { name: world_get_cached_job_total_jp, address: "0x8011f370", end: "0x8011f380", kind: function, ownership: game, confidence: high }
+  - { name: world_get_cached_skillset_empty_flag, address: "0x8011f380", end: "0x8011f390", kind: function, ownership: game, confidence: high }
+  - { name: world_is_non_action_ability_unlearned, address: "0x8011f400", end: "0x8011f438", kind: function, ownership: game, confidence: high }
+  - { name: world_is_selected_ability_action_type, address: "0x8011f438", end: "0x8011f448", kind: function, ownership: game, confidence: high }
+  - { name: world_is_ability_category_action, address: "0x8011f548", end: "0x8011f558", kind: function, ownership: game, confidence: high }
+  - { name: world_is_ability_category_reaction, address: "0x8011f558", end: "0x8011f570", kind: function, ownership: game, confidence: high }
+  - { name: world_is_ability_category_support, address: "0x8011f570", end: "0x8011f588", kind: function, ownership: game, confidence: high }
+  - { name: world_is_ability_category_movement, address: "0x8011f588", end: "0x8011f5a0", kind: function, ownership: game, confidence: high }
+  - { name: world_obtain_gil, address: "0x801207bc", end: "0x8012081c", kind: function, ownership: game, confidence: high }
+  - { name: world_change_item_quantity_on_equip, address: "0x801208b8", end: "0x801208f8", kind: function, ownership: game, confidence: high }
+  - { name: world_dismiss_able_check, address: "0x801208f8", end: "0x80120930", kind: function, ownership: game, confidence: high }
+  - { name: world_dismiss_unit, address: "0x80120930", end: "0x801209c4", kind: function, ownership: game, confidence: high }
+  - { name: world_two_hands_check_for_equipping_weapons, address: "0x80120afc", end: "0x80120b90", kind: function, ownership: game, confidence: high }
+  - { name: world_special_monster_check, address: "0x80120b90", end: "0x80120bb0", kind: function, ownership: game, confidence: high }
+  - { name: world_get_item_ranking_value, address: "0x80121568", end: "0x80121654", kind: function, ownership: game, confidence: high }
+  - { name: world_find_job_by_skillset, address: "0x801223e4", end: "0x8012243c", kind: function, ownership: game, confidence: high }
+  - { name: world_get_base_job, address: "0x8012243c", end: "0x80122488", kind: function, ownership: game, confidence: high }
+  - { name: world_set_jobs_unlocked_by_others, address: "0x80122488", end: "0x80122534", kind: function, ownership: game, confidence: high }
+  - { name: world_calculate_and_store_job_unlocks, address: "0x80122534", end: "0x8012257c", kind: function, ownership: game, confidence: high }
+  - { name: world_get_job_s_skillset, address: "0x8012276c", end: "0x80122790", kind: function, ownership: game, confidence: high }
+  - { name: world_check_two_swords, address: "0x80122884", end: "0x801228a8", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Check For Two Swords" }
+  - { name: world_check_two_hands, address: "0x801228a8", end: "0x801228cc", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Check for Two Hands" }
+  - { name: world_check_secret_hunt, address: "0x801228cc", end: "0x801228f0", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Check for Secret Hunt" }
+  - { name: world_clear_some_data_at_r4_and_r5, address: "0x80122e40", end: "0x80122e88", kind: function, ownership: game, confidence: high }
+  - { name: world_get_ability_s_move_and_jump_increase_values, address: "0x80122e88", end: "0x80122f0c", kind: function, ownership: game, confidence: high }
+  - { name: world_find_stat_changes_due_to_equipped_abilities, address: "0x80122f0c", end: "0x80122f9c", kind: function, ownership: game, confidence: high }
+  - { name: world_get_item_price, address: "0x80123708", end: "0x8012372c", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get Item Price From Item ID" }
+  - { name: world_func_8012372c, address: "0x8012372c", end: "0x80123764", kind: function, ownership: game, confidence: high }
+  - { name: world_can_unit_equip_item_id, address: "0x8012457c", end: "0x80124614", kind: function, ownership: game, confidence: high }
+  - { name: world_get_item_type, address: "0x80124fd0", end: "0x80124ff4", kind: function, ownership: game, confidence: high, external_name: "WORLD.BIN Get Item Type from Item ID" }
+  - { name: world_get_item_type_icon_rect, address: "0x80124ff4", end: "0x8012502c", kind: function, ownership: game, confidence: high }
+  - { name: world_get_item_type_from_item_number, address: "0x80125374", end: "0x801253d4", kind: function, ownership: game, confidence: high }
+  - { name: world_lock_equipment_and_abilities, address: "0x80125540", end: "0x801255e4", kind: function, ownership: game, confidence: high }
+  - { name: world_get_generic_human_formation_graphic_entry, address: "0x801258a4", end: "0x80125954", kind: function, ownership: game, confidence: high }
+  - { name: world_get_8018df7c_or_one, address: "0x801263a8", end: "0x801263c8", kind: function, ownership: game, confidence: high }
+  - { name: world_menu_script_set_semi_trans, address: "0x80127b24", end: "0x80127b3c", kind: function, ownership: game, confidence: high }
+  - { name: world_menu_script_set_draw_priority, address: "0x80127c1c", end: "0x80127c34", kind: function, ownership: game, confidence: high }
+  - { name: world_set_menu_draw_priority, address: "0x801298b0", end: "0x801298c0", kind: function, ownership: game, confidence: high }
+  - { name: world_set_window_scale_step, address: "0x80129b14", end: "0x80129b24", kind: function, ownership: game, confidence: high }
+  - { name: world_get_window_scale_step, address: "0x80129b24", end: "0x80129b34", kind: function, ownership: game, confidence: high }
+  - { name: world_set_r2_0x801c9e84, address: "0x80129b6c", end: "0x80129b7c", kind: function, ownership: game, confidence: high }
+  - { name: world_find_text_entry_by_index, address: "0x8012a08c", end: "0x8012a0e8", kind: function, ownership: game, confidence: high }
+  - { name: world_bin_turn_off_unit_status_banner_thread, address: "0x8012a598", end: "0x8012a5c0", kind: function, ownership: game, confidence: high }
+  - { name: world_stop_menu_thread, address: "0x8012aaf4", end: "0x8012ab1c", kind: function, ownership: game, confidence: high }
+  - { name: world_run_menu_thread, address: "0x8012ab78", end: "0x8012ac14", kind: function, ownership: game, confidence: high }
+  - { name: world_run_menu_thread_set_field_38, address: "0x8012ac14", end: "0x8012ac44", kind: function, ownership: game, confidence: high }
+  - { name: world_store_combined_bit_value_pointer, address: "0x8012b1b4", end: "0x8012b1d0", kind: function, ownership: game, confidence: high }
+  - { name: world_store_data_pointer_2, address: "0x8012b1d0", end: "0x8012b1ec", kind: function, ownership: game, confidence: high }
+  - { name: world_get_combined_bit_value_from_stored_pointer, address: "0x8012b1ec", end: "0x8012b298", kind: function, ownership: game, confidence: high }
+  - { name: world_bin_check_if_job_is_unlocked, address: "0x8012b354", end: "0x8012b400", kind: function, ownership: game, confidence: high }
+  - { name: world_func_8012b90c, address: "0x8012b90c", end: "0x8012b930", kind: function, ownership: game, confidence: high }
+  - { name: world_func_8012b930, address: "0x8012b930", end: "0x8012b950", kind: function, ownership: game, confidence: high }
+  - { name: world_func_8012b950, address: "0x8012b950", end: "0x8012b970", kind: function, ownership: game, confidence: high }
+  - { name: world_bin_clear_some_data_in_0x801cd000_range, address: "0x8012bd7c", end: "0x8012bd9c", kind: function, ownership: game, confidence: high }
+  - { name: world_game_reset, address: "0x8012bd9c", end: "0x8012bdbc", kind: function, ownership: game, confidence: high }
+  - { name: world_func_8012d48c, address: "0x8012d48c", end: "0x8012d4c0", kind: function, ownership: game, confidence: high }
+  - { name: world_set_fade_disabled, address: "0x8012d6cc", end: "0x8012d6dc", kind: function, ownership: game, confidence: high }
+  - { name: world_load_image_sync, address: "0x8012d6dc", end: "0x8012d70c", kind: function, ownership: game, confidence: high }
+  - { name: world_bin_move_image_to_ram_from_vram_and_wait, address: "0x8012d70c", end: "0x8012d73c", kind: function, ownership: game, confidence: high }
+  - { name: world_get_menu_script, address: "0x8012d898", end: "0x8012d8b0", kind: function, ownership: game, confidence: high }
+  - { name: world_handle_tutorial_command, address: "0x8012dae0", end: "0x8012dcd4", kind: function, ownership: game, confidence: high }
+  - { name: world_handle_tutorial_command_shift, address: "0x8012ddc8", end: "0x8012de98", kind: function, ownership: game, confidence: high }
+  - { name: world_handle_tutorial_command_display_message, address: "0x8012de98", end: "0x8012df80", kind: function, ownership: game, confidence: high }
+  - { name: world_handle_tutorial_command_wait_for_message, address: "0x8012df80", end: "0x8012dfe4", kind: function, ownership: game, confidence: high }
+  - { name: world_handle_tutorial_command_change_dialog, address: "0x8012dfe4", end: "0x8012e0b8", kind: function, ownership: game, confidence: high }
+  - { name: world_handle_tutorial_command_wait, address: "0x8012e720", end: "0x8012e7a0", kind: function, ownership: game, confidence: high }
+  - { name: world_handle_tutorial_command_wait_time, address: "0x8012ea44", end: "0x8012eb08", kind: function, ownership: game, confidence: high }
+  - { name: world_read_controller_input, address: "0x8012ebd0", end: "0x8012ebf0", kind: function, ownership: game, confidence: high }
+  - { name: world_free_work_buffer, address: "0x8013090c", end: "0x80130934", kind: function, ownership: game, confidence: high }
+  - { name: world_set_selected_card_slot, address: "0x801325b4", end: "0x801325c4", kind: function, ownership: game, confidence: high }
+  - { name: world_get_selected_card_slot, address: "0x801325c4", end: "0x801325d4", kind: function, ownership: game, confidence: high }
+  - { name: world_func_801325dc, address: "0x801325dc", end: "0x80132604", kind: function, ownership: game, confidence: high }
+  - { name: world_add_to_fitting_room_cost, address: "0x80135360", end: "0x80135380", kind: function, ownership: game, confidence: high }
+  - { name: world_buy_from_fitting_room, address: "0x8013702c", end: "0x801370fc", kind: function, ownership: game, confidence: high }
+  - { name: world_func_80138e74, address: "0x80138e74", end: "0x80138ea4", kind: function, ownership: game, confidence: high }

@@ -1,0 +1,12 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: effect-e480
+address_model: { runtime_base: "0x801c2500", file_header_bytes: 0 }
+provenance:
+  - original/ffhacktics/wiki/pages/00006760.wiki
+  - original/ffhacktics/wiki/pages/00009904.wiki
+  - original/ffhacktics/wiki/pages/00009906.wiki
+  - build/extracted/files/EFFECT/E480.BIN
+symbols:
+  - { name: effect_e480_dejeon_arrive_step_map_unfreeze_state, address: "0x801c2c74", end: "0x801c2d08", kind: function, ownership: game, confidence: high, external_name: "E480 001c2c74 - 001c2d04" }
+  - { name: effect_e480_dejeon_arrive_step_map_freeze_state, address: "0x801c42d8", end: "0x801c436c", kind: function, ownership: game, confidence: high, external_name: "E480 001c42d8 - 001c4368" }

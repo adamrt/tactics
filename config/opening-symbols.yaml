@@ -1,0 +1,219 @@
+schema_version: 1
+target_id: fft-us-scus-94221
+module_id: opening
+
+address_model:
+  runtime_base: "0x80067000"
+  file_header_bytes: 0
+
+provenance:
+  - original/ffhacktics/wiki/pages/00010459.wiki
+  - original/ffhacktics/wiki/pages/00010460.wiki
+  - original/ffhacktics/wiki/pages/00010461.wiki
+  - original/ffhacktics/wiki/pages/00010465.wiki
+  - original/ffhacktics/wiki/pages/00010466.wiki
+  - original/ffhacktics/wiki/pages/00010467.wiki
+  - original/ffhacktics/wiki/pages/00010468.wiki
+  - original/ffhacktics/wiki/pages/00010469.wiki
+  - original/ffhacktics/wiki/pages/00010471.wiki
+  - original/ffhacktics/wiki/pages/00010472.wiki
+  - original/ffhacktics/wiki/pages/00010473.wiki
+  - original/ffhacktics/wiki/pages/00010474.wiki
+  - original/ffhacktics/wiki/pages/00010477.wiki
+  - original/ffhacktics/wiki/pages/00010478.wiki
+  - original/ffhacktics/wiki/pages/00010479.wiki
+  - original/ffhacktics/wiki/pages/00010480.wiki
+  - original/ffhacktics/wiki/pages/00010481.wiki
+  - original/ffhacktics/wiki/pages/00010482.wiki
+  - original/ffhacktics/wiki/pages/00010483.wiki
+  - original/ffhacktics/wiki/pages/00010484.wiki
+  - original/ffhacktics/wiki/pages/00010485.wiki
+  - original/ffhacktics/wiki/pages/00007092.wiki
+  - original/ffhacktics/wiki/pages/00010487.wiki
+  - original/ffhacktics/wiki/pages/00010488.wiki
+  - original/ffhacktics/wiki/pages/00010489.wiki
+  - original/ffhacktics/wiki/pages/00010490.wiki
+  - original/ffhacktics/wiki/pages/00010492.wiki
+  - original/ffhacktics/wiki/pages/00010493.wiki
+  - original/ffhacktics/wiki/pages/00010497.wiki
+  - original/ffhacktics/wiki/pages/00007311.wiki
+  - original/ffhacktics/wiki/pages/00010507.wiki
+  - original/ffhacktics/wiki/pages/00010509.wiki
+  - original/ffhacktics/wiki/pages/00010448.wiki
+  - original/ffhacktics/wiki/pages/00010446.wiki
+  - original/ffhacktics/wiki/pages/00010447.wiki
+  - original/ffhacktics/wiki/pages/00003101.wiki
+  - original/ffhacktics/wiki/pages/00010515.wiki
+  - original/ffhacktics/wiki/pages/00010516.wiki
+  - original/ffhacktics/wiki/pages/00010520.wiki
+  - original/ffhacktics/wiki/pages/00010523.wiki
+  - original/ffhacktics/wiki/pages/00007096.wiki
+  - original/ffhacktics/wiki/pages/00010505.wiki
+  - original/ffhacktics/wiki/pages/00010457.wiki
+  - original/ffhacktics/wiki/pages/00010462.wiki
+  - original/ffhacktics/wiki/pages/00010463.wiki
+  - original/ffhacktics/wiki/pages/00010464.wiki
+  - original/ffhacktics/wiki/pages/00010506.wiki
+  - original/ffhacktics/wiki/pages/00010513.wiki
+  - original/ffhacktics/wiki/pages/00010514.wiki
+  - original/ffhacktics/wiki/pages/00007074.wiki
+  - original/ffhacktics/wiki/pages/00010504.wiki
+  - original/ffhacktics/wiki/pages/00010512.wiki
+  - original/ffhacktics/wiki/pages/00007089.wiki
+  - original/ffhacktics/wiki/pages/00007093.wiki
+  - original/ffhacktics/wiki/pages/00007103.wiki
+  - original/ffhacktics/wiki/pages/00007102.wiki
+  - original/ffhacktics/wiki/pages/00010524.wiki
+  - original/ffhacktics/wiki/pages/00010529.wiki
+  - original/ffhacktics/wiki/pages/00010531.wiki
+  - original/ffhacktics/wiki/pages/00010533.wiki
+  - original/ffhacktics/wiki/pages/00010534.wiki
+  - original/ffhacktics/wiki/pages/00010535.wiki
+  - original/ffhacktics/wiki/pages/00010536.wiki
+  - original/ffhacktics/wiki/pages/00010539.wiki
+  - original/ffhacktics/wiki/pages/00010542.wiki
+  - original/ffhacktics/wiki/pages/00010449.wiki
+  - original/ffhacktics/wiki/pages/00010450.wiki
+  - original/ffhacktics/wiki/pages/00010451.wiki
+  - original/ffhacktics/wiki/pages/00010452.wiki
+  - original/ffhacktics/wiki/pages/00010456.wiki
+  - original/ffhacktics/wiki/pages/00010458.wiki
+  - original/ffhacktics/wiki/pages/00010454.wiki
+  - original/ffhacktics/wiki/pages/00010543.wiki
+  - original/ffhacktics/wiki/pages/00010544.wiki
+  - original/ffhacktics/wiki/pages/00010547.wiki
+  - original/ffhacktics/wiki/pages/00010548.wiki
+  - original/ffhacktics/wiki/pages/00010550.wiki
+  - original/ffhacktics/wiki/pages/00010552.wiki
+  - original/ffhacktics/wiki/pages/00010553.wiki
+  - original/ffhacktics/wiki/pages/00010554.wiki
+  - original/ffhacktics/wiki/pages/00010556.wiki
+  - original/ffhacktics/wiki/pages/00010559.wiki
+  - original/ffhacktics/wiki/pages/00010588.wiki
+  - original/ffhacktics/wiki/pages/00010602.wiki
+  - original/ffhacktics/wiki/pages/00007106.wiki
+  - original/ffhacktics/wiki/pages/00010527.wiki
+  - original/ffhacktics/wiki/pages/00007101.wiki
+  - original/ffhacktics/wiki/pages/00010486.wiki
+  - build/extracted/files/OPEN/OPEN.BIN
+
+symbols:
+  - { name: open_run_main_loop, address: "0x800670f0", end: "0x8006720c", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Main Routine" }
+  - { name: open_run_ending_cutscene, address: "0x8006720c", end: "0x80067320", kind: function, ownership: game, confidence: high, external_name: "Play Ending Cutscene" }
+  - { name: open_stream_movie, address: "0x80067320", end: "0x80067484", kind: function, ownership: game, confidence: high, external_name: "Stream Movie" }
+  - { name: open_process_movie_stream_frame, address: "0x80067484", end: "0x800675bc", kind: function, ownership: game, confidence: high }
+  - { name: open_stop_movie_stream, address: "0x800675bc", end: "0x80067620", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 000675bc - 0006761c" }
+  - { name: open_pause_movie_cd_audio, address: "0x80067620", end: "0x8006768c", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 00067620 - 00067688" }
+  - { name: open_initialize_mdec_stream_state, address: "0x8006768c", end: "0x800676f8", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006768c - 000676f4" }
+  - { name: open_initialize_movie_stream, address: "0x800676f8", end: "0x800677cc", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 000676f8 - 000677c8" }
+  - { name: open_handle_mdec_output_slice, address: "0x800677cc", end: "0x8006792c", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN MDEC Output Callback" }
+  - { name: open_decode_next_movie_frame, address: "0x8006792c", end: "0x800679a0", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006792c - 0006799c" }
+  - { name: open_acquire_next_movie_frame, address: "0x800679a0", end: "0x80067b38", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Acquire Next Movie Frame" }
+  - { name: open_wait_for_mdec_output, address: "0x80067b38", end: "0x80067bd0", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 00067b38 - 00067bcc" }
+  - { name: open_start_cd_stream_read, address: "0x80067bd0", end: "0x80067c1c", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN CD Controls Streaming" }
+  - { name: open_present_movie_frame, address: "0x80067c1c", end: "0x80067d84", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 00067c1c - 00067d80" }
+  - { name: open_update_button_input_and_check_game_reset, address: "0x80067d84", end: "0x80067e68", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Button Input Related 1" }
+  - { name: open_start_overlay_fade_out, address: "0x80067e68", end: "0x80067e90", kind: function, ownership: game, confidence: high }
+  - { name: open_start_overlay_fade_in, address: "0x80067e90", end: "0x80067eb8", kind: function, ownership: game, confidence: high }
+  - { name: open_initialize_directional_input_state, address: "0x80068220", end: "0x80068268", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 00068220 - 00068264" }
+  - { name: open_check_repeating_directional_input, address: "0x80068268", end: "0x80068384", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Button Input Related 2" }
+  - { name: open_prepare_new_game_party, address: "0x80068384", end: "0x80068420", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 00068384 - 0006841c" }
+  - { name: open_convert_birthday_to_zodiac_position, address: "0x80068420", end: "0x8006854c", kind: function, ownership: game, confidence: high }
+  - { name: open_update_world_formation_menu, address: "0x8006854c", end: "0x800685ec", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006854c - 000685e8" }
+  - { name: open_calculate_birthday_day_index, address: "0x800685ec", end: "0x80068638", kind: function, ownership: game, confidence: high }
+  - { name: open_set_sound_type_and_volume, address: "0x80068638", end: "0x80068684", kind: function, ownership: game, confidence: high }
+  - { name: open_initialize_and_stream_opening_movie, address: "0x80068684", end: "0x800686dc", kind: function, ownership: game, confidence: high }
+  - { name: open_prepare_and_play_end_movie, address: "0x800686dc", end: "0x80068760", kind: function, ownership: game, confidence: high }
+  - { name: open_backup_frame_vram_page, address: "0x80068760", end: "0x800687ac", kind: function, ownership: game, confidence: high }
+  - { name: open_initialize_runtime_state, address: "0x80068aec", end: "0x80068b74", kind: function, ownership: game, confidence: high }
+  - { name: open_clear_and_render_current_frame, address: "0x80068b74", end: "0x80068bb0", kind: function, ownership: game, confidence: high }
+  - { name: open_initialize_render_buffers, address: "0x80068bb0", end: "0x80068c90", kind: function, ownership: game, confidence: high }
+  - { name: open_clear_current_otag, address: "0x80068c90", end: "0x80068cd0", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Call ClearOtagR" }
+  - { name: open_render_record_pointer_list, address: "0x80068cd0", end: "0x80068d80", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN ? 0x68cd0" }
+  - { name: open_append_render_record_36, address: "0x800696c8", end: "0x800697b0", kind: function, ownership: game, confidence: high }
+  - { name: open_append_render_record_56, address: "0x800697b0", end: "0x800698c0", kind: function, ownership: game, confidence: high }
+  - { name: open_calculate_scaled_rectangle, address: "0x800698c0", end: "0x800699d4", kind: function, ownership: game, confidence: high }
+  - { name: open_wait_then_build_file_header, address: "0x800699d4", end: "0x80069a34", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 000699d4" }
+  - { name: open_wait_for_pending_file, address: "0x80069a34", end: "0x80069a90", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Open File" }
+  - { name: open_load_main_menu_graphics, address: "0x80069a90", end: "0x80069b6c", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Load Main Menu Graphics" }
+  - { name: open_load_end_movie_graphics, address: "0x80069b6c", end: "0x80069c38", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 00069b6c" }
+  - { name: open_load_sound_menu_textures, address: "0x80069c38", end: "0x80069cc8", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 00069c38" }
+  - { name: open_build_openbk_file_header, address: "0x80069cc8", end: "0x80069d38", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Build OPENBK File Header" }
+  - { name: open_get_cd_sync_state_delta, address: "0x80069d38", end: "0x80069d7c", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 00069d38" }
+  - { name: open_put_opntex_in_frame_buffer, address: "0x80069d7c", end: "0x80069e60", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Put OPNTEX in Frame Buffer" }
+  - { name: open_start_fftst_or_alternate_controller, address: "0x80069e60", end: "0x80069eb4", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Stream FFTST.STR 1" }
+  - { name: open_dispatch_current_controller, address: "0x80069eb4", end: "0x80069f24", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Title Screen Routine Dispatcher" }
+  - { name: open_stream_fftst_and_push_controller, address: "0x80069f24", end: "0x80069fd8", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Stream FFTST.STR" }
+  - { name: open_finish_stream_controller_if_ready_or_skipped, address: "0x80069fd8", end: "0x8006a074", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 00069fd8" }
+  - { name: open_stream_movie_and_push_controller_1, address: "0x8006a074", end: "0x8006a0e0", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006a074" }
+  - { name: open_finish_movie_controller_1_if_ready_or_skipped, address: "0x8006a0e0", end: "0x8006a174", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006a0e0" }
+  - { name: open_hide_four_render_records, address: "0x8006a578", end: "0x8006a670", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006a578 - 0006a66c" }
+  - { name: open_show_four_render_records, address: "0x8006a670", end: "0x8006a768", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006a670 - 0006a764" }
+  - { name: open_bin_0006b0a4_0006b354, address: "0x8006b0a4", end: "0x8006b358", kind: function, ownership: game, confidence: high }
+  - { name: open_begin_new_game_transition, address: "0x8006b358", end: "0x8006b420", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006b358" }
+  - { name: open_bin_0006b420_0006b638, address: "0x8006b420", end: "0x8006b63c", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_0006c750_0006c8a4, address: "0x8006c750", end: "0x8006c8a8", kind: function, ownership: game, confidence: high }
+  - { name: open_upload_birthday_window_image, address: "0x8006c8a8", end: "0x8006c96c", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006c8a8 - 0006c968" }
+  - { name: open_display_birthday_menu_text_entry, address: "0x8006c96c", end: "0x8006c9c4", kind: function, ownership: game, confidence: high, external_name: "DISPLAY BIRTHDAY MENU TEXT ENTRY" }
+  - { name: open_measure_menu_text_image, address: "0x8006c9c4", end: "0x8006ca2c", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006c9c4" }
+  - { name: open_initialize_menu_text_render_record, address: "0x8006ca2c", end: "0x8006cb00", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006ca2c - 0006cafc" }
+  - { name: open_initialize_menu_render_record_fields, address: "0x8006cb00", end: "0x8006cbf8", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006cb00 - 0006cbf4" }
+  - { name: open_bin_0006cbf8_0006cdb0, address: "0x8006cbf8", end: "0x8006cdb4", kind: function, ownership: game, confidence: high }
+  - { name: open_start_controller_7_with_openbk, address: "0x8006cdb4", end: "0x8006cef0", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006cdb4" }
+  - { name: open_start_thread_2_controller, address: "0x8006d25c", end: "0x8006d360", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006d25c - 0006d35c" }
+  - { name: open_finish_thread_2_controller, address: "0x8006d360", end: "0x8006d3cc", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006d360" }
+  - { name: open_stream_other_str_and_push_controller_11, address: "0x8006d3cc", end: "0x8006d480", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006d3cc" }
+  - { name: open_start_fftst_or_skip_movie_controller, address: "0x8006d480", end: "0x8006d524", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006d480" }
+  - { name: open_begin_new_game_or_clear_file_buffer, address: "0x8006d524", end: "0x8006d658", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006d524" }
+  - { name: open_update_title_exit_transition, address: "0x8006d658", end: "0x8006d7ac", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006d658" }
+  - { name: open_initialize_transition_request, address: "0x8006d7ac", end: "0x8006d7ec", kind: function, ownership: game, confidence: high }
+  - { name: open_noop_8006d7ec, address: "0x8006d7ec", end: "0x8006d7f4", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Null Routine 1" }
+  - { name: open_copy_file_image_to_210x180_buffer, address: "0x8006e068", end: "0x8006e13c", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006e068" }
+  - { name: open_initialize_and_dispatch_script_entries, address: "0x8006e7e0", end: "0x8006e8a8", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006e7e0 - 0006e8a4" }
+  - { name: open_add_pointer_offset, address: "0x8006e8a8", end: "0x8006e8b0", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN Add 2 variables" }
+  - { name: open_update_script_timing_and_record_values, address: "0x8006f134", end: "0x8006f228", kind: function, ownership: game, confidence: high }
+  - { name: open_decode_hex_digit, address: "0x8006f598", end: "0x8006f5d4", kind: function, ownership: game, confidence: high }
+  - { name: open_update_opntex_sequence, address: "0x8006f79c", end: "0x8006f8e0", kind: function, ownership: game, confidence: high }
+  - { name: open_play_end_movie, address: "0x8006f8e0", end: "0x8006f91c", kind: function, ownership: game, confidence: high }
+  - { name: open_stream_fftend, address: "0x8006f91c", end: "0x8006f988", kind: function, ownership: game, confidence: high, external_name: "Stream FFTEND.STR" }
+  - { name: open_finish_fftend_controller_if_ready_or_skipped, address: "0x8006f988", end: "0x8006fa10", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006f988 - 0006fa0c" }
+  - { name: open_push_controller_10, address: "0x8006fa10", end: "0x8006faa0", kind: function, ownership: game, confidence: high }
+  - { name: open_rewind_controller_after_script_completion, address: "0x8006faa0", end: "0x8006faf8", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006faa0 - 0006faf4" }
+  - { name: open_toggle_script_control, address: "0x8006faf8", end: "0x8006fb40", kind: function, ownership: game, confidence: medium }
+  - { name: open_parse_store_s16_and_advance, address: "0x8006fd64", end: "0x8006fd9c", kind: function, ownership: game, confidence: high }
+  - { name: open_parse_counted_wait, address: "0x8006fe24", end: "0x8006feb4", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006fe24 - 0006feb0" }
+  - { name: open_parse_wait_for_external_counter, address: "0x8006feb4", end: "0x8006ff34", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006feb4 - 0006ff30" }
+  - { name: open_parse_start_control_0x20, address: "0x8006ff34", end: "0x8006ffe4", kind: function, ownership: game, confidence: high, external_name: "OPEN.BIN 0006ff34 - 0006ffe0" }
+  - { name: open_parse_start_control_0x10, address: "0x8007005c", end: "0x80070100", kind: function, ownership: game, confidence: medium }
+  - { name: open_parse_upload_opntex_frame, address: "0x80070100", end: "0x80070160", kind: function, ownership: game, confidence: high }
+  - { name: open_parse_start_control_0x40, address: "0x80070160", end: "0x800701ac", kind: function, ownership: game, confidence: medium }
+  - { name: open_parse_start_control_0x80, address: "0x800701ac", end: "0x800701fc", kind: function, ownership: game, confidence: medium }
+  - { name: open_toggle_script_control_bit_1_or_advance, address: "0x800701fc", end: "0x80070240", kind: function, ownership: game, confidence: high }
+  - { name: open_parse_start_opntex_sequence, address: "0x80070240", end: "0x800702a8", kind: function, ownership: game, confidence: high }
+  - { name: open_set_card_slot, address: "0x800702a8", end: "0x800702b8", kind: function, ownership: game, confidence: high }
+  - { name: open_consume_all_card_events, address: "0x800702b8", end: "0x800702e0", kind: function, ownership: game, confidence: high }
+  - { name: open_poll_bios_card_event, address: "0x800702e0", end: "0x800703a0", kind: function, ownership: game, confidence: high }
+  - { name: open_wait_for_bios_card_event, address: "0x800703a0", end: "0x800703e8", kind: function, ownership: game, confidence: high }
+  - { name: open_consume_bios_card_events, address: "0x800703e8", end: "0x80070440", kind: function, ownership: game, confidence: high }
+  - { name: open_poll_hardware_card_event, address: "0x80070440", end: "0x80070500", kind: function, ownership: game, confidence: high }
+  - { name: open_wait_for_hardware_card_event, address: "0x80070500", end: "0x80070548", kind: function, ownership: game, confidence: high }
+  - { name: open_consume_hardware_card_events, address: "0x80070548", end: "0x800705a0", kind: function, ownership: game, confidence: high }
+  - { name: open_card_info_with_retries, address: "0x800705a0", end: "0x8007062c", kind: function, ownership: game, confidence: high }
+  - { name: open_poll_card_info_result, address: "0x8007062c", end: "0x800706e8", kind: function, ownership: game, confidence: high }
+  - { name: open_poll_card_info_until_stable, address: "0x800706e8", end: "0x8007077c", kind: function, ownership: game, confidence: high }
+  - { name: open_check_memory_card_slots, address: "0x8007077c", end: "0x800707f8", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_decdctreset, address: "0x8007348c", end: "0x800734c4", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_decdctgetenv, address: "0x800734c4", end: "0x80073550", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_decdctputenv, address: "0x80073550", end: "0x800735ec", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_decdctbufsize, address: "0x800735ec", end: "0x800735f8", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_decdctin, address: "0x800735f8", end: "0x80073674", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_decdctout, address: "0x80073674", end: "0x80073694", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_decdctinsync, address: "0x80073694", end: "0x800736b4", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_decdctoutsync, address: "0x800736b4", end: "0x800736d4", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_decdctincallback, address: "0x800736d4", end: "0x800736f8", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_decdctoutcallback, address: "0x800736f8", end: "0x8007371c", kind: function, ownership: game, confidence: high }
+  - { name: opening_open_bin_mdec_reset, address: "0x8007371c", end: "0x80073818", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_mdec_in, address: "0x80073818", end: "0x800738ac", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_mdec_out, address: "0x800738ac", end: "0x8007393c", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_mdec_in_sync, address: "0x8007393c", end: "0x800739d4", kind: function, ownership: game, confidence: high }
+  - { name: open_bin_mdec_out_sync, address: "0x800739d4", end: "0x80073a6c", kind: function, ownership: game, confidence: high }

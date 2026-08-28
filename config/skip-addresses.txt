@@ -1,0 +1,109 @@
+# Addresses the wiki lists as "routines" that are NOT independently
+# reconstructable, so batch generation should never hand them to a worker.
+#
+# Each entry must be justified by disassembly, not merely by a worker failing to
+# match it. A hard function that resists matching belongs in wip/, not here.
+# See docs/ffhacktics-findings.md for the reasoning behind each class.
+#
+# Format: one address per line, `#` comments and blank lines ignored.
+
+# Tail fragments of a larger enclosing function: no prologue, read callee-saved
+# registers/stack slots they never write, end in a bare `j` to the next label.
+0x80080c40  # "Two Digit Experience" -> j func_80080EFC
+0x80080d84  # "Two Digit JP"         -> j func_80080EFC
+0x80080bc4
+0x80080cf8
+0x80080e3c
+0x80080e7c
+0x80080ebc  # "No MP display": no prologue, reads caller's $s1, writes caller's arg slots 0x10..0x20($sp), ends in jal store_sprite_display_data with no jr $ra (falls through)
+
+# Handwritten assembly / compiler-output shapes no C source produces.
+0x8014bf54
+0x8014ce78
+0x8014ceb4
+0x80195944
+0x80195a24
+0x80195a30
+0x80195a90  # "AI Ability Data Setting - Jump": no prologue, reads s0/s1/s2/s5
+            # set by the enclosing dispatcher, ends in `j func_80195974`
+0x80195ba0
+0x8019a63c
+0x801a0fd4
+0x80010a30
+0x800775b8
+
+# Padding, not code: address range is a run of `nop` with no `jr $ra`.
+0x80114680  # wiki "Math Skill Targeting Calculations" -> 50 consecutive nops
+
+# Data, not code. Reconstructing these as functions produces nonsense.
+0x8004f1d0  # "Geomancy_tiles_type_to_ability_table" -- lookup table, see findings
+
+# Sony library/middleware. AGENTS.md: do not reconstruct these to inflate totals.
+0x80073ba0  # OPEN.BIN DecDCTvlcSize (libpress)
+0x80100384  # "WORLD.BIN Call Inner Subroutine": manual $at, saves $sp/$ra
+            # into a global slot, handwritten addi marker -- not compiler output
+
+0x8001e9ec  # LIBCD (libraries.yaml 0x8001e8c4-0x8002228c): lbu D_8003189D getter
+0x8001e9fc  # LIBCD: returns &D_80031898 (library state block accessor)
+0x80020750  # LIBCD: sw a0 -> D_80031B24 setter
+0x80022044  # LIBCD: handwritten `li a0,2; syscall 0` (BIOS ExitCriticalSection)
+0x800245bc  # LIBGPU (0x80022c24-0x800275c0): GetGraphType, already bound in
+            # linker-symbols.yaml
+0x800245cc  # LIBGPU: GetGraphDebug-style byte getter (D_80032896)
+0x80092b1c  # WLDCORE stack-switch epilogue paired with 0x80092b04: `addiu sp,sp,4
+            # / lw sp,0(sp)` restores $sp from a caller-supplied block (scratchpad
+            # 0x1F8003FC). Handwritten asm; no C source assigns $sp.
+
+# Batch 141: function-boundary detector hits that fall inside linked
+# library/middleware ranges (config/libraries.yaml). AGENTS.md: do not add more
+# linked library or middleware functions merely to raise the total.
+0x8001dee0  # LIBETC (0x8001dad0-0x8001e8c4): `lhu D_800306FE` state getter,
+            # called only from libetc internals 0x8001f7ec/0x8001fa74/0x8001fed0
+0x8001e884  # LIBETC: GetVideoMode -- `lw D_800317E8`, paired with the setter at
+            # 0x8001e86c; callers are libgpu SetDefDrawEnv and PutDispEnv
+0x8001e9cc  # LIBCD (0x8001e8c4-0x8002228c): `lbu D_8003188C` getter, same
+            # accessor block as the already-skipped 0x8001e9ec / 0x8001e9fc
+0x8001e9dc  # LIBCD: `lbu D_8003189C` getter, same accessor block
+0x8001d158  # main: libgte GetGeomScreen -- `cfc2 v0,$26` (H), psyq library
+0x8001d1c8  # main: libgte SetGeomScreen -- `ctc2 a0,$26` (H), psyq library
+0x8001c2e8  # main: mid-function branch target inside the handwritten libgte
+            # shift helper at 0x8001c2a0 (`bgez t1` at 0x8001c2d4 lands here);
+            # reads t1/t5 it never writes, no prologue
+
+# Batch 157
+0x80092b04  # WLDCORE stack-switch prologue (twin of the already-skipped
+            # 0x80092b1c epilogue): `addu t0,a0,zero / sw sp,0(t0) /
+            # addiu t0,t0,-4 / addu sp,t0,zero` saves $sp into a caller-supplied
+            # block and switches to it. Handwritten asm -- no C source assigns
+            # $sp. Also already bound as func_80092B04 in linker-symbols.yaml.
+0x8014cf28  # BATTLE.BIN thread-resume trampoline. Handwritten assembly, not
+            # compiler output: no prologue, no $ra save. It is the tail half of
+            # the coroutine switcher at 0x8014ceb4 (which does
+            # `sw $ra, 0x8014cf5c` and then swaps $sp). This range does
+            # `lui at,0x8017 / addu at,at,zero / lw t0,0x3ca8(at) / jalr t0`
+            # to call the thread entry pointer at D_80173CA8, then
+            # `lui at,0x8015 / addu at,at,zero / lw ra,0xcf5c(at) / jr ra`,
+            # i.e. it restores $ra from the *global* word at 0x8014cf5c rather
+            # than from the stack. The manual `$at` usage and the
+            # global-slot $ra reload are not expressible in C.
+
+# Batch 166
+0x801003f8  # WORLD.BIN coroutine-dispatch tail fragment, not a function. It is
+            # the fall-through/branch target of `beq t0,zero` at 0x801003a0
+            # inside the stack-switching dispatcher that starts at 0x80100384
+            # (`sw $ra, 0x8010042c` / loads g_world_current_thread_id / swaps
+            # $sp to the thread's own stack). This range does
+            # `lui at,0x801d / addu at,at,zero / lw t0,-0x2874(at) / jalr t0`
+            # to call g_world_inner_subroutine_callback (0x801cd78c), then
+            # `lui at,0x8010 / addu at,at,zero / lw ra,0x042c(at) / jr ra`,
+            # restoring $ra from the *global* word at 0x8010042c rather than
+            # from the stack. Manual $at use and a global-slot $ra reload are
+            # not expressible in C; the boundary detector split the dispatcher
+            # at its interior `jr $ra`.
+
+# AI ability-data dispatcher (0x80195xxx) switch-case bodies: no prologue, read
+# $s0/$s1/$s2/$s4 they never write, end in a bare `j` into the shared setter.
+0x80195a24  # "ai_ability_data_setting_katana_inventory": addiu v0,s1,-0x26 ; j 0x80195C00 ; sb v0,6(s0)
+0x80195ba0  # "ai_ability_data_setting_charge": addiu v0,s1,-0x196 ; sll ; lui at ; addu at,at,v0 ; lbu v0,0x1044(at) ; j 0x80195944 ; sb v0,1(s0)
+0x80195bbc  # "ai_ability_data_setting_arithmeticks": 5x sb 0xff,7..3(s0+4) loop ; sb 0xfc,0xc(s0) ; lbu v0,3(s4) ; sb v0,0xf(s0) ; lw/ori 0x8000/sw 0xc(s0) ; j 0x80195D64
+0x801959d4  # "ai_ability_data_setting_ai_item_inventory": lbu v0,0x91(s2) ... lbu s6,0x3f9a(at) ; ... ; j 0x80195C00 ; sb v0,6(s0)
